@@ -1,0 +1,100 @@
+body {
+    margin: 0 auto;
+    background-color: lightgrey;
+}
+
+div {
+    width: 90%;
+    margin: 0 auto;
+    background-color: mistyrose;
+}
+
+.boite {
+    height: 11vh;
+    width: 18vh;
+    /* vh is a measure that is the most sensible for website size changing */
+    padding: 5vh;
+    background: url("https://www.myjewishlearning.com/wp-content/uploads/2005/12/pareve-christmas-1598x900.jpg")no-repeat;
+    /* background: no-repeat; */
+    border: 5px double orchid;
+    margin: 2vh;
+    float: left;
+    /* effet flottant, permet de placer des balises cote à cote alors question que selon le flux du web standart les éléments se placent les uns au dessous des autres */
+    transition: margin 0.5s;
+}
+
+.boite:hover {
+    /* la pseudo class :hover modifie un affichage au survol de la souris */
+margin-top: 10vh;
+}
+
+.clear {
+    clear: both;
+    /* supprime l'effet flottant */
+}
+
+p{
+    background-color: lightblue;
+    /* display: inline , propriété à tester! */
+}
+
+p span{
+    /* selectionne les "span" contenu  */
+    background-color: yellow;
+}
+
+
+
+.box {
+    height: 18vh;
+    width: 18vh;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4gLiFx1HmAN6UhSIDFt-PZpvKBMXxeRKKCt5kkUiNDt7c5vVCVw")no-repeat;
+    border: 5px double rgb(110, 78, 255);
+    margin: 2vh;
+    float: left;
+    transition: margin 0.5s;
+    border-radius: 50%;
+}
+
+.box:hover {
+    /* la pseudo class :hover modifie un affichage au survol de la souris */
+margin-left: 10vh;
+}
+
+.clear1 {
+    clear: both;
+}
+
+
+.boxes{
+
+    height: 10vh;
+    width: 10vh;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-9bZC1367fs6cCqnZrfOQw05882V71BdDij39PeLI4qEdgVyx")no-repeat;
+    border: 5px double rgb(52, 138, 3);
+    margin: 2vh;
+    float: left;
+    transition: margin 0.5s;
+    border-radius: 30%;
+}
+
+.boxs{
+
+    height: 10vh;
+    width: 10vh;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-9bZC1367fs6cCqnZrfOQw05882V71BdDij39PeLI4qEdgVyx")no-repeat;
+    border: 5px double rgb(52, 138, 3);
+    margin: 2vh;
+    float: right;
+    transition: margin 0.5s;
+    border-radius: 30%;
+}
+
+
+.boxes:hover {
+margin-right: 10vh;
+}
+
+.boxs:hover {
+    margin-right: 10vh;
+}

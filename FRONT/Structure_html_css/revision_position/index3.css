@@ -1,0 +1,11 @@
+nav {
+    background: rgb(64, 0, 70);
+    position: fixed;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+p {
+    border: 3px solid mistyrose;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+        .listeFruits {
+            transform: scale(0);
+            transform-origin : 0 0;
+            transition: .5s;
+            /* point de transformation est en centre */
+            /* transform-origin : 50% 50% ; mais on peut changer */
+            /*  if we want that the fisure starts growing from the TOP LEFT corner , then we can give it 0 0 ; */
+            background-color: firebrick;
+            color: white;
+            list-style: none;
+            padding: 10px;
+            /* display: flex; */
+
+            /* correction */
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60%;
+        }
+
+        /* li {
+            margin-right: 20px;
+        }
+
+        li:hover {
+            font-size: 2rem;
+            color: rgb(33, 196, 211);
+        } */
+
+        .affiche {
+        transform: scale(1);
+        }
+
+        .care {
+            height: 400px;
+            width: 400px;
+            background-color: forestgreen;
+            /* position: absolute; */
+            /* z-index: 0; */
+        }
+/* 
+        .btn {
+            position: relative;
+            z-index: 1;
+        }  */
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="care"></div>
+    <ul class="listeFruits">
+        <li>Mango</li>
+        <li>Avocado</li>
+        <li>Pear</li>
+    </ul>
+    <button class="btn">Affiche</button>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        // <!-- 
+        //         $(function(){
+        //             // $('.btn').on('click', function(){
+        //             //     $('.listeFruits').css('display','none');
+        //             //     $(this).toggleClass('.affiche');
+
+        //             // })
+
+        //             // var affiche = function(){
+        //             //      $('.listeFruits').toggleClass('.affiche');
+        //             // }
+
+        //             //   $('.btn').on('click', affiche);
+
+
+        //             var open = function () {
+        //                 $('.listeFruits').toggleClass('affiche');
+        //             }
+        //             // on éxécute la fonction au clic sur la balise .carre
+
+        //             $('.btn').on('click', open);
+
+        //         }) -->
+
+
+        // CORRECTION
+
+        $(function () {
+
+            // ici on ajoute un événement click sur l'élément qui a
+            // la class .btn est on éxécute une fonction anonyme
+            $('.btn').on('click', function () {
+
+                // on ajoute un toogleClass pour ajouter et supprimer un class sur
+                //  l'objet qui a la class .listeFruits
+                $('.listeFruits').toggleClass('affiche');
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>

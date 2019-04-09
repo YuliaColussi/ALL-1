@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="cible">Votre message</label><br>
+        <textarea name="" id="cible" cols="30" rows="10">
+
+        </textarea>
+    </form>
+    <p class="info"></p>
+    <span class="testKey">Rien</span>
+
+
+    <!-- SCRIPT -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            console.log('coucou');
+
+            // lorsqu'une touche et appuyée dans le textarea .cible, on change le couleut de fond de testKey pour mettre du vert
+
+            $('#cible').keydown(function(){
+                $(this).css('background-color', 'green');
+
+            })//fin dy keydown sur #cible
+
+            $('#cible').keyup(function(){
+                $(this).css('background-color', 'gold');
+
+            })//fin dy keyup sur #cible
+
+            // lors du keypress(touche pressée, analyse du caractère saisi) on va afficher le keycode de la touche
+            //dans le paragraphe .info
+
+            $('#cible').keypress(function(ev) {
+                // attention: il faut ajouter le paramètre ev dans le parenthèses de la
+                // fonction  qu'elle analyse l'événement qui survient
+                $('.info').text(ev.which);
+
+            })//fin dy keydown sur #cible
+
+
+        })//FIN DU SCOPE
+    </script>
+</body>
+
+</html>

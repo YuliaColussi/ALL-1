@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" id="monForm">
+        <fieldset>
+            <legend>Infos pro</legend>
+            <label for="prenom">Votre prenom</label>
+            <input type="text" id="prenom">
+            <br>
+            <label for="motpasse">Votre mot de passe</label>
+            <input type="password" id="motpasse">
+            <br>
+            <label for="date">Ta date de rdv</label>
+            <input type="date" id="date">
+            <br>
+            <strong>Genre</strong><br>
+            <label for="homme">Homme</label>
+            <input type="radio" id="homme" value="homme" name="genre">
+
+            <label for="homme">Femme</label>
+            <input type="radio" id="femme" value="femme" name="genre">
+            <br>
+
+            <h4>
+                <label for="statut">Selectionne ton status</label>
+            </h4>
+
+        <select name="statut" id="statut">
+            <option value="etudiant">Etudiant</option>
+            <option value="ensaignant">Ensaignant</option>
+            <option value="autre">Autre</option>
+        </select>
+
+        <p>
+            Choix de couleur
+        </p>
+
+        <p>
+            <input type="checkbox" id="orange" name="couleurs">
+            <label for="orange">Orange</label>
+        </p>
+        <p>
+            <input type="checkbox" id="purple" name="couleurs">
+            <label for="purple">Purple</label>
+        </p>
+
+        <input type="reset" id="annuler" value="Annuler">
+        <input type="submit" id="envoyer" value="Envoyer">
+        </fieldset>
+    </form>
+    <div class="info">
+        <p></p>
+    </div>
+
+
+    <!-- SCRIPT -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            console.log('coucou');
+
+            //lire le prenom entré dans l'input qua a l'id="prenom" et l'afficher en console
+            console.log($('.prenom').val());
+
+            // créer l'événement on submit et stopper la redirection
+            $('#monForm').on('submit',function(ev){
+                // pour stopper la redirection on va intercepter l'événement.
+                // Attention pour cela de bien indiquer le paramèthre ev dans les 
+                // parenthèses de la fonction : function(ev)
+
+                ev.preventDefault();
+
+                //lire le prenom entré dans l'input qua a l'id="prenom" et l'afficher en console
+                console.log($('#prenom').val());
+                console.log($('#motpasse').val());
+
+
+                 console.log($('#statut').val());// afficher la valeur de status
+                 console.log($(':radio:checked').val()); //lit l'etat du bouton radio qui est coche
+
+  
+//  
+//                 $('#prenom').val('Michel')//  écrit Michel dans la zone de texte prenom
+//                 $(':radio').val(['homme'])//séléctionne le bouton radio homme 
+
+                   
+                   //1.Créer une balise p,
+                   //2.la replir cette balise avec la string 'bonjour' concaténée avec le valeur de l'input #prenom
+                   // 3.ajouter cette balise à la balise qui a la class="info"
+
+                   $('<p>').append('Bonjour ' + $('#prenom').val()).appendTo('.info');
+
+                
+                    // Créer un paragraphpar valeur de champ du formulaire (pour tout les 4 en top)
+
+                
+                    $('<p>').append('Mot de passe est : ' + $('#motpasse').val()).appendTo('.info');
+                    $('<p>').append('Votre statut est : ' + $('#statut').val()).appendTo('.info');
+                    $('<p>').append('Votre date de rdv : ' + $('#date').val()).appendTo('.info');
+                    $('<p>').append('Vous etes un(e) : ' + $(':radio:checked').val()).appendTo('.info');
+                    $('<p>').append('Votre choix est : ' + $(':checkbox:checked').val()).appendTo('.info');
+
+                //  affiche les couleurs cochées par l'utilisateur
+                // CLOSURE 'pour acceder aux variables locales d'une fonction
+                function couleurs(){
+                    var couleurs = [];
+
+                    return function(){
+                        $("input[type='checkbox']:checked").each(
+                            function(){
+                                couleurs.push(' ' + $(this).attr('id'));
+                                console.log(couleurs);
+                            }
+
+
+                        )//FIN DU EACH
+                        $('<p>').append('Tu a choisi les couleur suivantes ' + couleurs).appendTo('.info');
+                    }
+                }
+                var ajoutCouleurs = couleurs();
+                ajoutCouleurs();
+
+
+
+            })//Fin de submit
+
+        })//FIN DU SCOPE
+
+
+    </script>
+</body>
+
+</html>

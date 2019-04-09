@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+    * {
+            box-sizing: border-box;
+        }
+
+    body {
+        margin: 0;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        border: 2px solid teal;
+        padding: 122px 2rem 0;
+        position: relative;
+    }
+
+    .container p:nth-of-type(1) {/* on cible le premier p descendant du container  */
+
+        color: orange;
+        position: relative;
+        /* la position relative permet que le badge soit placé par rapport à ce 1er p */
+    }
+
+    .badge {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background-color: crimson;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 80px;
+        position: absolute;
+        /* un élément position: absolute est place par rapport à son 1er anc-etre positionne. 
+        S'il n'a pas d'ancentre positionné, il sera placé par rapport a son body */
+        left: -40px;
+        top: 20px;
+    }
+
+    /*  Le tipes de positions possible:
+    -static
+    par défaut tout les balises sont en position: static ; (elle ne son pas positionnée et restent dans le flux)
+     -absolute
+     -relative: sera positionné par rapport à son placement naturelle dans le flux (comme si il avait une marge)
+     Son emplacement est réserve;
+     Un relative deviant réferent de positionnement pour ses enfants absolute: 
+
+     Par example dans ce contexte on va donner une position: relative au <1er p pour que le badge en absolute soit calé par rapport à ce p
+     
+     -fixed 
+     Un élément qui a la position: fixed; sera calé par rapport à viewport
+     (fenetre du navigateur), meme si la page scroll, l'objet fixed reste calé sur la fenetre.
+    
+     
+     */
+
+     nav {
+         border-bottom: 3px solid navy;
+         padding: 1rem;
+         position: fixed;
+         background-color: rgba(0, 0, 0, .5);
+         color: white;
+         width: 100%;
+     }
+
+     nav ul {
+         padding-left: 0px;         /* reset du padding existant */
+         display: flex;         /* context flex permet d'aligner les enfants */
+         justify-content: space-around;
+     }
+
+     nav li {
+         border: 2px solid pink;
+         list-style: none;
+         padding: 1rem;
+
+     }
+
+     /* SHAPES */
+
+     .carre {
+         background-color: teal;
+         width: 100px;
+         height: 100px;
+         display: block;
+         position: absolute;
+         right: 0px;
+         top: 70%;
+
+     }
+     .rond {
+         border-radius: 50%;
+         background-color: rgb(195, 179, 32);
+         width: 100px;
+         height: 100px;
+         display: block;
+         position: absolute;
+         right: 0px;
+         top: 60%;
+
+     }
+
+.triangle{
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 53%;
+	width: 0;
+	height: 0;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-bottom: 80px solid rgb(209, 37, 75);
+
+	}
+
+     .container a {
+         text-decoration: none;
+         color: white;
+         text-align: center;
+         line-height: 100px;
+         text-indent: -10000px;
+     }
+
+ 
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Galeri</li>
+            <li>Contacts</li>
+        </ul>
+    </nav>
+    <div class="container">
+    <p>
+    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv
+        <span class="badge">NEW</span>
+
+</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+    <p>
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+        est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+        de texte pour réaliser un liv</p>
+       <a href="#" class="carre">CARRE</a>
+       <a href="#" class="rond">ROND</a>
+       <a href="#" class="triangle">TRIANGLE</a>
+    </div>
+</body>
+</html>

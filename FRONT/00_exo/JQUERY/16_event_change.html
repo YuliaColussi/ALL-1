@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Fair un formulaire avec un manu déroulant
+    (balise select) qui contient plusieurs options d'animaux (uin animal par option)</p>
+    <form action="#">
+        <label for="animaux">Sélectionne ton animal fétiche</label>
+        <select name="" id="animaux">
+        <option value="boa">Boa</option>
+        <option value="baleine">Baleine</option>
+        <option value="koala">Koala</option>
+        <option value="panda">Panda</option>
+    </select> 
+    </form>
+    <p class="info"></p>
+    
+    
+    
+    
+    
+    <!-- SCRIPT -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            console.log('coucou');
+            
+            // l'événement change survient quand l'utilisateur choisit une nouvelle option dans le liste déroulante
+            $('select#animaux').change(function(){
+                // icio n affiche dans .info le valeur de l'option de l'utililateur
+                // dans la liste déroulante
+                $('.info').html('Ton animal préféré est le '+ $(this).val());
+
+            })
+
+
+        })//FIN DU SCOPE
+    </script>
+</body>
+
+</html>

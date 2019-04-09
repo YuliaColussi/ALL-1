@@ -1,0 +1,76 @@
+
+body {
+    margin: 0 auto;
+    background: lightgrey;
+}
+
+div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.yellow {
+    height: 2em;
+    width: 2em;
+    padding: 1vh;
+    background-color: yellow ;
+    margin: 1px;
+    float: left;
+}
+
+.black {
+    height: 2em;
+    width: 2em;
+    padding: 1vh;
+    background-color: rgb(0, 0, 0) ;
+    margin: 1px;
+    float: left;
+}
+
+.grey {
+    height: 2em;
+    width: 2em;
+    padding: 1vh;
+    background-color: grey ;
+    margin: 1px;
+    float: left;
+}
+
+
+.white {
+    height: 2em;
+    width: 2em;
+    padding: 1vh;
+    background-color: white ;
+    margin: 1px;
+    float: left;
+}
+
+.blue {
+    height: 2em;
+    width: 2em;
+    padding: 1vh;
+    background-color: blue ;
+    margin: 1px;
+    float: left;
+}
+
+.lightgrey {
+    height: 2em;
+    width: 2em;
+    padding: 1vh;
+    background-color: lightgrey ;
+    margin: 1px;
+    float: left;
+}
+
+.floor {
+    background-color: black;
+    height: 5px;
+    width: 40em;
+    float: left;
+}

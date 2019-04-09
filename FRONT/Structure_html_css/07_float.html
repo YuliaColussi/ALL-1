@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=*, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/07_float.css">
+    <title>Les floats</title>
+</head>
+
+<body>
+    <!-- La propriéte FLOAT  indique qu'un élément doit etre retiré du flux normal et doit etre placè sur la coté droit ou gauche de son conteneur. Le texte et les autres éléments e, ligne (INLINE) entoureront alors l'élément flottant. -->
+    <!-- Un élément "flottant" est un élément pour lequel la valeur calculée de float est différente de NONE -->
+    <!-- FLOAT implique l'utilisation d'une position en bloc, cette propriété modifie donc la valeur de DISPLAY dans certains cas. -->
+    <!-- LEFT: mot-clé, indiquant que l'élément doit flotter du coté gauche du blockquote qui le contient -->
+    <!-- RIGHT: mot-clé, indiquant que l'élément doit flotter du coté droit du blockquote qui le contient -->
+    <!-- NONE: mot-clé, indiquant que l'élément ne doit pas flotter -->
+    <div>
+        <p>Test paragraphe contenant une <span>Balise inline</span>
+        </p>
+        <hr>
+        <!-- div.boite{$}*4 -->
+        <div class="boite">1</div>
+        <div class="boite">2</div>
+        <div class="boite">3</div>
+        <div class="boite">4</div>
+        <div class="clear"></div>
+        <!-- La propriété CLEAR indique si un élément peut etre situé à coté d'élément FLOTTANTS qui le précèdent ou s'il etre déplacé vers le bas pour etre en dessous  des ces éléments. La propriété CLEAR s'applique aux éléments FLOTTANTS comme aux éléments non-FLOTTANTS -->
+        <div class="boite">5</div>
+        <div class="boite">6</div>
+        <div class="boite">7</div>
+        <div class="boite">8</div>
+        <div class="clear"></div>
+    </div>
+    <hr>
+    <div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="clear1"></div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="clear1"></div>
+    </div>
+
+        <div>
+            <div class="boxs">1</div>
+            <div class="boxs">2</div>
+            <div class="boxs">3</div>
+            <div class="clear1"></div>
+            <div class="boxes">1</div>
+            <div class="boxes">2</div>
+            <div class="boxes">3</div>
+            <div class="boxes">4</div>
+            <div class="boxes">5</div>
+            <div class="clear1"></div>
+            <div class="boxes">1</div>
+            <div class="boxes">2</div>
+            <div class="boxes">3</div>
+            <div class="clear1"></div>
+            
+</body>
+
+</html>

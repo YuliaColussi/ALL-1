@@ -1,0 +1,1724 @@
+*{
+    box-sizing: border-box;  /*ça bloque l'élement, le recentre et ça fait une marge*/
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+h1{
+    font-size: 70px;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 400;
+}
+h2{
+    font-size: 50px;
+    color: CRIMSON;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+}
+h3{
+    font-size: 22px;
+    color: #2c3e50;
+    padding: 15px;
+}
+h4{
+    text-align: center;
+    margin-top: 30px;
+    color: #2c3e50;
+    font-size: 20px;
+}
+h5{
+    font-size: 90px;
+    color: /*CRIMSON*/purple;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+}
+blockquote{
+    font-style: italic;
+    font-size: 120%;
+}
+strong{
+    font-weight: bold;
+}
+main{
+
+    background: mistyrose ;
+    margin: 0 auto;
+    width: 1000px;
+    padding: 20px;
+}
+aside{
+    /*height: 250px;*/
+    height: 300px;
+}
+section{
+    margin-top: 50px;
+    /*background: THISTLE;*/
+    padding: 20px;
+}
+footer{
+    background:MISTYROSE;
+    height: 30px;
+}
+
+
+/*********************************  DEBUT HEADER  ***********************************/
+header{
+    background-color:SLATEGRAY;
+        height: 175px;
+}
+#logo{
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 15px;
+}
+#slogan{
+    width: 50%;
+    float: left;
+}
+#rs{
+    width: 25%;
+    float: left;
+    padding: 20px;
+}
+#rs a{
+    font-size: 30px;
+    color: white;
+    display: block; /*change leur type inline en block pour les mettre les uns en dessous des autres*/
+    text-align: right;
+    padding: 15px 30px 0 0;
+    text-decoration: none;
+}
+#rs a:hover{
+    font-size: 60px;
+    transition: 1s;
+}
+/*********************************  FIN HEADER  ***********************************/
+/*********************************  DEBUT NAV  ***********************************/
+nav{
+    background-color: MISTYROSE;
+    border-bottom: 4px solid slategray;
+    text-align: center;
+    padding: 17px;
+}
+nav a{
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    text-decoration: none;
+    color: Black;
+    font-weight: 500;
+    border: 1px solid pink;
+    padding: 6px 9px;
+    border-radius: 7px;
+    margin: 0px 8px;
+}
+nav a:hover{
+    background: pink;
+    transition: 1s;
+}
+.activ{
+    background: pink;
+}
+/*********************************  FIN NAV ***********************************/
+/*********************************  DEBUT PAGE TEXTE  ***********************************/
+.roboto p{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/*********************************  FIN PAGE TEXTE  **************************************/
+
+
+.first {
+    color: red;
+    font-size: 25px;
+}
+
+.first li:first-child,.first li:nth-child(10){
+    color: purple;
+}
+
+.first li:nth-child(5),.first li:nth-child(6) {
+    color: green;
+}
+
+.first li {
+    list-style: none;
+}
+
+
+.zone li {
+    list-style: none;
+}
+
+.zone{
+    color: rgb(246, 156, 83);
+    font-size: 25px;
+}
+
+.zone li:nth-child(3) {
+    color: blue;
+}
+
+.one,.two {
+    font-size: 25px;
+}
+
+.one p {
+    color: rgb(121, 170, 46);
+}
+
+.clear {
+    clear: both;
+}
+
+.zone li {
+    margin-right: 5px;
+    float: left;
+}
+
+span {
+    color: green;
+}
+
+
+/* .select div:not(.zoneB){ all the div in select will be bald unless the Zone B
+   
+}
+     */
+
+.fond {
+    height: 600px;
+    background: url(../img/photo-1530482817083-29ae4b92ff15.jfif);
+}
+
+.block {
+    opacity: .7;
+    /* or we can do transparancy just like this background: rgba(255,255,255,0.60 */
+    border-radius: 25px;
+    margin: 20% auto;
+    vertical-align: middle;
+    width: 70%;
+    background-color: white;
+    vertical-align: 600px;
+}
+
+.second img {
+    border: 4px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 30px 370px;
+}
+
+/* img[src="img/toureiffel.jpg"} - thats how we co=an choose an element without giving it a class */
+
+h3 {
+    font-size: 25px;
+    color: palevioletred;
+    margin-top: 30px;
+}
+
+.third img {
+    margin-top: 20px;
+    margin-right: 30px;
+    border: 5px solid white;
+    box-shadow: 8px 12px 18px 0px #000000;
+
+}
+
+.third img:first-child{
+    margin-left: 160px;
+}
+
+
+.third img:first-child:hover,.third img:nth-child(2):hover{
+    transform: rotate(20deg);
+    transition: all 0.8s ease-in-out 0s;
+}
+
+
+
+.third img:last-child{
+    display: block;
+    margin: 30px auto;
+}
+
+
+.third img:last-child:hover{
+    transform: rotate(360deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+/* .rotation : image de type inline-block, elle xomporte des marges par defaut. Pout supprimer cette marge,
+ouvrir comme après 1ere photo et  la fermer avant 2eme photo ou enlever les espaces en HTML */
+
+/* LES LISTES */
+
+p {
+    margin-bottom: 20px;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.arrow-right li,.ball li {
+    list-style: none;
+}
+
+
+
+.arrow-right li {
+    float: left;
+    margin-top: 20px;
+    margin-right: 30px;
+
+}
+
+.ball li:first-child {
+    margin-top: 20px;
+}
+
+
+i {
+    color: rgb(214, 23, 55);
+    margin-right: 5px;
+}
+
+.fa-circle {
+    color: rgb(189, 189, 189);
+    margin-right: 5px;
+}
+
+.ball li:first-child {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.ball li {
+    font-size: 20px;
+}
+
+.ball li:hover {
+    font-size: 35px;
+    transition: all 0.5s ease-in-out 0s;
+    color: red;
+}
+
+ol li{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+dl dt {
+font-size: 20px;    
+}
+
+/* ----TABLEAU----- */
+
+
+table{
+border: 4px solid #5895f8;   /* bordure 3 valeurs épaisseur, type de trait couleus */
+border-collapse: collapse;
+/* par défaut le bordure contient 2 traits, pour que le trait soit unique on utilise la propriété "collapse" */
+width: 90%;
+/* largeur du tableau par rapport à son contenant donc ici le body /!/ ne pas oublier la régle de l'héritage en CSS */
+margin: 25px;
+}
+
+thead, tfoot {
+    background-color: rgb(198, 234, 255);;
+    border: 2px solid #5895f8;;
+}
+
+tbody {
+    border: 1px solid #5895f8;
+}
+
+th {
+    border: 1px solid #5895f8;
+    /* dotted = pointillés */
+    padding: 4px;
+    /* le padding est une marge interieur */
+    background-color: rgb(198, 234, 255);
+    width: 25%;
+}
+
+td {
+    font-size: 100%;
+    border: 1px solid #5895f8;
+    text-align: center;
+    padding: 5px;
+}
+
+
+/* ----POSITIONNING----- */
+
+.green_box {
+    display: block;
+    margin: 20px auto;
+    background: rgb(38, 204, 135);
+    height: 150px;
+    width: 400px;
+}
+
+.green_box p {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+   line-height: 150px;
+}
+
+
+.red_box {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto;
+    background: rgb(204, 38, 38);
+    height: 400px;
+    width: 400px;
+}
+
+
+.blue_box {
+    position: absolute;
+    bottom: 5px;
+    background: rgb(23, 38, 252);
+    height: 30px;
+    width: 30px;
+
+}
+
+.second_box p{
+    margin-right: 110px;
+    bottom: 400px;
+    position: relative;
+    display: inline-block;
+}
+
+
+/* ----------------ZONING-------------------- */
+#zoning {
+    width: 800px;
+    height: 600px;
+}
+
+
+#zoning div:first-child {
+    background-color: rgb(241, 212, 114);
+    height: 80px;
+    text-align: center;
+
+}
+
+#zoning div:nth-child(2) {
+    float: left;
+    width: 200px;
+    height: 520px;
+    background-color: rgb(161, 204, 126);
+}
+
+#zoning div:last-child {
+    width: 760px;
+    height: 502px;
+    background-color: rgb(76, 97, 59);
+}
+
+
+ #zoning div:last-child img{
+    position: relative;
+    top: 170px;
+    left: 0px;
+}  
+
+.clear {
+    clear: both;
+}
+
+/* #zoning1 {
+    margin: 0 auto;
+    width: 800px;
+    border: 2px solid black;
+}
+
+#zoning1 .header {
+    height: 80px;
+    background-color: darkgrey;
+
+}
+
+#zoning1 aside {
+    width: 30%;
+    height: 500px;
+    background-color: purple;
+    float: left;
+}
+
+#zoning1 section {
+    width: 70%;
+    height: 500px;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    float: left;
+} */
+
+
+/* ---------------------ZONING2---------- */
+
+#zoning2 {
+    color: white;
+    text-align: center;
+    height: 700px;
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgb(165, 45, 45);
+}
+
+#zoning2 aside {
+    float: left;
+    height: 700px;
+    width: 140px;
+    background-color: rgb(52, 82, 52);
+}
+
+
+
+#zoning2 .middle {
+    float: left;
+    height: 700px;
+    width: 320px;
+}
+
+.second_zone p{
+    text-align: center;
+}
+
+
+/* ---------------------ZONING3-------------- */
+
+
+#zoning3 {
+    margin: 0 auto;
+    height: 600px;
+    width: 700px;
+}
+#zoning3 aside {
+    height: 550px;
+    color: white;
+    text-align: center;
+    width: 50%;
+    float: left;
+    background-color: grey;
+}
+
+
+
+#zoning3 aside:last-of-type {
+    background-color: rgb(64, 124, 64);
+}
+
+.bas {
+    text-align: center;
+    height: 50px;
+    background-color: rgb(238, 238, 156);
+}
+
+
+/* -------------------------ZONING4-------------------------- */
+
+#zoning4 {
+    margin: 0 auto;
+    height: 600px;
+    width: 700px;
+    border: 3px solid black;
+}
+
+
+.header {
+    height: 100px;
+    background: rgb(206, 206, 206);
+    line-height: 100px;
+    text-align: center;
+}
+
+.nav {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(104, 160, 104);
+    border-bottom: 10px solid rgb(74, 136, 194);
+
+}
+
+.section {
+    height: 395px;
+    background: url(../img/pexels-photo-531880.jpeg);
+    background-origin: padding-box;
+    background-size: cover;
+    border: 20px solid white;
+}
+
+/* --------------------FIFTH SECTION ------------- */
+
+#five_zone {
+    padding: 0;
+    border: 2px solid black;
+    margin: 0 auto;
+    height: 650px;
+    width: 700px;
+}
+
+.headerFive {
+    line-height: 100px;
+    height: 100px;
+    background-color: rgb(251, 232, 147);
+    text-align: center;
+}
+
+.navFive {
+    line-height: 40px;
+    height: 40px;
+    background-color: rgb(214, 175, 67);
+    border-bottom: 5px solid rgb(189, 155, 5);
+    text-align: center;
+}
+
+.sectionFive {
+    height: 440px;
+    border: 20px solid white;
+}
+
+.footerFive {
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+    background-color: rgb(214, 175, 67);
+
+}
+
+.zone_one,.zone_two,.zone_three,.zone_four {
+    text-align: center;
+    width: 328px;
+    height: 200px;
+    background-color: rgb(189, 155, 5);
+    float: left;
+}
+
+
+.zone_two {
+    background: url(../img/hogwarts-crest-png-5.png) no-repeat 60px 0px;
+    background-size: contain;
+    background-color: rgb(214, 175, 67);
+
+}
+
+
+.zone_three {
+    background: url(../img/harry-potter-1-logo-png-transparent.png) no-repeat 60px 0px;
+    background-size: contain;
+    background-color: rgb(214, 175, 67);
+
+}
+
+
+/* DEBAGGING */
+
+/* #cont{
+  height: 700px;
+   width: 80%;
+   margin: 0 auto;
+   background-color:white;
+
+}
+#cont, .headerFive{
+   height: 80px;
+   background-color: goldenrod;
+   color: black; /*Couleur texte*/
+   /* text-align: center;
+}
+#cont nav{
+ border-bottom: 4px solid black;
+ height: 40px;
+ background:#d6941a;
+ text-align: center;
+ color: #000;
+}
+
+.mainFive {
+    height: 400px;
+}
+#cont .or{
+ height: 200px;
+ width: 50%;
+ background-color: rgb(151, 101, 245);
+ color: #000;
+ float: left;
+}
+
+
+#cont .beige{
+ height: 200px;
+ width: 50%;
+ background-color: rgb(64, 89, 122);
+ text-align: center;
+ float: right;
+
+}
+
+#cont .beige1{
+   height: 200px;
+   width: 50%;
+   background-color:  rgb(151, 101, 245);
+   float: right;
+}
+
+#cont .br{
+   height: 200px;
+   width: 50%;
+   background-color:  rgb(64, 89, 122);
+   float: left;
+}
+
+#footerFive{
+   height: 80px;
+   background-color: goldenrod;
+   color: black; /*Couleur texte*/
+   /* text-align: center;
+} */ 
+
+
+/* -----------------ZONING 6---------------------------- */
+
+.section_six {
+    margin: 60px auto;
+    border: 2px solid black;
+    padding: 0;
+    width: 854px;
+}
+
+
+.haut1 {
+    background-color: rgb(46, 77, 46);
+    text-align: center;
+    width: 200px;
+    height: 250px;
+    float: left;
+}
+
+.haut2 {
+    background-color: rgb(126, 212, 126);
+    text-align: center;
+    width: 450px;
+    height: 250px;
+    float: left;
+}
+
+.menu {
+    text-align: center;
+    width: 850px;
+    height: 40px;
+    background-color:  rgb(214, 175, 67);
+}
+
+.zonegauche {
+    float: left;
+    text-align: center;
+    width: 200px;
+    height: 450px;
+    background-color:  rgb(197, 197, 197);
+
+}
+
+.zonedroite {
+    float: left;
+}
+
+.a,.b {
+    float: left;
+    height: 160px;
+    width: 325px;
+    background-color: rgb(128, 229, 246);
+    text-align: center;
+}
+
+.b {
+     background-color: rgb(25, 125, 143);
+}
+
+
+
+.c,.d,.e,.f {
+    float: left;
+    height: 130px;
+    width: 162.5px;
+    background-color: rgb(31, 112, 69);
+    text-align: center;
+}
+
+.d {
+    background-color: rgb(31, 182, 101);
+}
+
+.e {
+    background-color: rgb(4, 117, 57);
+}
+
+.f {
+    background-color: rgb(31, 175, 168);
+}
+
+
+.footerSix {
+    height: 130px;
+    width: 850px;
+    background-color: rgb(9, 155, 118);
+    text-align: center;
+}
+
+
+/* ---------------SLIDER----------------- */
+
+#slideshow{
+list-style: none;
+position: relative;
+float: left;
+height: 160px;
+width: 650px;
+}
+.slide{
+position: absolute;
+left: 0;
+top: 0;
+opacity: 0;
+transition: opacity 3s; /* Время появления картинки */
+}
+
+.demonstration{
+opacity: 1;
+}
+
+/* #slideshow {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style-type: none;
+    float: left;
+    height: 160px;
+    width: 650px;
+    background-color: rgb(12, 107, 124);
+    text-align: center;
+
+}
+
+
+.slide:first-child {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(173, 173, 49);
+    transition: opacity 2s;
+}
+
+.slide:nth-child(2) {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: grey;
+    transition: opacity 2s;
+}
+
+.slide:last-child {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(106, 106, 170);
+    transition: opacity 2s;
+    
+}
+
+.demonstration {
+    opacity: 1;
+} */
+
+
+/* -----------------BARS------------ */
+
+#additional {
+    width: 980px;
+    height: 1500px;
+}
+
+
+.red {
+    color: rgb(230, 226, 21);
+    line-height: 40px;
+    padding-left: 10px;
+    height: 40px;
+    margin-bottom: 20px;
+    width: 200px;
+    background: rgb(211, 14, 14);
+}
+
+.brown {
+    color: rgb(230, 226, 21);
+    line-height: 40px;
+    padding-left: 10px;
+    height: 40px;
+    margin-bottom: 20px;
+    width: 450px;
+    background: rgb(116, 38, 38);
+}
+
+.green {
+    color: rgb(230, 226, 21);
+    line-height: 40px;
+    padding-left: 10px;
+    height: 40px;
+    margin-bottom: 20px;
+    width: 800px;
+    background: rgb(7, 173, 118);
+}
+
+/* -----------------FLOATING CARES---------- */
+
+.care {
+    float: left;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 200px;
+    border: 10px solid white;
+    background-color: grey;
+
+}
+
+.care:hover {
+    border-radius: 100px;
+    transform: rotate(45deg);
+}
+
+
+/* ------------THE LAST FLOAT-------------- */
+
+#sectionSeven {
+    width: 800px;
+    height: 480px;
+    margin: 30px auto;
+
+}
+
+.topSeven,.footerSeven {
+    background-color: rgb(77, 119, 77);
+    width: 760px;
+    height: 40px;
+}
+
+.pink,.carott,.bluemarine,.peach {
+    height: 200px;
+    width: 190px;
+    float: left;
+    background-color: pink;
+}
+
+.pink:hover {
+	margin-left: -30px;
+}
+
+.peach {
+    background-color: rgb(223, 110, 34);
+}
+
+.peach:hover {
+    transform: rotate(160deg);
+}
+
+.carott {
+    background-color: coral;
+}
+
+.carott:hover {
+    transform: scale(1.3);
+}
+
+
+.bluemarine {
+    background-color: rgb(50, 179, 140);
+}
+
+.bluemarine:hover {
+    transform: rotate(360deg);
+    border-radius: 50%;
+    
+}
+
+/* ---------------FLEXBOX-------------------- */
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexfirst {
+    line-height: 100px;
+    font-size: 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(170, 15, 15);
+    color: white;
+    font-weight: 30px;
+    border: 3px solid white;
+}
+
+
+/* -----------------FLEXBOX2-------------- */
+#section_flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexOne {
+    display: flex;
+}
+
+.hautflex1 {
+    background-color: rgb(46, 77, 46);
+    text-align: center;
+    width: 200px;
+    height: 250px;
+}
+
+.hautflex2 {
+    background-color: rgb(126, 212, 126);
+    text-align: center;
+    width: 450px;
+    height: 250px;
+}
+
+.menuflex {
+    text-align: center;
+    width: 850px;
+    height: 40px;
+    background-color:  rgb(214, 175, 67);
+}
+
+.mainFlex {
+    width: 880px;
+    display: flex;
+}
+
+.gaucheflex {
+    text-align: center;
+    width: 200px;
+    height: 450px;
+    background-color:  rgb(197, 197, 197);
+}
+
+.droiteflex {
+    width: 680px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aflex,.bflex {
+    height: 160px;
+    width: 325px;
+    background-color: rgb(128, 229, 246);
+    text-align: center;
+}
+
+.bflex {
+     background-color: rgb(25, 125, 143);
+}
+
+.slideflex {
+    background-color: brown;
+    height: 160px;
+    width: 650px;
+}
+
+.cflex,.dflex,.eflex,.fflex {
+    height: 130px;
+    width: 162.5px;
+    background-color: rgb(31, 112, 69);
+    text-align: center;
+}
+
+.dflex {
+    background-color: rgb(31, 182, 101);
+}
+
+.eflex {
+    background-color: rgb(4, 117, 57);
+}
+
+.fflex {
+    background-color: rgb(31, 175, 168);
+}
+
+.footerFlex {
+    height: 130px;
+    width: 850px;
+    background-color: rgb(9, 155, 118);
+    text-align: center;
+}
+
+button {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 350%;
+    color: slategray;
+}
+
+button:hover {
+    color: pink;
+    transition: 1s;
+}
+
+
+/* -------------LES LIENS AND MENUS-------------------- */
+
+#firstul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#firstul li {
+    margin: 20px 5px;
+    border-radius: 10px;
+    list-style: none;
+    background: red;
+    color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#firstul li:hover {
+    transform: scale(1.3);
+
+}
+
+
+/* ---------------ANOTHER MENU---------------- */
+
+#secondul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#secondul li {
+    padding: 10px;
+    margin: 20px 5px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: white;
+    border: 1px solid pink;
+
+}
+
+#secondul li a {
+    text-decoration: none;
+    color: pink;
+    text-transform: uppercase;
+}
+
+#secondul li:hover {
+   background-color: rgb(255, 255, 170);
+   transition: 1s ease-in-out;
+
+}
+
+
+/* MENU DEROULANT */
+
+/* 
+.menu_deroulant ul {
+    
+    position: relative;
+}
+
+.menu_deroulant ul li {
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 5px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: white;
+    border: 1px solid pink;
+
+}
+
+.submenu li {
+    position: relative;
+    padding: 10px;
+    margin: 20px 5px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: white;
+    border: 1px solid pink;
+
+}
+
+.menu_deroulant ul li a {
+    display: block;
+    text-decoration: none;
+    color: pink;
+    text-transform: uppercase;
+}
+
+.submenu li a {
+    display: block;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+    color: pink;
+    text-transform: uppercase;
+}
+
+
+.submenu{
+    position: absolute;
+    display: none;
+}
+
+.submenu li{
+    position: relative;
+    display: none;
+}
+
+.menu_deroulant .submenu li:hover {
+    display: block;
+} */
+
+
+/* CORRECTION */
+
+
+#menuDeroulant {
+    height: 650px;
+
+}
+
+#menuDeroulant nav {
+    background: transparent;
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#menuDeroulant nav ul li {
+    float: left;
+    list-style: none;
+    width: 20%;
+}
+
+
+#menuDeroulant ul ul {
+    /* on definit les listes qui sont dans les listes */
+    display: none;
+
+}
+
+#menuDeroulant nav ul li ul li {
+    border-top: 1px solid pink;
+    width: 100%;
+}
+
+#menuDeroulant nav li {
+    background: gainsboro;
+}
+
+
+#menuDeroulant nav li a {
+    text-decoration: none;
+    color: black;
+    padding: 4px 0 4px;
+    display: block;
+    /* pour qu'ils s'etendent sur toute la lonheur de son conteneur */
+    background: mistyrose;
+}
+
+#menuDeroulant nav ul.niveau1 li.sousMenu:hover ul.niveau2{
+    display: block;
+}
+
+/* Fin de ma page lien et menu */
+/* FORMULAIRE */
+
+form {
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 60%;
+    background-color: rgb(211, 79, 79);
+    color: white;
+}
+
+
+label { 
+float: left;
+width: 250px;
+}
+
+.file {
+    width: 250px;
+    float: left;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+
+.fraise,.mangue,.orange {
+    width: 80px;
+}
+
+.mangue {
+    margin-right: 180px;
+}
+
+form p {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+
+/* VUDEO/AUDIO */
+
+/* .fullwidth-bg {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    padding-top:45%;
+    /* overflow: hidden; */
+    /* z-index: -100;
+}
+ 
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+ 
+.video-layer{
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+ 
+.video-layer h1 {
+    text-align:center;
+    color:#fff;
+    font-size: 20px;
+    margin-top: 17%;
+} */
+/*  */
+/* @media (max-width: 767px) {
+    .fullwidth-bg {
+        background: url(../video/videoBackground.mp4) center center / cover no-repeat;
+    }
+ 
+    .fullwidth-bg__video {
+        display: none;
+    }
+} */ 
+
+
+@font-face {
+  font-family: Moderne Sans;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/moderne_sans.woff2)
+}
+* {
+  box-sizing: border-box;
+}
+
+video { 
+    position: absolute;
+    top: 450px;
+    left: 700px;
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+}
+div#fashion {
+    margin-bottom: 200px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#fashion h2 { 
+  font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 2rem 3rem 0;
+  mix-blend-mode: overlay;
+  color: #fff;
+  font-weight: 100;
+}
+
+
+/* CORRECTION VIDEO FOND */
+/* 
+.videoFond {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.videoFond video {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+videoTexte {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.videoFond p{
+    position: absolute;
+    z-index: 2;
+    width: 500px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.6);
+    left: 250px;
+    top: 100px;
+    padding: 20px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+ */
+
+ iframe[allowFullscreen] {
+     /* Cet atribut, lorsqu'il est TRUE(vrai) indique que l'IFRAME
+     intégré peut-etre passé en pleine écran avec
+     la methode Element.requestfullscreen() */
+     width: 100%;
+ }
+
+ /* -----------------ANIMATION----------- */
+
+.overlay{
+  display:none;
+  position: absolute;
+}
+
+a {
+    margin-bottom: 40px;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white; 
+}
+
+
+a:hover .overlay{
+    padding: 0px 10px 10px 10px;
+    border-radius: 20px;
+    background: pink;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+    text-align: center;
+    background-color: rgb(177, 177, 177);
+    box-shadow: inset 2px 2px 5px rgba(10, 10, 10, 0.5), 1px 1px 5px rgb(0, 0, 0);
+}
+
+
+/* CORRECTION */
+/* 
+.infobulle {
+    height: 250px;
+    width: 500px;
+    margin: auto;
+    padding-top: 15px;
+    background: slategrey;
+    box-shadow: 0 0 50px #222 inset;
+    /* effet à l'interieur de l'element */
+/* }
+
+.infobulle p {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.infobulle a {
+    color: white;
+    text-shadow: 0 -2px 0 black;
+    text-decoration: none;
+}
+
+.infobulle a:hover {
+    text-shadow: 0 1px 2px black;
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 1px 0 rgba(255, 255, 255 ,0.4);
+    color: white;
+}
+
+.infobulle a span {
+    position: absolute;
+    padding: 15px;
+    margin-top: 23px;
+    margin-left: -35px;
+    background: rgba(0,0,0,0.9);
+    opacity: 0;
+    color: pink;
+    transform: scale(0) rotateZ(-12deg);
+    transition: .25s;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+
+.infobulle a:hover span {
+    opacity: 1;
+    transform: scale(1) rotateZ(0);
+}
+
+.infobulle a span:before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    border-bottom: 6px solid rgba(0,0,0,0.9);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+} */ 
+
+/* IMAGES TRANSITIONS */
+
+.harry_potter {
+    margin: auto;
+    width: 600px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    filter: blur(0);
+    transition: .3s ease-in-out;
+}
+
+img:hover {
+        transform: scale(1.4);
+        filter: blur(0px);
+}
+
+
+img:hover ~ img {
+    filter: blur(15px);
+}
+
+/* CORRECTION */
+/* 
+.imgEffets {
+    width: 320px;
+    height: 320px;
+    margin: 70px auto;
+}
+
+.imgEffets li {
+    list-style: none;
+    float: left;
+    width: 141px;
+    height: 150px;
+    margin: 5px;
+}
+
+.imgEffets li:nth-child(3) {
+    clear: both;
+}
+
+.imgEffets img {
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    box-shadow: 0 0 3px black;
+    transition: .5s cubic-bezier(0,3,.4.1);
+}
+
+.imgEffets li:hover img {
+    z-index: 2;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px black;
+}
+
+
+.imgEffets:hover li:not(:hover) img {
+    /* we make hover for all the pictures unless the hovered one */
+    /* filter: grayscale(1) blur(8px);
+} */ 
+
+
+/* ------------------TRANSITION----------------- */
+/* .rotation {
+    margin: auto;
+    width: 700px;
+    height: 400px;
+    background: linear-gradient(to bottom, pink, white );
+}
+
+
+
+
+.rotate {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    background: rgb(216, 108, 108);
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+  .rotate:hover {
+    transition: 0.9s;
+   transform: rotateZ(180deg);
+  }
+
+  .line {
+      display: block;
+      position: relative;
+      top: 60px;
+      border: 2px solid black;
+  }
+
+.line::before{
+      display: none;
+  } */
+
+
+  /* CORRECTION */
+#menuRotate{
+    height: 360px;
+    width: 576px;
+    margin: 100px auto;
+    background: mistyrose;
+    position: relative; 
+    overflow: hidden;
+    border: 2px solid pink;
+}
+#menuRotate .masque{
+    position: absolute;
+    z-index: 50;
+    width: 585px;
+    height: 135px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(pink, mistyrose);
+}
+#menuRotate .ombre{
+    position: absolute;
+    z-index: 40;
+    width: 300px;
+    height: 6px;
+    box-shadow: 0px 100px 3px black;
+    border-radius: 75px / 3px; 
+    top: 32px;
+    left: 142px;
+}
+
+#menuRotate dl{
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 155px;
+    color: white;
+    text-align: center;
+    background: CRIMSON;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.7);
+    transform-origin: 50% 120px;
+    animation: bounceOut 0.7s ease-in-out;
+}
+#menuRotate dt{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    padding-top: 5px;
+}
+#menuRotate dd{
+    transform: rotate(180deg);
+}
+#menuRotate dd a{
+    /* display: block; */
+    height: 24px;
+    /* padding: 3px 0;  */
+    color: white;
+    text-decoration: none;
+    margin:0 auto;
+   
+}
+#menuRotate dd a:hover{
+    background: rgba(255,255,255,0.1);
+}
+#menuRotate dl:hover{
+    transform: rotate(-180deg);
+    animation: bounceIn 0.7s ease-in-out;
+}
+@keyframes bounceIn{
+    from{transform: rotate(0deg);}
+    75%{transform: rotate(-200deg);}
+    90%{transform: rotate(-175deg);}
+    to{transform: rotate(-180deg);}
+}
+@keyframes bounceOut{
+    from{transform: rotate(0deg);}
+    0%{transform: rotate(-180deg);}
+    10%{transform: rotate(-165deg);}
+    to{transform: rotate(-360deg);}
+}
+/*********************************  FIN PAGE ANIMATION ***********************************/
+

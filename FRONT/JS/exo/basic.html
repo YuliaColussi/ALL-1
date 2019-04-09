@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: orange;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:hover, a:focus {
+            text-decoration: underline;
+            outline: thin solid gold;
+        }
+
+        a:visited {
+            color: teal;
+        }
+
+        a:active {
+            color: crimson;
+            }
+
+            div {
+                padding: 1rem;
+            }
+/* <!-- 
+            :target {
+                border-left: 2px solid silver;
+                background-color: lightblue;
+            } --> */
+
+            #chap1:target {
+                background: pink;
+            }
+
+            #chap2:target {
+                background: rgb(184, 78, 95);
+            }
+
+            #chap3:target {
+                background: rgb(206, 14, 46);
+            }
+            /* selecteur d'attribute: se lit tout les éléments , qui sont d'attribute TITLE */
+
+            [title]{
+                font-weight: bold;
+            }
+
+            a[href^=https] {
+                display: inline-block;
+                /* les margins et paddings ne fonctions pas avec la display: inline; donc si je veux mettre
+                un padding et margin sur la'élément comme un lien donc il faut transformer
+                son display (block ou inline-block) */
+                margin-bottom: 2rem;
+                border-bottom: 3px dotted pink;
+                padding: .5rem 2rem .5rem .5rem;
+                /* 0.5 = .5rem */
+                /* épaisseur de bordure */
+
+                background:silver url(../images/lien_externe.svg) no-repeat;
+               /* background-position: 0 0 , en haut à gauche par defaut */ 
+               /* background-position: 100% 50%; -right et center / background-position: right center;*/ 
+               background-position: right .25rem;
+               background-size: 1.5rem auto;
+               /* largaur de 1.5rem et hauteur homotétique = la hauteur est automatiquement
+               calcilée en fonction de la largeur */
+
+               /* la meme chose mais plus courte: */
+               background: silver url(../images/lien_externe.svg) no-repeat right .25rem;
+            }
+
+            /* selecteur d'attricute: cible tous les liens dans l'attribute href commence par http */
+
+
+    </style>
+</head>
+<body>
+    <!-- lien absolu: vers une page extérieure à mon site, l'attribute contient
+        TOUJOURS une address wen complète avec le protocole http.-->
+    <a href="https://www.aplle.com" title="lien vers apple">Lien vers Apple</a>
+    <a href="https://www.transavia.fr" title="lien vers transavia">Lien vers Apple</a>
+    <nav>
+    <a href="#chap1">Chapter 1</a>
+    <a href="#chap2">Chapter 2</a>
+    <a href="#chap3">Chapter 3</a>
+    </nav>
+    <section>
+    <div id="chap1">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de textepour réaliser un liv</div>
+    <div id="chap2">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv</div>
+    <div id="chap3">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv</div>
+    </section>
+</body>
+</html>

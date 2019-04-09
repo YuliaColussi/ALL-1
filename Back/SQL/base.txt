@@ -1,0 +1,180 @@
+--------------- Connexion à la base de donnée BDD ---------------------------
+
+mysql -u root -p
+
+--------------------Afficher les BDD------------
+
+SHOW DATABASES;
+
+--------------------------Créer une BDD-------------------
+
+CREATE DATABASE nom_de_la_BDD;
+
+--------------------Sélectionner une BDD------------
+
+USE nom_de_la_BDD;
+
+----------------Pour créer le table dans la BDD--------
+
+-----------------Type de donnée(INT (a full number with no virgule), 
+VARCHAR(string so if the internot will put the bumbers - it will be rerfused), 
+TEXT(description)), FLOAT(avec virgule));-------
+
+CREATE TABLE fruits (id_fruit INT(3), nom VARCHAR(60), origine VARCHAR(50), 
+calibre INT(1), prix FLOAT, categorie VARCHAR(20));
+
+-----------------Insertion dans la BDD (putting the table)--------------------;
+
+INSERT INTO fruits (id_fruit, nom, origine, 
+calibre, prix, categorie) VALUES ('1', 'pomme', 'France', '5', '12,50', 'Golden');
+
+
+-----------------------Afficher toutes les tables------------------
+
+SHOW TABLES;
+
+-------------Pour afficher tous que dans la table-----------------------------
+
+ SELECT * FROM fruits;
+
+ --------------------To choose some exact subjects in the table -----------
+
+ SELECT nom, categorie FROM fruits;
+
+--------------------I added two more fruits---------------------
+ 
+INSERT INTO fruits (id_fruit, nom, origine, 
+calibre, prix, categorie) VALUES ('2', 'orange', 'France', '7', '15,50', 'Orangina');
+
+INSERT INTO fruits (id_fruit, nom, origine, 
+calibre, prix, categorie) VALUES ('3', 'pinapple', 'France', '9', '17,50', 'SpongeBob House');
+
+
+------------------Supprimer de la ligne de la table avec une condition---------------
+
+DELETE FROM nom_de_la_TABLE WHERE condition;
+DELETE FROM fruits WHERE categorie = 'Golden';
+
+-------------------We change some notions at the chosen paramethre--------------
+
+UPDATE nom_de_la_TABLE SET nom_colonne condition;
+UPDATE fruits SET calibre = '7' WHERE id_fruit = '3';
+
+
+-----------------Supprimer tout le contenu d'une table---------------------
+
+DELETE FROM nom_de_la_TABLE; /!\ si vous faite cela vous effacerez tout le contenu de la table /!\
+
+-------------To change few things at the same time, but we should always base on smth that doesnt change which is an id---------------
+
+UPDATE fruits SET origine = 'Espagne', calibre = '4', prix = '3.99' WHERE id_fruit = '3';
+
+----------------------------We add a new column in a table----------------------
+
+ALTER TABLE fruits ADD commerce VARCHAR (50);
+
+--------------------We are adding info into the column----------------------
+
+UPDATE fruits SET commerce = 'supermarche' WHERE id_fruit ='2';
+
+
+-----------Opérateurs de comparaison----------------
+
+= Egale
+<> Pas égale
+!= Pas égale
+> Supérieur
+< Inferieur
+>= Supérieur ou égale à
+<= Inférieur ou égale à
+IN liste de plusieur valeurs possible BETWEEN recherche des valeurs comprise dans un interval donnée
+(utile pour les nombres ou dates)
+LIKE  recherche en spécifiant le début, le milieu ou la fin d'un mot
+IS NULL valeur est nulle 
+IS NOT NULL valeur n'est pas nulle
+
+
+cmd c - pour sortie
+
+--------------------We have selected the lines between 2 and 5 (we used BETWEEN)-----------------
+ SELECT * FROM bonbons WHERE id_bonbon BETWEEN 2 AND 5;
+
+
+ --------------------choose some line that in NOT between the demanded lines------------------
+
+  SELECT * FROM bonbons WHERE id_bonbon NOT BETWEEN 2 AND 6;
+
+  ---------------------order by alphabet---------------------
+  ORDER BY 
+
+  ----------------choose some at the same time -------------------------
+
+  SELECT * FROM stagiaires WHERE id_stagiaire BETWEEN 1 AND 5 AND 7;
+  SELECT * FROM stagiaires WHERE yeux = 'marron';
+
+  -----------------to turn the id upside down in the table ------------------------
+
+  SELECT * FROM stagiaires ORDER BY id_stagiaire DESC;
+
+  -----------------where the name starts from the same letter------------------------
+
+  SELECT * FROM stagiaires WHERE prenom LIKE 'l%';
+
+
+  SELECT * FROM stagiaires WHERE prenom LIKE 'j%a%n';
+
+  ------------------Afficher un nombre limité de données----
+
+  SELECT * FROM stagiaires LIMIT 2;
+
+  -------------------Afficher un nombre limité de données en sautant des lignes ----------
+
+  SELECT * FROM stagiaires LIMIT 1,2;
+  (le premier chiffre après LIMIT représant l'offset donc le nombre de ligne ignoré. Le second chiffre correspond aux
+  nombres de données à afficher)
+
+
+
+  
+CREATE TABLE produit (id_produit INT PRIMARY KEY AUTO_INCREMENT NOT NULL, nom VARCHAR(60), origine VARCHAR(50), 
+calibre INT(1), prix FLOAT, categorie VARCHAR(20));
+
+CREATE TABLE produit (id_produit INT(3) PRIMARY KEY AUTO_INCREMENT NOT NULL, nom_produit VARCHAR(60), categorie_produit VARCHAR(50), 
+reference_produit INT(10), stock_produit INT(10), date_produit DATE);
+
+
+
+
+INSERT INTO produit (nom_produit, categorie_produit, 
+reference_produit, stock_produit, date_produit) VALUES ('pomme de terre', 'legume', '52', '165', '10.10.19');
+
+INSERT INTO produit (nom_produit, categorie_produit, 
+reference_produit, stock_produit, date_produit) VALUES ('pomme de terre', 'legume', '52', '165', '10.10.19');
+
+INSERT INTO produit (nom_produit, categorie_produit, 
+reference_produit, stock_produit, date_produit) VALUES ('pomme de terre', 'legume', '52', '165', '10.10.19');
+
+INSERT INTO produit (nom_produit, categorie_produit, 
+reference_produit, stock_produit, date_produit) VALUES ('pomme de terre', 'legume', '52', '165', '10.10.19');
+
+INSERT INTO produit (nom_produit, categorie_produit, 
+reference_produit, stock_produit, date_produit) VALUES ('pomme de terre', 'legume', '52', '165', '10.10.19');
+
+
+
+ALTER TABLE produit ADD date_vente DATE;
+
+
+UPDATE produit SET date_vente = '2012-20-20' WHERE id_produit ='1';
+UPDATE produit SET date_vente = '2018-20-20' WHERE id_produit ='2';
+UPDATE produit SET date_vente = '2019-20-20' WHERE id_produit ='3';
+UPDATE produit SET date_vente = '2016-20-20' WHERE id_produit ='4';
+UPDATE produit SET date_vente = '2015-20-20' WHERE id_produit ='5';
+
+UPDATE produit stock_produit = '500' WHERE id_produit = 1;
+
+
+
+UPDATE produit SET date_vente = '2015-12-20' WHERE id_produit ='3';
+UPDATE produit SET date_vente = '2015-11-20' WHERE id_produit ='2';
+UPDATE produit SET date_vente = '2015-10-20' WHERE id_produit ='1';

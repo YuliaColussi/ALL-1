@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .listeFruits{
+        /* display: none; */
+        /* ici on cache  la liste*/
+        background-color: firebrick;
+        color: white;
+        list-style: none;
+        padding: 10px;
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 60%;
+    }
+
+    li {
+        margin-right: 20px;
+    }
+
+    li:hover {
+        font-size: 2rem;
+        color: rgb(33, 196, 211);
+    }
+
+    .affiche {
+        display: none;
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <ul class="listeFruits">
+        <li>Mango</li>
+        <li>Avocado</li>
+        <li>Pear</li>
+    </ul>
+    <button class="btn">Affiche</button>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+// <!-- 
+//         $(function(){
+//             // $('.btn').on('click', function(){
+//             //     $('.listeFruits').css('display','none');
+//             //     $(this).toggleClass('.affiche');
+
+//             // })
+
+//             // var affiche = function(){
+//             //      $('.listeFruits').toggleClass('.affiche');
+//             // }
+
+//             //   $('.btn').on('click', affiche);
+
+
+//             var open = function () {
+//                 $('.listeFruits').toggleClass('affiche');
+//             }
+//             // on éxécute la fonction au clic sur la balise .carre
+
+//             $('.btn').on('click', open);
+
+//         }) -->
+
+
+        // CORRECTION
+
+        $(function(){
+
+            // ici on ajoute un événement click sur l'élément qui a
+            // la class .btn est on éxécute une fonction anonyme
+            $('.btn').on('click', function(){
+
+                // on ajoute un toogleClass pour ajouter et supprimer un class sur
+                //  l'objet qui a la class .listeFruits
+                $('.listeFruits').toggleClass('affiche');
+            })
+        })
+
+
+    </script>
+</body>
+</html>

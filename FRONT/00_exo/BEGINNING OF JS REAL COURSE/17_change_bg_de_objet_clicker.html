@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Change le couleur de fond</button>
+    <div class="unDiv">Ici le div</div>
+    <script>
+        // COMMENT ON FAIRE
+
+        // FAIRE une FUNCTION nomme changeBg() qui contient 1 seule instruction : alert(ok);
+        // Cette fonction doit etre déclenchée lors du clic sur le bouton
+
+        var btn = document.querySelector('button');
+        var monDiv = document.querySelector('.unDiv');
+
+        function random(number) {
+            // Math.floor convertit en nombre entier
+            return Math.floor(Math.random() * number);
+            // ici on convertit en nombre entier (sans virgule) le number
+            // rendomnisé et multiplié par la valeur number(qui est l'argument donné en entrée de
+            // la fonction)
+        }
+
+
+
+        function changeBg(e) {
+            e.target.style.backgroundColor = 'hsla(' + random(360) + ', 100%, 50%, 1)';
+            // document.body.style.backgroundColor = 'hsla(' + random(360) + ', 100%, 50%, 1)';
+            // alert('OK');
+        }
+
+        btn.addEventListener('click', changeBg);
+        monDiv.addEventListener('click', changeBg);
+
+
+
+
+    </script>
+</body>
+
+</html>

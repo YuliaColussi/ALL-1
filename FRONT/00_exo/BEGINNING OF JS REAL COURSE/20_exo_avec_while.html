@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exo prénoms avec WHILE</h1>
+    <p>ici on va demander à l'internaut son prénom,
+        ainsi les prénoms des frères et soeurs. On va
+        afficher une boite de dialogue avec la méthode prompt()
+        pour chaque prénom. Comment savoir à l'avance
+        combien il y aura de frèrers et soeurs?
+    </p>
+    <p>
+        Nous allons utiliser une bocule WHILE qui va
+        demander, à chaque passage dans la boucle, un
+        prénom supplimentaire.<br>
+        La boucle ne s'arrètera que lorsque
+        l'utilisateur choisira de ne plus entrer de prénom.
+    </p>
+    <script>
+
+
+    var prenoms = '',
+        prenom,
+        proceed = true;
+
+
+//  ici ATTENTION on a une boucle infinie :
+
+// puisque la condition = true  est toujours vraie,
+// la boucle continue de jouer et donc le navigateur affiche promptet ne s'arrète
+// jamais de l'afficher puique proceed n'est jamais FALSE
+
+//  Une boucle unfinie!!!!!!
+
+        // while(proceed){
+        //     prenom = prompt('Entrez un prénom');
+        // }
+        // alert(prenom);
+
+        while(proceed){
+            prenom = prompt('Entrez un prénom');
+            
+            // ici on va tester
+            // SI (l'utilisatur entre un prénom dans la prompt),
+            // ALORS on ajoute ce prénom  dans la tableau prenoms 
+            // SINON
+            // on sort de la boucle et mettent la variable procced à FALSE
+
+            if(prenom){
+                prenoms += prenom + ' ';
+
+                // ici on ajoute le nouveau prénom au tableau prénoms suivi d'une aspace
+
+            } // FIN de IF
+            else {
+                proceed = false;
+
+                // puisqu'aucun prénom n'a
+                // été entré, on fait en sorte d'invalider
+                // condition en mettant proceed à false
+
+            }// FIN de ELSE
+
+        }  // FIN de la boucle WHILE
+        document.write(prenoms);
+        // affiche les prénoms les uns à la suite des autres
+
+    </script>
+</body>
+</html>

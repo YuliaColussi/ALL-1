@@ -1,0 +1,103 @@
+html{
+    font-size: 62.5%; /* base 10px */ 
+}
+
+body {
+    font: 1.4rem/1.5 arial, helvetica, sans-serif;
+    margin: 0;
+}
+
+/* LAYOUT GLOBALE */
+
+h1 {
+    font-size: 5rem;
+}
+
+header .container-fluid{
+    position: relative;
+    z-index: 0;
+}
+
+header .navbar-toggler {
+    position: absolute;
+    top:10px;
+    right: 10px;
+    z-index: 1;
+    border-color: rgb(224, 224, 224);
+}
+
+/* LIST*/
+
+header #navbarToggleExternalContent {
+    position: absolute;
+    width: 100%;
+    top: 36px;
+    z-index: 1;
+
+}
+
+/* SLIDER */
+.bd-example {
+    position: relative;
+    right: 0;
+    z-index: 0;
+}
+
+.carousel-caption {
+    display: block;
+    position: absolute;
+    top: 50px;
+
+}
+
+/* MAIN */
+
+     .sectionVoiture {
+         margin: 80px 0px 80px 0px;
+     }
+
+     .description{
+         margin-left: 30px;
+     }
+     
+     i {
+         padding-top: 3px;
+         color: white;
+     }
+
+/* FOOTER */
+
+footer img {
+    position: absolute;
+    right: 0;
+    margin-right: 60px;
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    position: relative;
+    margin-bottom: 10rem;
+    /* width: 10rem;
+    height: 11rem; */
+}
+
+/* FORM */
+.form-group {
+    display: flex;
+    padding: 0;
+}
+
+.form-inline {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-right: 0;
+    padding-left: 10px;
+    position: absolute;
+    bottom: 120px;
+}
+
+form button {
+    width: 200px;
+    height: 50px;
+    opacity: .8;
+}

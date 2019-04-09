@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        /* begginning of a personal reset */
+
+        html {
+            
+            font-size: 62.5%; /*  62.5% = 10px (10 / 16 * 100) */
+            /* on fais en % a cause de bags sue IE */
+        }
+
+
+
+        body{
+            margin: 0;
+            font-size: 1.4rem ;
+            /* 1.4rem = 14px; */
+            font-family: arial, helvetica, sans-serif;
+        }
+
+
+
+        /* THE END OF A PERSONAL  RESET */
+    
+    h1 {
+        padding: 1rem;  /* 1rem ici = 10px */
+        margin-bottom: 0;
+        border: 2px solid crimson;
+        width: 300px;
+
+        /* la taille calculée de la boite du h1:
+        border-left 2px + padding-left 10px + width 300px
+        + padding-right 10px + border-right 2px = TOTAL 324px*/
+    }
+
+    p {
+        margin-top: 0;
+        border: 2px solid gold;
+        width: 300px;
+        padding: 1rem;
+
+              /* la taille calculée de la boite du p:
+        border-left 2px +  width 300px
+        + border-right 2px = TOTAL 304px*/
+    }
+
+    article {
+        border: 2px solid silver;
+        width: 50%;/* 300px */
+        min-width:  160px;
+        max-width: 600px;
+        /* pour eviter que cette article est plus petite que 160px on utilise le min-height */
+        padding: 1rem;
+        /* largeur calculée : 324px; */
+        box-sizing: border-box;
+        /* avec le box-sizing : border-box, la largeur calculée sera de 300px;
+        qules que soient les bordures ou les paddings */
+    }
+
+    h2 {
+        background-color: coral;
+        margin: 0 auto;
+        width: 57,97%; /*160px */
+        /* a convertir en % */
+        /* cible 160px devise par contexte  (160 / (300 - 24)) * 100= 276px = resultat en %*/
+    }
+
+    
+    </style>
+</head>
+<body>
+    <!-- liste de balises display:
+    body, div, p, h1-h6, ul, ol, li, dt, dd
+    new html5: section, article, aside, nav, header, footer
+
+    Les balises BLOCK sont des boites qui font 100% de largeur par défaut
+    et qui sont affichées les une sous les autres  verticallement,
+    l'espace vertical qui sépare les boites c'est de la marge.
+
+    liste des balises inline: a, span, label, address, strong, em
+    
+    liste de balises inline-block: 
+    img, audio, video, canvas , input, select, textarea
+
+    liste de balises diplay: table; : table
+    liste de balises diplay: table-row; : tr
+    liste de balises diplay: table-cell; : td -->
+
+    <h1>HTML</h1>
+    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv</p>
+
+    <h1>CSS c'est super Souk</h1>
+    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv</p>
+
+<article>
+    <h2>Histoire du web</h2>
+     Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv
+</article>
+
+</body>
+</html>

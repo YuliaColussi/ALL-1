@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <style>
+
+
+            /* selecteurs universel, se lit toutes les balises
+            le box-sizing: border-box permet de donner des paddings et borders sans augmenter
+            la taille calculée de boite . Donc la width represent la taille TOTALE de TOUTES les boites*/
+
+
+            *{
+                box-sizing: border-box;
+
+            }
+
+            .container {
+                width: 80%;
+                border: 2px solid olivedrab;
+                margin: 0 auto;
+                min-width: 600px;
+        
+            }
+
+            .container figure {
+                border: 2px orange solid;
+                width: 25%;
+                margin: 0px;
+                float: left;
+                padding: .5rem;
+
+            }
+
+            figure img {
+                max-width: 100%;
+            }
+        
+            /* .container img {
+                width: 40%;
+            }
+         */
+            .flt_l {
+                float: left;
+            }
+        
+        
+            .clear {
+                clear: both;
+                display: table;
+            }
+        
+        
+            .clearfix:after {
+                content: 'FAUX FOOTER';
+                display: table;
+                clear: both;
+            }
+
+
+            /* RESPONSIVE DESIGN */
+            /* Les media queris */
+/* <!-- pour tout les ecrans qui sont plus petit que 640px on va mettre 2 figures par ligne --> */
+
+@media (max-width: 640px) {
+    body {
+        background: hotpink;
+    }
+    .container {
+        width: 100%;
+    }
+    .container figure {
+        width: 50%;
+    }
+}
+
+/* <!-- pour tout les ecrans qui sont plus petit que 480px on va mettre 1 figures par ligne --> */
+
+@media (max-width: 480px) {
+    body {
+        background: teal;
+    }
+
+    .container figure {
+        width: 100%;
+    }
+}
+
+
+
+
+
+        </style>
+</head>
+<body>
+    <div class="container clearfix">
+       <figure>
+           <img src="images/montage.jpg" alt="">
+           <figcaption>Le Cervin</figcaption>
+       </figure>
+       
+       <figure>
+           <img src="images/montage.jpg" alt="">
+           <figcaption>Le Cervin</figcaption>
+       </figure>
+
+       <figure>
+           <img src="images/montage.jpg" alt="">
+           <figcaption>Le Cervin</figcaption>
+       </figure>
+
+       <figure>
+           <img src="images/montage.jpg" alt="">
+           <figcaption>Le Cervin</figcaption>
+       </figure>
+
+       <figure>
+           <img src="images/montage.jpg" alt="">
+           <figcaption>Le Cervin</figcaption>
+       </figure>
+
+       <figure>
+           <img src="images/montage.jpg" alt="">
+           <figcaption>Le Cervin</figcaption>
+       </figure>
+
+       <figure>
+           <img src="images/montage.jpg" alt="">
+           <figcaption>Le Cervin</figcaption>
+       </figure>
+
+       <figure>
+           <img src="images/montage.jpg" alt="">
+           <figcaption>Le Cervin</figcaption>
+       </figure>
+
+    </div>
+</body>
+</html>

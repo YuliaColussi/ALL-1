@@ -1,0 +1,50 @@
+#contenu{
+    padding: 40px;
+    width: 800px;
+    height: 900px;
+    margin: 60px auto;
+    border: 2px solid grey;
+    background: rgb(230, 230, 230);
+    border-radius: 10%;
+}
+
+h1 {
+    text-align: center;
+    color: grey;
+    font-size: 40px;
+}
+
+.card {
+    background: url(../img/vector-outline-floral-pattern.jpg);
+    margin: 0px 20px 20px 40px;
+    float: left;
+    width: 220px;
+    height: 300px;
+    border-radius: 10%;
+}
+
+.card1 {
+    background: url(../img/vector-outline-floral-pattern.jpg);
+    margin: 0px 20px 20px 40px;
+    float: left;
+    width: 500px;
+    height: 60px;
+    border-radius: 5%;
+}
+
+.filter {
+    margin-left: 20px;
+    background: url(../img/vector-outline-floral-pattern.jpg);
+    float: left;
+    width: 220px;
+    height: 700px;
+    border-radius: 5%;
+}
+
+
+clear {
+    clear: both;
+}
+
+
+

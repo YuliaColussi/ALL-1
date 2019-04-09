@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/formulaire.css">
+    <title>Formulaire</title>
+</head>
+<body>
+    <div class="container">
+    <form method="POST" action="#" enctype="#">
+        <label for="pseudo">Pseudo *</label>
+        <input id="pseudo" type="text" name="pseudo" placeholder="rentrer son pseudo" required>
+        <br>
+        <!-- METHOD=> comment circule les données en PHP, ENCTYPE => concerne la recupération-->
+        <label for="mdp">Mot de passe</label>
+        <input type="password" id="#" name="#" placeholder="password" required>
+        <br>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="email">
+        <br>
+        <label for="fishier">fishier</label>
+        <input type="file" id="fishier" name="fishier">
+        <br>
+        <label for="file">Fishier</label>
+        <select name="#" id="##">
+        <!-- cette list est SELECT et pas INPUT -->
+        <optgroup>
+            <!-- option group, can use for menues too -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </optgroup>
+        </select>
+        <br>
+        <label for="choix1">Choix1</label>
+        <input type="checkbox" name="subscribe" id="choix1" checked>Choix1
+        <input type="checkbox" name="subscribe" id="choix1">Choix2
+        <input type="checkbox" name="subscribe" id="choix1">Choix3
+        <br>
+        <label for="radio1">civilité</label>
+        <input type="radio" name="subscribe" id="radio1" checked>Monsieur
+        <input type="radio" name="subscribe" id="radio1">Madame
+
+        <br>
+        <label for="ville">ville</label>
+        <input id="ville" type="text" name="ville" list="france">
+        <datalist id="france">
+            <!-- la datalist permet de suggerer lorsque l'utulisateur
+            tape, couple avec du PHP pour aller faire un lien qvec une basse de données -->
+            <option value="Paris">Paris</option>
+            <option value="Paris">Paris</option>
+            <option value="Paris">Paris</option>
+        </datalist>
+        <br>
+        <label for="cp">code postal</label>
+        <input id="id" type="text" name="id" maxlength="5" pattern="[0-9]{5}">
+        <br>
+        <!-- MAXLENGHT=> impose un max de caracteres et PATTERN permet d'imposer le type
+        de caractere numérique et comme PATTERN permet de préciser le nombre
+    de caracteres max on peut eblever MAXLENGTH ici (on le garde pour les connaissance) -->
+        <label for="address">Address</label>
+        <textarea name="address" rows="8" cols="30"></textarea>
+        <br>
+        <label for="jaunge">Jaunge</label>
+        <input type="range" min="0" max="50" id="jaunge" >
+        <br>
+        <label for="color">Couleur</label>
+        <input type="color" id="color" >
+        <br>
+        <input type="submit" name="inscription" value="S'inscrire">
+        <input type="reset" name="annuler" value="Recommencer">
+        <br>
+        <br>
+        <input type="submit" name="inscription" value="Envoyer">
+        <input type="reset" name="annuler" value="Annuler">
+    </form>
+</div>
+    
+</body>
+</html>

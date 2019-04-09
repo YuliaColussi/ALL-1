@@ -1,0 +1,54 @@
+.container-fluid {
+    height: 100vh;
+    background: black;
+}
+
+.container {
+    background: white;
+    height: 100vh;
+}
+
+#header {
+    background-color: mistyrose;
+    height: 15vh;
+    text-align: center;
+}
+
+#nav {
+    height: 5vh;
+    background-color: black;
+
+}
+
+#carousel {
+    background: #2c2b2d;
+    height: 25vh;
+    width: 100vw;
+}
+
+#contenu {
+    background: bisque;
+    height: 55vh;
+}
+
+#G {
+    height: 55vh;
+    background: rgb(255, 255, 255);
+}
+
+#D {
+    height: 55vh;
+    background: rgb(0, 0, 0);
+}
+
+/* CSS PERSO */
+
+.navbar-dark {
+    background-color: grey !important;
+}
+
+#nav a {
+    color: white;
+
+}
+

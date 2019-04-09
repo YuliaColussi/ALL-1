@@ -1,0 +1,18 @@
+
+.img-thumbnail {
+  margin-top: 50px;
+  width: 250px; 
+  height: 250px; 
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}
+
+.col-lg-4 .btn{
+background-color: #563d7c;
+}
+
+.nav-link {
+    height:100px;
+}

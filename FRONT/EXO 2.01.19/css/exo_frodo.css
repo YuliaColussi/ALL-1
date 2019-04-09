@@ -1,0 +1,69 @@
+body{
+    width: 30%; 
+    margin: left; 
+}
+
+table{
+width: 90%;
+border-collapse: collapse;
+margin: 35px;
+}
+
+th {
+    padding: 15px;
+}
+
+td {
+    font-size: 100%;
+    padding: 15px;
+}
+
+.black {
+    background-color: black;
+}
+
+.brown {
+    background-color: rgb(94, 55, 48);
+}
+
+.lightbrown {
+    background-color: rgb(177, 130, 130);
+}
+
+.skin {
+    background-color: rgb(223, 147, 116);
+}
+
+.lightskin {
+    background-color: rgb(255, 194, 169);
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: rgb(72, 109, 67);
+}
+
+.lightgreen {
+    background-color: rgb(131, 194, 123);
+}
+
+.darkgreen {
+    background-color: rgb(27, 41, 25);
+}
+
+
+.redbrown {
+    background-color: rgb(119, 29, 1);
+}
+
+
+.lightredbrown {
+    background-color: rgb(192, 68, 30);
+}
+
+.lightlightyellow {
+    background-color: rgb(228, 224, 203);
+}

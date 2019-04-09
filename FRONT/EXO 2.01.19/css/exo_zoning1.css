@@ -1,0 +1,44 @@
+#container {
+    width: 960px;
+    color: white;
+    margin 0 auto;
+}
+
+header {
+    height: 80px;
+    background-color: brown;
+    color: rgb(255, 255, 255);
+    line-height: 60px;
+    text-align: center;
+}
+
+section {
+    background-color: rgb(132, 106, 180);
+    height: 700px;
+}
+
+.zones {
+    width: 468px;
+    height: 400px;
+    background-color: rgb(83, 168, 43);
+    float: left;
+}
+
+.z1,.z2,.z3,.z4,.z5 {
+    width: 89px;
+    height: 400px;
+    line-height: 400px;
+    float: left;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.footer {
+    background-color: rgb(243, 243, 130);
+
+}
+
+
+.clear {
+    clear: both;
+}

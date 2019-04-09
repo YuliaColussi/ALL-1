@@ -1,0 +1,28 @@
+
+body{
+    width:80%;
+}
+
+.contenu {
+    padding: 30px;
+    margin: 30px auto;
+    width: 960px;
+    background: rgb(120, 212, 203);
+    box-sizing: border-box;
+}
+
+.zone,.zone1 {
+
+    width: 400px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 20px;
+     /* display: inline-block;  */
+    /* affichage des deux blocs alliignés,
+    INLINE seul crée 2 cadres qui entourent uniquement le contenu comme le surlignage, BLOCK seul
+    affiche 2 blocks l'un sue l'autre */
+    vertical-align: middle;
+    /* centrer verticallement les deux blocsq =>zone 1 et zone 2
+    ayant les memes propriétés on les
+    rassemble */
+}

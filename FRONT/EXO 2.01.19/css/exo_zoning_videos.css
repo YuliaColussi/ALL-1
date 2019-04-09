@@ -1,0 +1,39 @@
+#contenu{
+    padding-left: 40px;
+    width: 800px;
+    height: 900px;
+    margin: 60px auto;
+    border: 2px solid grey;
+    background: rgb(230, 230, 230);
+    border-radius: 10%;
+}
+
+h1 {
+    padding-right:40px;
+    text-align: center;
+    color: grey;
+}
+
+.first,.second {
+    margin: 40px 40px 20px 40px;
+    float: left;
+    width: 300px;
+    height: 200px;
+    background: rgb(99, 99, 99);
+    border-radius: 10%;
+}
+
+.first {
+    background: url(../img/vector-outline-floral-pattern.jpg);
+}
+
+clear {
+    clear: both;
+}
+
+
+p {
+    color: rgb(214, 214, 233);
+    padding: 25px 5px 20px 15px;
+}
+

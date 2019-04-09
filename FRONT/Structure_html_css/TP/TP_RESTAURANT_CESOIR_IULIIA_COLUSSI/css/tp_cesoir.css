@@ -1,0 +1,190 @@
+body {
+    background-color: mediumaquamarine;
+
+}
+
+header {
+    padding: 30px;
+    height: 500px;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+    font-family: 'Bangers', cursive;
+    float: left;
+}
+
+h5 {
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Bangers', cursive;
+}
+
+.navigation a{
+    font-family: 'Baloo Thambi', cursive;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    float: right;
+}
+
+.picture{
+    height: 300px;
+    background: url(../img/cerf.svg) no-repeat;
+    margin-left: 325px;
+    margin-bottom: 50px;
+}
+.content { 
+    width: 0;
+    height: 0;
+    border-top: 200px solid rgb(200, 47, 119);; 
+    border-left: 200px solid transparent;
+    opacity: .4;
+    transform: rotate(48deg);
+    padding-top: 250px;
+}
+
+.one {
+    height: 500px;
+}
+
+
+p {
+    font-family: 'Almendra', serif;
+}
+
+
+#contenu {
+    margin: 30px auto;
+    width: 1000px;
+    background: url(../img/pattern.jpg);
+
+}
+
+header {
+    background: url(../img/woddPlank.jpg);
+}
+
+
+clear {
+    clear: both;
+}
+
+.first-text {
+    padding: 60px 30px 30px 30px;
+    width: 350px;
+    float: left;
+    text-align: center;
+}
+
+.second-text {
+    padding: 60px 30px 40px 30px;
+    width: 200px;
+    float: right;
+    text-align: center;
+}
+
+
+.third-text {
+    padding: 60px 30px 20px 30px;
+    width: 350px;
+    float: left;
+    text-align: center;
+}
+
+.first-image img{
+    transform: scale(-1, 1); 
+    float: right;
+    width: 560px;
+    height: 350px;
+}
+
+.second-image img{
+    float: left;
+    width: 720px;
+    margin: 0;
+    height: 530px;
+}
+
+.third-image img{
+    margin: 0;
+    padding: 0;
+    float: right;
+    width: 560px;
+    height: 420px;
+}
+
+
+h2 {
+    padding-top: 15px;
+    font-family: 'Baloo Thambi', cursive;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Baloo Thambi', cursive;
+    font-weight: bold;
+    color: rgb(200, 47, 119);
+    font-size: 10px;
+}
+
+hr {
+    background-color: rgb(200, 47, 119);
+    height: 5px;
+    width: 35px;
+}
+
+.firsthr {
+    background-color: rgb(200, 47, 119);
+    height:10px;
+    width: 35px;
+    margin: 55px 50px 0px 37px;
+    border: none;
+
+}
+
+
+.secondhr {
+    background-color: rgb(200, 47, 119);
+    height:10px;
+    width: 35px;
+    margin-left: 35px;
+    border: none;
+
+}
+
+
+.section {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    padding: 40px 20px 50px 20px;
+    height: 150px;
+}
+
+
+.left {
+    float: left;
+    width: 300px;
+}
+
+i {
+    color: rgb(200, 47, 119);
+}
+
+.arrow i {
+    margin: 0px 320px 100px 450px;
+    font-size: 70px;
+}
+
+.right {
+    padding-top: 140px;
+    float: right;
+    width: 500px;
+   text-align: right;
+}

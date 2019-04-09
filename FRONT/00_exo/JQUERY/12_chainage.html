@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .vert {
+        color: green;
+    }
+    .grand {
+        font-size: 2em;
+    }
+    .rouge {
+        color: red;
+    }
+
+    .petit {
+        font-size: .8em;
+    }
+
+    div {
+        background: cornflowerblue;
+    }
+
+    .pjeune {
+        background: gold;
+    }
+
+    </style>
+</head>
+<body>
+    <p id="pierre" class="grand vert">Pierre</p>
+    <p id="jean" class="petit rouge">Jean</p>
+    <div>Mon div</div>
+    <article>Mon super article</article>
+    <p class="pjeune">Not all implementations will implement all functionality defined in CSS. For example, an implementation may choose to implement
+    only the functionality required by a CSS Profile. Profiles define a subset of CSS considered fundamental for a specific class
+    of CSS implementations. The W3C CSS Working Group defines the following CSS profiles:</p>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+    $(function(){
+        // console.log('coucou');
+
+    // $('#pierre').removeClass('vert).addClass('rouge').removeClass('grand).addClass('petit);
+
+
+    // // faire l'instruction suivent au clic sur #pierre
+    // $('#pierre').removeClass('vert grand').addClass('rouge petit');
+
+    $('#pierre').click(function(){
+        $(this).removeClass('vert grand').addClass('rouge petit');
+    })
+
+$('#jean').click(function(){
+    // Si #jean a la classe .rouge alors on fait un alert qui affiche 'Jean est rouge'
+    // SINON alors on fait un alert qui affiche 'Jean est pas rouge'
+
+    if ($(this).hasClass('rouge'))
+    alert('Jean est rouge');
+    else
+    alert('jean est pas rouge');
+})
+
+// la méthode hide() permet de cacher un élément 
+// - c'est une animation
+// - s'applique sur tous les éléments ciblés avec le sélecteur 
+// - à la fin du hide() on mettra une alert ('fin du hide')
+
+
+//  ici le div disparait en 2 Sec
+//  1. Une fois  que sa disparation est terminée, on déclenche une fonction 
+//  de callback qui s'execute quand l'action est terminée
+//  2. Dans cette fonction on cache l'article (durée de disparation de 1 second 1000 miliseconds)
+//  3. On lui donne le propriété css color de valeur coral
+//  4. On attend 2 sec (delay 2000)
+//  5. On fait réapparaitre l'article avec show(500), durée de l'apparation une demi second
+//  6. Après le hide du div on affiche une alert ('fin du hide du div') 
+
+    $('div').hide(2000, function(){
+        $('article').css('color','coral').hide(1000).delay(2000).show(500);
+        // alert('fin du hide');
+        // NICE FOR THE LOGO
+    });//FIN DU HIDE
+
+    $('.pjeune').fadeOut('slow', function(){
+        // ajputer une fonction de callBack qui sera éxécute une fois
+        // que la fonction de fadeOut sera terminée
+        $(this).fadeIn(2500, function(){
+            // encore un callback qui s'execute quand le fadeIn est terminée
+            alert('fin du fadeIn');
+        });
+    })
+
+
+    }) //FIN DU SCOPE
+    </script>
+</body>
+</html>

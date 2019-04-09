@@ -1,0 +1,32 @@
+body {
+    width: 70%;
+    margin: 30px auto;
+    background-color: rgb(224, 224, 224); 
+
+}
+
+form {
+    border: 2px solid rgb(58, 58, 58);
+    padding: 2%;
+    width: 70%;
+    height: 75%;
+
+}
+
+
+
+label {
+    width: 30%;
+    float: left;
+    background-color: mistyrose;
+}
+
+input {
+    margin-bottom: 1%;
+}
+
+
+form:hover {
+    box-shadow: 0px 0px 1px 10px yellow;
+
+}

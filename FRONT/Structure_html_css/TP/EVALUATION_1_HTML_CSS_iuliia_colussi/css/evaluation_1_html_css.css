@@ -1,0 +1,350 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+
+/* PRINCIPALE */
+    
+#principale {
+    padding: 15px 0px;
+    background-color: rgb(233, 233, 233);
+    margin: 30px auto;
+    width: 1400px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* HEADER */
+
+header {
+    width: 1400px;
+    background-color: rgb(0, 0, 0);
+}
+
+.header {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.gauche {
+    width: 580px;
+    float: left;
+    margin-bottom: 20px;
+}
+/* 
+.gauche hr {
+    width: 2px;
+    height: 500px;
+    background-color: linear-gradient(to bottom, rgb(175, 114, 0), rgb(199, 183, 35), rgba(110, 110, 110, 0));
+} */
+
+/* .gauche:before {
+  content: '';
+  width: 10px;
+  height: 200px;
+  position: absolute;
+  background-color: linear-gradient(to left, rgb(143, 143, 143), rgb(124, 124, 124), rgba(110, 110, 110, 0));
+  /* border: 1px solid black; */
+  /* top: 0;
+  left: 400px;
+} */ 
+
+h1 {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+span {
+     color: rgb(255, 174, 0);
+}
+
+/* ICONS */ 
+
+.droite {
+    float: left;
+    width: 420px;
+}
+
+.haute_droite {
+    background: rgb(224, 224, 224);
+    padding: 5px 10px;
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid grey;
+}
+
+.haute_droite img {
+    margin-right: 10px;
+}
+
+/* BONJOUR JULIEN */
+
+.haute_droite_millieu {
+    width: 400px;
+    height: 40px;
+}
+
+.haute_droite_millieu p{
+    padding: 10px;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* LIST COMME NAV */
+
+.haute_droite_icon {
+    width: 200px;
+    float: left;
+}
+
+.haute_droite img{
+    width: 35px;
+    height: 40px;
+    float: left;
+}
+
+li {
+    text-align: center;
+    padding: 10px 5px;
+    list-style: none;
+    width: 125px;
+    float: left;
+    border-left: 1px solid rgb(199, 199, 199);
+}
+
+li:last-child {
+
+    border-right: 1px solid rgb(199, 199, 199);
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(41, 41, 41);
+}
+
+/* SECTION DE MILLIEU */
+
+#millieu {
+    background-color: rgb(31, 31, 31);
+}
+
+#millieu .fond img{
+    width: 1000px;
+}
+
+#millieu .fond{
+    width: 1000px;
+    margin: auto;
+}
+
+
+
+/* CATALOGUE */
+
+.catalogue {
+
+    padding: 20px;
+    height: 1200px;
+    width: 960px;
+    margin: 0 auto;
+    background-color: rgb(231, 231, 231);
+}
+
+.card_principale {
+    float: left;
+    margin: 10px 55px;
+}
+
+
+/* SOLD */
+
+.sold {
+    position: relative;
+    top: 50px;
+    left: 300px;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 5px -4px 7px 0px  rgb(46, 46, 46);
+    color: rgb(255, 174, 0);
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* CARD IMG */
+
+.card_interieur {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}    
+
+
+
+h3 {
+    background-color: white;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+
+/* PRICES / BOUTON */
+
+
+button {
+    border-top: none;
+    margin-top: 10px;
+    display: block;
+    float: left;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+
+}
+
+
+.price {
+    width: 150px;
+    float: left;
+    padding: 10px;
+}
+
+h5 {
+    text-decoration: line-through;
+    font-size: 25px;
+    margin: 0px 7px;
+    font-weight: bold;
+    float: left;
+    color: rgb(48, 48, 48);
+}
+
+h6 {
+    line-height: 40px;
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(255, 174, 0);
+}
+
+.line {
+    position: relative;
+    bottom: 50px;
+    right: 200px;
+    height: 20px;
+    width: 1400px;
+    background-color: rgb(53, 53, 53);
+}
+
+hr {
+   height: 3px;
+   border: 0;
+   background: linear-gradient(to left, rgb(143, 143, 143), rgb(124, 124, 124), rgba(110, 110, 110, 0));
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(53, 53, 53);
+    color: rgb(218, 218, 218);
+    height: 380px;
+}
+
+.footer_haut {
+    position: relative;
+    bottom: 51px;
+    padding-left: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(104, 104, 104);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: rgb(223, 223, 223);
+    border-radius: 5px;
+    width: 700px;
+    line-height: 20px;
+    height: 60px;
+    margin: auto;
+}
+
+.footer_haut ul li button {
+  width: 205px;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.footer_haut ul li:last-child {
+  width: 105px;
+}
+
+.footer_haut ul li {
+      text-align: center;
+      width: 175px;
+      padding: 0;
+}
+
+i {
+    color: rgb(175, 175, 175);
+    margin-left: 40px;
+}
+
+.footer_haut ul li {
+  border: none;
+
+}
+
+
+.footer {
+    width: 1000px;
+    margin: 0px auto;
+}
+/* ICONS */
+
+
+.icon {
+    text-align: center;
+    width: 200px;
+    margin: 0px 20px;
+    float: left;
+}
+
+
+/* SOCIAL NETWORKS */
+
+.footer_bas {
+    text-align: center;
+    margin: 0px auto;
+}
+
+
+.footer_bas img{
+    margin: 20px;
+}

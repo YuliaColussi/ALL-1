@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container {
+        width: 80%;
+        height: 200px;
+        margin: 0 auto;
+        border: 2px solid crimson;
+        position: relative;
+     }
+
+     .popup{
+         width: 200px;
+         height: 60px;
+         background: silver;
+         border: 1px black solid;
+         border-radius: 10px;
+         position: absolute;
+         right: 0;
+         top: 0;
+
+         /* placer cette pop-up en haut à droite du container */
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button class="btn">Affiche et cache</button>
+    <div class="popup">
+        Ma pop-up
+    </div>
+    </div>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+        $(function(){
+            console.log('coucou');
+
+            $('.btn').click(function(){
+                $('.popup').slideToggle('slow');
+                $('.popup').toggle('flow');
+                $('.popup').toggle('slow');
+                $('.popup').fadeToggle('slow');
+                // different variations
+            })
+        })
+        </script>
+</body>
+</html>

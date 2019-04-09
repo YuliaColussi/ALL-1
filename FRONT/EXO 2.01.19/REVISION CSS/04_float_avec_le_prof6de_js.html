@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    .container {
+        width: 80%;
+        border: 2px solid olivedrab;
+        margin: 0 auto;
+
+    }
+
+    .container img {
+        width: 40%;
+    }
+
+    .flt_l { 
+        float: left;
+    }
+
+
+    .clear {
+        clear: both;
+        display: table;
+    }
+
+
+    .clearfix:after {
+        content: 'FAUX FOOTER';
+        display: table;
+        clear: both;
+    }
+
+    
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <img src="images/montage.jpg" class="flt_l" alt="image de montagne">
+        <p>Le Lorem Ipsum est simplement du faux
+            dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard
+            de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser
+            un liv</p>
+            <strong> texte employé</strong>
+
+            <img src="images/montage.jpg" class="flt_l" alt="image de montagne">
+            <!-- <footer class="clear">& Copydesign</footer> -->
+            <!-- we can solve a problem  with a footer a clear both that will break the float, but if we dont want a footer
+            then we can use a clearfix-->
+    </div>
+</body>
+</html>

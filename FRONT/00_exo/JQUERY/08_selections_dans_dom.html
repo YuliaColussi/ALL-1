@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .container {
+        border: 2px solid darkred;
+        width: 70%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .lienActif {
+        font-size: 4rem;
+        color: forestgreen;
+        text-decoration : none;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="colLeft">
+            <h2 class="titleSite">
+                <a href="#">WF3 / Pole S</a></h2>
+            <p>cases you can ignore these files, however if you wish to download the default release on its own you can use Bower to install
+            jQuery from one of the above urls instead of the registered package. For example, if you wish to install just the compressed
+            jQuery file, you can install just that file with the following command:</p>
+            <p>cases you can ignore these files, however if you wish to download the default release on its own you can use Bower to install
+            jQuery from one of the above urls instead of the registered package. For example, if you wish to install just the compressed
+            jQuery file, you can install just that file with the following command:</p>
+            <a href="ressources.pdf">Les resources de cours</a>
+        </div>
+        <div class="colRight">
+            <h2 class="titleChapter">Cours JQuery</h2>
+            <p class="para">cases you can ignore these files, however if you wish to download the default release on its own you can use Bower to install
+            jQuery from one of the above urls instead of the registered package. For example, if you wish to install just the compressed
+            jQuery file, you can install just that file with the following command:</p>
+            <form action="#">
+                <input type="date">
+                <input type="submit">
+            </form>
+        </div>
+    </div> <!-- fin de div .container -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    
+    $(function(){
+        // console.log('coucou');
+
+        //  pour sélectionne avec le JQuery la div qui a la class = container
+        $('div.container')
+
+        //  pour sélectionne avec le JQuery les éléments qui ont la class = container
+        $('.container')
+
+        // mettre dans une variable monElement les éléments qui ont la class = container
+        var monElement = $('.container');
+        // monElement.children()// selectionne tous les enfants direct .container
+        console.log(monElement.children());
+
+
+        console.log(monElement.children('.colLeft'));
+        // sélectionne parmi les enfants de .container, velui qui a la classe = "colLeft"
+
+
+        console.log(monElement.children().eq(1));
+        // sélectionne parmi les enfants de .container, le deuxième de la liste (on commence
+        // toujours par zéro quand on compte dans une liste)
+        // ici la console renvoie l'objet div colRight
+
+        console.log(monElement.children().find('h2'));
+        // sélectionne tous les h2 parmi tous les descendants
+
+        var monPara = $('p.para');
+        //renvoie le paraghraphe qui a la class=para
+
+        console.log(monPara.next());
+
+        // renvoie le voisin suivante de .para qui est donc le form
+
+        console.log(monPara.prev());
+        // renvoie le voisin précédent de .para qui est donc le titre h2.titleChapter
+
+        console.log(monPara.parent());
+        // renvoie le parent du p.para qui est donc le div.colRight
+
+        console.log(monPara.next().next()); //renvoie un objet JQuery vide
+        // car il n'ay a rien aprèe le form
+
+        // chercher combien il y a de liens dans loa page
+        console.log($('a').length);//retourne 1 car on n'a qu'un seul lien dans la page
+
+        // chercher combien d'objets h2 ont la classe titleChapter
+        console.log($('h2.titleChapter').length);//retourne 1 car on n'a qu'un seul lien dans la page
+
+
+        // chercher combien d'objets a dont l'attribute href est égal à #
+
+        console.log($('a[href="#"]').length);
+
+
+        // chercher combien d'objets a dont l'attribute href se termine par .pdf
+
+        // WE LOOK FOR THE SELECTORS IN THE https://www.w3.org/TR/css-2010/ and put it straight like css
+
+        console.log($('a[href$=".pdf"]').length);
+
+        // au chargement de la page ce lien sera rouge
+        $('a[href$=".pdf"]').css('color','red');
+
+        // Au clic sur ce lien fair un toggleClass(lienActif) poyur changer sa couleurchanger sa couleur
+        
+    //    $('a').on('click', function(){
+           
+    //        $(this).addClass('lienActif');
+    //        $(this).css('color','green');  
+    //        $(this).togglerClass('lienActif');
+
+    //    })
+
+    //    CORRECTION
+
+    $('a[href$=".pdf"]').hover(function(){
+        $(this).toggleClass('lienActif');
+    })
+
+    })
+
+    </script>
+</body>
+</html>

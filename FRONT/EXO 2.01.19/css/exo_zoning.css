@@ -1,0 +1,103 @@
+body {
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+#conteiner {
+    width: 960px;
+    color: white;
+    margin: 0 auto;
+
+}
+
+header {
+    height: 80px;
+    background-color: rgb(255, 192, 140);
+    color: rgb(255, 255, 255);
+    line-height: 60px;
+    text-align: center;
+}
+
+footer {
+    height: 80px;
+    background-color: rgb(175, 152, 132);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 80px;
+}
+
+
+nav{
+    height: 30px;
+    background-color: rgb(12, 88, 28);
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+section {
+    background-color: rgb(169, 249, 255);
+    height: 500px;
+    text-align: center;
+    margin: 10px;
+}
+
+p {
+    margin: 0;
+    
+}
+
+.rectangle1,.rectangle2,.rectangle3,.rectangle4 {
+    width: 468px;
+    height: 248px;
+    float: left;
+    border: 1px solid white;
+}
+
+.rec1,.rec2,.rec3,.rec4 {
+    border: 1px solid;
+    float: left;
+    height: 122px;
+    line-height: 122px;
+    text-align: center;
+    width: 232px;
+}
+
+.rec5,.rec6,.rec7,.rec8,
+.rec9,.rec10,.rec11,.rec12 {
+    border: 1px solid;
+    float: left;
+    height: 122px;
+    line-height: 122px;
+    text-align: center;
+    width: 232px;
+}
+
+
+.rec13,.rec14,.rec15,.rec16 {
+    border: 1px solid;
+    float: left;
+    height: 122px;
+    line-height: 122px;
+    text-align: center;
+    width: 232px;
+}
+
+.rectangle1{
+    background-color: rgb(241, 199, 185);
+}
+.rectangle2{
+    background-color: rgb(145, 183, 218);
+}
+.rectangle3 {
+    background-color: rgb(249, 255, 169);
+}
+.rectangle4 {
+    background-color: rgb(25, 85, 126);
+}
+
+
+.clear {
+    clear: both;
+}

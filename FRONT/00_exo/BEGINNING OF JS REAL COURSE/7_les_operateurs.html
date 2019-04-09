@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        font-weight: bold;
+        font-size: 2rem;
+        color: steelblue;
+    }
+    </style>
+</head>
+<body>
+    <script>
+    var operation1 = 1 + 2;
+    document.write(operation1 + '<br>');   
+
+    maCheine  = "Ja m'appelle " + " Iuliia";
+    document.write(maCheine + '<br>');   
+
+// Le précédence des opérateurs, ici la multiplication se fait avant l'addition
+    var operation2 = 2 + 3 * 5;
+    document.write(operation2 + '<br>' );
+
+    //altérer les précédents avec les parenthèses
+        var operation3 = (2 + 3) * 5;
+        document.write(operation3 + '<br>');
+
+//le modulo, signe % : c'est reste d'une division (it leaves us the reste after the division)
+        var operation4 = 10 % 2;
+        document.write(operation4 + '<br>');
+        // renvoie zéro car il n'y a pas de reste dans la division 10 / 2 = 5
+
+        var operation5 = 17 % 3;
+        document.write(operation5 + '<br>');
+        // renvoie 2 car 17 / 3 = 5 reste 2
+
+        var monVehicule1 = 'voiture';
+        var monVehicule2 = 'camion';
+
+        // opérateur de comparison renvoie les booléen true ou false
+        // signe === : égalité stricte valeur est le type (string) sont égaux ou pas
+        document.write((monVehicule2 === 'velo') + '<br>');
+
+
+        // ici on la valeur 20 et de la chaine de caractère sans les 2 cas // valeur 20 et string // renvoie true
+        monChiffre = '20';
+
+        // ici on a la valeur 20 et dans la variable une chaine, on demande si la variable
+        // monChiffre vaut 20 et est un number // la console renvoie FALSE car dans la variable 
+        // monChiffre on a bien la valeur 20 mais PAS un number
+            document.write((monChiffre === 20) + '<br>');
+
+
+// opérateur d'egalite ne teste que la valeur, meme si le type est differente le navigateur renverra true;
+            document.write((monChiffre == 20) + '<br>');
+
+// opérateur de difference (NOT) 
+// ! NON
+// ! = NON EGAL
+// ! == NON strictement égal
+
+
+            var unChiffre = 3;
+            document.write((monChiffre !== 2) + '<br>');
+
+// renvoie true car 2 est bien strictement different de 3
+
+// autre façon d'écrire le NOT
+
+       var unDernierChiffre = 4;
+       document.write(   !(unDernierChiffre === 4)   );
+    //    renvoie FALSE car unDernierChiffre === 4
+    // donc ne pas differente de 4
+
+
+    </script>
+</body>
+</html>

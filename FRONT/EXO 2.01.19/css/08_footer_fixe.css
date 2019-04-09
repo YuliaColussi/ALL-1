@@ -1,0 +1,53 @@
+ /* * {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;  
+}
+
+.conteneur {
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto -100px;
+}
+
+header {
+    height: 100px;
+    background: mistyrose;
+
+}
+
+footer {
+    height: 100px;
+    position: relative;
+    background: burlywood;
+}   */
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.conteneur {
+    min-height: 100%;
+    height: 100%;
+
+}
+
+header {
+    height: 100%;
+    background: mistyrose;
+}
+
+footer {
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: mediumturquoise;
+
+} 

@@ -1,0 +1,132 @@
+
+/*  where to find a reset https://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    text-align: center;
+}
+
+
+#conteneur::before {  
+    content: " " ;
+    display: block;
+    height: 10px;
+    width: 700px;  
+    background: rgb(100, 146, 74);
+}
+
+#conteneur::after {  
+    content: " " ;
+    display: block;
+    height: 10px;
+    width: 700px;  
+    background: rgb(100, 146, 74);
+}
+
+#conteneur {
+    border: 2px solid rgb(94, 161, 55);
+    height: 1033px;
+    margin: 30px auto;
+    width: 700px;
+}
+
+
+header {
+    width: 800px;
+    margin: 0;
+}
+
+p {
+    text-align: justify; 
+    font-family: 10px;
+}
+
+
+.big_apple {
+    float: left;
+    width: 150px;
+    height: 258px;
+}
+
+
+
+nav {
+    padding-bottom: 0;
+    color: white;
+    font-size: 20px;
+    font-style: sans-serif;
+    height: 22px;
+    width: 700px;
+    background-color: rgb(78, 212, 38);
+    box-shadow: 0px 1px 4px 0px #818181,
+                0px 7px 4px 1px #e6e6e6;
+
+}
+
+.nav1,.nav2,.nav3,.nav4,.nav5{
+    vertical-align: bottom;
+    float: left;
+    height: 22px;
+    width: 120px;
+    border-right: 1px solid white;
+}
+
+.milieu {
+    box-shadow: top;
+}
+.left_zone {
+    float: left;
+    height: 1050px;
+    margin: 30px;
+}
+
+.right_zone {
+    width: 680px;
+}
+
+
+h2,h3{
+    color: rgb(125, 204, 79);
+    border-bottom: 2px solid rgb(125, 204, 79);
+    text-align: left;
+    font-size: 23px;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+.last_words p{
+    color: rgb(125, 204, 79);
+}
+
+h3{
+    margin-left: 120px;
+    border-left: 3px solid rgb(125, 204, 79);
+    padding-left: 5px;
+}
+
+h4 {
+    color: rgb(125, 204, 79);
+    text-align: right;
+    line-height: 50px;
+}
+
+
+.clear {
+    clear: both;
+}

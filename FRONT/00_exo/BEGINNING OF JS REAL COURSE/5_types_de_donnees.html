@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // ----------TYPES DE DONNEES------------------
+
+    var maVariable = 10;
+    console.log(typeof maVariable);
+
+    var monText = 'Soleil';
+    console.log(typeof monText);
+
+
+    // isNaN : is not a Number
+    console.log(isNaN(100));// renvoir FALSE
+    console.log(isNaN('100'));// ici la chaine "100" est convertie en number
+    // par le navigateur  avant d'etre testée, renvoie FALSE 
+
+
+    // 
+    console.log(isNaN('abc100'));
+    // ici renvoir TRUE
+
+
+    
+    // ----------LES BOULEENS------------
+
+    var monBooleen = true;
+    console.log(typeof monBooleen);
+
+    var maListe = ['pommes', 'poires', 'bananes', 20];
+    console.log(typeof maListe);
+
+
+
+// Structure du test if
+//  en français simple 
+// Si (une condition est vraie ou fausse) {
+    // alors
+//     fais une chose;
+//     fais une autre chose;
+// }
+
+// C'est comme
+
+// si(il fait beau) {
+//     alors
+//     on sort;
+// }
+
+
+// Pseudo code algorithmique
+
+// si(condition) {
+//     alors
+//     instruction 1;
+//     instruction 2;
+// } 
+
+
+//  En JS 
+
+// Si (le nom dze constructeur est égal à Array ) {
+//     alors
+//     affiche en console la chaine de caractères 'Array'
+// }
+
+    if (maListe.constructor.name == 'Array') {
+        console.log('Array');
+    }
+
+    // Array veut dire 'tableau de données en français
+        
+    </script>
+</body>
+</html>

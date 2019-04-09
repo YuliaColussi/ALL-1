@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; /* base 10px */ 
+}
+
+body {
+    font: 1.4rem/1.5 arial, helvetica, sans-serif;
+    margin: 0;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* LAYOUT GLOBALE */
+
+header{
+    background:url(../images/dinosaure.jpg) no-repeat 50% -170px;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid darkred;
+    /* plus tard à remplacer par un padding de 1px si
+    nécessaire quand on supprimera les borders */
+    max-width: 1000px;
+}
+
+footer {
+    background: black;
+    height: 200px; /* temporaire */
+    color: white;
+}
+
+/* CONTENU DE HEADER */
+
+/* LA NAV */
+
+nav {
+    border: 3px solid green;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    line-height: 5;/* c'est normal de ne pas donner d'unite */
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    border: 2px orchid solid;
+}
+
+nav li {
+    border: 2px gold solid;
+}
+
+/* les logos et bandeau */
+
+header .logo{
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+header .bandeau {
+    border: 2px solid blue;
+    position: absolute;
+    /* attention: the element with a position: aboslute is like a child with no parent 
+    - you always need to find a parent and give it a position: relative; */
+    right: 0;
+    bottom: 0;
+}
+
+/* CONTENU DE MAIN */
+
+main section {
+    padding-top: 5rem;
+    border: 2px pink solid;
+    margin: 0 auto;
+}
+
+section.presentation {
+    width: 70%;
+}
+
+.titre-n2 {
+    text-align: center;
+}
+
+img.entre-parc {
+    max-width: 100%;
+}
+
+/* Boite a outiles */
+
+.txt-center {
+    text-align: center;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+}
+
+.btn-primary {
+    background-color: steelblue;
+    color: white;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    border: 1px green solid;
+    width: 50%;
+}
+
+iframe {
+    width: 100%;
+}
+
+.partenaires img {
+    width: 80px;
+    margin: auto;
+    display: block;
+}
+
+/* CONTENU DE FOOTER */

@@ -1,0 +1,23 @@
+#conteneur {
+    height: 660px;
+    margin: 30px auto;
+    width: 650px;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 5px;
+}
+
+.main p {
+    font-size: 20px;
+    color: grey;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+   padding: 20px 0px;
+   margin-left: 215px;
+}
+
+a {
+    margin-left: 215px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--Permet de definir le langage utulié-->
+<html lang="fr">
+    <!--Permet de definir la Language de la page-->
+<head>
+    <!--Tete du document, non visible sur le site-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--Titre du site apparaisant sur l'onglet-->
+    <meta name="description" content="Ma premiere page en HTML/CSS">
+    <!--Description sous le titre dans la recherche Google, les moteurs de recherche s'en
+    servent un peu comme des mots cles pour les rechercher-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--Relie le fishier html à mon fishier css (Cascading style sheetes)-->
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CLemonada%7COswald" rel="stylesheet">
+        <!--liens pour les polices via Google-Font-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <!--liens pour les Font-Awesome récupère la font sur le site dans GET STARTED-->
+</head>
+<body>
+    <!--Cops du document-->
+    <header>
+        <!--Zone du haut, exp : bannière, logo, slogan-->
+    <div id="logo">
+        <a href="index.html" target="_blank">
+            <img src="img/logo.png" alt="logo">
+        </a>
+    </div>
+    <div id="slogan">
+        <h1>Mon premier site en HTML/CSS</h1>
+        <!--H1 titre de premier rang un seul par page-->
+    </div>
+    <div id="rs">
+        <a href="http://twitter.com" target="_blank">
+        <i class="fab fa-twitter-square"></i>
+    </a>
+    <a href="http://facebook.com" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+    </a>
+    <a href="http://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    </div>
+    <div class="clear"></div>
+    </header>
+    <nav>
+        <!--menu-->
+        <a href="index.html" class="active">Structure</a>
+        <a href="text.html">Textes</a>
+        <a href="selecteur.html">Selecteurs</a>
+        <a href="image.html">Images</a>
+        <a href="position.html">Positions</a>
+        <a href="zoning.html">Zoning</a>
+        <a href="list.html">Listes</a>
+        <a href="lien_menu.html">Liens & Menus</a>
+        <a href="tableaux.html">Tableau</a>
+        <a href="formulaire.html">Formulaires</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="animation.html">Animation</a>
+        <a href="explication_flexbox.html">Flexbox</a>
+    </nav>
+    <main>
+        <!--Main contenu principal de la page-->
+        <aside>
+            <!--Contenu secondaire-->
+            <marquee behavior="scroll" direction="left" scrollamount="10">
+                <h5>Session de Vitry</h5>
+            </marquee>
+            <marquee behavior="scroll" direction="right" scrollamount="10">
+                <h5>Voici mon premiere site</h5>
+            </marquee>
+        </aside>
+        <section>
+            <!--Section: zone du contenu : titre, texte, regroupement thématique-->
+            <div>
+                <!--Div : zone supplémentaire de contenu-->
+            </div>
+            <span>
+                <!--Span: zone supplémentaire de contenu 
+                Span est un conteneur en ligne (inline) pour les contenus phrasés
+                Il ne représente rien de particulier-->
+            </span>
+            <article>
+                <!--Article: zone supplémentaire de contenu-->
+            </article>
+        </section>
+    </main>
+    <a href="#logo">
+        <button type="button">
+            <i class="fas fa-arrow-alt-circle-up"aria-hidden="true"></i>
+            <!--aria accés de contenus web plus facilespour les handicapes => https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA-->
+        </button>
+    </a>
+    <footer>
+        <!--Footer: zone du bas, ex : Les liens administratifs, mentions légales, plan du site...-->
+        
+    </footer>
+</body>
+</html>

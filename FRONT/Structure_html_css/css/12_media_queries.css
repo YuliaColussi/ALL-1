@@ -1,0 +1,230 @@
+
+/************************REGLAE GENERALE**************************** */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    border: 0.3vh solid;
+}
+
+header {
+    height: 6vh;
+    background:blue;
+    padding: 1vh;
+    /* vh (size of the different blocks) pour gérer la responsivité des éléments en hauteur (viewport height) et 
+     vw (size of the different typo police) pour gérer la responsivité des éléments en largeur (viewport width) */
+}
+
+nav {
+    height: 3vh;
+    background: red;
+    text-align: center;
+    font-size: 2vw;
+    color: #fff;
+    text-decoration: none;
+}
+/* NAV A cible le liens de menu, ils n'ont pas de taille donc ils occupent la place de
+leur contenu */
+
+nav a:hover {
+    background: mistyrose;
+    text-decoration: none;
+    /* efface le standart W3C  */
+    padding: 0.5% 0.8%;
+}
+
+.n1,.n2,.n3,.n4 {
+    height: 20vh;
+    width: 38%;
+    padding: 5%;
+    margin: 1%;
+    float: left;
+}
+
+.n1 {
+    background: orange;
+}
+
+.n2 {
+    background: rgb(111, 0, 255);
+}
+
+.n3 {
+    background: rgb(129, 206, 159);
+}
+
+.n4 {
+    background: rgb(0, 195, 255);
+}
+
+
+footer {
+    height: 6vh;
+    background: blue;
+}
+
+/* ********************RESPONSIVE***************************** */
+
+@media(max-width: 500px) {
+    header {
+        height: 6vh;
+        background: yellowgreen;
+    }
+
+    nav {
+        height: 3vh;
+        background: purple;
+    }
+
+.n1,.n2,.n3,.n4 {
+    height: 20vh;
+    width: 86%;
+    margin: 0 auto;
+}
+
+.n1 {
+    background: blueviolet;
+}
+
+.n2 {
+    background: rgb(229, 227, 231);
+}
+
+.n3 {
+    background: rgb(19, 104, 83);
+}
+
+.n4 {
+    background: rgb(226, 43, 128);
+}
+
+footer {
+    height: 6vh;
+    background: rgb(128, 57, 57);
+}
+ }
+
+
+@media(max-width: 768px) {
+    header {
+        height: 7vh;
+        background: yellowgreen;
+    }
+
+    nav {
+        height: 3.5vh;
+        background: purple;
+    }
+
+.n1,.n2,.n3,.n4 {
+    height: 20vh;
+    float: left;
+}
+
+.n1 {
+    background: blueviolet;
+}
+
+.n2 {
+    background: rgb(229, 227, 231);
+}
+
+.n3 {
+    background: rgb(19, 104, 83);
+}
+
+.n4 {
+    background: rgb(226, 43, 128);
+}
+
+footer {
+    height: 6vh;
+    background: rgb(128, 57, 57);
+}
+ }
+
+@media(max-width: 992px) {
+    header {
+        height: 8vh;
+        background: yellowgreen;
+    }
+
+    nav {
+        height: 4vh;
+        background: purple;
+    }
+
+.n1,.n2,.n3,.n4 {
+    height: 30vh;
+    float: left;
+}
+
+.n1 {
+    background: url(img_media/image.jpg);
+    background-size: cover;
+}
+
+.n2 {
+    background: rgb(111, 55, 168);
+}
+
+.n3 {
+    background: rgb(19, 104, 83);
+}
+
+.n4 {
+    background: rgb(63, 8, 34);
+}
+
+footer {
+    height: 6vh;
+    background: rgb(57, 128, 63);
+}
+ }
+@media(max-width: 1200px) {
+    header {
+        height: 9vh;
+        background: yellowgreen;
+    }
+
+    nav {
+        height: 4.5vh;
+        background: purple;
+    }
+
+.n1,.n2,.n3,.n4 {
+    height: 40vh;
+    float: left;
+}
+
+.n1 {
+    background: linear-gradient(to left, blue, grey);
+}
+
+.n2 {
+    background: rgb(76, 61, 92);
+}
+
+.n3 {
+    background: rgb(19, 104, 83);
+}
+
+.n4 {
+    background: rgb(190, 15, 97);
+    background: linear-gradient(to left, blue, grey);
+}
+
+footer {
+    height: 9vh;
+    background: linear-gradient(to left, rgb(0, 0, 0), grey);
+}
+ }
+
+ section {
+    margin: 1.5vh;
+ }
+
+ .clear {
+    clear: both;
+ }

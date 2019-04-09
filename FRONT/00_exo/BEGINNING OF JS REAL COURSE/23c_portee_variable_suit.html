@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>OQue se passe-t-il si les variables sont appelées de l'intérieure d'une autre fonction.
+    </p>
+    <script>
+
+        // ETAPE C
+
+
+        var x = 1;
+
+        function a() {
+            var y = 2;
+            sortie(x);
+        }
+
+        function b() {
+            var z = 3;
+            sortie(x);
+        }
+
+
+        function sortie(valeur) {
+            var para = document.createElement('p');
+            document.body.appendChild(para);
+            para.textContent = 'La valeur est : ' + valeur;
+        }
+
+        sortie(x);
+        a();
+        b();
+
+        // Les deux fonctions a() et b() appelées doivent
+        // renvoyer la valeur x (qui est à 1). Cela fonctionne très bien car meme
+        // si la fonction
+        // sortie() n'est pas dans la meme portée que celle dans
+        // laquelle x est 
+        // définie, x est un e variable
+        // globale et donc elle est dicponible dans n'importe quelle partie du code.
+
+    </script>
+</body>
+
+</html>

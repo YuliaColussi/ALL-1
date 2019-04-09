@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            width: 100%;
+            height: inherit;
+            /* html va prendre la taille de la window */
+        }
+
+        button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+        }
+
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            display: block;
+            /* donc canvas va s'adater à la taille du body */
+            border: 4px solid crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Dessin</button>
+    <canvas></canvas>
+
+    <script>
+        var btn = document.querySelector('button');
+        var canvas = document.querySelector('canvas');
+        var feuille = canvas.getContext('2d');
+
+        var WIDTH = document.documentElement.clientWidth;
+        var HEIGHT = document.documentElement.clientHeight;
+
+        canvas.width = WIDTH;
+        canvas.height = HEIGHT;
+
+        function random(number) {
+            // Math.floor convertit en nombre entier
+            return Math.floor(Math.random() * number);
+            // ici on convertit en nombre entier (sans virgule) le number
+            // rendomnisé et multiplié par la valeur number(qui est l'argument donné en entrée de
+            // la fonction)
+        }
+
+        function dessinUnCercle() {
+            feuille.clearRect(0, 0, WIDTH, HEIGHT);
+            // efface le contenu du canvas
+
+
+          
+                // ici c'est les instructions a realiser autant de fois que la boucle le dit
+
+
+              // initialisation de i et du nombre de cercles qu'on voudra créer
+                var i = 0, combienDeFois = 100;
+
+                function f(){ 
+
+
+                feuille.beginPath();
+                feuille.fillStyle = 'hsla(' + random(360) + ', 100%, 50%, .5)';
+
+                // http://www.workwithcolor.com/hsl-color-picker-01.htm?cp=FF0000&ch=0-100-50&cb=FF0000,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF
+
+                // dessiner un cercle de 30px de diamètre, positionné à 100px en x
+                // et 100px en y de l'angle gauche du canvas
+
+                // feuille.arc(x, y, radius, startAngle, endAngle);
+                feuille.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+                feuille.fill();
+
+
+              i++;
+              if(i < combienDeFois){
+                setTimeout(f, 500);
+                // 500 = tout de demisecond
+              }
+
+             }
+                f(); //  FIN DE DECLARATION DE LA FONCTION f()
+            }
+
+
+        // ------------------CERCLE BEGINNING --------------------------------
+        // feuille.beginPath();
+        // feuille.fillStyle = 'hsla(' + random(360) + ', 100%, 50%, .5)';
+
+        // // http://www.workwithcolor.com/hsl-color-picker-01.htm?cp=FF0000&ch=0-100-50&cb=FF0000,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF,FFFFFF
+
+        // // dessiner un cercle de 30px de diamètre, positionné à 100px en x
+        // // et 100px en y de l'angle gauche du canvas
+
+        // // feuille.arc(x, y, radius, startAngle, endAngle);
+        // feuille.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+        // feuille.fill();
+
+        // ---------------------------CERCLE END ---------------------------------
+
+
+        // }  FIN DE LA FONCTION AU CLICK
+
+
+
+
+        // peremètres de addEventListener : événement, action
+        btn.addEventListener('click', dessinUnCercle);
+
+    </script>
+</body>
+
+</html>
+
+
+

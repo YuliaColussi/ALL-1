@@ -1,0 +1,50 @@
+#conteneur {
+    margin: 30px auto;
+    text-align: center;
+    width: 800px;
+    font-size: 22px;
+    border: 1px solid black;
+
+}
+
+.clear {
+    clear: both;
+}
+
+.espace {
+    text-align: center;
+    width: 158px;
+    border: 1px solid black;
+    float: left;
+}
+
+.espace7 {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid black;
+}
+
+.espace9 {
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    width: 500px;
+    height: 250px;
+    float: left;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.espace10 {
+    height: 200px;
+}
+
+.espace11,.espace12 {
+    width: 147px;
+    line-height: 49px;
+    height: 49px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    float: left;
+
+}

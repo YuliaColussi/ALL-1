@@ -1,0 +1,359 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+
+#page {
+    width: 1200px;
+    margin: 30px auto;
+}
+
+/* HEADER */
+/* HEADER TOP */
+.header_top {
+    height: 20px;
+    width: 1200px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+
+.header_top_left {
+ width: 250px;
+ float: left;
+}
+
+ .header_top_middle {
+ padding-left: 200px;
+ width: 550px;
+ height: 20px;
+ float: left;
+}
+
+ .header_top_middle > h4 {
+ float: left;
+}
+
+.header_top_right {
+text-align: center;
+ width: 150px;
+ float: left;
+}  
+
+.clear {
+    clear: both;
+}
+
+
+/* HEADER MIDDLE */
+
+.header_middle {
+    background-color: rgb(248, 248, 248);
+    padding: 10px 20px;
+}
+
+
+.header_middle_left {
+    float: left;
+    width: 700px;
+}
+
+.header_middle_first {
+
+    margin-right: 80px;
+    margin-bottom: 10px;
+    float: left;
+    width: 200px;
+}
+
+.header_middle_first img {
+    float: left;
+
+}
+
+.header_middle_second img {
+    float: right;
+}
+
+p {
+    display: block;
+}
+
+h3 {
+    font-weight: bold;
+    display: block;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    background-color: rgb(248, 248, 248);
+    padding-bottom: 20px;
+
+}
+
+nav li a {
+    border-right: 1px solid grey;
+    text-decoration: none;
+    color: rgb(42, 42, 42);
+    float: left;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+/* SLIDER RIGHT PART*/
+
+.main {
+    padding: 20px 40px;
+}
+
+.left_slider {
+    margin-left: 10px;
+    width: 800px;
+    margin-right: 20px;
+    float: left;
+} 
+
+.right_pictures {
+
+    float: left;
+    width: 270px;
+}
+
+.right_pictures img {
+    height: 210px;
+    width: 270px;
+}
+
+.description {
+    color: white;
+    background-color: rgb(250, 33, 123);
+}
+
+
+
+
+/* ARTICLES */
+
+#description {
+    margin: 40px;
+}
+
+.article_left {
+    float: left;
+    width: 800px;
+}
+
+article i {
+    font-size: 30px;
+    width: 63px;
+    height: 42px;
+    color: grey;
+    float: left;
+}
+
+article img {
+    float: left;
+}
+
+.article left > div {
+    width: 200px;
+}
+
+
+.first{
+    float: left;
+     width: 250px;
+}
+
+h2 {
+    font-size: 13px;
+}
+
+/* CARDS */
+
+
+.card {
+    float: left;
+    width: 300px;
+    margin: 20px 20px 10px 40px;
+}
+
+.pink_part {
+    color: white;
+    padding: 3px;
+    background-color: rgb(250, 33, 123);
+}
+
+
+.grey_part {
+    width: 50%;
+    color: white;
+    padding: 3px;
+    float: left;
+    background-color: rgb(82, 82, 82);
+}
+
+.last_part {
+    color: white;
+    padding: 3px;
+    background-color: rgb(212, 212, 212);
+}
+
+.card i {
+    float: left;
+}
+
+.card p {
+    font-size: 12px;
+}
+
+.product_description {
+    margin: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product_price {
+    margin: 10px;
+    font-size: 28px;
+    color: rgb(250, 33, 123);
+    text-align: center;
+}
+
+.promo {
+    position: absolute;
+    bottom: 150px;
+}
+
+.livraison {
+    position: absolute;
+    bottom: 150px;
+}
+
+.nouveaute {
+    position: absolute;
+    bottom: 150px;
+}
+
+
+
+
+
+/* FOURTH SECTION */
+
+.fourth_part {
+    margin-left: 40px;
+    width: 1020px;
+    height: 250px;
+    background-color: grey;
+    color: white;
+}
+
+.fourth_left ul li div {
+    margin-right: 20px;
+    float: left;
+}
+
+.fourth_left ul li{
+   margin: 20px;
+}
+
+.spriteone {
+    width: 39px;
+    height: 39px;
+    background: url(../img/sprites.png) no-repeat;
+    background-position: 0px -105px;
+}
+
+.spritetwo {
+    width: 39px;
+    height: 39px;
+    background: url(../img/sprites.png) no-repeat;
+    background-position: 0px -135px;
+}
+.spritethree {
+    width: 39px;
+    height: 39px;
+    background: url(../img/sprites.png) no-repeat;
+    background-position: 0px 0px;
+}
+
+.fourth_left {
+    float: left;
+    width: 290px;
+    height: 400px;
+}
+
+.fourth_middle {
+    padding: 20px;
+    width: 350px;
+    float: left;
+}
+
+.fourth_right{
+    padding: 20px;
+    width: 340px;
+    float: left;
+}
+
+
+.spritefour{
+    width: 39px;
+    height: 39px;
+    background: url(../img/sprites.png) no-repeat;
+    background-position: 0px -35px;
+}
+
+.spritefive {
+    width: 39px;
+    height: 39px;
+    background: url(../img/sprites.png) no-repeat;
+    background-position: 0px -65px;
+}
+
+
+.fourth_middle div {
+        margin-bottom: 100px;
+    margin-right: 20px;
+    float: left;
+}
+
+
+.fourth_right div {
+    margin-bottom: 100px;
+    margin-right: 20px;
+    float: left;
+}

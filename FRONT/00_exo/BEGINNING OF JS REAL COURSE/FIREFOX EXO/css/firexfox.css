@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(12, 34, 161);
+}
+
+#contenu {
+    background-color: rgb(255, 174, 0);
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px 15px 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.image{
+    width: 20%;
+    margin: auto;
+}
+
+
+
+h1 {
+    color: rgb(136, 136, 207);
+    text-shadow: 1px 1px 2px black;
+    font-size: 2rem;
+    text-align: center;
+
+}
+

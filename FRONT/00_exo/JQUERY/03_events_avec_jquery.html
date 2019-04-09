@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Cliquez-moi</button>
+    <!-- charger JQuery ici  -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    // on charger le SCOPE de JQuery
+    $(function(){
+        // ne RIEN FAIRE AVENT D4AVOIRE AFFICHE EN CONSOLE LA LIGNE SOUVENT
+        // <!-- TOUT LE SCOPE JQUERY -->
+    // console.log('bien chargé');
+
+    var action = function(){
+        alert('tu a cliqué');
+    }
+
+    $('#btn').on('click', action);
+
+})
+    // c'est la meme que la code JS
+
+    
+        // var btn = document.getElementById('btn');
+        // var action = function () {
+        //     alert('Tu as cliqué');
+        // }
+        // btn.addEventListener('click', action);
+
+
+
+
+    // FIN DE SCOPE
+
+    
+    </script>
+</body>
+</html>

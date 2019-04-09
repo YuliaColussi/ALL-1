@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Explication des FLOAT</title>
+</head>
+<body>
+    <p>=>Le FLOAT
+        =>Notion de flux
+        <hr>
+        Le flux d'un document pourrait sz définir comme étant le comportement naturel d'affichage des éléments d'une page web. Autrement dit, les éléments succèdent l'ordre
+        ou ils sont déclarés dans le code HTML. 
+        De façon simpliste, les éléments de séquençage tels que "h1", "p", ou "ul", "s"
+        affichent logiquement pqr défaut les uns en dessous des autres tandis que les
+        éléments délimitant pour la plupart des portions de textes (mise en iotalique d'un ou pluisieurs mots par ex.)
+        s'affichient cote à cotes <br/>
+        maintenet que nous avons évoqué ce point, il faut comprendre que les balises HTML 
+        ont tous par défautdes propriétés de rencu CSS particulières. En fait, il existe initialement deux grands groupes principaux de balises: <<mark>les balises de 
+        rencu CSS "bloc" (block)</mark> et <mark> Les balises de renduCSS "en-ligne" ("inline")
+        </mark> Ces valeurs de rendu visuel coincident généralement par défaut avec le group d'appartenance HTML <br/>
+        Des propriétés CSS d'un élément (display:block, inline, list-item, inline-block, table, table-cell...) découlent des spécificités d'affichage, son positionnement dans le flux. 
+        <br/>
+        <br/>
+        Il est possible de sortit du flux naturel un ou plusieurs élément pour modififier leur affichage avec du CSS </br><br/>
+        Nos deux groups d'éléments peuvent etre classés en deux familles 
+    <mark><strong>Les éléments de type block (h1, p, ul; ol, dl, table, blockquote, etc..)</strong></mark>
+    <mark><strong>Les éléments de type inline (a, img, strong, abbr...)</strong></mark>
+    <br/>
+    <hr>
+    </p>
+    <p>
+        =>Le type "block"
+        <hr>
+        Les éléments de rendu CSS block se placent toujours l'un dessous de l'autre par défaut (comme un retour à la ligne.) par example, une suite de paragraphes (balises <p>.) par ailleurs, un élément "bloc" occupe automatiquement, par défaut, tout la largeur disponible dans son conteneur et peut etre dimensionné à l'aide des propriétés telles que "width", "height", "min-width", ou "min-height"...<br/>
+        De plus élément de type "block" peut contenir d'autres éléments de type block ainsi que des éléments de type inline.
+        <mark><strong>A RETENIR<br/>
+        Un élément de type block d=se différencie des éléments de type inline (en ligne)
+        sur différents poins, dont ceux-ci:
+    <ul>
+        <li>Il occupe l'entièreté de la largeur de son conteneur</li>
+        <li>Il permet l'attribution de marges verticales</li>
+        <li>Il permet la modification de sa hauteur et de sa largeur</li>
+    </ul>
+    Le premier point est primordial, nous utiliserons abondamment ce comportementpar défaut bien pratique dans la creation de nos mise en page; Notons également que tout élément peut etre "reclassé" dans la famille opposée grace à la propriété display (que nous verrons plus tard.)
+</strong></mark>
+    </p>
+    <p>
+    =>Le type "inline"
+    Les éléments de rendu "inline" se placent toujours l'un à cote de l'autre afin de rester dans le texte (par exemple la balise "strong", "img", "a", "span").
+    Par défaut, il n'est pas prévu qu'ils puissent se positionner sur la page (meme si cela est possible), ni de leur donner des dimensions (hauteur, largeur, profondeut)
+    leur taille va etre déterminée par la texte ou l'élément:image qu'ils contiennent.
+    Référence: http://fr.learnlayout.com/toc.html (en français) <br/>
+    <br/>
+    La propriété CSS FLOAT permet de faire flotter des éléments cote à cote, donc de modifier le comportement naturellement de type block en comportement inline.
+    A l'origine le float est prévu pour entourer une image avec du texte (paragraphe).
+    
+    </p>
+
+</body>
+</html>

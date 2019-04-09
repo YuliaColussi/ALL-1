@@ -1,0 +1,166 @@
+#contenu {
+    margin: 30px auto;
+    width: 1026px;
+    background: rgb(241, 241, 241);
+}
+
+header,footer {
+    text-align: center;
+    margin: auto;
+    padding-top: 40px;
+}
+
+footer {
+    padding-bottom: 150px;
+}
+
+
+h1,h2 {
+    font-family: 'Nanum Myeongjo', serif;
+    border-bottom: 1px solid rgb(87, 87, 87);;
+    border-top: 1px solid rgb(87, 87, 87);
+    width: 480px;
+    margin-left: 275px;
+
+}
+
+h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    border-bottom: 2px solid rgb(194, 194, 194);
+    width: 440px;
+    font-size: 27px;
+    padding-top: 120px;
+}
+
+
+
+.description,.description-second {
+    width: 440px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: 'Niconne', cursive;
+}
+
+.description-third {
+    width: 440px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: 'Niconne', cursive;
+}
+
+.description-fourth {
+    padding-right: 20px;
+    width: 440px;
+    font-size: 20px;
+    font-family: 'Niconne', cursive;
+    float: right;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    padding-left: 10px;
+    font-family: 'Niconne', cursive;
+    font-size: 20px;
+
+}
+
+.clear {
+    clear: both;
+}
+
+.first-photo {
+    float: right;
+}
+
+.third-photo {
+    float: right;
+}
+
+.third {
+    width: 1000px;
+}
+
+.second-photo {
+    width: 400px;
+    float: left;
+}
+
+.fourth-photo {
+    float: left;
+}
+
+
+
+.description-second {
+    float: right;
+}
+
+.mark {
+    font-family: 'Nanum Myeongjo', serif;
+    height: 10px;
+    width: 190px;
+    background: rgb(56, 56, 56);
+    padding: 10px 0px 20px 30px;
+
+}
+
+
+.stars {
+        margin-left: 90px;
+        line-height: 13px;
+}
+
+.mark i {
+    line-height: 10px;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+}
+
+.left{
+    float: left; 
+    font-size: 20px;
+}
+
+.mark p {
+    color: white;
+    margin: 0px;
+    font-size: 15px;
+    line-height: 17px;
+    position: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+.photo {
+    width: 100px;
+    padding-top: 40px;
+    float: left;
+}
+
+.description-new {
+    padding-top: 80px;
+    float: right;
+    margin-right: 150px;
+    text-align: right;
+    padding-right: 20px;
+    width: 440px;
+    font-size: 20px;
+    font-family: 'Nanum Myeongjo', serif;
+    float: right;
+
+}
+
+h2 {
+    padding: 10px;
+    font-size: 30px;
+}
+
+.dates,.address {
+    font-family: 'Alice', serif;
+}
+
+

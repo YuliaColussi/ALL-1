@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    section {
+        border: 2px crimson solid;
+        width: 70%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        Ici contenu de section
+    </section>
+    <p class="resultat">
+
+    </p>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function() {
+        // console.log('la page est chargée');
+
+        // ICI TOUT NOTRE CODE
+        // on cible SECTION et avec la méthod .css on peut ajouter du css via jquery
+
+        // $('section').css('background-color', 'gold');
+
+        // la décoration se fait dans la feuille de style plutot
+
+
+        // plus intérresante, on va ajouter ce fond gold au click sur la balise section, l'intéret de jquery c'est l'intéractivité
+
+        $('section').on('click', function(){
+            // ici on écrit tout ce qu'on veut faire alors du clic sur la balise section
+            
+            // ajoute une propriété css à la section
+            // $(this).css('background-color', 'gold');
+
+            // ajoute plusieurs propriétés css à la section
+            // background et font-size par exemple
+
+            // ici on va utiliser un array. Attention on a : (deux poins)
+            // entre chaque propriété / valeur css et à chaque
+            // fin de ligne, une virgule
+            $(this).css({
+                'background-color': 'orange',
+                'font-size' : '2rem'
+            })
+
+            // ici on récupère dans la variable couleur la valeur de couleur de fond de this
+            var couleur = $(this).css('background-color');
+            // on affiche cette vaeur dans la console
+
+            console.log(couleur);
+
+            // ici on sélectionne la balise p qui a la class résultat
+            // ATTENTION A BIEN METTRE LE POINT .RESULTAT devant le nom de classe
+
+            $('.resultat').html('La couleur de fond de section est : ' + couleur)
+                            .css('background-color', couleur);
+        })
+
+    })// FIN DU SCOPE JQUERY
+
+    </script>
+</body>
+</html>

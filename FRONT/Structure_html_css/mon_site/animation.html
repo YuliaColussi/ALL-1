@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CLemonada%7COswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <!--Zone du haut, exp : bannière, logo, slogan-->
+        <div id="logo">
+            <a href="index.html" target="_blank">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+        <div id="slogan">
+            <h1>Mon premier site en HTML/CSS</h1>
+            <!--H1 titre de premier rang un seul par page-->
+        </div>
+        <div id="rs">
+            <a href="http://twitter.com" target="_blank">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="http://facebook.com" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="http://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </header>
+    <nav>
+        <!--menu-->
+        <a href="index.html">Structure</a>
+        <a href="text.html">Textes</a>
+        <a href="selecteur.html">Selecteurs</a>
+        <a href="image.html">Images</a>
+        <a href="position.html">Positions</a>
+        <a href="zoning.html">Zoning</a>
+        <a href="list.html">Listes</a>
+        <a href="lien_menu.html">Liens & Menus</a>
+        <a href="tableaux.html">Tableau</a>
+        <a href="formulaire.html">Formulaires</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="animation.html" class="active">Animation</a>
+        <a href="explication_flexbox.html">Flexbox</a>
+    </nav>
+    <main>
+        <h2>Animations</h2>
+        <div class="box">
+        <a href="#">
+        <div class="overlay"><p>Lorem ipsum dolor sit amet</p></div>Passez la souris!
+        </a>
+        <a href="#">
+        <div class="overlay"><p>Lorem ipsum dolor sit amet</p></div>Ici aussi!
+        </a>
+        <a href="#">
+        <div class="overlay"><p>Lorem ipsum dolor sit amet</p></div>Une fois encore.
+        </a>
+        </div>
+
+        <!-- correction -->
+<!-- <section>
+    <h3>Infobulle</h3>
+    <div class="infobulle">
+        <p>
+            <a href="#">Passez la souriz!<span>Salut, je suis un pop-up</span></a>
+        </p>
+        <p>
+            <a href="#">Ici aussi!<span>Salut, un autre pop-up</span></a>
+        </p>
+        <p><a href="#">Une fois encore.<span>Salut, encore un pop-up</span></a>
+        </p>
+    </div>
+</section> -->
+<section class="harry_potter">
+    <h3>Effets de survol avec transition en filtres CSS</h3>
+    <img src="img/hogwarts-crest-png-5.png">
+    <img src="img/pexels-photo-531880.jpeg">
+    <img src="img/simbolo-harry-potter-png-1.png">
+    <img src="img/postImage_u24Np6Wgsk.jfif">
+</section>
+
+<!-- correction -->
+
+<!-- <section>
+    <h3>Effets de survol avec transition en filtres CSS</h3>
+    <ul class="imgEffets">
+    <li><img src="img/hogwarts-crest-png-5.png"></li>
+    <li><img src="img/pexels-photo-531880.jpeg"></li>
+    <li><img src="img/simbolo-harry-potter-png-1.png"></li>
+    <li><img src="img/postImage_u24Np6Wgsk.jfif"></li>
+    </ul>
+</section> -->
+<!-- ROTATION -->
+<!-- <h3>Rotation d'un menu en CSS3</h3>
+<section class="rotation">
+<div class="line"></div>
+<div class="rotate">
+    <p>Effets de survol avec transition en filtres CSS</p>
+</div>
+</section> -->
+<section>
+    <h3>Rotation d'un menu en CSS3</h3>
+    <article id="menuRotate">
+        <dl class="menu">
+            <dt class="btnRot">Partager</dt>
+            <dd>
+                <a href="">...</a>
+            </dd>
+            <dd>
+                <a href="">Mon Site</a>
+            </dd>
+            <dd>
+                <a href="">Facebook</a>
+            </dd>
+            <dd>
+                <a href="">Twitter</a>
+            </dd>
+        </dl>
+        <div class="masque"></div>
+        <div class="ombre"></div>
+    </article>
+</section>
+</main>
+
+        <a href="#logo">
+            <button type="button">
+                <i class="fas fa-arrow-alt-circle-up" aria-hidden="true"></i>
+                <!--aria accés de contenus web plus facilespour les handicapes => https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA-->
+            </button>
+        </a>
+    <footer>
+        <!--Footer: zone du bas, ex : Les liens administratifs, mentions légales, plan du site...-->
+
+    </footer>
+
+    <input type="text"> Mon champ texte
+    <input />
+</body>
+
+</html>

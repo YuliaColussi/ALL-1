@@ -1,0 +1,72 @@
+
+body { 
+    width: 80%;
+    margin: 20px auto;
+    color: white;
+}
+
+
+#container { 
+    width: 500px;
+    margin: 0 auto;
+}
+
+header { 
+    background-color: rgb(172, 97, 97);
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+
+}
+
+section { 
+    height: 500px;
+}
+
+.z1,.z2,.z3,.z4,.z5{ 
+    width: 135px;
+    height: 350px;
+    background-color: rgb(124, 184, 124);
+    border: 1px solid white;
+    float: left;
+    text-align: center;
+    line-height: 350px;
+}
+
+.gauche { 
+    background-color: rgb(144, 144, 201);
+    float: left;
+    height: 500px;
+    width: 190px;
+    text-align: center;
+    line-height: 500px;
+
+}
+
+.droite { 
+    background-color: rgb(144, 144, 201);
+    float: right;
+    height: 500px;
+    width: 190px;
+    text-align: center;
+    line-height: 500px;
+
+}
+
+.z6{ 
+
+    background-color: rgb(238, 238, 113);
+    float: left;
+    border: 1px solid white;
+    text-align: center;
+    height: 147px;
+    line-height: 147px;
+    width: 683px;
+    
+}
+
+.clear { 
+    clear: both;
+
+}
+

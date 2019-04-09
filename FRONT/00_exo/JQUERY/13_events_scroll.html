@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .maDiv {
+        background: burlywood;
+        padding: 1rem;
+        width: 400px;
+        height: 200px;
+        /* overflow: hidden, cache le contenu qui déborde du div */
+        /* overflow: scroll; make the scrolling bars on the side */
+        overflow: auto;
+        /* affiche l'ascenseur là iu y en a besoin */
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+        <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+        des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+    
+    <div class="maDiv">
+        <h2>Ma Div</h2>
+                <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+                    des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+                <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+                    des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+                <p>Si vous voulez vraiment pousser à fond votre utilisation des dimensions et du redimensionnement des éléments, il existe aussi
+                    des méthodes jQuery qui prennent en compte les bords, les marges intérieures et extérieures, ensemble ou séparément.</p>
+    </div>
+    </section>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function () {
+                // console.log('coucou');
+                $(window).scroll(function(){
+                console.log('utilisation de la roulette dans le document');
+                // récupérer les dimensions de la fenétre
+                var largeur = $(window).width();
+                console.log(largeur);
+
+                var hauteur = $(window).height();
+                console.log(hauteur);
+                 })//FIN DE LA SCROLL FENETRE
+
+                 $('.maDiv').scroll(function(){
+                     console.log('utilisation de la scroll dans la div .maDiv')
+                 })
+
+                })//FIN DU SCOPE
+        </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+header {
+    height: 12vh;
+    background-color: blue;
+    width: 95;
+    margin: 0 auto;
+}
+
+.contenu {
+    background-color: yellow;
+    height: 35vh;
+}
+
+nav {
+    background-color: green;
+    height: 5vh;
+}

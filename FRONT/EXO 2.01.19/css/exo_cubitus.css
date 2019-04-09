@@ -1,0 +1,88 @@
+
+body {
+    margin: 0 auto;
+}
+
+div {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boite {
+    height: 5em;
+    width: 5em;
+    padding: 3vh;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    float: left;
+    transition: margin 0.5s;
+}
+
+
+
+
+.boite1 {
+    height: 5em;
+    width: 5em;
+    padding: 3vh;
+    background-color: rgb(35, 77, 35);
+    border: 1px solid black;
+    border-radius: 10px 20px 30px 40px;
+    margin: 5px;
+    float: left;
+    transition: margin 0.5s;
+}
+
+.boite2 {
+    height: 5em;
+    width: 5em;
+    padding: 3vh;
+    background-color: rgb(73, 175, 189);
+    border: 1px solid black;
+    border-radius: 70px 0 70px 0;
+    margin: 5px;
+    float: left;
+    transition: margin 0.5s;
+}
+
+.boite3 {
+    height: 5em;
+    width: 5em;
+    padding: 3vh;
+    background-color: rgb(81, 202, 211);
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 5px;
+    float: left;
+    transition: margin 0.5s;
+}
+
+.boite4 {
+    height: 5em;
+    width: 5em;
+    padding: 3vh;
+    background-color: rgb(194, 163, 178);
+    border: 1px solid black;
+    border-radius: 30px 60px 30px 60px;
+    margin: 5px;
+    float: left;
+    transition: margin 0.5s;
+}
+
+
+.boite5 {
+    height: 5em;
+    width: 5em;
+    padding: 3vh;
+    background-color: rgb(161, 40, 40);
+    border: 1px solid black;
+    border-radius: 30px 60px 30px 60px;
+    float: left;
+    margin: 5px;
+    transition: margin 0.5s;
+}
+
+.clear {
+    clear: both;
+}

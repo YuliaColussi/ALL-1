@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .tailleTexte2{
+        font-size: 2em;
+    }
+
+    .couleurFond{
+        background-color: teal;
+    }
+
+    .carre{
+        width: 200px;
+        height: 200px;
+        background-color: forestgreen;
+        margin-top: 50px;
+        transition: 1s;
+    }
+
+    .tourne{
+        background-color: gold;
+        transform: rotate(.5turn) scale(.5);
+    }
+
+    </style>
+</head>
+<body>
+    <strong>Je suis gras</strong><br>
+    <em>Je suis de l'italic</em><br>
+    <u>Je suis du texte souligné</u><br>
+    <button>Retire la classe</button>
+    <div class="carre">Contenu de carré</div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+    $(function(){
+        // console.log('coucou');
+
+        // sélectionner la balise u et lui donner la classe
+        // .tailleTexte2 avec la méthode jquery .addClass
+
+          $('u').addClass('tailleTexte2');      
+            // exo pratique : quand on clique sur la balise em, on ajoute        // la class .couleurFond à la balise strong
+
+            $('em').on('click', function(){
+
+             $('strong').addClass('couleurFond');
+
+       })
+
+
+         // ici on éxécute cette fonction lors du click du la balise button
+        var retireClass = function(){
+             $('u').removeClass();
+        }
+       $('button').on('click', retireClass);
+
+
+        // On va faire fonction TourneCarre qui sera
+        // éxécutée au clic sur le carré, cette fonction ajoute la classe tourne au carre
+
+        //  ici on déclare la fonction tourneCarre
+        var tourneCarre = function(){
+            $(this).toggleClass('tourne')
+        }
+        // on éxécute la fonction au clic sur la balise .carre
+
+        $('.carre').on('click', tourneCarre);
+
+    })// FIN DU SCOPE JQUERY
+
+
+    </script> 
+
+</body>
+</html>

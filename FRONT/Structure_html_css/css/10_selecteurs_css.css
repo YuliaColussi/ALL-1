@@ -1,0 +1,126 @@
+
+
+
+body {
+    width: 70%;
+    margin: 0px auto;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 40px;
+}
+
+#box {
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid rgb(241, 241, 108);
+    background-color: rgb(214, 214, 214);
+    padding: 20px;
+}
+
+ /* nav {
+    height: 30px;
+    background-color:  rgb(241, 241, 108);
+}
+
+
+a {
+    color: rgb(5, 60, 112);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration: none;
+    width: 110px;
+    padding: 5px 30px 5px 30px;
+}
+
+a:hover {
+    background-color: green;
+}  */
+
+
+nav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+a:hover {
+  color: rgb(241, 241, 108);
+}
+
+.main {
+  margin-left: 15px; /* Same as the width of the nav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+.font-weigh {
+  font-weight: bold;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+}
+
+.background-image {
+  background-image: url()
+}
+
+.background-size {
+  background-size: 2px;
+}
+
+.text-shadow {
+  text-shadow: 5px 4px 6px rgb(241, 241, 108);
+}
+
+.opacity {
+  opacity: 0.33;
+}
+
+.border-style {
+  border-style: double dashed;
+  border-color: rgb(241, 241, 108);
+}
+
+.box-shadow {
+  box-shadow: 6px 3px 7px 7px  rgb(241, 241, 108);
+}
+
+.border {
+  border: 2px solid rgb(241, 241, 108);
+}
+
+.background-color {
+  background-color: rgb(241, 241, 108);
+}
+
+.font-variant {
+  font-variant: small-caps slashed-zero;
+}
+
+.border-width {
+  border-width: thick;
+  border: 3px solid rgb(241, 241, 108);
+ }
+
+.border-radius {
+  border-radius: 30px;
+  border: 3px solid rgb(241, 241, 108);
+
+.background-image {
+  background-size: 30px;
+}

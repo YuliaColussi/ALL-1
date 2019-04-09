@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    p {
+        background-color: forestgreen;
+        /* p étant  une balise block donc il prendre tout le place disponible */
+    }
+
+    strong {
+        background-color: yellow;
+        /* strong - un element inline, c'est une boite de ligne
+        dont la largeur s'adapte au text qu'il y a dedans */
+        padding: 1rem;
+        /* les marges et paddings verticales ne fonctions pas ou mal sur la balises inline 
+        / les width ne fonctions pas du tout */
+    }
+
+    em {
+        background-color: thistle;
+        display: inline-block;
+        padding: 1rem;
+    }
+    
+    ul {
+        border: 2px solid crimson;
+        padding-left: 0px;
+
+    }
+
+    li {
+        padding: 5px;
+        display: inline-block;
+        border: 2px gold solid;
+        list-style: none;
+    }
+
+    section {
+        border: 2px teal solid;
+        width: 60%;
+    }
+
+    section div {
+        border: 2px firebrick solid;
+        box-sizing: border-box;
+        width: 50%;
+        padding: 1rem;
+        float: left;
+      /* <!-- avec le float les dives sortent du flux,
+      le parent section ne les contient plus --> */
+
+      /* 2 WAYS SO THE BACKGROUND DOESNT CLAP ITSELF / 
+      .clearfix:after */
+    }
+
+    /* boite à outil des flotatnt : le clearfix */
+    /* TO USE IT WE SHOULD GIVE A PARENT ELEMENT A CLASS 'CLEARFIX' */
+
+    .clearfix:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    
+    
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <p>Le Lorem Ipsum est simplement du faux<strong> texte employé</strong> dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv</p>
+
+    <p>Le Lorem Ipsum est simplement du <em>faux texte</em> employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv</p>
+
+    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+    est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+    de texte pour réaliser un liv</p>
+
+<ul>
+    <li>Pomme</li>
+    <li>Poire</li>
+    <li>Banane</li>
+</ul>
+
+<section class="clearfix">
+    <div>Un</div>
+    <div>deux</div>
+    <div>trois</div>
+</section>
+
+</body>
+</html>

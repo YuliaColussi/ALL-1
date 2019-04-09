@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CLemonada%7COswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <!--Zone du haut, exp : bannière, logo, slogan-->
+        <div id="logo">
+            <a href="index.html" target="_blank">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+        <div id="slogan">
+            <h1>Mon premier site en HTML/CSS</h1>
+            <!--H1 titre de premier rang un seul par page-->
+        </div>
+        <div id="rs">
+            <a href="http://twitter.com" target="_blank">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="http://facebook.com" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="http://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </header>
+    <nav>
+        <!--menu-->
+        <a href="index.html">Structure</a>
+        <a href="text.html">Textes</a>
+        <a href="selecteur.html">Selecteurs</a>
+        <a href="image.html">Images</a>
+        <a href="position.html">Positions</a>
+        <a href="zoning.html">Zoning</a>
+        <a href="list.html">Listes</a>
+        <a href="lien_menu.html">Liens & Menus</a>
+        <a href="tableaux.html">Tableau</a>
+        <a href="formulaire.html">Formulaires</a>
+        <a href="multimedia.html" class="active">Multimedia</a>
+        <a href="animation.html">Animation</a>
+        <a href="explication_flexbox.html">Flexbox</a>
+        
+    </nav>
+    <main>
+        <!-- CORRECTION VIDEO FONT -->
+        <!-- <section class="videoFond">
+            <h3>Vidéo en fond</h3>
+            <div class="videotexte">
+                <video autoplay loop>
+                    <source src="./video/videoBackground.mp4" type="video/mp4">     
+                </video>
+                <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+                est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+                de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi
+                adapté à la bureautique in.</p>
+            </div>
+        </section> -->
+        <h2>Videos/Audios/Map</h2>
+        <!-- VIDEO BACKGROUND -->
+        <p>Video fond</p>
+        <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/fashion.jpg" playsinline autoplay muted loop>
+            <source src="./video/videoBackground.mp4" type="video/mp4">
+        </video>
+        <div id="fashion">
+            <h2>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum
+            est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux
+            de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi
+            adapté à la bureautique in.</h2>
+        </div>
+        <!-- VIDEO -->
+        <p>Video Youtube</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Uf0ctiZhmWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+            <!-- AUDIO -->
+            <p>Audio</p>
+            <audio controls>
+                <source src="../mon_site/audio/son.mp3">
+            </audio>
+            <audio controls>
+                <source src="../mon_site/audio/son.ogg">
+            </audio>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10500.937506721395!2d2.384845877197265!3d48.853740926399794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6727a68cb47bf%3A0xcac64dc9beee3a9e!2sDARTY+Nation!5e0!3m2!1sru!2sfr!4v1550241577481"
+            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!-- SUPERHEROES -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+                <!-- JQuery Library -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <!-- Fancy Box Core JS -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+                <!-- Fancy Box -->
+                <a data-fancybox="gallery" href="http://i66.tinypic.com/1zcpf6e.jpg">
+                    <img src="http://i66.tinypic.com/1zcpf6e.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i63.tinypic.com/2q3atrs.jpg">
+                    <img src="http://i63.tinypic.com/2q3atrs.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i63.tinypic.com/9u4y91.jpg">
+                    <img src="http://i63.tinypic.com/9u4y91.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i64.tinypic.com/2lwk45z.jpg">
+                    <img src="http://i64.tinypic.com/2lwk45z.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i67.tinypic.com/kcj6mg.jpg">
+                    <img src="http://i67.tinypic.com/kcj6mg.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i63.tinypic.com/21bomd5.jpg">
+                    <img src="http://i63.tinypic.com/21bomd5.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i68.tinypic.com/4twso3.jpg">
+                    <img src="http://i68.tinypic.com/4twso3.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i66.tinypic.com/x5xv60.jpg">
+                    <img src="http://i66.tinypic.com/x5xv60.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i68.tinypic.com/jl1hk5.jpg">
+                    <img src="http://i68.tinypic.com/jl1hk5.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i63.tinypic.com/312zafp.jpg">
+                    <img src="http://i63.tinypic.com/312zafp.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i67.tinypic.com/iztjb9.jpg">
+                    <img src="http://i67.tinypic.com/iztjb9.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i63.tinypic.com/osg7c4.jpg">
+                    <img src="http://i63.tinypic.com/osg7c4.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i66.tinypic.com/2nukbw0.jpg">
+                    <img src="http://i66.tinypic.com/2nukbw0.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i68.tinypic.com/15oh0jn.jpg">
+                    <img src="http://i68.tinypic.com/15oh0jn.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i67.tinypic.com/ekg4ro.jpg">
+                    <img src="http://i67.tinypic.com/ekg4ro.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i64.tinypic.com/jz77k.jpg">
+                    <img src="http://i64.tinypic.com/jz77k.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i64.tinypic.com/2nq5idw.jpg">
+                    <img src="http://i64.tinypic.com/2nq5idw.jpg">
+                </a>
+                <a data-fancybox="gallery" href="http://i63.tinypic.com/b5nply.jpg">
+                    <img src="http://i63.tinypic.com/b5nply.jpg">
+                </a>
+                <!-- Fancy Box -->
+                </main>
+                <a href="#logo">
+                    <button type="button">
+                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                    </button>
+                </a>
+                <!-- fa. => classe de FontAwesome -->
+                <!-- aria-... accès de contenus web plus faciles pour les handicapés => https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA -->
+                <footer>
+                    <!--Footer : Zone du bas, ex: les liens administratifs, mentions légales, plan du site...-->
+                </footer>
+                <!--<script src="js/activ.js"></script> script de bases-->
+                <script src="js/fancy_box.js"></script>
+        <a href="#logo">
+            <button type="button">
+                <i class="fas fa-arrow-alt-circle-up" aria-hidden="true"></i>
+                <!--aria accés de contenus web plus facilespour les handicapes => https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA-->
+            </button>
+        </a>
+        
+    </main>
+    <footer>
+        <!--Footer: zone du bas, ex : Les liens administratifs, mentions légales, plan du site...-->
+
+    </footer>
+</body>
+
+</html>
