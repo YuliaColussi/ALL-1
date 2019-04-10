@@ -68,6 +68,11 @@
         echo '<pre>'; var_dump($result); echo '</pre>';
         echo '<pre>'; var_dump(get_class_methods($result)); echo '</pre>';
 
+        // // requete selection -> query() -> retour objet PDOStatement (inexploitable)
+        // Pour exploiter le résultat -> associe une méthode --> fetch() /fetchAll() --> retourne tableau 
+        // Si pluisieurs résultats --> boocle!!
+
+
         $employe = $result->fetch(PDO::FETCH_ASSOC);// retourne un tableau ARRAY indexé avec le nom des champs
 
         $employe = $result->fetch(PDO::FETCH_NUM);// retourne un tableau ARRAY indexé numériquement
@@ -156,16 +161,149 @@ echo '</div>';
 
 
     
-    echo '<hr><h2 class="display-4 text-center">04. PDO : QUERY + FETCH + BDD (pluisiers resultats)</h2><hr>';
+    echo '<hr><h2 class="display-4 text-center">05. PDO : QUERY + FETCH + BDD (pluisiers resultats)</h2><hr>';
 
     // Exo: afficher la liste des bases des données, puis les mettre dans une liste ul li
 
 
  $resultat = $pdo->query("SHOW DATABASES");
+ echo '<pre'; print_r($resultat); echo '</pre>';
 
- $donnes = $resultat->fetchALL(PDO::FETCH_ASSOC);
 
- echo '<pre>';  print_r($donnes); echo '</pre>';
+echo '<ul class="col-md-4 offset-md-4 list-group">';
+
+// $data receptionne un tableau ARRAY par tour de boucle contenant les unformations d'une BDD
+while($donnes = $resultat->fetch(PDO::FETCH_ASSOC)){
+
+//   on va crocheter à l'indice [Database] pour afficher le nom de la BDD
+  echo '<li class="list-group-item active">' .  $donnes['Database'] . '</li>';
+//   echo '<pre>';  print_r($donnes); echo '</pre>';
+}
+echo '</ul>';
+
+    
+echo '<hr><h2 class="display-4 text-center">06. PDO : QUERY + TABLE (pluisiers resultats)</h2><hr>';
+
+$resultat = $pdo->query("SELECT * FROM employes");
+
+
+
+/*
+columnCount() est un méthode issue de la classe PDOStatement qui retourne
+le nombre de colonne selectionnés via
+le requete de selection, dans notre cas retourne integer 7, donc la
+boucle FOR tourne 7 fois, autant de fois qu'il y a de colonnes
+
+getColumnMeta() est un méthode issue de la classe PDOStatement
+qui permet de recolter les informations des champs/colonne selectionnés
+*/
+
+echo '<table class=" table table-bordered text-center"><tr>';
+
+for($i=0; $i < $resultat->columnCount(); $i++)
+{
+    $colonne = $resultat->getColumnMeta($i);
+    // echo '<pre>';  print_r($colonne); echo '</pre>';
+    echo "<th>$colonne[name]</th>";
+}
+echo '</tr>';
+// $employe receptionne un tableau ARRAY par employes par tour de boucle
+while($employe = $resultat->fetch(PDO::FETCH_ASSOC))
+{
+    echo '<pre>';  print_r($employe); echo '</pre>';
+    echo '<tr>';
+    //  la boucle foreach permet de parcourir chaque tableau ARRAY de chaque employé
+    foreach ($employe as $value)
+    {
+        echo "<td>$value</td>";
+    }
+    echo'</tr>';
+}
+echo '</table>';
+
+// Exo: faire la meme chose en utilisant la méthode fetchAll
+
+
+$resultat = $pdo->query("SELECT * FROM employes");
+$employes = $resultat->fetchAll(PDO::FETCH_ASSOC);
+
+echo '<table class=" table table-bordered text-center"><tr>';
+
+// on va crocheter au premier indice du tableau multi pour recupérer les indices et les srockés dans les entetes <th></th>
+foreach($employes[0] as $key => $value)
+{
+    echo "<th>$key</th>";
+}
+echo '</tr>';
+foreach($employes as $tab)
+{
+    echo '<tr>';
+    // on crée une ligne par employé
+    //  la boucle foreach permet de parcourir chaque tableau ARRAY de chaque employés
+    foreach($tab as $infos)
+    {
+        echo "<td>$infos</td>";
+    }
+}
+echo '</table>';
+
+// $resultat = $pdo->query("SELECT * FROM employes");
+// //  echo '<pre'; print_r($resultat); echo '</pre>';
+
+// echo '<div class=" table table-bordered text-center"><tr>';
+
+
+// while($donnes = $resultat->fetchAll(PDO::FETCH_ASSOC)){
+
+// //   on va crocheter à l'indice [Database] pour afficher le nom de la BDD
+//   echo '<li class="list-group-item active">' .  $donnes['Database'] . '</li>';
+// //   echo '<pre>';  print_r($donnes); echo '</pre>';
+// }
+// echo '</ul>';
+
+echo '<hr><h2 class="display-4 text-center">08. PDO : PREPARE +  BINDVALUE + EXECUTE(pluisiers resultats)</h2><hr>';
+// les requetes préparées permettent du formuler un seul fois le requete et de l'executée autant de fois que souhaité
+
+// Les requetes préparées permettent de parer aux injections SQL, cela permet de protéger les requètes SQL
+
+// 3 cycles dans une requete : analyse / interprétation : execution
+
+$resultat = $pdo->prepare(" SELECT * FROM employes WHERE nom = :nom ");
+// ici on prépare la requete mais à aucun moment ici elle n'est executée
+// :nom --> marqueur nomiatif que l'on peux comparer à une boite vide ou un tampon
+ echo "<pre>"; print_r($resultat); echo "</pre>";
+ $resultat->bindValue(':nom', 'Winter', PDO:: PARAM_STR);// bindValue() --> méthode PDOStatement. Elle
+//  permet de se associer une valeur au marqueur nominatif ':nom'
+//  arguments bindValue(nom_du_marqueur, valeur, type)
+// A ce stade la requete n'a toujours pas été executée
+$resultat->execute(); // la méthode PDOStatement : permet d'executer la requete préparée
+
+
+// EXO: afficher le resultat de la requete préparée à l'aide de méthode et boucle
+
+
+$employes = $resultat->fetch(PDO::FETCH_ASSOC);
+
+
+// on va crocheter au premier indice du tableau multi pour recupérer les indices et les srockés dans les entetes <th></th>
+echo'<div class="col-md-4 offset-md-4 alert alert-warning text-dark mx-auto text-center">';
+foreach($employes as $key => $value)
+{
+    echo "$key : $value<hr>";
+}
+echo '</div><hr>';
+
+$nom = 'Dubar';
+// A tout moment on peut changer la valeur du marqueur ':nom' sans avoir a reformuler la requete SQL 
+$resultat->bindValue(':nom', $nom, PDO::PARAM_STR);
+//  on change la valeur du marqueur sans avoir à reformuler la requete SQL 
+$resultat->execute();// on execute la requete
+$employe = $resultat->fetch(PDO::FETCH_ASSOC);
+ echo "<pre>"; print_r($resultat); echo "</pre>";
+
+
+
+
 
     ?>
     </div>
