@@ -43,7 +43,11 @@
     </div>
     </form>
     <?php
-
+    foreach($_POST as $key => $value)
+    {
+        $_POST[$key] = strip_tags(trim($value)); // on passe en revue le formulaire 
+        // trim() est une fonction prédéfinie qui supprime les espaces eb début et fin de chaine
+    }
     // 1
 
 //     $sql = "CREATE DATABASE";
@@ -93,6 +97,7 @@ extract($_POST); // permet de tranformer chaque indice du formulaire en variable
 
 
 if($_POST){
+       
     
     //    echo '<pre>' ; print_r($_POST); echo'</pre>';
     //    echo '<hr>'  ;
@@ -137,15 +142,11 @@ $resultat = $bdd ->query("SELECT pseudo , message , DATE_FORMAT(dateEnregistreme
     // -htmlspecialchars() : permet de rendre innofensives des balises HTML 
     // - htmlentities() : permet de convertir les balises HTML en entités html
 
-    foreach($_POST as $key => $value)
-    {
-        $_POST[$key] = strip_tags($value); // on passe en revue le formulaire 
-    }
+ 
 
     // we put straight after if($_POST) and it removes a tag HTML
     
     
-    </finies:>
 
 
 // 6
