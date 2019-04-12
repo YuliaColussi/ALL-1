@@ -1,0 +1,220 @@
+/* STYLES GLOBALES */
+
+*{
+   box-sizing: border-box;  /*ça bloque l’élement, le recentre et ça fait une marge*/
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 10px;
+}
+
+body {
+   font: 1.4rem Srisakdi, helvetica, sans-serif;
+   line-height: 2.1rem;
+   background-color: #a9f0d1;
+   padding: 3% 10%;
+}
+
+
+/* STYLES DE LA PAGE */
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenu {
+    padding: 3% 1%;
+    background: url(../images/bg.jpg) repeat;
+    width: 100%;
+}
+
+.header i {
+    font-size: 4rem;
+    padding-right: 2%;
+}
+
+.header, .footer {
+    display: flex;
+}
+
+ /* CARDS */
+
+ .card {
+     background-color: white;
+     width: 32%;
+     margin: 3% 7% 1% 3%;
+ }
+
+ .card-left {
+     margin-right: 20%;
+ }
+
+
+ img {
+     width: 100%;
+ }
+
+
+.meilleu {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+h3 {
+    padding: 4% 0%;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p {
+       font: 1.6rem Aria, helvetica, sans-serif;
+       line-height: 2.5rem;
+       padding-left: 3%;
+    }
+    
+    a {
+        
+        font: 2rem Aria, helvetica, sans-serif;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        margin: 10% auto;
+        padding: 2% 0%;
+        width: 70%;
+        border: none;
+        border-radius: 4%;
+    }
+    
+    .btn1 {
+        background-color: #17a2b8;
+    
+}
+
+.btn2 {
+    background-color: #dc3545;
+}
+
+.btn3 {
+    background-color: #ffc107;
+}
+
+.btn4 {
+    background-color: #007bff;
+}
+
+
+.footer {
+    margin-top: 4%;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+i { 
+    color: #6c9986;
+    font-size: 2rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* CARD PHP */
+
+h2 {
+    background-color:  #dff8e7;
+    font-size: 3rem;
+    padding: 2% 0% 2% 2%;
+    color: #198131;
+}
+
+h6 {
+    margin-top: 8%;
+    font-size: 2rem;
+}
+
+.card-merci {
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.card-merci p{
+    line-height: 4rem;
+    padding: 0;
+}
+
+.gauche {
+    width: 40%;
+}
+
+.card-merci img {
+    width: 70%;
+    margin: 10% 20% 10% 10%;
+}
+.btn {
+    text-decoration: none;
+
+    margin-bottom: 5%;
+    padding: 1%;
+    width: 100%;
+    background-color: #2ba046;
+
+}
+
+h6 {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.card-merci i {
+    margin-top: 8%; 
+}
+
+.stars {
+    width: 33%;
+    margin: 10% auto;
+}
+
+.stars i{
+    line-height: 2.3rem;
+    color: grey;
+    font-size: 1.2rem;
+}
+
+.aime {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.price {
+    color: grey;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+#bleu {
+    width: 200px;
+    height: 100px;
+
+    background-color: blue;
+
+}
+
+#vert {
+    width: 200px;
+    height: 100px;
+
+    background-color: rgb(51, 177, 2);
+
+}
+
