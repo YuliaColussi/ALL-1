@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="include/css/style.css">
+    <link rel="stylesheet" href="<? URL ?>include/css/style.css">
 
     <title>Bienvenue dans ma boutique de OUFF!!</title>
   </head>
@@ -20,26 +20,47 @@
 
       <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
+
+         <?php if(internauteEstConnecte()):// accés membre connecté NON ADMIN?>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?= URL ?>boutique.php">Boutique</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="connexion.php">Connexion</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="<?= URL ?>profil.php">Profil</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="inscription.php">Inscription</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="<?= URL ?>panier.php">Panier</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="profil.php">Profil</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="<?= URL ?>connexion.php?action=deconnexion">Deconnexion</a>
           </li>
+          
+      <?php else: ?>
+             <li class="nav-item active">
+            <a class="nav-link" href="<?= URL ?>boutique.php">Boutique</a>
+          </li>
+                 <li class="nav-item active">
+            <a class="nav-link" href="<?= URL ?>inscription.php">Inscription</a>
+          </li>
+                 <li class="nav-item active">
+            <a class="nav-link" href="<?= URL ?>connexion.php">Connexion</a>
+          </li>
+                 <li class="nav-item active">
+            <a class="nav-link" href="<?= URL ?>panier.php">Panier</a>
+          </li>
+      <?php endif; ?>
+      <?php if(internauteEstConnecteEtEstAdmin()): ?>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Back office</a>
             <div class="dropdown-menu" aria-labelledby="dropdown04">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="<?= URL ?>admin/gestion_boutique.php">Gestion Boutique</a>
+              <a class="dropdown-item" href="<?= URL ?>admin/gestion_commande.php">Another Commande</a>
+              <a class="dropdown-item" href="<?= URL ?>admin/gestion_membre.php">Something Membre</a>
             </div>
           </li>
+         <?php endif; ?>
+
+
         </ul>
         <form class="form-inline my-2 my-md-0">
           <input class="form-control" type="text" placeholder="Search">

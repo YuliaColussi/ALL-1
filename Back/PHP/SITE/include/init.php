@@ -9,12 +9,12 @@ $bdd = new PDO('mysql:host=localhost;dbname=site', 'root', '',
 session_start();
 
 // ---------CHEMIN
-define("RACINE_SITE", $_SERVER['DOCUMENT_ROOT'] . '/PHP/SITE');
+define("RACINE_SITE", $_SERVER['DOCUMENT_ROOT'] . '/ALL/Back/PHP/SITE');
 //  $_SERVER['DOCUMENT_ROOT'] --> C:/xampp/htdocs 
 // lors de enregistrement d'image/ photos, nous  aurons bedoins du chemin physique complet pour enregistret la photo dans la bonne dosier
 // echo RACINE_SITE;
 
-define("URL", "https://localhost/PHP/SITE");
+define("URL", "http://localhost/ALL/Back/PHP/SITE/");
 // echo URL;
 
 // cette constante servira entre autre à enregistreer

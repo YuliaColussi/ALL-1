@@ -1,6 +1,13 @@
 <?php
 require_once("include/init.php");
 extract($_POST);
+
+
+if(internauteEstConnecte()){
+    header("Location: profil.php");
+}
+
+
 // 4
 // CONTROLE MDP
 if(isset($_POST['form'])) {
@@ -33,6 +40,10 @@ echo '<pre>'; print_r($_POST); echo '</pre>';
     
     
     if(empty($error)) {
+
+      // $_POST['mdp']  = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // $2y$10$SV3bb8OkXQr9JLYeDsMQ/.RARkJudv6KP8wYoaxk.pK1TtqVwkG8u thats what it gives
+      // on se conserve jamais en cliar les mots de passe dans la BDD, password_hash permet de créer une clé de hashage
+
         $data_insert = $bdd->prepare("INSERT INTO membre(pseudo, mdp, nom, prenom, civilite, email, ville, code_postal, adresse) VALUES (:pseudo, :mdp, :nom, :prenom, :civilite, :email, :ville, :code_postal, :adresse)");
         
       foreach($_POST as $key=>$value)
