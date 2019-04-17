@@ -666,8 +666,7 @@
         }
         echo '</div>';
     }
-    echo '<hr>';
-
+    echo '<
     // ---------------------------------------------------------------------------------------------------------------------------------------
 
     // la boucle for permet de tourner autant de fois qu'il y a de lignes dans la tableau multi, donc 2 tour de boucle dans notre cas
