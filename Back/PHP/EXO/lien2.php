@@ -13,23 +13,13 @@
     <div class="container">
 <ul class="list-group list-group-flush">
   <li class="list-group-item">
-  <a href="lien.php?id=1&type=france">
-  France
+  <a href="lien2.php?id=1&type=un homme">
+  Homme
   </a>
   </li>
   <li class="list-group-item">
-    <a href="lien.php?id=2&type=italie">
-  Italie
-  </a>
-  </li>
-  <li class="list-group-item">
-    <a href="lien.php?id=3&type=espagne">
-  Espagne
-  </a>
-  </li>
-  <li class="list-group-item">
-      <a href="lien.php?id=4&type=allemagne">
-  Allemagne
+    <a href="lien2.php?id=2&type=une femme">
+  Femme
   </a>
   </li>
 </ul>
@@ -38,9 +28,10 @@
 <?php
 
 foreach($_GET as $key => $value)
+// echo print_r($_GET);
 if($key != 'id')
 {
-    echo "Votre choix est <strong>$value</strong><br><br><hr>";
+    echo "Vous etes <strong>$value</strong><br><br><hr>";
 }
 
 

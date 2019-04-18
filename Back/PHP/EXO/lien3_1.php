@@ -13,37 +13,27 @@
     <div class="container">
 <ul class="list-group list-group-flush">
   <li class="list-group-item">
-  <a href="lien.php?id=1&type=france">
-  France
+  <a href="lien3_2.php?id=1&type=pizza">
+  Pizza
   </a>
   </li>
   <li class="list-group-item">
-    <a href="lien.php?id=2&type=italie">
-  Italie
+    <a href="lien3_2.php?id=2&type=salad">
+  Salad
   </a>
   </li>
   <li class="list-group-item">
-    <a href="lien.php?id=3&type=espagne">
-  Espagne
+    <a href="lien3_2.php?id=3&type=viande">
+  Viande
   </a>
   </li>
   <li class="list-group-item">
-      <a href="lien.php?id=4&type=allemagne">
-  Allemagne
+    <a href="lien3_2.php?id=4&type=poisson">
+  Poisson
   </a>
   </li>
 </ul>
 </div>
 
-<?php
-
-foreach($_GET as $key => $value)
-if($key != 'id')
-{
-    echo "Votre choix est <strong>$value</strong><br><br><hr>";
-}
-
-
-?>
 </body>
 </html>

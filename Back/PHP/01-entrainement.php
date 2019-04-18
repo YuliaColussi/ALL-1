@@ -666,10 +666,10 @@
         }
         echo '</div>';
     }
-    echo '<
+    
     // ---------------------------------------------------------------------------------------------------------------------------------------
 
-    // la boucle for permet de tourner autant de fois qu'il y a de lignes dans la tableau multi, donc 2 tour de boucle dans notre cas
+    // la boucle for permet de tourner autant de fois qu\'il y a de lignes dans la tableau multi, donc 2 tour de boucle dans notre cas
     for($i = 0; $i < count($tab_multi); $i++)
     { 
      echo'<div class="col-md-4 offset-md-4 alert alert-info text-dark mx-auto text-center">';
