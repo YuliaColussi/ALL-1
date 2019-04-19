@@ -1,0 +1,132 @@
+/* STYLES GLOBALES */
+
+
+html {
+   font-size: 10px;
+}
+
+body {
+   font: 1rem Aria, helvetica, sans-serif;
+}
+
+
+/* STYLES DE LA PAGE */
+
+/* HEADER1 */
+
+.header ul li {
+    display: block;
+    list-style: none;
+    margin-right: 4%;
+}
+
+
+.header ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    padding: 2%;
+}
+
+.header ul li i{
+    font-size: 6rem;
+    color: black;
+}
+
+.header ul li a{
+    font-size: 2rem;
+}
+
+i {
+    font-size: 1.9rem;
+    color:  rgb(116, 116, 116);
+    margin-right: 4%;
+}
+
+/* HEDAER 2 */
+
+.header2 ul li {
+    display: block;
+    list-style: none;
+    margin-right: 4%;
+}
+
+.header2 {
+    background-color: #75c9c8;
+}
+
+.header2 ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1% 6%;
+}
+
+.header2 ul li i{
+    font-size: 6rem;
+    color: black;
+}
+
+.header2 ul li a{
+    font-size: 2rem;
+}
+
+
+/* HEADER 2 FINITTOOOO */
+
+.carousel1 {
+    z-index: 0;
+    position: relative;
+}
+
+
+.btn {
+    display: block;
+    font-size: 2rem;
+    margin: 2% auto;
+}
+
+ 
+.footer {
+    background-color: #75c9c8;
+    color: rgb(116, 116, 116);
+} 
+
+.footer ul{
+    justify-content: center;
+    display: flex;
+    padding: 1%;
+} 
+
+ .footer ul li {
+    display: flex;
+    flex-grow: initial;
+} 
+
+.footer ul li:first-child {
+    width: 14%;
+}
+
+.footer ul li:last-child {
+    width: 15%;
+}  
+
+/* CAROUSEL2 */
+
+.carousel2 img {
+    height: 40%;
+}
+
+/* CARD */
+
+.millieu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.card {
+    margin: 3% 4%;
+}
