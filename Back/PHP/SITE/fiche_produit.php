@@ -33,7 +33,7 @@ extract($_GET);
         <p class="col-md-12"><?= $produits['taille']?></p>
         <h5><?= $produits['prix']?>€</h5>
         <div class="card-footer bg-dark">
-        <a href=<?= $produits['id_produit']?>" class="alert-link text-light">Ajouter au panier<i class="fas fa-shopping-basket"></i></a>
+        <a href=<?= $produits['id_produit']?> class="alert-link text-light">Ajouter au panier<i class="fas fa-shopping-basket"></i></a>
         </div>
         </div>
 

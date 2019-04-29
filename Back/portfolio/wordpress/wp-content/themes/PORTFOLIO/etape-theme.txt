@@ -1,0 +1,25 @@
+1. Installation Wordpress (root, admin, no password first and then it's admin)
+2. Créer un dossier 'Portfolio' dans wp-content -> thémes
+3. Creer un fishier SCREENSHOT ( this is necessary) (extension png, jpeg...) et enregistrée a la racine du dossier portfolio, ce cera l'apperçu dans le back office de wordpress->apparence->thèmes
+4. Create BDD 'Postfolio'
+5. Create the style.css ansd add a piece of css code that we take from 'CREATION THEME WORDPRESS CODEX'
+
+/*   
+Theme Name: Portfolio
+Theme URI: http://localhost/portfolio/wordpress/wp-content/themes/PORTFOLIO
+Description: Portfolio developpeur WEB
+Author: Iuliia COLUSSI
+Author URI: http://localhost/portfolio
+Version: 1.0
+.
+Commentaires généraux / Information de licences si applicable.
+.
+*/
+
+6. Creation de pluisieurs fishiers : index.php / header.php / footer.php
+7. We add different kind of <?php bloginfo('name');?> so we can change all the contenu in the back office of WP (in case if someone is using it)
+8. To show the editing bar we add <?php  wp_head();// ?> to the header.php
+9. Créer les différentes regions dans le footer et créer du zoning, ces régions permettent de placer les vidjets (logo, slogan, bar de recherche...)
+10. We add an extension "widget content block" to make the wigets online
+11. control + F5 to clean cash
+12. To make a special css for every page we make copies of index.php and call it differently like PAGE, then we see in a url what is egale a post and call a page like PAGE-39.php and then we can do a special css for this page.

@@ -67,7 +67,7 @@ while($eleve = $show->fetch(PDO::FETCH_ASSOC))
 
 echo "<pre>"; print_r($eleve); echo "</pre>"; 
 echo '<div class="col-md-4 offset-md-4 mx-auto alert alert-info text-center">';
-echo $eleve['nom'] . '<hr>'; // pour chaque tour de boucle,, donc pour chaque tableau ARRAY, on va crocheter aux differentes indices
+echo $eleve['nom'] . '<hr>'; // pour chaque tour de boucle, donc pour chaque tableau ARRAY, on va crocheter aux differentes indices
 echo $eleve['prenom'] . '<hr>';
 echo $eleve['classe'] . '<hr>';
 echo $eleve['parents']. '<hr>';

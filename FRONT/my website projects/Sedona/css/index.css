@@ -33,12 +33,27 @@ ul {
 li {
     list-style: none;
     width: 20%;
+    margin: 0.8% 0%;
+}
+
+nav ul li a{
+    list-style: none;
+    width: 20%;
+}
+
+nav ul li img {
+    position: absolute;
+    z-index:1;
+    top: 0;
+    left: 44%;
+    width: 11%;
 }
 
 .fond {
     background: url(../img/main.png);
     width: 100%;
     height: auto;
+    z-index: 0;
     /* background-position-y: -150px; */
     background-size: cover;
 
@@ -56,6 +71,7 @@ li {
 
 .polygon img {
     display: block;
+    top: 30%;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
@@ -97,8 +113,16 @@ main {
 
 .article-first {
     color: white;
+    width: 23%;
     margin: 4.5% 5%;
 }
+
+.article-first h3{
+    width: 70%;
+    display: block;
+    margin: 5% auto;
+}
+
 
 .article-second {
     content: "";
@@ -118,7 +142,7 @@ main {
 h3 {
     font-size: 2.1rem;
     text-transform: uppercase;
-    font-style: bold;
+    font-style: 700;
     text-align: center;
     margin-bottom: 4%;
 }
@@ -137,11 +161,12 @@ h4 {
 .icon {
     text-align: center;
     width: 33%;
-    margin-bottom: 5%;
+    margin: 5% 0%;
 }
 
 .icon img {
-    margin: 7.5% 0% 3.6% 0%;
+    margin: 0% 0% 3.6% 0%;
+    width: 17.4%;
 }
 
 .icon h4 {
@@ -159,21 +184,39 @@ h4 {
 .note {
     text-align: center;
     width: 33%;
-    margin: 6.2% 0% 6% 0%;
+    margin: 4% 0%;
+}
+
+.note h3{
+    width: 36.4%;
+    display: block;
+    margin: 0 auto 5%;
+}
+
+.note h4{
+    width: 56.4%;
+    display: block;
+    margin: 0 auto;
 }
 
 a{
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 2.6rem;
 }
 
 h5 {
-    font-size: 2.1rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    font-style: bold;
+    font-style: 700;
     text-align: center;
-    margin: 5% 0% 2%;
+    margin: 15% 0% 8%;
+}
+
+.last-typo {
+    width: 33.9%;
+    margin: 0 auto 10%;
 }
 
 h6 {
@@ -197,13 +240,218 @@ h6 {
     width: 100%;
     background-color: white;
     opacity: 0.8;
+    display: flex;
 
 }
 
-.last-typo {
-    width: 36.17%;
-    margin: 0 auto 10%;
+.footer_section,.footer-section-flex {
+    width: 33%;
 }
+
+.footer-section-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_box {
+    width: 13.5%;
+    padding: 4.5%;
+    margin-right: 2%;
+    background-color: #81b3d2;
+}
+
+.img_box:nth-child(2) {
+    /* width: 11.5%; */
+    padding: 3.6% 5.5%;
+}
+
+.img_box img{
+    display: block;
+    margin: 0 auto;
+}
+
+.footer_section h2{
+font-size: 2.1rem;
+font-weight: 700;
+line-height: 2.6rem;
+display: block;
+margin: 21% auto;
+}
+
+.footer_section:last-child{
+display: flex;
+}
+
+.footer_section:last-child{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.footer_section p{
+font-size: 1.4rem;
+font-weight: 400;
+text-transform: uppercase;
+margin-right: 2%;
+/* display: block;
+margin: 21% auto; */
+}
+
+
+
+/* ---------------------CATALOG FORM------------- */
+
+.first-catalog {
+    color: white;
+    background-image: url(../img/filter_background.png);
+    display: flex;
+    padding: 3% 6%;
+    width: 100%;
+    height: auto;
+    background-position-y: -150px;
+    background-size: cover;
+}
+
+.first-catalog h3{
+    text-align: left;
+    font-size: 1.6rem;
+    margin-bottom: 10%;
+}
+
+.first-catalog-first{
+    width: 25%;
+}
+
+.form-flex {
+    display: flex;
+    margin-bottom: 7%;
+}
+.form-flex img{
+    margin-right: 5%;
+}
+
+.first-catalog-second{
+    width: 25%;
+}
+
+.first-catalog-third{
+    width: 25%;
+}
+
+
+/* ---------------------CATALOG MAIN------------- */
+
+.second-catalog {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    align-items: center;
+}
+
+.second-catalog-first {
+    width: 20%;
+    margin: 2.5% 4% 2.5% 5%;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+}
+
+.second-catalog-second {
+    width: 60%;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    margin: 2.5% 4% 2.5% 5%;
+    text-transform: uppercase;
+    margin-left: 0;
+}
+
+.second-catalog-second ul li:last-child, .second-catalog-second ul li:nth-child(3) {
+    font-size: 1.2rem;
+    color: rgb(211, 211, 211);
+    border-bottom: 1px dotted  rgb(211, 211, 211);
+}
+
+.second-catalog-second ul li:nth-child(2) {
+    color: #81b3d2;
+}
+
+.second-catalog-third {
+    width: 20%;
+    margin-right: 6%;
+}
+
+.second-catalog-third img{
+    float: right;
+}
+
+/*------------------------- CATALOG HOTELS --------------- */
+
+.catalogue_deux {
+    display: flex;
+    width: 100%;
+    padding: 2.5% 5%;
+}
+
+.catalogue_gauche {
+    width: 15%;
+}
+
+.catalogue_centre {
+    width: 70%;
+}
+
+.catalogue_centre h2{
+    width: 70%;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    text-align: left;
+}
+
+.catalogue_centre h3{
+    width: 70%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    text-align: left;
+
+}
+
+.catalogue_centre_description {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.catalogue_droite {
+    width: 15%;
+}
+
+.catalogue_deux button {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.1rem;
+    text-transform: uppercase;
+    padding: 0.5% 1%;
+    color: white;
+    border: none;
+}
+
+.catalogue_centre button:first-child {
+    background-color: #81b3d2;
+}
+
+.catalogue_deux button:last-child {
+    background-color: #766357;
+}
+
+
+
+
+
 
 /* RESPONSIVITE */
 
@@ -272,5 +520,6 @@ h6 {
 h1 {
     font-size: 1.4rem;
 }
- }
+
+}
 

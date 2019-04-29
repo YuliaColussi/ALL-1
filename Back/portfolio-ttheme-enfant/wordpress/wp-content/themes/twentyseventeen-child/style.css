@@ -1,0 +1,19 @@
+/*
+Theme Name: Twentyseventeen Child
+Theme URI: http://localhost/ALL/Back/portfolio-ttheme-enfant/wordpress/wp-content/themes/twentyseventeen-child/
+Author: Iuliia Colussi
+Author URI: http://localhost/portfolio-ttheme-enfant/
+Template: twentyseventeen
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentyseven-child
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+a {
+    color: red;
+}

@@ -304,7 +304,7 @@ $stock = (isset($produit_actuel['stock'])) ? $produit_actuel['stock'] : '';
     <img height="400" src="<?= $photo ?>" alt="<?= $titre ?>" class="card-img-top">
     <?php endif; ?>
     <!-- allows to get a photo -->
-    <input type="hidden" id="photo_actuelle" name="photo_actuelle" value="<?= $photo ?>"
+    <input type="hidden" id="photo_actuelle" name="photo_actuelle" value="<?= $photo ?>">
     <div class="form-group col-md-6">
     <label for="prix">Prix</label>
     <input type="text" class="form-control" id="prix" name="prix" placeholder="Entre prix" value="<?= $prix ?>">
