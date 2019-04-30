@@ -1,0 +1,491 @@
+*{
+   box-sizing: border-box;  /*ça bloque l’élement, le recentre et ça fait une marge*/
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+html {
+   font-size: 10px;
+}
+
+body {
+    font-family: "PT Sans - Narrow Bold";
+    font-weight: 400;
+    line-height: 2.4rem;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+/* LAYOUT GLOBALE */
+
+/* HEADER */
+
+/* NAV */
+
+header {
+   padding-left: 25%;
+   width: 100%;
+   background-color: black;
+   color: white;
+}
+
+nav, .fond {
+    width: 78.3%;
+    margin: 0 auto;
+}
+
+header ul {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   /* margin-right: 50%; */
+}
+
+header li {
+    list-style: none;
+    margin: 0.8% 3.3% 0.8% 0%;
+}
+
+.move {
+    margin-right: 25%;
+}
+
+header nav ul li a{
+    font-size: 1.6rem;
+    list-style: none;
+    width: 5.5%;
+    color: white;
+}
+
+.login {
+    display: flex;
+}
+
+/* MAIN */
+
+h2 {
+    font-size: 3rem;
+    line-height: 4.2rem;
+    text-align: center;
+}
+
+.fond {
+    color: white;
+}
+
+.fond img {
+    display: block;
+    margin: 0 auto;
+    padding: 6.3% 0% 8.4%;
+}
+
+.fond ul{
+   display: flex;
+   padding-bottom: 7%;
+}
+
+.fond ul li {
+    width: 25%;
+    margin-right: 6%;
+}
+
+.fond ul li:first-child {
+    margin-left: 6.5%;
+}
+
+.fond ul li p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;  
+}
+
+/* ARTICLES */
+
+article {
+    background-image: url("../images/white-background.png");
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: flex;
+    color: black;
+    padding: 5.8% 8.6%;
+}
+
+/* NOUVELLES */
+
+
+.nouvelles {
+    padding-right: 10%;
+}
+
+.nouvelles button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5%;
+
+}
+
+.nouvelles h3{
+    text-align: left;
+    margin-bottom: 6%;
+    font-size: 3rem;
+}
+
+.nouvelles h4{
+    text-align: left;
+}
+
+.nouvelles, .gallery {
+    width: 50%;
+    text-align: left;
+}
+
+/* GALLERY */
+
+.gallery button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5%;
+
+}
+
+.gallery h3{
+    text-align: left;
+    margin-bottom: 6%;
+    font-size: 3rem;
+}
+
+.gallery h4{
+    text-align: left;
+}
+
+.nouvelles, .gallery {
+    width: 50%;
+    text-align: left;
+}
+
+
+h5 {
+    font-size: 1.4rem;
+    text-transform: lowercase;
+    margin-bottom: 5%;
+}
+
+main {
+    width: 100%;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    line-height: 2.6rem;
+}
+
+
+h6 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    background-color: white;
+    opacity: 0.8;
+    display: flex;
+
+}
+
+.footer_section,.footer-section-flex {
+    width: 33%;
+}
+
+.footer-section-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_box {
+    width: 13.5%;
+    padding: 4.5%;
+    margin-right: 2%;
+    background-color: #81b3d2;
+}
+
+.img_box:nth-child(2) {
+    /* width: 11.5%; */
+    padding: 3.6% 5.5%;
+}
+
+.img_box img{
+    display: block;
+    margin: 0 auto;
+}
+
+.footer_section h2{
+font-size: 2.1rem;
+font-weight: 700;
+line-height: 2.6rem;
+display: block;
+margin: 21% auto;
+}
+
+.footer_section:last-child{
+display: flex;
+}
+
+.footer_section:last-child{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.footer_section p{
+font-size: 1.4rem;
+font-weight: 400;
+text-transform: uppercase;
+margin-right: 2%;
+/* display: block;
+margin: 21% auto; */
+}
+
+
+
+/* ---------------------CATALOG FORM------------- */
+
+.first-catalog {
+    color: white;
+    background-image: url(../img/filter_background.png);
+    display: flex;
+    padding: 3% 6%;
+    width: 100%;
+    height: auto;
+    background-position-y: -150px;
+    background-size: cover;
+}
+
+.first-catalog h3{
+    text-align: left;
+    font-size: 1.6rem;
+    margin-bottom: 10%;
+}
+
+.first-catalog-first{
+    width: 25%;
+}
+
+.form-flex {
+    display: flex;
+    margin-bottom: 7%;
+}
+.form-flex img{
+    margin-right: 5%;
+}
+
+.first-catalog-second{
+    width: 25%;
+}
+
+.first-catalog-third{
+    width: 25%;
+}
+
+
+/* ---------------------CATALOG MAIN------------- */
+
+.second-catalog {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    align-items: center;
+}
+
+.second-catalog-first {
+    width: 20%;
+    margin: 2.5% 4% 2.5% 5%;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+}
+
+.second-catalog-second {
+    width: 60%;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    margin: 2.5% 4% 2.5% 5%;
+    text-transform: uppercase;
+    margin-left: 0;
+}
+
+.second-catalog-second ul li:last-child, .second-catalog-second ul li:nth-child(3) {
+    font-size: 1.2rem;
+    color: rgb(211, 211, 211);
+    border-bottom: 1px dotted  rgb(211, 211, 211);
+}
+
+.second-catalog-second ul li:nth-child(2) {
+    color: #81b3d2;
+}
+
+.second-catalog-third {
+    width: 20%;
+    margin-right: 6%;
+}
+
+.second-catalog-third img{
+    float: right;
+}
+
+/*------------------------- CATALOG HOTELS --------------- */
+
+.catalogue_deux {
+    display: flex;
+    width: 100%;
+    padding: 2.5% 5%;
+}
+
+.catalogue_gauche {
+    width: 15%;
+}
+
+.catalogue_centre {
+    width: 70%;
+}
+
+.catalogue_centre h2{
+    width: 70%;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    text-align: left;
+}
+
+.catalogue_centre h3{
+    width: 70%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    text-align: left;
+
+}
+
+.catalogue_centre_description {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.catalogue_droite {
+    width: 15%;
+}
+
+.catalogue_deux button {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.1rem;
+    text-transform: uppercase;
+    padding: 0.5% 1%;
+    color: white;
+    border: none;
+}
+
+.catalogue_centre button:first-child {
+    background-color: #81b3d2;
+}
+
+.catalogue_deux button:last-child {
+    background-color: #766357;
+}
+
+
+
+
+
+
+/* RESPONSIVITE */
+
+/* @media only screen and (max-width: 600px) {
+
+  li {
+      width: 100%;
+    }
+    ul {
+        flex-direction: column;
+  }
+  .testtest {
+      padding: 2%;
+      width: 100%;
+      background: rgb(156, 185, 156);
+    }
+    .test {
+        width: 100%;
+        flex-direction: column;
+        flex: none;
+    }
+    .first {
+        flex-direction: column;
+    }
+    .article-fisrt {
+        width: 100%;
+    }
+    .article-second {
+        width: 100%;
+        content: "";
+    }
+
+    .deuxieme {
+        flex-direction: column;
+    }
+
+    .troisieme {
+        flex-direction: column;
+    }
+
+    .icon {
+        width: 100%;
+    }
+
+    .note {
+        width: 100%;
+    }
+
+.article-second {
+    content: "";
+    height: auto;
+    background: url(../img/hotel.png);
+    padding: 20% 0%;
+    width: 100%;
+    background-size: cover;
+}
+
+.article-second-second {
+    content: "";
+    background: url(../img/diabol_bridge.png);
+    padding: 15% 0%;
+    width: 100%;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+}
+ */
