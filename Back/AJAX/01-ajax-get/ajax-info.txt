@@ -1,0 +1,4 @@
+
+AJAX - asynchronus javascript and XML main on devrait plus l'appeler AJAJ parce que maintenent on utilise un format JSON
+
+Bonjour c'est lundi et ça pique!!

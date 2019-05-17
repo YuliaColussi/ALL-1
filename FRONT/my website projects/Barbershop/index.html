@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/normalize.css">
     <title>Barbershop Borodinski</title>
@@ -45,7 +46,7 @@
                     DÉFINI?</p>
                 </li>
             </ul>
-            <article>
+            <article id="nouvelles">
                 <div class="nouvelles">
                     <h3>NOUVELLES</h3>
                     <h4>
@@ -65,35 +66,43 @@
                 <div class="galery">
                     <h3>GALERIE DE PHOTOS</h3>
                     <img src="images/first-photo-salon.png" alt="la photo de barbershop">
-                    <button href="#">RETOUR</button>
+                    <button class="button_premiere" href="#">RETOUR</button>
                     <button href="#">EN AVANT</button>
                 </div>
             </article>
-            <article>
+            <article id="contact">
                 <div class="contact">
                     <h3>NOUVELLES</h3>
-                    <h4>
+                    <h4 class="address">
                          BARBERSHOP «BORODINSKIY» ADRES: G. SANKT-PETERBURG, B. KONYUSHENNAYA, D. 19/8 TELEFON: +7 (495) 666-02-66 101/5000 BARBERSHOP
                         "BORODINSKY" ADRESSE: SAINT-PETERSBOURG, B. KONUSHENNAYA, D. 19/8 TÉLÉPHONE: +7 (495) 666-02-66
                     </h4>
                     <h4>
                      TEMPS DE TRAVAIL: Du lundi au vendredi: de 10h00 à 22h00 Samedi - Dimanche: de 10h00 à 19h00
                     </h4>
-                    <button href="#">Comment y aller</button>
+                    <button class="button_premiere" href="#">COMMENT Y ALLER</button>
                     <button href="#">CONTACTEZ-NOUS</button>
                 </div>
                 <div class="inscrivez">
                     <h3>INSCRIVEZ-VOUS</h3>
                     <h4>APPELEZ LA DATE ET L'HEURE SOUHAITÉES ET NOUS VOUS CONTACTERONS POUR CONFIRMER LA RÉSERVATION</h4>
                     <form method="post" action="">
-                        <label for="jour">JOUR</label>
+                        <div class="motie">
+                        <label for="jour">JOUR
                         <input id="jour" name="jour" placeholder="08.10.2019">
-                        <label for="heure">HEURE</label>
+                        </label>
+                        <label for="heure">HEURE
                         <input id="heure" name="heure" placeholder="10:00">
-                        <label for="nom">VOTRE NOM</label>
+                        </label>
+                        </div>
+                        <div class="motie">
+                        <label for="nom">VOTRE NOM
                         <input id="nom" name="nom">
-                        <label for="phone">Téléphone</label>
+                        </label>
+                        <label for="phone">Téléphone
                         <input id="phone" name="phone" placeholder="08.10.2019">
+                        </label>
+                        </div>
                         <button href="#">ENVOYER</button>
                     </form>
                 </div>

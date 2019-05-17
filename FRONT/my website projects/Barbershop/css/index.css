@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: "PT Sans - Narrow Bold";
+    font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 400;
     line-height: 2.4rem;
     background-color: white;
@@ -24,7 +24,6 @@ body {
 /* NAV */
 
 header {
-   padding-left: 25%;
    width: 100%;
    background-color: black;
    color: white;
@@ -37,18 +36,23 @@ nav, .fond {
 
 header ul {
    display: flex;
+   justify-content: flex-start;
    align-items: center;
-   text-align: center;
+   text-align: left;
    /* margin-right: 50%; */
 }
 
 header li {
     list-style: none;
-    margin: 0.8% 3.3% 0.8% 0%;
+    margin: 1.6% 3.3% 1.6% 0%;
+}
+
+header li:first-child {
+    margin-left: 2%;
 }
 
 .move {
-    margin-right: 25%;
+    margin-right: 52%;
 }
 
 header nav ul li a{
@@ -58,8 +62,18 @@ header nav ul li a{
     color: white;
 }
 
+
 .login {
     display: flex;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.login img{
+    margin-right: 20%;
+    width: 100%;
+    height: 60%;
+    margin-top: 10%;
 }
 
 /* MAIN */
@@ -72,6 +86,11 @@ h2 {
 
 .fond {
     color: white;
+}
+
+.fond p{
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 .fond img {
@@ -104,29 +123,39 @@ h2 {
 article {
     background-image: url("../images/white-background.png");
     background-size: cover;
-    width: 100%;
+    width: 90%;
+    /* margin: 0% 10% 0% 10%; */
     height: auto;
     display: flex;
     color: black;
-    padding: 5.8% 8.6%;
+    padding: 5% 6.6%;
+}
+
+#nouvelles{
+    background-image: url("../images/white-background.png");
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5%;
 }
 
 /* NOUVELLES */
 
 
 .nouvelles {
-    padding-right: 10%;
+    margin-right: 15%;
 }
 
 .nouvelles button {
     background-color: black;
     color: white;
     border: none;
-    padding: 5%;
-
+    font-size: 1.4rem;
+    margin-top: 4%;
+    padding: 3% 6%;
 }
 
-.nouvelles h3{
+h3{
     text-align: left;
     margin-bottom: 6%;
     font-size: 3rem;
@@ -134,6 +163,7 @@ article {
 
 .nouvelles h4{
     text-align: left;
+    font-size: 1.4rem;
 }
 
 .nouvelles, .gallery {
@@ -143,25 +173,36 @@ article {
 
 /* GALLERY */
 
-.gallery button {
+.galery button {
     background-color: black;
     color: white;
     border: none;
-    padding: 5%;
-
+    font-size: 1.4rem;
+    margin-top: 4%;
+    padding: 3% 14%;
 }
 
-.gallery h3{
+.button_premiere {
+    margin-right: 6%;
+}
+
+.galery img {
+    width: 80%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.galery h3{
     text-align: left;
-    margin-bottom: 6%;
     font-size: 3rem;
 }
 
-.gallery h4{
+.galery h4{
     text-align: left;
 }
 
-.nouvelles, .gallery {
+.nouvelles, .galery {
     width: 50%;
     text-align: left;
 }
@@ -170,9 +211,83 @@ article {
 h5 {
     font-size: 1.4rem;
     text-transform: lowercase;
-    margin-bottom: 5%;
+    margin: 2% 0% 5%;
 }
 
+
+/* CONTACT */
+
+
+.contact {
+    margin-right: 15%;
+}
+
+.contact button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    margin-top: 4%;
+    padding: 3% 6%;
+}
+
+.button_premiere {
+    margin-right: 6%;
+}
+
+.contact h4{
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.address{
+    margin-bottom: 7%;
+}
+
+.contact, .inscrivez {
+    width: 50%;
+    text-align: left;
+}
+
+/* FORM */
+
+.inscrivez button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    margin-top: 4%;
+    padding: 3% 14%;
+}
+
+.inscrivez img {
+    width: 80%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.inscrivez h3{
+    text-align: left;
+    font-size: 3rem;
+}
+
+.inscrivez h4, form{
+    font-size: 1.4rem;
+    text-align: left;
+    margin-bottom: 4%;
+    font-weight: 700;
+}
+
+label {
+    margin-right: 15%;
+}
+
+.motie {
+    margin-bottom: 6%;
+}
+
+/* FORM END */
 main {
     width: 100%;
     background-image: url("../images/background.png");
