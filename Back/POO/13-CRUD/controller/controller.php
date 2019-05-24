@@ -35,12 +35,54 @@ class Controller
        
        public function selectAll()
        {
-           echo 'Methode selectAll !!';
-           $r = $this->db->selectAll();
-        //    db represente un objet issu de la classe EntityRepository
-        //    db->selectAll() : on pointe sur la méthode selectAll() déclarée sans la classe EntityRepository
-            echo '<pre>';print_r($r);echo'</pre>';
+        //    echo 'Methode selectAll !!';
+        //    $r = $this->db->selectAll();
+        // //    db represente un objet issu de la classe EntityRepository
+        // //    db->selectAll() : on pointe sur la méthode selectAll() déclarée sans la classe EntityRepository
+        //     echo '<pre>';print_r($r);echo'</pre>';
+                $this->render('layout.php', 'donnees.php', array (
+                    'title' => 'Toute les données', 
+                    'donnees' => $this->db->selectAll(), // on pointe sur la méthode déclarée dans EntityRepository.php
+
+                    // donnees corrcponde à les donnees dans la controller
+                    'fields' => $this->db->getFields(), // on pointe sur la méthode déclarée dans EntityRepository.php
+                    'id' => 'id' . ucfirst($this->db->table) //affiche idEmployes, cela servira à ponté sur l'indice idEmployes du tableau de données anvoyer dans la layout pour les liens voir/modifier/supprimer
+                ));
         }
+
+        public function save($op)
+            {
+                $title = $op;//permet de récupérer le donnée envoyeé dans l'URL et de la stocké dans $title
+                
+                if($_POST)
+                {
+                    $r = $this->db->save(); // lorsque l'on valide le formulaire d'ajout, on execute le méthode save() du fichier EntityRepository.php
+                }
+                $this->render('Layout.php', 'donnees-form.php', array(
+                    "title" => "Donnée : $title", 
+                    "op" => $op, 
+                    "fields" => $this->db->getFields() 
+                ));
+            }
+
+        public function render($layout,$template, $parameters = array())
+        {
+            extract($parameters); //permet d'avoir les indices du tableau variable
+            ob_start(); //commence la temporisation
+
+            require "view/$template";
+            //$content =require "view/$template"; this we can't do cuz content is a caracter chaine
+
+            $content = ob_get_clean();// tout se qui se trouve dans la template sera stocké dans $content grace à la fonction ob_get_clean()
+
+            ob_start(); //temporise la sortie d'affichage
+            require "view/$layout";
+
+            return ob_end_flush(); //permet de libérer l'affichage et fait tout apparaitre sur la page
+        }
+
+
+
     }
 
 

@@ -43,6 +43,25 @@ class EntityRepository
                 $r = $q->fetchAll(\PDO::FETCH_ASSOC);
                 return $r;
             }
+            public function getFields() // méthode permettant de récupérer le noms des champs / colonne de la table 'employe'
+            {
+                $q = $this->getDb()->query("DESC " . $this->table); // DESC is for description de la table
+                $r = $q->fetchAll(\PDO::FETCH_ASSOC);
+                return array_splice($r, 1); //permet de retirer le premier champ idEmploye dans le formulaire grace à la méthode array_splice()
+            }
+            public function save()
+            {
+                $id = isset($_GET['id']) ? $_GET['id'] : 'NULL';
+
+                // down its a method that allows us to show all the indices and valeurs
+
+                // $q = $this->getDb()->query('REPLACE INTO (idEmployes, prenom, nom, sexe, service, dateEmbauche, salaire) VALUES (' . $id . ', '$_POST[prenom]' , '$_POST[nom]' et ext);
+
+                $q = $this->getDb()->query('REPLACE INTO ' . $this->table . '(id' . ucfirst ($this->table) . ',' . implode(',', array_keys($_POST)) . ')VALUES (' . $id . ',' . "'" . implode("','", $_POST) . "'" . ')');
+                // ucfirst - makes the first letter in Majiscule
+                //  $this->table : retourn la table 'employe'
+                // implode(',', array_keys($_POST)) : permet d'extraire chaque indice du formulaire afin de les appelés comme nom de champ/colonne dans la requete
+            }
     }
 
 $e = new EntityRepository;
