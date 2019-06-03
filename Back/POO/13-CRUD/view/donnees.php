@@ -8,6 +8,8 @@
 
 <?php echo '<pre>'; print_r($_POST);echo'</pre>'; ?>
 
+
+
 <table class="table table-bordered text-center">
 <thead>
 <tr>
@@ -26,8 +28,8 @@
 <?php foreach($donnees as $value): ?>
     <tr>
         <td><?= implode('</td><td>', $value) ?></td>
-        <td><a href="?op=update&id=<?= $value[$id] ?>" class="text-warning"><i class="fas fa-info-circle"></i></a></td></th>
-        <td><a href="?op=select&id=<?= $value[$id] ?>"  class="text-info"><i class="fas fa-edit"></i></a></td>
+        <td><a href="?op=select&id=<?= $value[$id] ?>" class="text-warning"><i class="fas fa-info-circle"></i></a></td></th>
+        <td><a href="?op=update&id=<?= $value[$id] ?>"  class="text-info"><i class="fas fa-edit"></i></a></td>
         <td><a href="?op=delete&id=<?= $value[$id] ?>" class="text-danger"><i class="fas fa-trash-alt"></i></a></td>
     </tr>
 

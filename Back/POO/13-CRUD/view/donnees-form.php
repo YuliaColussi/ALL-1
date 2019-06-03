@@ -1,4 +1,11 @@
+<?php
 
+echo '<pre>';print_r($_POST);echo'</pre>';
+
+echo '<pre>'; print_r($values);echo'</pre>'; 
+// echo '<pre>'; print_r($fields);echo'</pre>'; 
+
+?>
 
 <form method="post" class="col-md-6 offset-md-3 text-center">
 
@@ -7,7 +14,7 @@
         <div class="form-group">
             <label for="<?= $value['Field'] ?>"><?= $value['Field'] ?></label>
 
-            <input type="text" class="form-control" id="<?= $value['Field'] ?>" name="<?= $value['Field'] ?>" placeholder="Enter <?= $value['Field'] ?>">
+            <input type="text" class="form-control" id="<?= $value['Field'] ?>" name="<?= $value['Field'] ?>" placeholder="Enter <?= $value['Field'] ?>" value="<?= ($op == 'update') ? $values[$value['Field']] : '' ?>">
         
         </div>
 

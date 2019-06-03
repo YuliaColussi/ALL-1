@@ -48,9 +48,28 @@ class EntityRepository
                 $q = $this->getDb()->query("DESC " . $this->table); // DESC is for description de la table
                 $r = $q->fetchAll(\PDO::FETCH_ASSOC);
                 return array_splice($r, 1); //permet de retirer le premier champ idEmploye dans le formulaire grace à la méthode array_splice()
+
             }
+
+                public function select($id)
+                {
+                    // $q = $this->getDb()->query("SELECT * FROM " . employe where idEmploye = 7256);
+                    $q = $this->getDb()->query("SELECT * FROM " .$this->table . ' WHERE id' . ucfirst($this->table) . "=" . (int) $id);
+                    $r = $q->fetch(\PDO::FETCH_ASSOC);
+                    return $r;
+                }
+
+                public function delete($id)
+                {
+                    // $q = $this->getDb()->query("SELECT * FROM " . employe where idEmploye = 7256);
+                    $q = $this->getDb()->query("DELETE FROM " .$this->table . ' WHERE id' . ucfirst($this->table) . "=" . (int) $id);
+                  
+                }
+
+
             public function save()
             {
+
                 $id = isset($_GET['id']) ? $_GET['id'] : 'NULL';
 
                 // down its a method that allows us to show all the indices and valeurs

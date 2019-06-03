@@ -1,19 +1,19 @@
 <?php
 
 session_start();
-if(isset($_GET['action']) && $_GET['action'] == 'vider')
+if(isset($_GET['op']) && $_GET['op'] == 'conducteur')
 {
-    unset($_SESSION['panier']);
+    unset($_SESSION['vehicule']) && unset($_SESSION['association']);
 }
 
-if(isset($_GET['action']) && $_GET['action'] == 'create' || isset($_SESSION['panier']))
+if(isset($_GET['action']) && $_GET['action'] == 'association' || isset($_SESSION['vehicule']))
 {
-    $_SESSION['panier'] = array(26, 27, 28);
-    echo "Produit présent dans le panier : " . implode($_SESSION['panier'], '-') . '<hr>';
-    echo '<a href="?action=vider">Vider la panier</a>';
+    $_SESSION['conducteur'] = array(26, 27, 28);
+    echo "Produit présent dans le panier : " . implode($_SESSION['conducteur'], '-') . '<hr>';
+    echo '<a href="?action=vehicule">Form</a>';
 }
 else {
-    echo '<a href="?action=create">Create la panier</a>';
+    echo '<a href="?action=conducteur">Conducteur</a>';
 }
 
 

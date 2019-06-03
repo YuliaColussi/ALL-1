@@ -1,0 +1,47 @@
+---------------------------------------
+SYMFONY
+--------------------------------------
+
+Yakine HAMIDA
+yakine.hamida@evogue.fr
+
+bootstrap is a library which means that its a mass of code that we can reuse
+
+and framework is a structure of a code
+
+mvc we work in php objet in a team 
+
+mvc - model vue controller (bdd-html-controller)
+
+----------------------------------------
+
+1. Révisions PHP OO :
+
+Autoload
+Namespace
+Interface
+Visibilité
+
+2. MVC 
+
+3. SYMPHONY
+
+INTRO: qu'est-ce que SYMPHONY
+Etape 1 : Installation de SYMPHONY 3.4
+LTS : Long Time Support
+Etape 2 : Les bundles
+Etape 3 : Les routes et les controllers
+Etape 4 : Créer la boutique en SYMPHONY
+Etape 5 : TWIG(moteur de template)
+Etape 6 : Les assets
+Etape 7 : Entités
+Etape 8 : DOCTRINE
+Etape 9 : Les formulaires
+Etape 10 : Validation des données
+Etape 11 : Assosiation mapping
+Etape 12 : Sécurité et Utilisateurs
+Etape 13 : Installation et boutique sur SF 4.3
+BONUS : Formulaire de contact
+
+
+

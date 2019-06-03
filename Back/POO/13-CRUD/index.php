@@ -6,8 +6,20 @@ $controller = new Controller\Controller;
 
 echo '<pre>';var_dump($controller);echo'</pre>';
 
-$controller->handlerRequest(); //on fait appel à la meme méthode handlerRequest() se trouvant dans la fichier controller.php
+$controller->handlerRequest(); 
 
 
-
+class Conducteur 
+{   
+    // public $litresEssence;
+    public function setConducteur($conducteur)
+    {
+        $this->conducteur = $conducteur;
+    }
+    public function getConducteur()
+    {
+        return $this->conducteur;
+    }
+    
+}
 ?>
