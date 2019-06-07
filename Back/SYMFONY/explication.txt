@@ -1,0 +1,741 @@
+
+--------------
+SYMFONY :
+--------------
+
+
+
+
+INTRO: qu'est-ce que SYMPHONY
+Etape 1 : Installation de SYMPHONY 3.4
+LTS : Long Time Support
+Etape 2 : Les bundles
+Etape 3 : Les routes et les controllers
+Etape 4 : Créer la boutique en SYMPHONY
+Etape 5 : TWIG(moteur de template)
+Etape 6 : Les assets
+Etape 7 : Entités
+Etape 8 : DOCTRINE
+Etape 9 : Les formulaires
+Etape 10 : Validation des données
+Etape 11 : Assosiation mapping
+Etape 12 : Sécurité et Utilisateurs
+Etape 13 : Installation et boutique sur SF 4.3
+BONUS : Formulaire de contact
+
+
+-------------------------------------------------
+INTRO: qu'est-ce que SYMPHONY
+-------------------------------------------------
+
+1.  What is the interest of using a framework?
+
+    A. We have an organised structure
+    B. Fonctionnalité commune à tous les projets - we make code once and then reuse it like a subscription or a connection form 
+    C. Service disponibles(Routing, Sécurité, BDD, Moteur de template, formulaire...)
+    D. Communauté - it's a society cuz there is always another people who specialise on this framework
+
+
+2. How to choose a framework.
+
+    A. Or to make your own framework;
+    B.Les framework fullstack (Symfony, Zend, Laravel, cake)
+    C. Les mini Framework (Silex, Slim, CodeIgniter, Lumen...)
+
+
+
+3. We talk about SYMFONY
+
+--> Symfony is a French framework created by Sensiolabs  
+--> versions :
+    LTS (Long Time Support): 
+        v 2.8
+        v 3.4 : 2.8 plus souple (moins rigide), avec des fonctionnalités
+        v 4.4 : 3.4 BundleLess, Flex, Encore (webpack bibliotheque), Maker, PHP7.1
+
+
+Etape 1 : Installation de SYMPHONY 3.4
+Sommaire :
+1. Installer Composer
+2. Installer SF3.4
+-on va dans le dossier Symfony and click droit -> open Git Bush and write 'composer'
+
+
+1. Installer Composer
+
+Composer est un outils de dépendance. Composer allows us to know when its an update and it will update all of them concirning the changes
+
+- Télécharger : https://getcomposer.org/download composer-Setup.exe
+
+- Installer : Suivre les étapes.
+
+
+<cmd>
+composer create-project symfony/framework-standard-edition test
+
+==> A ce stade un dossier test à été créé. C'est un nouveau projet SF.
+
+3. rdorescence des dossiers et fichiers
+
+- app/ contient toute la configuration de l'app (BDD, sécurité, routes...)
+-bin/ : Les éxécutable de l'app (de SF)
+-src/ : Le dossier dans lequel nous allons coder notre MVC
+-var/ : Les fichiers écrits par SF au fur et à mesure (cache, logs)
+-tests/ : Les tests unitaires
+-web/ : repertoire WEB (app.php ou app_dev.php, img/css/js/fonts) thats where internet will come
+-vendor/ le codeur de SF (les fichiers codés par les sensioLabs)
+
+-composer.json : Contient la list de toutes les dépendances dont on a besoin.
+
+
+
+
+
+
+3.Arborescence des dossiers et fichiers
+
+
+4/ Lancement de l'application
+
+    - Méthode 1 : 
+    localhost/Back/SYMFONY/test/web/app.php
+    localhost/Back/SYMFONY/test/web/app_dev.php
+
+    - Méthode 2 :
+    On va dans le dossier test/
+    <cmd>
+    php bin/console server:run 
+
+    localhost:8000
+
+    - Différences entre mode prod et dev :
+    localhost/Back/SYMFONY/test/web/toto -prod
+    localhost:8000/toto - dev
+
+
+
+-------------------------------------------
+ETAPE 2 : Les Bundles
+Sommaire : 
+1/ Le concepte des Bundles
+2/ Création de notre premier Bundle
+-------------------------------------------
+
+
+1/ Le concepte des Bundles
+
+    - Les Bundles sont des briques de notre applications.
+
+    UserBundle :
+        UserController (C)
+        UserModel (M)
+        View : inscription/connexion/profil...
+    
+    Avec la nouvelle version de SF (4), on considère qu'il est préférable de crée un seul bundle (AppBundle).
+
+2/ Création de notre premier Bundle
+
+    On va créer un Bundle : POLES/TestBundle
+
+    <cmd>
+    php bin/console generate:bundle
+    -> Yes
+    -> POLES/TestBundle
+    -> POLESTestBundle
+    -> src/
+    -> annotation
+
+    ==> Notre bundle a été bien crée, mais il faut l'enregistrer.
+
+       "psr-4": {
+            "AppBundle\\": "src/AppBundle",
+            "POLES\\": "src/POLES"
+        },
+    "POLES\\": "src/POLES" dans le composer.json lignes 9
+
+    - Mise à jour de l'app
+    <cmd>
+    composer update
+
+
+==> Notre Bundle exists dans src/POLES/TetsBundle 
+Il est composé de 4 dossiers :
+    - Controller : les controllers de bundle
+    - DependencyInjection : Injection de dépendances
+    - Resources : Vues et Routes (YML) et eventuellement JS
+    - Test : Test liés fonctionnalité du Bandle
+
+
+==> A ce stade le Bundle est fonctionnel, mais il y a une petite erreur qu'on va corriger.
+
+    - src/POLES/TestBundle/Controller/DefaultController.php
+
+    <code>
+
+    in src->Controlelr->DefaultController.php first line we changed for the second
+    
+        // return $this->render('POLESTestBundle:Default:index.html.twig');
+        return $this->render('@POLESTest/Default/index.html.twig');
+    
+    </code>
+
+==> A ce stade la page d'accueil affiche "Hello World"
+
+
+-----------------------------------------------------------
+
+Etape 3 : Les routes et les controllers
+
+Sommaire :
+
+1. Création de routes
+2. L'objet Request
+3. L'objet Response
+4. Redirection
+5. Message
+
+----------------------------------------------------------
+
+
+1/ création de routes
+	("/") -> route simple homepage
+    ("/bonjour/") -> route echo (erreur)
+    ("/bonjour2/") -> route response
+    ("/hello/{prenom}") -> route response + param URL
+    ("/hola/{prenom}") -> route render de vue (html.twig) + param URL
+    ("/ciao/{prenom}/{age}") -> route render de vue + 2 params URL
+    ("/redirect/") -> route avec redirection (RedirectResponse)
+    ("/redirect2/") -> route avec redirection (redirectToRoute())
+    ("/message/") -> route avec redirect et message en session
+
+
+2/ L'objet Request 
+	<code>
+	use Symfony\Component\HttpFoundation\Request;
+
+	Correspond à la partie requete de la requête HTTP. 
+
+	<code>
+	$session = $request -> getSession(); 
+	--> récupère la session ($_SESSION)
+
+	Autres exemples : 
+	<code>
+	$session -> set('prenom', 'Yakine');
+	echo $session -> get('prenom'); 
+
+	Autre méthode :
+	<code>
+	$request -> session -> set('prenom', 'Yakine'); 
+
+	
+	Autres utilités de $request : 
+	<code>
+	$request -> query -> get('argument_url');
+	$request -> request -> get('champs_form');
+	$request -> cookies -> get('cookie');
+	$request -> server -> get('server');
+	
+3/ L'objet Response
+
+	- Correspond à la partie réponse d'une requête HTTP. 
+	
+	<code>
+	use Symfony\Component\HttpFoundation\Response;
+	
+	- Toute action (fonction) doit avec une réponse. 
+	
+	<code>
+	return new Response('toto');
+	
+	- Même la fonction render est une réponse. 
+	
+	<code>
+	return $this -> render();
+	return $this -> getTemplating() -> renderResponse(); 
+	
+	
+4/ Redirection
+
+	<code>premiere méthode : 
+	use Symfony\Component\HttpFoundation\RedirectResponse;
+	
+	cf route "/redirect/" et "/redirect2"
+	
+	/!\ A ce stade toutes nos routes doivent avoir un name
+	
+5/ Message
+	
+	<code>
+	$session -> getFlashBag() -> add();
+
+	-> permet d'enregistrer des messages qui seront disponibles dans d'autres pages (messages de félicitations, ou d'erreur).
+	
+	-> app.session : Qui nous permet en Twig de récupérer les infos en session. 
+	-> app.user : Qui nous permet en Twig de récupérer les infos de l'utilisateur actuellement connecté
+
+
+
+
+
+----------------------------------------------------------------
+
+Etape 4 : Créer la Boutique sur SF 3.4
+Sommaire :
+
+1. Création du projet
+
+- Dans le dossier Symfony
+
+<cmd>
+
+composer create-project symfony/framework-standard-edition Boutique3 
+cd Boutique3
+
+php bin/console/server:run
+
+Test: localhost:8000
+
+
+
+2. Réorganiser le AppBundle
+
+localhost/ -> Produit/index.html.twig
+localhost/categorie/pull -> Produit/index.html.twig
+localhost/produit/12 -> Produit/show.html.twig
+
+--> Création de nos Controllers:
+    AdminController
+    MembreController
+    CommandeController
+    ProduitCotroller
+    --
+    SecurityController
+    ProduitController
+
+--> création de nos Vues
+    Admin/ (list_produit, form_produit)
+    Membre/ (connexion, inscription, profil)
+    Commande/ (panier, transport, livraison, paiement)
+    Produit/ (home, categorie, boutique, fiche_produit)
+
+
+
+3. Création des première route
+
+    -> ProduitController : /, /produit{id}
+    -> AdminController : "/admin/produit/", "/admin/membre/"
+
+
+----------------------------------------------------------------
+
+ETAPE 5 : TWIG (moteur de template)
+Sommaire :
+1. Création du layout
+2. L'héritage Twig
+3. Modification de nos Vues
+4. Documentation Twig
+
+----------------------------------------------------------------
+
+TWIG est le moteru de template de Symfony.
+Un moteur de template (tpl, smarty, Twig, blade...) permet d'afficher du php dans le vues HTML de manière plus simple.
+
+    exemple :
+    <?= $membre['prenom'] ?>
+    {{ membre.prenom }}
+
+
+    1. Creating du layout
+
+    Chemin : Boutique3/app/Resources/views/layout.html.twig - we can create it only here 
+
+    Un layout est une structure de page, dans laquelle on peut ajouter des éléments contenu.
+    Le concept de layout permet d'avoir pluisieurs structures de pages dans noter site (ex: front vs backoffice)
+
+    2. Héritage Twig
+
+    Avec Twig on parle d'héritage. Cela signifie que nos vues héritent (extends) d'un layout, et peuvent contenit de l'HTML à l'intérieur des blocks disponibles (créés dans le layout).
+    
+=====> De manière générale, il faut voir le fonctionnement de Twig et de la méthode render comme un chargement du contenu de manière "empilée" (analogie de la poupée russe). Render temporise (mémoire tempon) le contenu, et affiche en meme temps le layout, la vue et les params.
+
+    3. Modification de nos vues
+    <code>
+
+    {% extends 'layout.html.twig' %}
+
+    {% block content%}
+
+    <h2>HTML ICI/h2>
+
+    {% endblock %}
+
+    /!\ ATTENTION : Quand on utilise l'héritage Twig, nos vues ne peuvent contenir de l'HTML qu'à linterieur des blocks prévus pour.
+
+    4. Documentation Twig
+
+    https://twig.symfony.com/doc/2.x/
+
+===> A ce stade notre app permet d'afficher les pages accueil, inscription, connexion, profil, boutique, produit, categorie, gestion membre, gestion produit, gestion commande.
+
+===> Par contre nous ne sommes pas encore en mesure d'échanger avec la BDD (ajouter un contenu, et récupérer le contenu). Il faut voir les Entity et Doctrine.
+
+
+    ------------------------------------
+    ETAPE 6 : ASSETS
+    ------------------------------------
+
+    Sommaire: 
+        1. Modification du fishier composer.json
+        2. Mise à jour de l'app
+        3. Dossier Web/ (photo, css, js...)
+        4. Modification de vues
+
+    
+    1. Modification du fishier composer.json
+
+
+    - Le composant Asset de SF nous permet de gérer les resources (img, js, fonts.....) et de les appeler de manière absolue.
+<code> composer.json
+
+"require": {
+    "symfony/asset" : "^3.4"
+}
+
+  2. Mise à jour de l'app
+
+  <cmd>
+
+  composer update
+
+
+  3. Dossier Web (photo, css, js...)
+
+    Boutique3/web
+
+        photo /(à récupérer du site en procédural)
+        js/
+        css/
+
+
+    4. Modification de vues
+
+        href="../../css/styles.css"
+
+        -> href="{{ asset('css/styles.css') }}"
+
+        href="inscription.php"
+        -> href="{{ path('inscription') }}"
+
+        La fonction asset() de twig nous permeet de charger une resouce (photo, css, js, fonts...).
+
+        La fonction path() de TWIG nous permet de créer un lien vers une pgae (route). 
+
+        liens dynamiques :
+
+        src="../../photo<? $pdt['photo'] ?>"
+        src="{{ asset('photo/' ~ pdt.photo ) }}
+
+        href="fiche_produit.php?id=<?= $pdt['id'] }) }}"
+
+            produit --> nom de la route
+            id ---------------> parametre dynamique de la route
+            pdt.id ---> valeur du parametre dynamique
+
+    ------------------------------------
+    ETAPE 7 : ENTITIES
+    ------------------------------------
+    sommaire:
+    1. Doctrine ORM et le concept des Entité (Entity) (object)
+
+        - D'une certaine manière, les entités correspondent à la partie MODEL de notre MVC. C'est la relation avec le BDD, mais en PHP et non de SQL.
+        - Théoriquement, nous n'avons plus besoin du SQL.
+
+        - ORM : Object Relation Mapping 
+
+        - Nous allons créé nos entités, sous forme de classes PHP (POPO : Plain Old PHP Object), qui vont permettre à Doctrine de comprendre notre BDD et de la manipuler.
+
+        Par exemple, pour faire INSERT INTO Produit on faire
+
+        $produit = newProduit;
+        $em -> persist($produit);
+
+        or remove($produit) for deleating
+
+        createForm($produit);
+
+===> Pour que cela soit possible, il faut expliquer à Doctrine, quel est relation il existe entre la BDD et nous Entity.
+    2. Creation Entités Produit
+
+
+    A. Créer le dossier src/AppBundle/Entity
+    B. Créer le fichier src/AppBundle/Entity/Produit.php
+    C. Créer notre class Produit et nos propriétés et les getters et les setters
+
+    3. Annotations (mapping)
+
+    - Avec DOCTRINE  ORM, on paramètre le mapping via les annotations.
+
+    <code>
+
+    use DOCTRINE\ORM\Mapping as ORM
+
+    --> Voir le fichier Entity/Produit.php
+
+    /!\ Attention : Les annotations pour l' ID (primary key) sont plus longues
+
+    Liens : 
+
+    BASIC MAPPING:
+
+    https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/basic-mapping.html
+
+    ASSOCIATION MAPPING : chapitre 11
+
+    https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/association-mapping.html
+
+    
+    
+    4. Mettre à jour la BDD
+
+     <cmd>
+
+    php bin/console doctrine:schema:update --dump-sql
+
+    --> voir la requete
+
+    php bin/console doctrine:schema:update --force
+
+    --> exécute les modifs en BDD
+
+    ==> Permet aussi de créer un eBDD à partir de nos entites
+
+
+    5. Générer les Entités en ligne de commande
+
+    A. On doit conencter notre app (projet SF) à la BDD
+    -app/Config/parameters.yml
+
+    B. 
+    <cmd>
+    php bin/console doctrine:generate:entity
+
+    AppBundle:Membre
+    -> On suit les étapes.
+
+    ===> Cela a crée le fichier Entity/Mmebre.php en quelques lignes de commandes.
+
+
+    6. Générer la BDD via les entites
+
+    - On peut créer la BDD, depuis les entités déjà codées
+
+    <cmd>
+  
+    php bin/console doctrine:schema:update --force
+
+    --> créer les tables dans la BDD. Par contre il faut que la BDD exists déjà.
+
+    7. Générer les éntités depuis la BDD
+
+    - On peut créer la BDD, depuis les entités depuis la BDD
+
+      <cmd>
+  
+   php bin/console doctrine:mapping:import AppBundle\Entity annotation --path=src/appBundle/Entity
+
+    ==> Cette commande nous a premis de générer les Entités depuis le tables de la BDD.
+    - Par contre cela n'a ni généré les repository, ni les getters et setters
+    <code>
+
+    A ajouter dans chaque Entity
+    
+    @ORM\Entity(repositoryClass="AppBundle\Repository\ProduitRepository")
+    @ORM\Entity(repositoryClass="AppBundle\Repository\MembreRepository")
+    @ORM\Entity(repositoryClass="AppBundle\Repository\CommandeRepository")
+    @ORM\Entity(repositoryClass="AppBundle\Repository\DetailsCommandeRepository")
+
+    <cmd>
+    php bin/console doctrine:generate:entities AppBundle
+    ==> Cela nous créer nos getter et detter et génère les repository :)
+
+
+    2. Créer Entité Produit
+    3. Annotations (mapping)
+    4. Mettre à jour la BDD
+    5. Générer les Entités en ligne de commande
+    6. Générer la BDD via les Entités
+    7. Générer les entité depuis la BDD
+
+   --------------------
+
+   DOCTRINE
+
+   --------------------
+
+   Sommaire :
+   1. La service Doctrine
+   2. Accéder au service doctrine depuis les controllers3. 
+   3. Requetes SELECT * FROM ...
+   4. Requetes SELECT * FROM ...WHERE id...
+   5. Requetes SELECT * FROM ...WHERE ... = ...
+   6. Requetes INSERT / update
+   7. Requetes DELETE 
+   8. Create Query et Query Builder
+
+   --------------------------------------
+
+      1. La service Doctrine
+
+      Doctrine fait 2 choses :
+
+        1. ORM (Object Relation Mapping)
+        Il permet de lier les tables de notre BDD à nos entités. On ne va pas manipuler la BDD, mais des objets (la table Produit ---> EntityProduit)
+
+        2. Doctrine DBAL (Database Abstract Layer)
+
+        Le DBAL est couche qui passe au-dessus de PDO. A partir de maintenent on ne fait plus de requete SQL, mais on va manipuler du PHP.
+
+        - En résumé le DBAL va nous permettre de faire des SELECT, INSERT, UPDATE, DELETE, non pas via du SQL, mais via des fonction PHP. On parle de DQL (Doctrine Query Language)
+
+
+        --> NOUS NE FERONS PLUS DE SQL (ou presque) 
+
+    -----------
+
+   2. Accéder au service doctrine depuis les controllers3. 
+
+   A. Il faut pouvoir manipuler les entités dont on a besoin.
+   <code>
+
+   use AppBundle\Entity\Produit;
+
+   B. Accéder au repository dans un controller :
+   <code>
+
+   $repo = $this -> getDoctrine() -> getRepository(Produit::Class);
+
+   C. Accéder au Manager (Qui peut faire les requetes sur toutes les tables)
+   $em = $this -> getDoctrine() ->getManager();
+
+    -----------
+
+   3. Requetes SELECT * FROM ...
+
+   Depuis le repository : 
+   <code>
+
+    $repo = $this -> getDoctrine() -> getRepository(Produit::Class);
+    $produits = $repo -> findAll();
+
+    ------------
+
+    4. Requetes SELECT * FROM ...WHERE id...
+
+    Depuis le repository: 
+
+    <code>
+    $repo = $this -> getDoctrine() -> getRepository(Produit::Class);
+    $produits = $repo -> find($id);
+
+
+    Depuis le Manager: 
+
+    <code>
+    $repo = $this -> getDoctrine() -> getManager();
+    $produits = $repo -> find(Produit::class, $id);
+
+
+      5. Requetes SELECT * FROM ...WHERE ... = ...
+
+      La fonction findBy() va nous permettre de récupérer des données de manière plus ciblée.
+      <code>
+       $repo = $this -> getDoctrine() -> getRepository(Produit::Class);
+         $produits = $repo -> findBy(array('categorie' => $cat));
+
+         $produits = $repo -> findBy(array(
+             'categorie' => 'pull',
+             'taille' => 'l'
+             ));
+
+             SELECT * FROM produit WHERE taille = 'l' AND categorie = 'pull' - its like this requete
+             $produit = $repo ->findBy(['couleur' => rouge], ['prix' => 'DESC'], 0, 10); - its the same thing as above
+
+             we take all the red, where 'order by' price and we have 10 on a page (and on the second page it would be 20, 10)
+
+             SELECT * FROM produit WHERE couleur = 'rouge' ORDER BY prix DESC LIMIT 0,10
+
+
+             $produit = $repo -> findOneBy(array('taille' => 'l'));
+             SELECT * FROM produit WHERE taille = 'l' LIMIT 0,1
+
+    6. Requetes INSERT / UPDATE
+
+        -   Avec doctrine on manipule des Objets (Entité)
+
+        -> Enregistrement :
+            - On créé un objet vide.
+            - On hydrate l'objet (normallement via un formulaire)
+            - On presist et on flush
+
+            <code>
+            $produit = newProduit;
+            $produit -> setTitre('dgdfg');
+            $produit -> setReference('ddd');
+
+            ...
+
+            $em -> persist($produit);
+            $em -> flush();
+
+
+        -> Modification 
+
+            - Pour update une entrée, c'est la meme chose que pour ADD, à ceci près que l'objet n'est pas vide à la base. On doit donc récupérer l'objet à modifier avec le fonction find()
+
+        -> Suppression DELETE
+
+            - Avec Doctrine on manipule des Objets (Entité) donc on va récupérer d'abord l'objet à suppromé avec le fonction find().
+
+            <code>
+            $em -> remove($produit);
+            $em -> flush();
+
+
+    8. Create Query et Query Builder // we can not do everything with Goctrine so sometimes we need to use our requetes
+
+    SELECT DISTINCT(categorie) FROM produit
+
+
+    // A faire la guestion des produits :
+
+    AdminController
+    -> /admin/produit/
+
+    $produits qui va récupérer tout les produits du site
+
+    -> list_produit.html.twig
+    -> tableau avec tous les infos des produits
+    -> action : modifier / supprimer
+
+Pour effectuer des requete specifiques, nous avons 2 possibilités: thats when we cant use Doctrine
+
+- Create Query (SQL)
+- Query Builder (PHP)
+
+==> Voir ProduitRepository
+/!\ Dans l'objectif de "factoriser" notre code nous créons nos requetes srécifiques dans le Repository, afin de les utiliser de manière simple dans les controller.
+
+==> Voir le ProduitController, route /categorie/ et le fonction GetAllCategories() déclarée dans le ProduitRepository.
+
+liens: 
+
+Query Builder: 
+
+https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/query-builder.html
+
+Create Query:
+
+https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/dql-doctrine-query-language.html
+
+6.

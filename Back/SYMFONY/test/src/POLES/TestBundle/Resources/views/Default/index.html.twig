@@ -1,0 +1,23 @@
+
+{# commentaires twig
+{{ dump(app.session) }}
+#}
+
+{# le boucle for for, foreach, while #}
+{% for message in app.session.flashbag.get('success')%}
+    {{ message }}<br/>
+{% endfor %}
+
+
+{% for message in app.session.flashbag.get('error')%}
+    {{ message }}<br/>
+{% endfor %}
+
+
+Hello World!
+
+
+
+
+
+

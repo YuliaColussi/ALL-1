@@ -44,4 +44,14 @@ Etape 13 : Installation et boutique sur SF 4.3
 BONUS : Formulaire de contact
 
 
+if we want to get  an id 
+SELECT * FROM category where id_category = 2'' - we need may be to att the contes 
+
+we see if there is an id in the search line and when we remove it it gives an erreur if yes then we can crack a website
+
+The main idea of an autoload is that it will charge what we ned at the right moment -> it will 'require' only the needed fichier 
+
+in Symphony there are thousands of different fichier so we will need a cirtain amount of autoloads 
+
+PHP STANDART RECOMMENDATIONS
 
