@@ -25,6 +25,9 @@
     <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
 
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {# si le visiteur est connecté (peu importe le niveau de role) #}
+
         <li class="nav-item">
             <a class="nav-link" href=" {{ path('homepage') }}">Boutique</a>
             {# the name of the route of accueil #}
@@ -35,10 +38,11 @@
         <li class="nav-item">
             <a class="nav-link" href="">Panier</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">Deconnexion</a>
-        </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('deconnexion') }}">Deconnexion</a>
+        </li>
+    {% else %}
         <li class="nav-item">
             <a class="nav-link" href="">Boutique</a>
         </li>
@@ -46,11 +50,14 @@
             <a class="nav-link" href=" {{ path('membre_inscription') }}">Inscription</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href=" {{ path('membre_connexion') }}">Connexion</a>
+            <a class="nav-link" href="{{ path('connexion') }}">Connexion</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="">Panier</a>
         </li>
+          {% endif %}
+
+          {% if is_granted('ROLE_ADMIN') %}
         <li class="dropdown">	
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Admin
@@ -61,7 +68,7 @@
 				<li><a class="dropdown-item" href=" {{ path('admin_commande') }}"><i class="fas fa-shopping-cart"></i>&nbsp;Gestion Commande</a></li>
 			</ul>
 		</li> 
-       
+       {% endif %}
 
         </ul>
         <form class="form-inline my-2 my-md-0">
@@ -72,6 +79,24 @@
 
     <section class="container mon-conteneur">
         <div class="row form1">
+
+        {% for message in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+        {{ message }}
+        </div>
+
+        {% endfor %}
+
+        {% for message in app.session.flashBag.get('errors') %}
+        <div class="alert alert-danger">
+        {{ message }}
+        </div>
+
+        {% endfor %}
+
+
+
+
         {% block content %} 
         {# on ouvre la fenetre #}
 
