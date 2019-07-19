@@ -1,0 +1,141 @@
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        span.medium,
+        span.large,
+        #main-menu.style-modern .top-menu li a,
+        .post-nav>a .subtitle,
+        .post-nav>a .title,
+        .post-header .title h1,
+        .post-header .title h2,
+        post-header>span.subtitle,
+        .infinite-text,
+        .main-post .post-header span,
+        .page-header-type h1,
+        .krown-button,
+        input[type="submit"],
+        .post-header>span.subtitle,
+        span.icl_lang_sel_current.icl_lang_sel_native,
+        .woocommerce-pagination,
+        #filter,
+        .woocommerce .price,
+        #filter-opener .count,
+        .single-product .cart .input-text,
+        .product-quantity .input-text,
+        .amount,
+        .single-product .cart .button,
+        .product-quantity .button,
+        .woocommerce-message .button,
+        .woocommerce-error .button,
+        .woocommerce-info .button,
+        .update-button {
+            font-family: 'Montserrat', sans-serif;
+            ;
+        }
+
+        body,
+        input,
+        textarea,
+        button {
+            font-family: 'Raleway', sans-serif;
+            ;
+        }
+
+        .page-header .subtitle,
+        .post-header>span.author,
+        .page-header-type h2.subtitle,
+        .krown-portfolio span,
+        blockquote {
+            font-family: 'Droid Serif', serif;
+            ;
+        }
+
+        /* CUSTOM COLORS */
+
+        a,
+        #main-menu.style-modern .top-menu li a:hover,
+        #main-menu.style-modern .top-menu li.selected>a,
+        #posts-container.classic .pagination a:hover,
+        #lang_sel ul ul a:hover,
+        #filter li a.selected,
+        .single-product .product_meta a:hover,
+        .woocommerce-MyAccount-navigation li a:hover {
+            color: #b99d61;
+        }
+
+        .pre-slide .page-header .title:after,
+        .page-header-type h1:after,
+        .krown-section-title h3:after,
+        .krown-section-title h4:after,
+        .post-content h3:after,
+        .post-content h4:after,
+        .line-link:after,
+        .fancybox-nav span:hover,
+        .fancybox-close:hover,
+        input[type="submit"]:hover,
+        #footer input[type="submit"]:hover,
+        .mejs-controls .mejs-time-rail .mejs-time-current,
+        .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+        .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current,
+        .mejs-overlay:hover .mejs-overlay-button,
+        .star-rating .star,
+        .star-rating .half-star,
+        .comment-form-rating a.star,
+        .single-product .cart .button:hover,
+        .product-quantity .button:hover,
+        .checkout-button.button,
+        .single-product .cart .button:hover,
+        .product-quantity .button:hover,
+        .woocommerce-message .button:hover,
+        .woocommerce-error .button:hover,
+        .woocommerce-info .button:hover,
+        .update-button:hover {
+            background-color: #b99d61;
+        }
+
+        .pagination a:hover,
+        .woocommerce-pagination a:hover,
+        .ui-slider-horizontal .ui-slider-handle:hover {
+            border-color: #b99d61;
+        }
+
+        #main-menu.style-classic li:not(.selected) a:hover,
+        #main-menu.style-classic li ul li a:hover {
+            color: #b99d61 !important;
+        }
+
+        /* CUSTOM CSS */
+
+        body {
+            font-weight: 500;
+        }
+
+        .up-front {
+            position: relative;
+            z-index: 999;
+        }
+
+        .page-header .excerpt>p {
+            letter-spacing: 0.4px;
+        }
+
+        @media all and (orientation: portrait) {
+            .post .featured-img {
+                background-position: right center;
+            }
+            #post-189 .featured-img {
+                background-position: left center;
+            }
+        }
+
+        .page-template-template-blog-classic #page-header {
+            margin-top: -100px;
+        }
+
+        #logo-holder {
+            z-index: 999;
+        }

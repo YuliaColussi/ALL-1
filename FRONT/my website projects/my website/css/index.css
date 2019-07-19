@@ -1,0 +1,363 @@
+body {
+    box-sizing: border-box; 
+    width: 100%;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+html {
+   font-size: 10px;
+}
+
+/* menu and logo */
+
+ul {
+    list-style: none;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.menu {
+    width: 90%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    width: 12%;
+    padding-right: 1%;
+}
+
+nav ul li:first-child{
+    width: 7%;
+    padding-right: 1%;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+li a:hover {
+   text-shadow: -0.7rem 0.6rem 0 rgba(219,76,23,.5);
+}
+
+/* SLIDER */
+
+/* ARROWS */
+
+.my_slider {
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.arrows {
+    width: 10%;
+}
+
+i {
+    /* position: relative; */
+    top: 18rem;
+    font-size: 4rem;
+    color: grey;
+    transition: all 0.2s ease-out;
+}
+
+i .fa-long-arrow-up
+
+{
+    padding-left: 15%;
+}
+
+/* PICTURE PART  */
+
+.main_slider_part {
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 15%;
+}
+
+.main_slider_part img{
+    z-index: 1;
+    width: 80%;
+    display: block;
+    width: 25%;
+    height: auto;
+}
+
+.main_slider_part p{
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    position: relative;
+    top: 15%;
+    right: 5%;
+    font-size: 2.8rem;
+    z-index: 2;
+    color:  rgba(219,76,23,.5);
+
+}
+
+.text_header p {
+    margin: 0;
+    z-index: 2;
+    margin-left: 19%;
+    font-weight: 900;
+    font-size: 13rem;
+}
+
+.text_header {
+    font-family: 'Poppins', sans-serif;
+    display: block; 
+    position: relative;
+    bottom: 42%;
+}
+
+.white_header {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 5%;
+    -webkit-text-stroke: 0.2rem #000;
+    -webkit-text-fill-color: transparent;
+}
+
+.black_header {
+    color: black !important;
+}
+
+/* DISCOVER BUTTON */
+
+
+/* WHAT WE DO BOX */
+
+.what_we_do {
+    width: 70%;
+    margin: auto;
+}
+
+.what_we_do a{
+    text-decoration: none;
+}
+
+.what_we_do_box {
+    width: 35%;
+    height: auto;
+}
+
+.what_we_do_box p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: black;
+    font-size: 3rem;
+
+   
+    display: block;
+    position: relative;
+    top: 24rem;
+    left: 20rem;
+    z-index: 90;
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: rotate(90deg);
+
+}
+
+/* .what_we_do_box p:hover{
+    transform: translate(0rem, 0rem);
+    
+} */
+
+.pattern_background {
+    background: url("http://wpdemo2.oceanthemes.net/chiron/wp-content/themes/chiron/assets/img/patterns/tic-tac-toe.png");
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 65rem;
+}
+
+.pattern_background:hover {
+   transform: translate(-2rem, -1rem);
+}
+
+.pattern_background img{
+    width: 100%;
+    margin: 0% 0% 0% 10%;
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pattern_background img:hover{
+    transform: translate(-2rem, 5rem);
+}
+
+h2 {
+    font-size: 5rem;
+    -webkit-text-stroke: 0.2rem #000;
+    -webkit-text-fill-color: transparent;
+    transition: 8s linear;
+}
+
+h2:hover {
+    /* -webkit-text-stroke: 2.2rem #000; */
+    transition-property: width, all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.1, .9, .9, 1.5);
+    transition: background-color 3s cubic-bezier(0.1, 0.8, 0.5, 2), color 3s 1s linear;
+}
+
+
+
+
+.btn-lg {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+
+.btn-line-outline {
+  position: relative;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.2rem #000;
+  text-stroke: 0.2rem #000;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.15s;
+}
+/* .btn-line-outline:before .inner{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5%;
+  width: 4px;
+  height: 2px;
+  left: -0.5rem;
+  background-color: var(--primary);
+  margin-top: -1px;
+  transform-origin: rotate(90deg);
+  transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.15s;
+
+} */
+.btn-line-outline .inner {
+  position: relative;
+  z-index: 1;
+}
+.btn-line-outline .inner:after {
+  content: attr(data-hover);
+  position: absolute;
+  top: -0.5;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.02em  #000;
+  text-stroke: 0.02em  #000;
+  -webkit-text-fill-color:  #000;
+  text-fill-color:  #000;
+  color:  #000;
+  transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.btn-line-outline:hover {
+  text-decoration: none;
+  /* padding-left: 1rem; */
+}
+.btn-line-outline:hover:before {
+  /* transform: scaleX(0); */
+  transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.btn-line-outline:hover .inner:after {
+  width: 100%;
+  height: 100%;
+  transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
+}
+
+/* SECTION US INFO */
+
+.us_info {
+    width: 90%;
+    margin: 30rem auto 10rem;
+    display: flex;
+    transition: none;
+}
+
+.us_info h2{
+    font-size: 8rem;
+}
+
+
+.box_left {
+    font-size: 3rem;
+    margin-left: 10%;
+    width: 30%;
+}
+
+.box_right {
+    background-color: #292929;
+    padding: 5% 5% 0% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-top: 20%;
+    width: 70%;
+
+}
+.box_right h3 {
+    font-size: 2rem;
+}
+
+.box_right_box {
+    margin-bottom: 5%;
+    color: white;
+    width: 40%;
+    margin-right: 10%;
+}
+
+.box_right_box p {
+    color: #808080;
+}
+
+.us_info p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* CONTACT */
+
+.footer {
+    padding: 5% 0;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 1.5rem;
+}
+
+.footer h4 {
+    font-size: 3rem;
+    margin-right: 10%;
+}
+
+.footer_left {
+   width: 50%;
+   justify-content: left;
+}
+
+.footer_left p{
+    width: 50%;
+}
+
+.footer_right {
+    padding-top: 2%;
+}
+
+.footer_right p{
+    font-weight: 500;
+}
