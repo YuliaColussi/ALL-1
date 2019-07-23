@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta htp-equiv="X-UA-Compatible" content="ie-edge">
+<script src="https://kit.fontawesome.com/1456345ba9.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/anuraghazra/Verly.js@v1.2.1/dist/verly.bundle.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/normalize.css">
+<title>C.Real digital agency</title>
+</head>
+<body>
+    <header>
+    <nav class="menu-wrap">
+    <div class="logo">
+        <img src="#" alt="une image de logo">
+    </div>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Notre portfolio</a>
+            </li>
+            <li>
+                <a href="#">Work in progress</a>
+            </li>
+            <li>
+                <a href="#">Work with us!</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    </header>
+    <main>
+        <section id="first_image">
+            <canvas id="rounds"></canvas>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script type='text/javascript'>
+    class Text {
+            constructor(alphabets, x, y, fontsize, verlyInstance) {
+                this.alphabets = alphabets.toUpperCase().split("");
+                this.x = x;
+                this.y = y;
+                this.fontsize = fontsize;
+                this.words = [];
+                this.iterations = 50;
+
+                this.gap = 0;
+                this.entity = new Entity(this.iterations, verlyInstance);
+                for (let i = 0; i < this.alphabets.length; i++) {
+                    let word = new TypoGraphy(
+                        this.x + this.gap,
+                        this.y,
+                        this.fontsize,
+                        this.alphabets[i]
+                    );
+                    this.words.push(word.text);
+                    this.gap += 110;
+                }
+                this.entity = verlyInstance.joinEntities(this.entity, ...this.words);
+            }
+        }
+
+        let canvas = document.getElementById("rounds");
+        let ctx = canvas.getContext("2d");
+        let width = (canvas.width = clamp(window.innerWidth, 900, 2000));
+        let height = (canvas.height = window.innerHeight - 50);
+
+        let verly = new Verly(100, canvas, ctx);
+
+        let web = new Text('CODEPEN', width / 2 - 400, height - 200, 25, verly);
+
+        for (let i = 0; i < width / 40; i++) {
+            verly.createRope(i * 40, 0, random(8, 15), 15, 0)
+        }
+
+
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            verly.update();
+            verly.render();
+            verly.interact();
+
+            // verly.renderPointIndex();
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+    </script>
+</body>
+</html>
