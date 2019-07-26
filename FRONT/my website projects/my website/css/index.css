@@ -366,6 +366,16 @@ h2:hover {
 
  /* translate(4.03226%, 0%) translate3d(0px, 0px, 0px); */
 
+ #first_background {
+   width: 100%;
+   height: 40rem;
+ }
+
+ #first_background svg {
+   width: 140rem;
+   margin-top: 11rem 0rem;
+ }
+
  /* ADAPTIVE SECTION */
 /* container */
 #responsiveWebsiteIcon {
@@ -568,7 +578,7 @@ h2:hover {
 
  #adaptive {
     width: 90%;
-    margin: 30rem auto 10rem;
+    margin: 60rem auto 10rem;
     display: flex;
     transition: none;
 }
@@ -669,4 +679,170 @@ h2:hover {
 	margin-left: auto;
 	position: absolute;
 }
+}
+
+/* COMPASS TEST  SECOND OPTION*/
+
+.device {
+  fill: #eee;
+}
+.device-screen {
+  fill: #fff;
+}
+.browser {
+  fill: #f2f2f2;
+}
+.chrome {
+  fill: #D8D8D8;
+}
+.chrome-shadow {
+  fill: darken(#D8D8D8,4%);
+}
+.close,.min,.expand {
+  fill: #fff;
+}
+.header {
+  fill: #A0A0A0;
+}
+.main-content {
+  fill: #fff;
+}
+.sidebar {
+  fill: #8C8C8C;
+}
+.aside {
+  fill: #ddd;
+}
+
+/* THIRD OPTION DEVICE*/
+
+.bg  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.path {
+  animation: draw 3s forwards;
+}
+
+.path-delay {
+  animation: draw 3s 1s forwards;
+}
+
+.path-delay--2 {
+  animation: draw 3s 1.5s forwards;
+}
+
+.path-delay--3 {
+  animation: draw 3s 2s forwards;
+}
+
+.path-delay--4 {
+  animation: draw 3s 2.5s forwards;
+}
+
+.clouds {
+  animation: draw 3s forwards, clouds 9.5s 3s forwards;
+}
+
+.wind {
+  animation: draw 3s forwards, wind 10s 2.5s forwards;
+}
+ 
+ @keyframes draw {
+  from{}
+ 
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+ @keyframes clouds {
+  from{}
+   
+  to {
+    transform: translate(30px,0);
+  }
+}
+
+ @keyframes wind {
+  from{}
+   
+  to {
+    transform: translate(35px,0);
+  }
+}
+
+/* THIRD OPTION OVER */
+
+/* DESIGN PAGE */
+
+#first_image {
+  display: block;
+  width: 100%;
+}
+
+/* ROUND SECTION */
+
+#round_section{
+
+  /* height: 20rem; */
+  /* display: block;
+  top: 50rem; */
+}
+
+square {
+  position: absolute;
+  top: 105vmin;
+  height: calc(50vh - 5vmin);
+  width: calc(53vw - 6vmin);
+  background: hsl(45,90%,50%);
+  background: linear-gradient(
+    -45deg,
+    hsl(55,90%,50%),
+    hsl(35,90%,50%)
+  );
+}
+
+circle {
+  position: absolute;
+  left: calc(59.7vw - 35vmin);
+  top: calc(240vh - 120vmin);
+  height: 30vmin;
+  width: 30vmin;
+  background: conic-gradient(
+    hsl(220deg,50%,50%),
+    hsl(140deg,50%,50%),
+    hsla(100deg,50%,50%,0));
+  border-radius: 50%;
+}
+
+/* h3 */
+
+/* .first_design_section_text h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+} */
+
+/* Red dots Css3 pattern */
+.bgDiv {
+  background: linear-gradient(-45deg, #036 30%, transparent 45%, transparent 55%, #036 70%), linear-gradient(45deg, #036 30%, transparent 45%, transparent 55%, #036 70%);
+  background-color: #f00;
+  background-size: 15px 15px;
+  background-position: 0px 0px;
+  width: 800px;
+  height: 500px;
+  animation: bgAnimation 0.5s linear 0s infinite;
+}
+@keyframes bgAnimation {
+  100% {
+    background-position: 0px -15px;
+  }
+}
+.text {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 100px;
 }

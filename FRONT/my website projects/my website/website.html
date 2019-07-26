@@ -2,12 +2,16 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta htp-equiv="X-UA-Compatible" content="ie-edge">
+<meta http-equiv="X-UA-Compatible" content="ie-edge">
 <script src="https://kit.fontawesome.com/1456345ba9.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Poppins:400,900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/anuraghazra/Verly.js@v1.2.1/dist/verly.bundle.js"></script>
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/normalize.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/snap.svg-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/anuraghazra/Verly.js@v1.2.1/dist/verly.bundle.js"></script>
+<script src="js/lazy-line-painter-1.9.6.min.js"></script> 
+            
 <title>C.Real digital agency</title>
 </head>
 <body>
@@ -35,8 +39,54 @@
 </nav>
     </header>
     <main>
-        <section id="first_image">
-            <canvas id="rounds"></canvas>
+        <section id="first_background">
+            <div class="bg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="670" height="1000" viewBox="560.4 -110.4 670 235" enable-background="new 560.4 -110.4 670 235">
+            
+                    <path class="wind" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                        stroke-dasharray="50" stroke-dashoffset="50" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M597.8-86.2h21.7m185.4-3.4h13.5m364.1 25.6h13.5m-225.5-33.8h21.7m35.8 65.8h8.1m-277.8 72h21.7"
+                        fill="none" />
+                    <g stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            
+                        <path class="path-delay--4" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                            stroke-dasharray="300" stroke-dashoffset="300" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
+                            d="M905.4-36.3v20.3l23.1 21.8-23.1 21.8v20.3l44.6-42.1zM888.2 27.6l-23.1-21.8 23.1-21.8v-20.3l-44.6 42.1 44.6 42.1z"
+                        />
+                    </g>
+            
+                    <g class="path-delay--3" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                        stroke-dasharray="500" stroke-dashoffset="500" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+                        <path d="M896.8-73.3c-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1c43.7 0 79.1-35.4 79.1-79.1s-35.4-79.1-79.1-79.1zM896.8 70.7c-35.8 0-64.9-29.1-64.9-64.9s29.1-64.9 64.9-64.9c35.8 0 64.9 29.1 64.9 64.9s-29.1 64.9-64.9 64.9z"
+                        />
+                    </g>
+            
+                    <g class="clouds" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                        stroke-dasharray="200" stroke-dashoffset="200" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
+                        fill="none">
+                        <path d="M768.1-5.9c-.6-7.3-6.6-13-14.1-13-1.8 0-3.5.3-5.1.9-2.8-5.7-8.7-9.6-15.6-9.6-8.2 0-15.1 5.7-16.9 13.4-.8-.2-1.7-.3-2.6-.3-5.3 0-9.6 3.7-10.6 8.7l64.9-.1zm370.7-60c-.5-6.7-6.1-12-13-12-1.6 0-3.2.3-4.7.9-2.6-5.3-8-8.9-14.3-8.9-7.6 0-13.9 5.2-15.6 12.3-.8-.2-1.6-.3-2.4-.3-4.8 0-8.9 3.4-9.8 8h59.8zm81.2 56.5c-.5-6.4-5.9-11.4-12.4-11.4-1.5 0-3.1.3-4.4.9-2.5-5-7.7-8.4-13.6-8.4-7.2 0-13.2 5-14.9 11.7-.8-.2-1.5-.3-2.3-.3-4.6 0-8.4 3.3-9.3 7.7l56.9-.2zm-128.1 29.4c-.6-7.4-6.8-13.3-14.3-13.3h-.8c-2.8-5.3-8.3-8.9-14.7-8.9-6.5 0-12.1 3.7-14.9 9.2-.9-.2-1.9-.3-2.9-.3-6.7 0-12.2 5.5-12.2 12.2 0 .4 0 .7.1 1.1h59.7zm-358.3-93.8c-.6-7.4-6.8-13.3-14.3-13.3h-.8c-2.8-5.3-8.3-8.9-14.7-8.9-6.5 0-12.1 3.7-14.8 9.2-.9-.2-1.9-.3-2.8-.3-6.7 0-12.2 5.4-12.2 12.2 0 .4 0 .7.1 1.1h59.5zM620.8-15.8c0-4.5-3.6-8.1-8.1-8.1-1.3 0-2.5.3-3.5.8-1.9-5.2-6.9-8.9-12.8-8.9-4.7 0-8.9 2.4-11.3 6.1-1.1-.5-2.3-.7-3.6-.7-5.2 0-9.5 4.3-9.5 9.5 0 .5 0 .9.1 1.4h48.7v-.1z"
+                        />
+                    </g>
+            
+                    <path class="path" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                        stroke-dasharray="1300" stroke-dashoffset="1300" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
+                        d="M1230.4 112.3c-5.6 0-10.2-4.6-10.2-10.2 0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2s-10.2-4.6-10.2-10.2c0 5.6-4.6 10.2-10.2 10.2"
+                        fill="none" />
+            
+                    <g class="path-delay" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                        stroke-dasharray="500" stroke-dashoffset="500" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
+                        fill="none">
+                        <path d="M1001.1 110.3l57.8-57.9 19.3 19.3 53.7-53.7 45.7 45.6 22.4-22.3 32.4 32.5M790 110.3l-69-69-22.3 22.3-42.6-42.6-31.5 31.4-21.3-21.3-43.7 43.7"
+                        />
+                    </g>
+            
+                    <g class="path-delay" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="10"
+                        stroke-dasharray="100" stroke-dashoffset="100" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
+                        fill="none">
+                        <path d="M1214.5 53.5l-9.5 9.5-3-3-4.1 4-11.5-11.5M1112.7 37.3l7.1 7.1 5-5.1 7.1 7.1 7.1-7.1 6.2 6 7.1-7.1M711.8 51.5l5.1 5 4.1-4.1 5 5.1 5.1-5.1M668.3 33.2l-6.2 6.1-5.1-5.1-7.1 7.1-7.1-7.1M1046 65.4l8 7.9 5.5-5.5 6 6 7.4-7.4M590.7 43.7l7.3 7.3 4.5-4.6 6.1 6.1 8.2-8.2"
+                        />
+                    </g>
+                </svg>
+            </div>
         </section>
         <section id="adaptive">
             <div class="adaptive_left">
@@ -621,9 +671,15 @@
 		c-3.5,0-6.3-2.8-6.3-6.3v-2C153.1,52.2,155.9,49.4,159.4,49.4z" />
         </g>
     </svg>
+     <!-- MOVING APP TEST SECOND VERSION-->
 
-    <h3 class="farm-new-font">Responsive Website Design</h3>
+    <svg id="responsive" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px"
+        height="300px" viewBox="0 0 500 300" enable-background="new 0 0 500 300" xml:space="preserve">
+    </svg>
+    <!-- SECOND VERSION OVER -->
 
+    </div>
+    <!-- FOURTH'S OPTION  -->
 </div>
             </div>
         </section>
@@ -675,60 +731,135 @@
     <footer>
 
     </footer>
-    <script type='text/javascript'>
-    class Text {
-            constructor(alphabets, x, y, fontsize, verlyInstance) {
-                this.alphabets = alphabets.toUpperCase().split("");
-                this.x = x;
-                this.y = y;
-                this.fontsize = fontsize;
-                this.words = [];
-                this.iterations = 50;
+    <script>
+        s = Snap("#responsive");
 
-                this.gap = 0;
-                this.entity = new Entity(this.iterations, verlyInstance);
-                for (let i = 0; i < this.alphabets.length; i++) {
-                    let word = new TypoGraphy(
-                        this.x + this.gap,
-                        this.y,
-                        this.fontsize,
-                        this.alphabets[i]
-                    );
-                    this.words.push(word.text);
-                    this.gap += 140;
-                }
-                this.entity = verlyInstance.joinEntities(this.entity, ...this.words);
-            }
+
+        var device = s.path('M445.25,300V140c0-5.523-4.478-10-10-10h-183c-5.523,0-10,4.477-10,10v160H445.25z');
+        device.attr({
+            class: 'device'
+        });
+
+
+
+        var deviceScreen = s.path("M429.25,300V152c0-2.762-2.238-5-5-5h-161c-2.762,0-5,2.238-5,5v148H429.25z");
+        deviceScreen.attr({ class: 'device-screen' });
+
+
+
+        var browser = s.rect(269, 170.686, 148, 129.314);
+        browser.attr({ class: 'browser' });
+
+
+
+        var chrome = s.path("M414,161H272c-1.657,0-3,1.343-3,3v6.686h148V164 C417,162.343,415.657,161,414,161z");
+        chrome.attr({ class: 'chrome' });
+
+
+        var chromeShadow = s.rect(269, 170.684, 148, 2);
+        chromeShadow.attr({ class: 'chrome-shadow' });
+
+
+
+        var close = s.circle(273.863, 165.842, 1.982);
+        close.attr({ class: 'close' });
+
+
+
+        var min = s.circle(281.809, 165.842, 1.982);
+        min.attr({ class: 'min' });
+
+
+
+        var expand = s.circle(289.545, 165.842, 1.982);
+        expand.attr({ class: 'expand' });
+
+
+        var header = s.rect(269, 171.938, 148, 8.223);
+        header.attr({ class: 'header' });
+
+
+
+        var mainContent = s.rect(316.443, 187.441, 89.425, 112.559);
+        mainContent.attr({ class: 'main-content' });
+
+
+        var aside = s.rect(316.443, 262, 89.425, 40);
+        aside.attr({ class: 'aside' });
+
+
+        var sidebar = s.rect(279.826, 187.441, 36.617, 112.559);
+        sidebar.attr({ class: 'sidebar' });
+
+        window.onload = function () {
+            setTimeout(animateMedium, 500);
+            setTimeout(animateBig, 2000);
+        };
+
+
+        var animateMedium = function () {
+            device.animate({ d: "M445.25,300V51.5c0-5.523-4.478-10-10-10H54.5c-5.523,0-10,4.477-10,10V300H445.25z" }, 1000, mina.easeinout);
+            deviceScreen.animate({ d: "M429.25,300V66.5c0-2.762-2.238-5-5-5H67.5c-2.762,0-5,2.238-5,5V300H429.25z" }, 1000, mina.easeinout);
+            browser.animate({ x: 78.5, y: 88.5, width: 338.5, height: 211.5 }, 1000, mina.easeinout);
+            chrome.animate({ d: "M414,78.814H81.5c-1.657,0-3,1.343-3,3V88.5H417v-6.686C417,80.157,415.657,78.814,414,78.814z" }, 1000, mina.easeinout);
+            chromeShadow.animate({ x: 78.5, y: 87.44, width: 338.5, height: 3 }, 1000, mina.easeinout);
+            close.animate({ cx: 85.174, cy: 83.657 }, 1000, mina.easeinout);
+            min.animate({ cx: 93.12, cy: 83.657 }, 1000, mina.easeinout);
+            expand.animate({ cx: 100.856, cy: 83.657 }, 1000, mina.easeinout);
+            header.animate({ x: 78.5, y: 89.56, width: 338.5, height: 8.223 }, 1000, mina.easeinout);
+            mainContent.animate({ x: 195.731, y: 108.922, width: 210.297, height: 191.078 }, 1000, mina.easeinout);
+            sidebar.animate({ x: 91.137, y: 108.922, width: 61.434, height: 191.078 }, 1000, mina.easeinout);
+            aside.animate({ x: 152.434, y: 108.922, width: 43.297, height: 191.078 }, 1000, mina.easeinout);
         }
 
-        let canvas = document.getElementById("rounds");
-        let ctx = canvas.getContext("2d");
-        let width = (canvas.width = clamp(window.innerWidth, 900, 2000));
-        let height = (canvas.height = window.innerHeight - 400);
+        var animateBig = function () {
+            device.animate({ d: "M366.25,300V26.5c0-5.523-4.478-10-10-10h-217c-5.523,0-10,4.477-10,10V300H366.25L366.25,300" }, 1000, mina.easeinout);
+            deviceScreen.animate({ d: "M354.5,300V34.979c0-2.762-2.238-5-5-5H148.262c-2.762,0-5,2.238-5,5V300H354.5L354.5,300" }, 1000, mina.easeinout);
+            browser.animate({ x: 153.569, y: 60.647, width: 191.673, height: 239.353 }, 1000, mina.easeinout);
+            chrome.animate({ d: "M342.242,49.021H156.569c-1.657,0-3,1.343-3,3v6.686h191.673v-6.686 C345.242,50.364,343.899,49.021,342.242,49.021L342.242,49.021" }, 1000, mina.easeinout);
+            chromeShadow.animate({ x: 153.569, y: 57.647, width: 191.673, height: 3 }, 1000, mina.easeinout);
 
-        let verly = new Verly(100, canvas, ctx);
-
-        let web = new Text('DESIGN', width / 4 - 400, height - 200, 35, verly);
-
-        for (let i = 0; i < width / 60; i++) {
-            verly.createRope(i * 40, 0, random(8, 15), 15, 0)
+            close.animate({ cx: 159.79, cy: 53.864 }, 1000, mina.easeinout);
+            min.animate({ cx: 167.736, cy: 53.864 }, 1000, mina.easeinout);
+            expand.animate({ cx: 175.472, cy: 53.864 }, 1000, mina.easeinout);
+            header.animate({ x: 153.569, y: 60.647, width: 191.546, height: 8.223 }, 1000, mina.easeinout);
+            mainContent.animate({ x: 153.569, y: 83.32, width: 191.546, height: 115.446 }, 1000, mina.easeinout);
+            aside.animate({ x: 153.569, y: 198.767, width: 191.546, height: 58.232 }, 1000, mina.easeinout);
+            sidebar.animate({ x: 153.569, y: 256.999, width: 191.546, height: 43.001 }, 1000, mina.easeinout);
         }
-
-
-
-        function animate() {
-            ctx.clearRect(0, 0, width, height);
-
-            verly.update();
-            verly.render();
-            verly.interact();
-
-            // verly.renderPointIndex();
-
-            requestAnimationFrame(animate);
-        }
-        animate();
 
     </script>
+          <script type="text/javascript">
+
+				(function(){ 
+
+					document.onreadystatechange = () => {
+
+			      	if (document.readyState === 'complete') {
+
+						let svg = document.querySelector('#logo');
+						let config = {
+							strokeWidth: 1 
+						};
+						let animation = new LazyLinePainter(svg, config); 
+							animation.paint();
+						}
+	        		} 
+				})();
+
+            </script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazy-line-painter@1.9.4/lib/lazy-line-painter-1.9.4.min.js">
+
+    // import LazyLinePainter
+    import LazyLinePainter from 'lazy-line-painter'
+
+    // select your svg
+    let el = document.querySelector('#lazy_line')
+
+    // initialise & configure LazyLinePainter
+    let myAnimation = new LazyLinePainter(el, { strokeWidth: 10 })
+
+    // paint! :)
+    myAnimation.paint()</script> -->
 </body>
 </html>
