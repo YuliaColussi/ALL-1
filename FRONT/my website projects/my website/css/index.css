@@ -389,6 +389,132 @@ h2 {
     font-weight: 500;
 }
 
+/* CONTACT FORM */
+
+.contact_form{	
+	width: 450px; 
+  height: auto;
+  margin: 80px auto;
+	border-radius: 10px; 
+	text-align: left; 
+	padding-top: 30px;
+	padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+
+input{
+	background-color: #fbfbfb; 
+	width: 408px; 
+	height: 40px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #ec576b; 
+	margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+
+textarea{
+  background-color: #fbfbfb; 
+	width: 405px; 
+	height: 150px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #ec576b; 
+	margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+
+label{
+  display: block; 
+	float: center; 	
+}
+
+
+button{
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color: #ec576b; 
+	border-color: #ec576b; 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 420px;   
+  cursor: pointer;
+}
+
+
+button p{
+	color: #fff; 
+}
+
+
+span{
+	color: #ec576b; 
+}
+
+
+.aviso{
+	font-size: 13px;  
+	color: #0e0e0e;  
+}
+
+
+h1{
+	font-size: 35px;  
+	text-align: center; 
+	padding-bottom: 20px; 
+	color: #ec576b;
+}
+
+
+h3{
+	font-size: 14px; 
+	padding-bottom: 30px;
+	color: #0e0e0e;   
+}
+
+
+p{
+	font-size: 14px; 
+	color: #0e0e0e; 
+}
+
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+
+.formulario input:focus{
+	outline:0;
+	border: 1px solid #97d848;
+}
+
+
+.formulario textarea:focus{
+	outline:0;
+	border: 1px solid #97d848;
+}
+
+/* END CONTACT FORM */
+
 /* SECOND PAGE HOW DO WE WORK */
 
  /* translate(4.03226%, 0%) translate3d(0px, 0px, 0px); */
@@ -744,13 +870,15 @@ h2 {
 /* THIRD OPTION DEVICE*/
 
 .bg  {
+  z-index: 3;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
 
 .path {
+  color: white;
   animation: draw 3s forwards;
 }
 
@@ -763,20 +891,13 @@ h2 {
 }
 
 .path-delay--3 {
-  animation: draw 3s 2s forwards;
+  animation: draw 3s 1s forwards;
 }
 
 .path-delay--4 {
-  animation: draw 3s 2.5s forwards;
+  animation: draw 3s 1.5s forwards;
 }
 
-.clouds {
-  animation: draw 3s forwards, clouds 9.5s 3s forwards;
-}
-
-.wind {
-  animation: draw 3s forwards, wind 10s 2.5s forwards;
-}
  
  @keyframes draw {
   from{}
@@ -1356,52 +1477,54 @@ a:focus {
 /*  DESIGNER DEVELOPPER HUMAN */
 
 .container_scroll {
-   width: 1510px;
-   height: 500px;
+	display: flex;
+   width: 80%;
+   height: 20rem;
+   line-height: 20rem;
    margin: 0 auto;
    /* margin-left: -105px;
    margin-top: -20px; */
+   font-size: 15rem;
+   z-index: 50;
    -webkit-font-smoothing: antialiased;
 }
 
 .container_scroll p {
-   float: left; 
-   line-height: 40px;
-   font-size: 10rem;
    color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+   margin-top: 0;
 }
 
 .container_scroll .scroller {
-   height: 150px;
-   line-height: 150px;
-   float: left;
-   margin-left: 15px;
-   overflow: hidden;
+
+	/* line-height: 7rem; */
+	float: left;
+	margin-left: 2%;
+	overflow: hidden;
 }
 
 .container_scroll .scroller span {
-   display: block; 
-   font-size: 12rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+	display: block; 
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
    color:  #e73c4e; 
 }
 
 .container_scroll .scroller .inner {
-   animation: scroll 5s infinite ease-out;
+   animation: scroll 6s infinite ease-out;
 }
 
 @keyframes scroll {
-   15%  {margin-top: 0px;}
-   30%  {margin-top: -150px;}
-   45%  {margin-top: -150px;}
-   60%  {margin-top: -150px;}
-   75%  {margin-top: -300px;}
-   /* 90%  {margin-top: -300px;} */
-   100% {margin-top: 0px;}
-}
+   15%  {margin-top: 0;}
+   30%  {margin-top: -20rem;}
+   40%  {margin-top: -42rem;}
+   80%  {margin-top: -40rem;}
+   100%  {margin-top: 0;} 
+ } 
+
+ 
+
 
 /* COMPRESS DESIGN */
 

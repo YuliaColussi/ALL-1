@@ -210,6 +210,74 @@
     </div> -->
     <div class="content-wrap">
         <div class="content content--layout content--layout-1">
+            <html lang="en">
+            
+            <head>
+                <meta charset="UTF-8">
+                <title>Contact Form</title>
+            
+                <!-- ligação ao documento css. não aplicável no codepen.
+              <link rel="stylesheet" type="text/css" href="contact-form.css">
+            -->
+            
+            </head>
+            
+            
+            <body>
+            
+                <!-- formulário de contacto utilizando html e css -->
+            
+                <div class="contact_form">
+            
+                    <div class="formulario">
+                        <h1>Contact us</h1>
+            
+            
+                        <form action="submeter-formulario.php" method="post">
+            
+            
+                            <p>
+                                <label for="nome" class="colocar_nome">Your name
+                                    <span class="obrigatorio">*</span>
+                                </label>
+                                <input type="text" name="introduzir_nome" id="nome" required="obrigatorio" placeholder="O teu nome">
+                            </p>
+            
+                            <p>
+                                <label for="email" class="colocar_email">Email
+                                    <span class="obrigatorio">*</span>
+                                </label>
+                                <input type="email" name="introduzir_email" id="email" required="obrigatorio" placeholder="O teu email">
+                            </p>
+            
+                            <p>
+                                <label for="telefone" class="colocar_telefone">Telephone
+                                </label>
+                                <input type="tel" name="introduzir_telefone" id="telefone" placeholder="O teu telefone">
+                            </p>
+                            <p>
+                                <label for="mensagem" class="colocar_mensagem">Message
+                                    <span class="obrigatorio">*</span>
+                                </label>
+                                <textarea name="introduzir_mensagem" class="texto_mensagem" id="mensagem" required="obrigatorio" placeholder="Write us few lines about your future project"></textarea>
+                            </p>
+            
+                            <button type="submit" name="enviar_formulario" id="enviar">
+                                <p>Enviar</p>
+                            </button>
+            
+                            <p class="aviso">
+                                <span class="obrigatorio"> * </span>Precisas mesmo de preencher estes campos.
+                            </p>
+            
+                        </form>
+                    </div>
+                </div>
+            
+            </body>
+            
+            </html>
+
             <!-- <h3 class="content__title my_attaches">frank</h3> -->
         </div>
     </div>
