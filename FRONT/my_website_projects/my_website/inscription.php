@@ -44,7 +44,7 @@ echo '<pre>'; print_r($_POST); echo '</pre>';
       // $_POST['mdp']  = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // $2y$10$SV3bb8OkXQr9JLYeDsMQ/.RARkJudv6KP8wYoaxk.pK1TtqVwkG8u thats what it gives
       // on se conserve jamais en cliar les mots de passe dans la BDD, password_hash permet de créer une clé de hashage
 
-        $data_insert = $bdd->prepare("INSERT INTO membre(pseudo, mdp, nom, prenom, civilite, email, ville, code_postal, adresse) VALUES (:pseudo, :mdp, :nom, :prenom, :civilite, :email, :ville, :code_postal, :adresse)");
+        $data_insert = $bdd->prepare("INSERT INTO member_form(pseudo, mdp, nom, prenom, email) VALUES (:pseudo, :mdp, :nom, :prenom, :email)");
         
       foreach($_POST as $key=>$value)
         { 
@@ -72,67 +72,41 @@ formulaire ($_POST)
 4. Faites en sorte d'informer l'internaute si le mot de passe ne sont pas indiques-->
 
 
-<h1 class="display-4 text-center"></h1>
+<h1></h1>
 <?= $error ?>
 <form  class="form1" method="post" action="">
-  <div class="form-row">
-    <div class="form-group col-md-6">
+  <div>
+    <div>
       <label for="pseudo">Pseudo</label>
-      <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Entre votre pseudo">
+      <input type="text" id="pseudo" name="pseudo" placeholder="Entre votre pseudo">
     </div>
-  <div class="form-group">
+  <div>
     <label for="mdp">Mot de passe</label>
-    <input type="text" class="form-control" id="mdp" name="mdp" placeholder="Entrer votre mot de passe">
+    <input type="text" id="mdp" name="mdp" placeholder="Entrer votre mot de passe">
   </div>
-    <div class="form-group col-md-6">
+    <div>
       <label for="nom">Nom</label>
-      <input type="text" class="form-control" name="nom" id="nom" placeholder="Votre nom">
+      <input type="text" name="nom" id="nom" placeholder="Votre nom">
     </div>
-    <div class="form-group col-md-6">
+    <div>
       <label for="conf_mdp">Confirmer votre mot de passe</label>
-      <input type="text" class="form-control" id="conf_mdp" name="conf_mdp">
+      <input type="text" id="conf_mdp" name="conf_mdp">
     </div>
-    <div class="form-group col-md-6">
+    <div>
       <label for="prenom">Prenom</label>
-      <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Votre prénom">
+      <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
     </div>
-      <div class="form-group col-md-6">
+      <div>
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="civilite">Civilite</label>
-      <select id="civilite" class="form-control" name="civilite">
-        <option selected>Choose...</option>
-        <option value="m" name="m">m</option>
-        <option value"f" name="f">f</option>
-      </select>
-    </div>
-  <div class="form-group col-md-6">
-    <label for="ville">Ville</label>
-    <input type="text" class="form-control" id="ville" name="ville" placeholder="Votre ville">
-  </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="adresse">Address</label>
-      <input type="text" class="form-control" name="adresse" id="adresse">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="code_postal">code_postal</label>
-      <input type="text" class="form-control" name="code_postal" id="code_postal">
+      <input type="email" id="email" name="email" placeholder="Email">
     </div>
   </div>
  
-  <button type="submit" name="form">Sign in</button>
+  <button type="submit" class="btn btn-primary" name="form">Sign in</button>
 </form>
 
 
 <?php
-// 2
-
-
-
 
 
 require_once("include/footer.php");
