@@ -5,7 +5,7 @@ extract($_GET);
 
 ?>
 
-
+<body  class="demo-2 loading">
 <section>
     
     <!-- MORPHY START -->
@@ -210,7 +210,7 @@ extract($_GET);
             
                 <!-- formulário de contacto utilizando html e css -->
             
-                <div class="contact_form">
+                <div class="contact_form" id="contact">
             
                     <div class="formulario">
                         <h1>Contact us</h1>
@@ -246,11 +246,11 @@ extract($_GET);
                             </p>
             
                             <button type="submit" name="enviar_formulario" id="enviar">
-                                <p>Enviar</p>
+                                <p>Send us!</p>
                             </button>
             
                             <p class="aviso">
-                                <span class="obrigatorio"> * </span>Precisas mesmo de preencher estes campos.
+                                <span class="obrigatorio"> * </span>Fields that have to be filled in.
                             </p>
             
                         </form>
