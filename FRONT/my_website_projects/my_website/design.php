@@ -90,33 +90,12 @@ extract($_GET);
             </div>
             <!-- Related demos -->
             <section class="content content--related">
-                <p class="content__info">If you enjoyed this demo you might also like:</p>
+                <p class="content__info"></p>
 
-                <a class="content__related-item" href="https://tympanus.net/Development/ElasticSVGElements/">
-                    <div class="footer_left">
-                        <h4>Let's work together?</h4>
-                        <a>
-                            <p>
-                                Fill in a small briefing form!
-                            </p>
-                        </a>
-                    </div>
-                </a>
-                <a class="content__related-item" href="https://tympanus.net/Development/ItemRevealer/">
-                    <div class="footer_right">
-                        <p>
-                            +33 626 99 10 02
-                        </p>
-                        <p>
-                            +33 78 986 10 15
-                        </p>
-                        <p>
-                            production@creal.com
-                        </p>
-                    </div>
-
+                <a class="content__related-item" href="">
                 </a>
             </section>
+            
             <!-- PHOTO ALBUM -->
             <div class="content">
                 <article class="content__item">

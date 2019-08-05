@@ -1,10 +1,57 @@
 <?php
 require_once('include/init.php');
 require_once('include/header.php');
+require_once ('include/contact.class.php');
 extract($_GET);
 
-?>
+//variable d'affichage :
+$errorContact = "";
+$successContact="";
 
+if($_POST){
+    // je récupère le nom des indices de des champs avec la methode "extract()"
+    extract($_POST);
+
+    // j'effectue la validation des champs du formulaire
+    if(!isset($_POST['prenom']) || strlen($_POST['prenom'])< 3 || strlen($_POST['prenom']) > 30){
+        $errorContact .= '<div class="alert alert-warning text-danger"> Indiquez votre prénom (entre 3 et 30 caractères)</div>';
+    }
+    if(!isset($_POST['nom']) || strlen($_POST['nom']) < 3 || strlen($_POST['prenom']) > 30){
+        $errorContact .= '<div class="alert alert-warning text-danger"> Indiquez votre nom (entre 3 et 30 caractères)</div>';
+
+    }
+    if(!isset($_POST['email']) || !filter_var($email,FILTER_VALIDATE_EMAIL)){
+        $errorContact .= '<div class="alert alert-warning text-danger"> Saisissez une adresse mail valide</div>';
+    }
+
+    if(!isset($_POST['message']) || strlen($_POST['message']) < 3 || strlen($_POST['message']) > 250){
+        $errorContact .= '<div class="alert alert-warning text-danger">Saisissez votre messages (250 caractères max)</div>';
+    }
+
+    if(empty($errorContact)){
+
+        foreach($_POST as $indice => $valeur){
+            $_POST[$indice] = htmlspecialchars($valeur, ENT_QUOTES);
+        }
+        // je créé un nouvel objet de ma classe Contact
+        $contact = new Contact();
+        // j'utilise la methode contactAction() de ma class Contact.php
+        $contact->contactAction($prenom, $nom, $email, $message);
+
+        unset($nom);
+        unset($prenom);
+        unset($email);
+        unset($message);
+        unset($contact);
+
+
+        $successContact .='<div class="alert alert-success">Votre message à bien été enregistré </div>';
+
+    }
+
+}
+
+?>
 <body  class="demo-2 loading">
 <section>
     
@@ -97,13 +144,13 @@ extract($_GET);
             </div>
                             <div id="inline">
         <h2>Онлайн заявка</h2>
-        <form id="contact" action="#" method="post" name="contact">
+        <!-- <form id="contact" action="#" method="post" name="contact">
         <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
         <input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон"> 
         <input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail"> 
         <textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea>
         <button id="send">Отправить</button>
-        </form>
+        </form> -->
         </div>
             <!-- <a href="#" class="content__link">Discover</a> -->
     </div>
@@ -191,26 +238,55 @@ extract($_GET);
             <h3 class="content__title my_attaches">east</h3>
         </div>
     </div> -->
+
+       
+
     <div class="content-wrap">
         <div class="content content--layout content--layout-1">
-            <html lang="en">
-            
-            <head>
-                <meta charset="UTF-8">
-                <title>Contact Form</title>
-            
-                <!-- ligação ao documento css. não aplicável no codepen.
-              <link rel="stylesheet" type="text/css" href="contact-form.css">
-            -->
-            
-            </head>
-            
-            
-            <body>
+
+    
+
+
+<!-- Zone contact-->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mt-5">
+                <form method="POST" class="offset-md-3" >
+                    <?php
+                    echo $errorContact;
+                    echo $successContact;
+                    ?>
+                    <div class="form-row">
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" placeholder="Prénom" name="prenom" value="<?php if (isset($prenom)){echo $prenom;}?>">
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control" placeholder="Nom" name="nom" value="<?php if (isset($nom)){echo $nom;}?>">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-8 mt-3">
+                            <input type="text" class="form-control" placeholder="Email@gmail.com" name="email" value="<?php if (isset($email)){echo $email;}?>">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col mt-3">
+                            <textarea name="message" id="" cols="45" rows="10" value="<?php if (isset($message)){echo $message;}?>">
+                            </textarea>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-outline-light mt-4  offset-3" value="Envoyer">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+ 
             
                 <!-- formulário de contacto utilizando html e css -->
             
-                <div class="contact_form" id="contact">
+                <!-- <div class="contact_form" id="contact">
             
                     <div class="formulario">
                         <h1>Contact us</h1>
@@ -255,7 +331,7 @@ extract($_GET);
             
                         </form>
                     </div>
-                </div>
+                </div> -->
             
             </body>
             
@@ -267,31 +343,11 @@ extract($_GET);
     <!-- </section> -->
     <!-- Related demos -->
     <section class="content content--related">
-        <p class="content__info">If you enjoyed this demo you might also like:</p>
+        <!-- <p class="content__info">If you enjoyed this demo you might also like:</p> -->
 
         <a class="content__related-item" href="https://tympanus.net/Development/ElasticSVGElements/">
-                        <div class="footer_left">
-                            <h4>Let's work together?</h4>
-                            <a>
-                                <p>
-                                    Fill in a small briefing form!
-                                </p>
-                            </a>
-                        </div>
         </a>
-        <a class="content__related-item" href="https://tympanus.net/Development/ItemRevealer/">
-            <div class="footer_right">
-                <p>
-                    +33 626 99 10 02
-                </p>
-                <p>
-                    +33 78 986 10 15
-                </p>
-                <p>
-                    production@creal.com
-                </p>
-            </div>
-
+        <a class="content__related-item" href="">
         </a>
     </section>
                 <!-- MORPHY END -->
@@ -319,4 +375,3 @@ extract($_GET);
 require_once('include/footer.php');
 
 ?>
-   

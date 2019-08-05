@@ -1,3 +1,34 @@
+   
+   <footer>
+       <div class="footer_wrapper content__info">
+           <div class="footer">
+                        <div class="footer">
+                            <h4>Let's work together?</h4>
+                            <a>
+                                <p>
+                                    Fill in a small briefing form!
+                                </p>
+                            </a>
+                        </div>
+           </div>
+           <div class="footer_two">
+               <h4>Call or email us directly!</h4>
+                 <p>
+                    +33 626 99 10 02
+                </p>
+                <p>
+                    +33 78 986 10 15
+                </p>
+                <p>
+                    production@creal.com
+                </p>
+           </div>
+       </div>
+   </footer>
+   
+   
+   
+   
    <script src="https://kit.fontawesome.com/1456345ba9.js"></script>
     <script src="js/snap.svg-min.js"></script>
     <script src="js/anime.min.js"></script>
@@ -9,13 +40,8 @@
     <script src="https://cdn.jsdelivr.net/gh/anuraghazra/Verly.js@v1.3.0/dist/verly.bundle.js"></script>
      <script href="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script>
     <!-- <script src="js/demo.js"></script> -->
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-  crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script> -->
     <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
-    <script href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
 
     <!-- CUSTOMED SCRIPTS -->
     <script type="text/javascript">
