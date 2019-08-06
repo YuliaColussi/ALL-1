@@ -47,6 +47,7 @@ extract($_GET);
             <!-- <section id="first_image">
                 <canvas id="rounds"></canvas>
             </section> -->
+            
             <div id="compress">
                 <h1 id="title">Design</h1>
             </div>

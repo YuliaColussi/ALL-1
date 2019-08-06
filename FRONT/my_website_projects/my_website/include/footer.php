@@ -24,6 +24,7 @@
                 </p>
            </div>
        </div>
+       
    </footer>
    
    
@@ -44,71 +45,71 @@
     <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
 
     <!-- CUSTOMED SCRIPTS -->
-    <script type="text/javascript">
+     <!-- <script type="text/javascript">  -->
 
-    // POP UP FORM
-  function validateEmail(email) { 
-    var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return reg.test(email);
-  }
+<!-- //     POP UP FORM
+//   function validateEmail(email) { 
+//     var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     return reg.test(email);
+//   }
 
-  $(document).ready(function() {
-    $(".modalbox").fancybox();
-    $("#contact").submit(function() { return false; });
-    $("#send").on("click", function(){
-      var emailval  = $("#email").val();
-      var namevl  = $("#name").val();
-      var phonevl  = $("#phone").val();
-      var msgval    = $("#msg").val();
-      var msglen    = msgval.length;
-      var mailvalid = validateEmail(emailval);
+//   $(document).ready(function() {
+//     $(".modalbox").fancybox();
+//     $("#contact").submit(function() { return false; });
+//     $("#send").on("click", function(){
+//       var emailval  = $("#email").val();
+//       var namevl  = $("#name").val();
+//       var phonevl  = $("#phone").val();
+//       var msgval    = $("#msg").val();
+//       var msglen    = msgval.length;
+//       var mailvalid = validateEmail(emailval);
 
-      if(mailvalid == false) {
-        $("#email").addClass("error");
-      }
-      else if(mailvalid == true){
-        $("#email").removeClass("error");
-      }
-  if(mailvalid == false) {
-        $("#name").addClass("error");
-      }
-      else if(mailvalid == true){
-        $("#name").removeClass("error");
-      }
-      if(mailvalid == false) {
-        $("#phone").addClass("error");
-      }
-      else if(mailvalid == true){
-        $("#phone").removeClass("error");
-      }
-      if(msglen < 4) {
-        $("#msg").addClass("error");
-      }
-      else if(msglen >= 4){
-        $("#msg").removeClass("error");
-      }
+//       if(mailvalid == false) {
+//         $("#email").addClass("error");
+//       }
+//       else if(mailvalid == true){
+//         $("#email").removeClass("error");
+//       }
+//   if(mailvalid == false) {
+//         $("#name").addClass("error");
+//       }
+//       else if(mailvalid == true){
+//         $("#name").removeClass("error");
+//       }
+//       if(mailvalid == false) {
+//         $("#phone").addClass("error");
+//       }
+//       else if(mailvalid == true){
+//         $("#phone").removeClass("error");
+//       }
+//       if(msglen < 4) {
+//         $("#msg").addClass("error");
+//       }
+//       else if(msglen >= 4){
+//         $("#msg").removeClass("error");
+//       }
       
-      if(mailvalid == true && msglen >= 4) {
-        // если обе проверки пройдены
-        // сначала мы скрываем кнопку отправки
-        $("#send").replaceWith("<em>отправка...</em>");
-        $.ajax({
-          type: 'POST',
-          url: 'sendmessage.php',
-          data: $("#contact").serialize(),
-          success: function(data) {
-            if(data == "true") {
-              $("#contact").fadeOut("fast", function(){
-                $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
-                setTimeout("$.fancybox.close()", 1000);
-              });
-            }
-          }
-        });
-      }
-    });
-  });
-</script>
+//       if(mailvalid == true && msglen >= 4) {
+//         // если обе проверки пройдены
+//         // сначала мы скрываем кнопку отправки
+//         $("#send").replaceWith("<em>отправка...</em>");
+//         $.ajax({
+//           type: 'POST',
+//           url: 'sendmessage.php',
+//           data: $("#contact").serialize(),
+//           success: function(data) {
+//             if(data == "true") {
+//               $("#contact").fadeOut("fast", function(){
+//                 $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
+//                 setTimeout("$.fancybox.close()", 1000);
+//               });
+//             }
+//           }
+//         });
+//       }
+//     });
+//   }); -->
+
 
 
     <script type="text/javascript">
@@ -895,8 +896,8 @@
 
         <!-- WEBSITE SCRIPT END -->
 
-    <script>
-    //     window.onscroll = function () {
+
+    <!-- //     window.onscroll = function () {
     // var s = Snap('#growing_round');
     // var myRound = s.circle(150, 150, 100);
 
@@ -1142,58 +1143,98 @@
 
     // FORM MAIN ONCLICK
 
-        jQuery(document).ready(function($) {
+//         jQuery(document).ready(function($) {
 
-    // Добавляем маску для поля с номера телефона
-    $('#phone').mask('+7 (999) 999-99-99');
+//     // Добавляем маску для поля с номера телефона
+//     $('#phone').mask('+7 (999) 999-99-99');
 
-    // Проверяет отмечен ли чекбокс согласия
-    // с обработкой персональных данных
-    $('#check').on('click', function() {
-        if ($("#check").prop("checked")) {
-            $('#button').attr('disabled', false);
-        } else {
-            $('#button').attr('disabled', true);
-        }
-    });
+//     // Проверяет отмечен ли чекбокс согласия
+//     // с обработкой персональных данных
+//     $('#check').on('click', function() {
+//         if ($("#check").prop("checked")) {
+//             $('#button').attr('disabled', false);
+//         } else {
+//             $('#button').attr('disabled', true);
+//         }
+//     });
 
-    // Отправляет данные из формы на сервер и получает ответ
-    $('#contactForm').on('submit', function(event) {
+//     // Отправляет данные из формы на сервер и получает ответ
+//     $('#contactForm').on('submit', function(event) {
         
-        event.preventDefault();
+//         event.preventDefault();
 
-        var form = $('#contactForm'),
-            button = $('#button'),
-            answer = $('#answer'),
-            loader = $('#loader');
+//         var form = $('#contactForm'),
+//             button = $('#button'),
+//             answer = $('#answer'),
+//             loader = $('#loader');
 
-        $.ajax({
-            url: 'handler.php',
-            type: 'POST',
-            data: form.serialize(),
-            beforeSend: function() {
-                answer.empty();
-                button.attr('disabled', true).css('margin-bottom', '20px');
-                loader.fadeIn();
-            },
-            success: function(result) {
-                loader.fadeOut(300, function() {
-                    answer.text(result);
-                });
-                form.find('.field').val('');
-                button.attr('disabled', false);
-            },
-            error: function() {
-                loader.fadeOut(300, function() {
-                    answer.text('Произошла ошибка! Попробуйте позже.');
-                });
-                button.attr('disabled', false);
-            }
-        });
+//         $.ajax({
+//             url: 'handler.php',
+//             type: 'POST',
+//             data: form.serialize(),
+//             beforeSend: function() {
+//                 answer.empty();
+//                 button.attr('disabled', true).css('margin-bottom', '20px');
+//                 loader.fadeIn();
+//             },
+//             success: function(result) {
+//                 loader.fadeOut(300, function() {
+//                     answer.text(result);
+//                 });
+//                 form.find('.field').val('');
+//                 button.attr('disabled', false);
+//             },
+//             error: function() {
+//                 loader.fadeOut(300, function() {
+//                     answer.text('Произошла ошибка! Попробуйте позже.');
+//                 });
+//                 button.attr('disabled', false);
+//             }
+//         });
     
-    });
+//     });
 
-});
+// }); -->
+
+<script type="text/javascript">
+     new Modal({
+            btn: '.button',
+            overlay: '.overlay',
+            close: '.close',
+            modal: '.pop-up-form'
+        });
+
+        new Modal({
+            btn: '.button-1',
+            overlay: '.overlay',
+            close: '.close',
+            modal: '.pop-up-form'
+        });
+
+        function Modal(obj) {
+            var htmlBody = document.querySelector('body');
+
+            this.btn = document.body.querySelector(obj.btn),
+                this.overlay = document.body.querySelector(obj.overlay),
+                this.close = document.body.querySelector(obj.close),
+                this.modal = document.body.querySelector(obj.modal)
+
+            this.open = function () {
+                this.overlay.style.display = "block";
+                this.modal.style.display = "block";
+
+            };
+
+            this.closePop = function () {
+                this.overlay.style.display = "none";
+                this.modal.style.display = "none";
+            };
+
+            // htmlBody.addEventListener('mouseup',() => this.closePop());
+            this.btn.addEventListener('click', () => this.open());
+            this.close.addEventListener('click', () => this.closePop());
+            this.overlay.addEventListener('click', () => this.closePop());
+        }
     </script>
     <!-- FORM ON CLICK END -->
 
@@ -1719,7 +1760,54 @@
     // gui.add(txt, 'width').onChange(txt.set.bind(txt));
     gui.add(txt, 'weight').onChange(txt.set.bind(txt));
     gui.add(txt, 'italic').onChange(txt.set.bind(txt));
+    
                 </script>
+
+
+    <script type="text/javascript">
+    new Modal({
+	btn: '.button',
+	overlay: '.overlay',
+	close: '.close',
+	modal: '.pop-up-form'
+});
+
+new Modal({
+	btn: '.button-one',
+	overlay: '.overlay',
+	close: '.close',
+	modal: '.pop-up-form-one'
+});
+
+function Modal (obj) {
+ 	var htmlBody = document.querySelector('body');
+
+ 	this.btn = document.body.querySelector(obj.btn),
+ 	this.overlay = document.body.querySelector(obj.overlay),
+ 	this.close = document.body.querySelector(obj.close),
+ 	this.modal = document.body.querySelector(obj.modal)
+
+ 	this.open = function () {
+ 		this.overlay.style.display = "block";
+ 		this.modal.style.display = "block";
+
+ 	};
+
+ 	this.closePop = function () {
+ 		this.overlay.style.display = "none";
+ 		this.modal.style.display = "none";
+ 	};
+
+
+ 	this.btn.addEventListener('click',() => this.open());
+ 	this.close.addEventListener('click',() => this.closePop());
+ 	this.overlay.addEventListener('click',() => this.closePop());
+ }
+ 
+</script>
+
+                
+              
     <!-- END DESIGN PAGE SCRIPTS -->
 
     <!-- END OF CUSTOMED SCRIPTS -->

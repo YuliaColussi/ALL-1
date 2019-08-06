@@ -9,7 +9,7 @@ body {
     font-weight: 400;
 	line-height: 1;
 	margin: 0 auto;
-    font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 
@@ -70,9 +70,11 @@ ul {
 }
 
 .menu-wrap {
+	color: white;
     width: 90%;
     margin: auto;
-    display: flex;
+	display: flex;
+	cursor: pointer;
 }
 
 .menu {
@@ -86,14 +88,14 @@ ul {
 }
 
 .menu-wrap ul li{
-    width: 12%;
+    width: 20%;
     padding-right: 1%;
 }
 
-.menu-wrap ul li:first-child{
+/* .menu-wrap ul li:first-child{
     width: 7%;
     padding-right: 1%;
-}
+} */
 
 .menu-wrap ul li a {
     color: white;
@@ -103,102 +105,109 @@ li a:hover {
    text-shadow: -0.7rem 0.6rem 0 rgba(219,76,23,.5);
 }
 
+
 /* POP UP FORM */
-
-/*
-/*
-Форма обратной связи
-*/
-#inline {
-   z-index: 80;
-   margin-left:30px;
-   width:80%;
-   margin:0 auto;
-   background:#FFF;
-   padding:10px 20px;
-}
-.txt {
-   display:inline-block;
-   color:#676767;
-   width:190px;
-   margin-bottom:10px;
-   border:1px solid #CCC;
-   padding:5px 9px;
-   font-size:15px!important;
-   line-height:1.4em;
-}
-.txtarea {
-   display:inline-block;
-   color:#676767;
-   width:617px;
-   margin-bottom:10px;
-   border:1px solid #CCC;
-   padding:5px 9px;
-   font-size:15px!important;
-   line-height:1.4em;
-   height:80px;
-}
-.txt:focus, .txtarea:focus {
-   border-style:solid;
-   border-color:#BABABA;
-   color:#444;
-}
-input.error, textarea.error {
-    border-color:#973D3D;
-    border-style:solid;
-    background:#F0BEBE;
-    color:#A35959;
-}
-input.error:focus, textarea.error:focus {
-    border-color:#973D3D;
-    color:#A35959;
-}
-#send { 
-    color:#FFFFFF;
-    display:block;
-    cursor:pointer;
-    padding:5px 11px;
-    font-size:1.2em;
-    border:solid 1px #F9F9F9;
-    border-radius:2px;
-    background:#70C6B9;
-    width:210px;
-    margin-bottom:20px;
-}
-#send:hover {
-    background:#979797;
-}
-/*
-Форма обратной связи
-*/
-
-
-.modalbox {
-   color:#FFFFFF;
-   display:block;
-   cursor:pointer;
-   padding:10px 11px;
-   font-size:1.2em;
-   border:solid 1px #F9F9F9;
-   border-radius:2px;
-   background:#70C6B9;
-   width:210px;
-   text-decoration:none;
-   text-align:center;
-   margin:0 auto 20px;
-}
-.modalbox:hover {
-   background:#979797;
-}
-
-#inline {
-   display:none;
-   margin-left:30px;
-   width:80%;
-   margin:0 auto;
-   background:#FFF;
-   padding:10px 20px;
+ 
+ .container{
+	width: 100%;
+	margin: 0 auto;
 } 
+
+.element{
+	/* background-color: #353535; */
+	width: 100%;
+	margin: 0;
+	display: flex;
+}
+
+.element ul{
+	width: 100%;
+}
+
+
+/* .element ul li {
+	width: 50rem;
+}
+.element ul li a{
+	width: 50%;
+} */
+
+/* .element ul li a{
+	margin-right: 5rem;
+} */
+
+.button, .button-one {
+	align-self: center;
+	margin-left:auto;
+	margin-right: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color:white;
+	letter-spacing: 0.8px;
+	border-radius: 5px;
+}
+
+.button {
+	margin-right: 2rem;
+	/* width: 50%; */
+}
+
+
+.button, .button-one:focus {
+	outline: none;
+} 
+
+.overlay{
+	display:none; 
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.7;
+}
+
+.pop-up-form,
+.pop-up-form-one{
+	display: none;
+	position: fixed;
+	width: 400px;
+	height: 400px;
+	z-index: 100000;
+	background-color: white;
+	margin: 0 auto;
+	padding: 30px;
+	top: 30%;
+	right: 5%;
+	transform: translate(-50%,-50%);
+	border-radius: 10%;
+}
+
+
+ .form{
+	display: flex;
+	flex-direction: column;
+	transition: all 2s ease-in-out;
+} 
+
+ .form input{
+	
+} 
+
+/* input[type="text"]{
+	margin-bottom: 10px;
+} 
+
+.close{
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+} 
+  
+
+
 
 /* POP UP END */
 
@@ -541,7 +550,7 @@ h2 {
 
 /* CONTACT FORM */
 
-.contact_form{	
+/* .contact_form{	
 	width: 450px; 
   height: auto;
   margin: 80px auto;
@@ -661,7 +670,7 @@ p{
 .formulario textarea:focus{
 	outline:0;
 	border: 1px solid #97d848;
-}
+} */
 
 /* END CONTACT FORM */
 
@@ -1732,6 +1741,7 @@ a:focus {
 	z-index: -1;
 }
 
+
 /* PHOTO ALBUM */
 
  .debug {
@@ -2277,3 +2287,106 @@ a:focus {
 		cursor: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='52px' height='52px' viewBox='0 0 52 52' style='enable-background:new 0 0 52 52;' xml:space='preserve'%3E %3Cpath fill='%23bb3a3a' d='M20.921 26.67L5.791 41.75C5.485 41.743.23 36.488.224 36.18L15.32 21.073.098 5.86 5.74.22l15.19 15.24L36.161.22l5.64 5.64-15.27 15.22 15.097 15.15c-.006.307-5.262 5.562-5.569 5.568L20.921 26.67z'/%3E %3C/svg%3E") 21 21, pointer;
 	}
 }   */
+
+
+
+/* POP UP FORM */
+
+/*
+/*
+Форма обратной связи
+*/
+/* #inline {
+   z-index: 80;
+   margin-left:30px;
+   width:80%;
+   margin:0 auto;
+   background:#FFF;
+   padding:10px 20px;
+}
+.txt {
+   display:inline-block;
+   color:#676767;
+   width:190px;
+   margin-bottom:10px;
+   border:1px solid #CCC;
+   padding:5px 9px;
+   font-size:15px!important;
+   line-height:1.4em;
+}
+.txtarea {
+   display:inline-block;
+   color:#676767;
+   width:617px;
+   margin-bottom:10px;
+   border:1px solid #CCC;
+   padding:5px 9px;
+   font-size:15px!important;
+   line-height:1.4em;
+   height:80px;
+}
+.txt:focus, .txtarea:focus {
+   border-style:solid;
+   border-color:#BABABA;
+   color:#444;
+}
+input.error, textarea.error {
+    border-color:#973D3D;
+    border-style:solid;
+    background:#F0BEBE;
+    color:#A35959;
+}
+input.error:focus, textarea.error:focus {
+    border-color:#973D3D;
+    color:#A35959;
+}
+#send { 
+    color:#FFFFFF;
+    display:block;
+    cursor:pointer;
+    padding:5px 11px;
+    font-size:1.2em;
+    border:solid 1px #F9F9F9;
+    border-radius:2px;
+    background:#70C6B9;
+    width:210px;
+    margin-bottom:20px;
+}
+#send:hover {
+    background:#979797;
+}
+/*
+Форма обратной связи
+*/
+
+
+/* .modalbox {
+   color:#FFFFFF;
+   display:block;
+   cursor:pointer;
+   padding:10px 11px;
+   font-size:1.2em;
+   border:solid 1px #F9F9F9;
+   border-radius:2px;
+   background:#70C6B9;
+   width:210px;
+   text-decoration:none;
+   text-align:center;
+   margin:0 auto 20px;
+}
+.modalbox:hover {
+   background:#979797;
+}
+
+#inline {
+   display:none;
+   margin-left:30px;
+   width:80%;
+   margin:0 auto;
+   background:#FFF;
+   padding:10px 20px;
+}  */ 
+
+
+
+ 

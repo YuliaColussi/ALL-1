@@ -13,11 +13,11 @@ if($_POST){
     extract($_POST);
 
     // j'effectue la validation des champs du formulaire
-    if(!isset($_POST['prenom']) || strlen($_POST['prenom'])< 3 || strlen($_POST['prenom']) > 30){
+    if(!isset($_POST['nom']) || strlen($_POST['nom'])< 3 || strlen($_POST['nom']) > 30){
         $errorContact .= '<div class="alert alert-warning text-danger"> Indiquez votre prénom (entre 3 et 30 caractères)</div>';
     }
-    if(!isset($_POST['nom']) || strlen($_POST['nom']) < 3 || strlen($_POST['prenom']) > 30){
-        $errorContact .= '<div class="alert alert-warning text-danger"> Indiquez votre nom (entre 3 et 30 caractères)</div>';
+    if(!isset($_POST['phone']) || strlen($_POST['phone']) < 3 || strlen($_POST['phone']) > 30){
+        $errorContact .= '<div class="alert alert-warning text-danger"> Indiquez votre phone (entre 3 et 30 caractères)</div>';
 
     }
     if(!isset($_POST['email']) || !filter_var($email,FILTER_VALIDATE_EMAIL)){
@@ -36,17 +36,17 @@ if($_POST){
         // je créé un nouvel objet de ma classe Contact
         $contact = new Contact();
         // j'utilise la methode contactAction() de ma class Contact.php
-        $contact->contactAction($prenom, $nom, $email, $message);
+        $contact->contactAction($nom, $phone, $email, $message);
 
         unset($nom);
-        unset($prenom);
+        unset($phone);
         unset($email);
         unset($message);
         unset($contact);
 
-
         $successContact .='<div class="alert alert-success">Votre message à bien été enregistré </div>';
 
+        
     }
 
 }
@@ -100,6 +100,7 @@ if($_POST){
             </div>
             <h1 class="codrops-header__title">Morphing Background Shapes</h1> -->
         </header>
+    </div>
             <main>
         <!-- <nav class="demos">
             <a class="demo" href="index.html">
@@ -127,7 +128,7 @@ if($_POST){
                     greements into your site or app with a few lines of code.</p>
             </a>   -->
         <!-- <div class="deco deco--title">2017 Westland Exhibition Center</div> -->
-    </div>
+  
     <div class="content-wrap">
             <!-- <img class="content__img" src="img/3.jpg" alt="Some image" /> -->
             <div class="main_slider_part">
@@ -142,18 +143,23 @@ if($_POST){
                     <p class="white_header">REAL</p>
                 </div>
             </div>
-                            <div id="inline">
-        <h2>Онлайн заявка</h2>
-        <!-- <form id="contact" action="#" method="post" name="contact">
-        <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
-        <input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон"> 
-        <input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail"> 
-        <textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea>
-        <button id="send">Отправить</button>
-        </form> -->
-        </div>
+            
+            <!-- <div id="inline">
+                <h2>Онлайн заявка</h2>
+                <form id="contact" action="#" method="post" name="contact">
+                    <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
+                    <input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон"> 
+                    <input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail"> 
+                    <textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea>
+                    <button id="send">Отправить</button>
+                </form>
+            </div> -->
+            
+          
+            
             <!-- <a href="#" class="content__link">Discover</a> -->
-    </div>
+        </div>
+     
     <div class="content-wrap">
         <div class="content content--layout content--layout-2">
             <a class="what_we_do_link what_we_do" href="#">
@@ -259,10 +265,10 @@ if($_POST){
                     ?>
                     <div class="form-row">
                         <div class="col-lg-4">
-                            <input type="text" class="form-control" placeholder="Prénom" name="prenom" value="<?php if (isset($prenom)){echo $prenom;}?>">
+                            <input type="text" class="form-control" placeholder="Votre prénom" name="nom" value="<?php if (isset($nom)){echo $nom;}?>">
                         </div>
                         <div class="col-lg-4">
-                            <input type="text" class="form-control" placeholder="Nom" name="nom" value="<?php if (isset($nom)){echo $nom;}?>">
+                            <input type="text" class="form-control" placeholder="Votre numero de telephone" name="phone" value="<?php if (isset($phone)){echo $phone;}?>">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -272,7 +278,7 @@ if($_POST){
                     </div>
                     <div class="form-group row">
                         <div class="col mt-3">
-                            <textarea name="message" id="" cols="45" rows="10" value="<?php if (isset($message)){echo $message;}?>">
+                            <textarea name="message" id="" cols="45" rows="10" placeholder="Votre messsage" value="<?php if (isset($message)){echo $message;}?>">
                             </textarea>
                         </div>
                     </div>
@@ -281,6 +287,7 @@ if($_POST){
             </div>
         </div>
     </div>
+
 </section>
  
             
@@ -333,9 +340,7 @@ if($_POST){
                     </div>
                 </div> -->
             
-            </body>
-            
-            </html>
+
 
             <!-- <h3 class="content__title my_attaches">frank</h3> -->
         </div>

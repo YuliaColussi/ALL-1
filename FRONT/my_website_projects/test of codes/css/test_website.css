@@ -1,141 +1,94 @@
+/* body{
+	position: relative;
+	margin:0;
+} */
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        span.medium,
-        span.large,
-        #main-menu.style-modern .top-menu li a,
-        .post-nav>a .subtitle,
-        .post-nav>a .title,
-        .post-header .title h1,
-        .post-header .title h2,
-        post-header>span.subtitle,
-        .infinite-text,
-        .main-post .post-header span,
-        .page-header-type h1,
-        .krown-button,
-        input[type="submit"],
-        .post-header>span.subtitle,
-        span.icl_lang_sel_current.icl_lang_sel_native,
-        .woocommerce-pagination,
-        #filter,
-        .woocommerce .price,
-        #filter-opener .count,
-        .single-product .cart .input-text,
-        .product-quantity .input-text,
-        .amount,
-        .single-product .cart .button,
-        .product-quantity .button,
-        .woocommerce-message .button,
-        .woocommerce-error .button,
-        .woocommerce-info .button,
-        .update-button {
-            font-family: 'Montserrat', sans-serif;
-            ;
-        }
+.container{
+	width: 1200px;
+	margin: 0 auto;
+	height: 100vh;
+}
 
-        body,
-        input,
-        textarea,
-        button {
-            font-family: 'Raleway', sans-serif;
-            ;
-        }
+.element{
+	background-color: #353535;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
 
-        .page-header .subtitle,
-        .post-header>span.author,
-        .page-header-type h2.subtitle,
-        .krown-portfolio span,
-        blockquote {
-            font-family: 'Droid Serif', serif;
-            ;
-        }
 
-        /* CUSTOM COLORS */
+.button,
+.button-1{
+	align-self: center;
+	margin-left:auto;
+	margin-right: 5px;
+	border: none;
+	border: 2px solid #D24D57;
+	background-color: #353535;
+	font-size: 14px;
+	padding: 14px 15px;
+	font-weight: bold;
+	color:white;
+	letter-spacing: 0.8px;
+	border-radius: 5px;
+}
 
-        a,
-        #main-menu.style-modern .top-menu li a:hover,
-        #main-menu.style-modern .top-menu li.selected>a,
-        #posts-container.classic .pagination a:hover,
-        #lang_sel ul ul a:hover,
-        #filter li a.selected,
-        .single-product .product_meta a:hover,
-        .woocommerce-MyAccount-navigation li a:hover {
-            color: #b99d61;
-        }
+.button-1{
+	margin-left: 5px;
+	margin-right:auto;
+}
 
-        .pre-slide .page-header .title:after,
-        .page-header-type h1:after,
-        .krown-section-title h3:after,
-        .krown-section-title h4:after,
-        .post-content h3:after,
-        .post-content h4:after,
-        .line-link:after,
-        .fancybox-nav span:hover,
-        .fancybox-close:hover,
-        input[type="submit"]:hover,
-        #footer input[type="submit"]:hover,
-        .mejs-controls .mejs-time-rail .mejs-time-current,
-        .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
-        .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current,
-        .mejs-overlay:hover .mejs-overlay-button,
-        .star-rating .star,
-        .star-rating .half-star,
-        .comment-form-rating a.star,
-        .single-product .cart .button:hover,
-        .product-quantity .button:hover,
-        .checkout-button.button,
-        .single-product .cart .button:hover,
-        .product-quantity .button:hover,
-        .woocommerce-message .button:hover,
-        .woocommerce-error .button:hover,
-        .woocommerce-info .button:hover,
-        .update-button:hover {
-            background-color: #b99d61;
-        }
+.button:hover,
+.button-1:hover{
+	background-color: #D24D57;
+	transition: 1s background-color;
+}
 
-        .pagination a:hover,
-        .woocommerce-pagination a:hover,
-        .ui-slider-horizontal .ui-slider-handle:hover {
-            border-color: #b99d61;
-        }
 
-        #main-menu.style-classic li:not(.selected) a:hover,
-        #main-menu.style-classic li ul li a:hover {
-            color: #b99d61 !important;
-        }
+.button:focus,
+.button-1:focus{
+	outline: none;
+}
 
-        /* CUSTOM CSS */
+.overlay{
+	display:none; 
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.7;
+}
 
-        body {
-            font-weight: 500;
-        }
+.pop-up-form{
+	display: none;
+	position: fixed;
+	width: 200px;
+	z-index: 10000;
+	background-color: green;
+	margin: 0 auto;
+	padding: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
 
-        .up-front {
-            position: relative;
-            z-index: 999;
-        }
+.form{
+	display: flex;
+	flex-direction: column;
+	transition: all 2s ease-in-out;
+}
 
-        .page-header .excerpt>p {
-            letter-spacing: 0.4px;
-        }
+input[type="text"]{
+	margin-bottom: 10px;
+}
 
-        @media all and (orientation: portrait) {
-            .post .featured-img {
-                background-position: right center;
-            }
-            #post-189 .featured-img {
-                background-position: left center;
-            }
-        }
-
-        .page-template-template-blog-classic #page-header {
-            margin-top: -100px;
-        }
-
-        #logo-holder {
-            z-index: 999;
-        }
+.close{
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+}
+ 
