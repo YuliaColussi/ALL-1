@@ -43,27 +43,6 @@ extract($_GET);
         <main>
          
             </div>
-            <nav class="menu-wrap">
-                <div class="logo">
-                    <img src="#" alt="une image de logo">
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Notre portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#">Work in progress</a>
-                        </li>
-                        <li>
-                            <a href="#">Work with us!</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
             <div class="content-wrap">
 <div class="container_scroll">
     <p>I am a</p>

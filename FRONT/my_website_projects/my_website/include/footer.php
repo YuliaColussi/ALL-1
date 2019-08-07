@@ -39,8 +39,8 @@
     <script src="js/charming.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/anuraghazra/Verly.js@v1.3.0/dist/verly.bundle.js"></script>
-     <script href="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script>
-    <!-- <script src="js/demo.js"></script> -->
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script>
+    <script src="js/demo.js"></script>
     <!-- <script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script> -->
     <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
 
