@@ -27,7 +27,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="../my_website/include/css/index.css">
     <link rel="stylesheet" href="../my_website/include/css/normalize.css">
-  <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+  
     <title>C.Real digital agency</title>
     
   </head>
@@ -228,13 +228,16 @@ if($_POST)
         <div class="menu">
             <ul>
                 <li>
-                    <a href="<?= URL ?>index.php">Main</a>
+                    <a href="<?= URL ?>index.php">Home</a>
                 </li>
                 <li>
                     <a href="<?= URL ?>design.php">Design</a>
                 </li>
                 <li>
                     <a href="<?= URL ?>website.php">Website</a>
+                </li>
+                <li>
+                    <a href="<?= URL ?>test.php">Test</a>
                 </li>
                 <li>
                     <a href="#contact">Work with us!</a>

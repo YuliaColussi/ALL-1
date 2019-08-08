@@ -40,8 +40,8 @@
     <script src="js/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/anuraghazra/Verly.js@v1.3.0/dist/verly.bundle.js"></script>
     <script href="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script>
-    <script src="js/demo.js"></script>
     <!-- <script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script> -->
+    <script src="js/demo.js"></script>
     <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
 
     <!-- CUSTOMED SCRIPTS -->
@@ -1806,8 +1806,10 @@ function Modal (obj) {
  
 </script>
 
-                
-              
+
+<!-- GAllery  -->
+               
+  
     <!-- END DESIGN PAGE SCRIPTS -->
 
     <!-- END OF CUSTOMED SCRIPTS -->

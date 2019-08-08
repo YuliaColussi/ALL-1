@@ -1383,7 +1383,7 @@ a:focus {
 	z-index: 10;
 	padding: 0 1em;
 	cursor: default;
-}  */
+}  
 
 .content__img,
 .content__title,
@@ -1757,15 +1757,15 @@ a:focus {
 }
 
 
- /* .loading__gallery {
+  /* .loading__gallery {
 	--color-text: #5d5d5d;
 	--color-bg: #e6e6ea;
 	--color-link: #838288;
-	--color-link-hover: #000;
-	--color-number: #000;
-	--color-title: #000;
-	--color-caption: #000;
-	--color-content: #000;
+	--color-link-hover: #FFFFFF;
+	--color-number: #FFFFFF;
+	--color-title: #FFFFFF;
+	--color-caption: #FFFFFF;
+	--color-content: #FFFFFF;
 	--color-content-bg: var(--color-bg);
 	--color-reveal-bg: var(--color-bg);
 	color: var(--color-text);
@@ -1774,9 +1774,9 @@ a:focus {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
-} 
+}  */
 
-.dark-mode {
+/* .dark-mode {
 	--color-text: #424242;
 	--color-bg: #101010;
 	--color-link: #bb3a3a;
@@ -1787,7 +1787,7 @@ a:focus {
 	--color-content: #dadada;
 	--color-content-title: #bb3a3a;
 	--color-content-meta: #fff;
-}   */
+}    */
 
 /* Page Loader */
 .js .loading__gallery::before {
@@ -1805,8 +1805,8 @@ a:focus {
 	content: '';
 	position: fixed;
 	z-index: 100000;
-	/* top: 50%;
-	left: 50%; */
+	top: 50%;
+	left: 50%;
 	width: 60px;
 	height: 60px;
 	margin: -30px 0 0 -30px;
@@ -1885,8 +1885,8 @@ a:focus {
 	font-size: 0;
 	position: absolute;
 	opacity: 0;
-	width: 250rem;
-	height: 100rem;
+	width: 100%;
+	height: 100%;
 	left: 0;
 	top: 0;
 	-moz-appearance: none;
@@ -1976,11 +1976,11 @@ a:focus {
 .grid {
 	position: absolute;
 	display: grid;
-	height: 100rem;
-	width: 250rem;
+	height: 400px;
+	width: 100%;
 	left: 0;
 	top: 0;
-	grid-template-columns: 80rem 80rem 80rem;
+	grid-template-columns: 30% 30% 30%;
 	grid-column-gap: 5%;
 	grid-template-areas: 'griditem-left griditem-center griditem-right';
 }
@@ -1989,7 +1989,7 @@ a:focus {
 .grid--interaction {
 	left: -5%;
 	width: 110%;
-	pointer-events: none;
+	pointer-events: none !important;
 }
 
 .grid--slideshow {
@@ -2058,24 +2058,23 @@ a:focus {
 }
 
 .grid__item--cursor {
-	pointer-events: auto;
+	pointer-events: auto !important;
 }
 
 .content-open .grid__item--cursor {
 	display: none;
 }
-
-.number {
-	font-size: 2rem;
-	-webkit-text-stroke: 1.5px var(--color-number);
+ /* .number {
+	font-size: 4rem !important;
+	 -webkit-text-stroke: 1.5px var(--color-number);
     text-stroke: 1.5px var(--color-number);
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+     text-fill-color: transparent; 
     color: transparent;	
     line-height: 1;
     margin: 0 0 0.5rem 0;
     font-weight: 700;
-}
+}  */
 
 .img-wrap {
 	width: 100%;
@@ -2090,7 +2089,7 @@ a:focus {
 
 .img-wrap .img {
 	background-image: url(../../images/1.1.jpg);
-	width: 100rem;
+	width: 100%;
 	height: 100rem;
 	left: -20px;
 	top: 0;
@@ -2133,21 +2132,23 @@ a:focus {
 .grid__item--cursor.grid__item--left::after,
 .grid__item--cursor.grid__item--right::after,
 .img-wrap--content::after {
+	display: block;
 	position: absolute;
-	left: calc(50% - 30px);
+	z-index: 100000;
+	/* left: calc(50% - 30px); */
 	cursor: pointer;
 }
 
-.grid__item--cursor.grid__item--left::after {
+/* .grid__item--cursor.grid__item--left::after {
 	top: 70%;
 }
 
 .grid__item--cursor.grid__item--right::after {
 	top: 20%;
-}
+} */
 
 .grid__item--cursor.grid__item--left::after {
-	content: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='61px' height='44px' viewBox='0 0 61 44' style='enable-background:new 0 0 61 44;' xml:space='preserve'%3E %3Cpath d='M.613 21.671L21.584.7l5.642 5.642-11.74 11.74H60.45v7.978H15.487l11.74 11.739-5.643 5.642L.613 22.469a.57.57 0 0 1 0-.798z'/%3E %3C/svg%3E");
+	content: url("../../images/arrow_left.svg");
 }
 
 .grid__item--cursor.grid__item--right::after {
@@ -2163,11 +2164,11 @@ a:focus {
 }
 
 
-/*
+
 @media screen and (min-width: 53em) {
-	body {
+	/* body {
 		overflow: hidden;
-	}
+	} */
 	.frame {
 		position: fixed;
 		bottom: 0;
@@ -2290,4 +2291,3 @@ a:focus {
 	}
 }  
 
-*/
