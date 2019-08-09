@@ -92,6 +92,11 @@ ul {
     padding-right: 1%;
 }
 
+.logo img {
+	background: url("images/../../../images/logo.png");
+	z-index: 10000;
+}
+
 /* .menu-wrap ul li:first-child{
     width: 7%;
     padding-right: 1%;
@@ -174,7 +179,7 @@ li a:hover {
 	display: none;
 	position: fixed;
 	width: 400px;
-	height: 400px;
+	height: 500px;
 	z-index: 100000;
 	background-color: white;
 	margin: 0 auto;
@@ -183,7 +188,18 @@ li a:hover {
 	right: 5%;
 	transform: translate(-50%,-50%);
 	border-radius: 10%;
+
+	box-shadow: 0 0 40px 0 rgba(234, 76, 137, 0.6);
+
+  height: 35.25rem;
+  position: absolute;
+  width: 28.75rem;
 }
+
+.pop-up-form {
+	height: 45rem;
+}
+
 
 
  .form{
@@ -192,15 +208,202 @@ li a:hover {
 	transition: all 2s ease-in-out;
 } 
 
- /* .form input{
-	
-}  */
+/* FORM CONNECTION PINK */
 
-/* input[type="text"]{
-	margin-bottom: 10px;
+/* @import url("https://fonts.googleapis.com/css?family=Work+Sans: 400,500,600");
+html,
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+} */
+
+/* body {
+  background: #f3f4f4;
+  font-family: "Work Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+/* 
+.box {
+  align-items: center;
+  display: flex;
+  background: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 40px 0 rgba(234, 76, 137, 0.6);
+  display: flex;
+  flex-direction: column;
+  height: 31.25rem;
+  position: absolute;
+  width: 18.75rem;
+} */
+
+.logo,
+.signin,
+input,
+button,
+.foot-txt,
+.signin-row {
+  margin: 0 auto;
+  position: relative;
+}
+
+.pop-up-form .logo,
+.pop-up-form-one .logo {
+  background: url("../../images/logo.png");
+  height: 3.125rem;
+  margin-top: 1.875rem;
+  width: 3.125rem;
+  display: block;
+  margin: auto;
+}
+
+p {
+  color: #444;
+}
+
+.signin {
+  font: 600 2.2rem "Work Sans", sans-serif;
+  padding: 0.17em;
+  text-align: center;
+}
+
+.signin-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.625rem auto 0.3rem;
+  padding: 0.625rem;
+  width: 11rem;
+}
+
+.signin-row > i {
+  color: #444;
+  font-size: 3rem;
+  padding: 0.8rem;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+}
+
+.signin-text {
+  color: #9da3a5;
+  font: 500 0.85rem "Work Sans", sans-serif;
+  margin: 0;
+  padding-top: 0.625rem;
+  text-align: center;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.ic1:hover {
+  color: #1da1f2;
+}
+
+.ic2:hover {
+  color: #3b5998;
+}
+
+.ic3:hover {
+  color: #4285f4;
+}
+
+.pop-up-form input,
+.pop-up-form-one input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #9da3a5;
+  font: 500 0.9rem "Work Sans", sans-serif, sans-serif;
+  height: 2.15em;
+  margin-top: 0.7em;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  width: 80%;
+  margin-left: 2rem;
+}
+
+
+.pop-up-form input:focus,
+.pop-up-form-one input:focus {
+  border-bottom: 2px solid #ea4c89;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #9da3a5;
+}
+
+::-moz-placeholder {
+  color: #9da3a5;
+}
+
+\:-ms-input-placeholder {
+  color: #9da3a5;
+}
+
+\:-moz-placeholder {
+  color: #9da3a5;
+}
+
+.pop-up-form button,
+.pop-up-form-one button {
+  background: #ea4c89;
+  border: 0;
+  border-radius: 1.4em;
+  color: #fff;
+  font: 1.1rem "Work Sans", sans-serif;
+  display: block; 
+  margin: 0 auto; 
+  outline: none;
+  padding: 0.6em;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.pop-up-form button:hover,
+.pop-up-form-one button:hover {
+  background: #444;
+  cursor: pointer;
+}
+
+.pop-up-form button:focus,
+.pop-up-form-one button:focus {
+  outline: none;
+}
+
+.foot-txt {
+  color: #9da3a5;
+  font: 500 0.85rem "Work Sans", sans-serif;
+  padding: 0.3em;
+}
+
+.foot-txt:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 600;
 } 
 
-.close{
+/* FORM CONNEXION PINK END */
+
+  /* .form input{
+	
+}  
+
+input[type="text"]{
+	margin-bottom: 10px;
+}  */
+
+.pop-up-form .class,
+.pop-up-form-one .class {
 	 position: absolute;
 	 top: 0;
 	 right: 0;
@@ -553,7 +756,182 @@ h2 {
 
 /* CONTACT FORM */
 
-/* .contact_form{	
+#contact_flex {
+	width: 90%;
+	display: flex;
+}
+
+.contact_contact_block {
+	display: flex;
+	margin-left: 10%;
+}
+
+.contact_contact_block_block:last-child {
+	margin-left: 15%;
+}
+
+.contact_block {
+	width: 50%;
+}
+
+.contact_block input{
+	background-color: transparent;
+	color: white;
+	font-size: 2.5rem;
+	width: 50%;
+}
+
+
+.contact_block button{
+  background: #ea4c89;
+  border: 0;
+  border-radius: 1.4em;
+  color: #fff;
+  font: 2.1rem "Work Sans", sans-serif;
+  display: block; 
+  margin: 0 auto; 
+  outline: none;
+  padding: 0.6em;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 2.8rem;
+}
+
+.contact_block button:hover{
+  background: #444;
+  cursor: pointer;
+}
+
+.contact_block input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #9da3a5;
+  font: 500 0.9rem "Work Sans", sans-serif, sans-serif;
+  height: 2.15em;
+  margin-top: 0.7em;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  width: 80%;
+  margin-left: 2rem;
+  padding-top: 4rem;
+}
+
+
+.contact_block input:focus {
+  border-bottom: 2px solid #ea4c89;
+  background-color: transparent;
+  outline: none;
+}
+
+.contact_block textarea {
+	margin-top: 3rem;
+	margin-left: 3rem;
+  border-bottom: 2px solid #ea4c89;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.contact_contact {
+	padding-bottom: 4rem;
+}
+
+
+h4 {
+	font-size: 8rem;
+	color: white;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+h5 {
+	font-size: 3rem;
+	color: white;
+	text-align: left;
+}
+
+h6 {
+	font-size: 1.9rem;
+	color: white;
+	text-align: left;
+}
+
+
+/* Social Icon Styling */
+/* Matt Stubenhofer -- https://www.github.com/mstub */
+
+.social-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	height: 20vh;
+	padding-left: 0;
+}
+
+.social-wrapper i {
+    padding: 0px 10px;
+    color: #171717;
+	cursor: pointer;
+	font-size: 6rem;
+	color: white;
+    transition: all ease-in-out 150ms;
+    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.7);
+}
+
+.social-wrapper i:hover {
+    margin-top: -10px;  
+    transform: translate(0, -8);
+}
+
+
+#instagram:hover {
+    color: #8a3ab9;
+    text-shadow: 0px 16px 10px rgba(233, 89, 80, 0.3);
+}
+
+#codepen:hover {
+    color: #190811;
+    text-shadow: 0px 16px 10px rgba(25, 8, 17, 0.3);
+}
+
+#linkedin:hover {
+    color: #0077B5;
+    text-shadow: 0px 16px 10px rgba(0, 160, 220, 0.3);
+}
+
+#meetup:hover {
+    color: #e51937;
+    text-shadow: 0px 16px 10px rgba(236, 81, 104, 0.3);
+}
+
+#fcc:hover {
+    color: #006400;
+    text-shadow: 0px 16px 10px rgba(0, 126, 0, 0.3);
+}
+
+#github:hover {
+    color: #c9510c;
+    text-shadow: 0px 16px 10px rgba(189, 44, 0, 0.3);
+}
+
+#twitch:hover {
+    color: #6441A4;
+    text-shadow: 0px 16px 10px rgba(100, 65, 164, 0.3);
+}
+
+#email:hover {
+    color: #dd4b39;
+    text-shadow: 0px 16px 10px rgba(221, 75, 57, 0.3);
+}
+
+/* SOCIAL BUTTONS END */
+
+ /* .contact_form{	
 	width: 450px; 
   height: auto;
   margin: 80px auto;
@@ -630,7 +1008,7 @@ span{
 .aviso{
 	font-size: 13px;  
 	color: #0e0e0e;  
-}
+} */
 
 
 h1{
@@ -673,7 +1051,7 @@ p{
 .formulario textarea:focus{
 	outline:0;
 	border: 1px solid #97d848;
-} */
+} 
 
 /* END CONTACT FORM */
 
@@ -1218,7 +1596,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	/* background: var(--background-color); */
+	background: var(--background-color);
 }
 
 .js .loading::after {
@@ -1283,7 +1661,7 @@ a:focus {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	/* fill: var(--background-color-3); */
+	fill: var(--background-color-3);
 }
 
 /* SVG Morph */
@@ -1303,7 +1681,7 @@ a:focus {
 .morph {
 	position: relative;
 	height: 100%;
-	/* fill: var(--background-color-2); */
+	fill: var(--background-color-2);
 	flex: none;
 }
 

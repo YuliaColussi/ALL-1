@@ -241,57 +241,85 @@ if($_POST){
             <!-- <h3 class="content__title my_attaches ">revert</h3> -->
         </div>
     </div>
+
+
     <!-- <div class="content-wrap">
         <div class="content content--layout content--layout-4">
             <h3 class="content__title my_attaches">east</h3>
         </div>
     </div> -->
 
+        <section id="contact_flex">
+            <div class="contact_block">
+        
+                <h4>Talk with us!</h4>
+                <div class="contact_contact_block">
+                <div class="contact_contact_block_block">
+                <div class="contact_contact">
+                <h5>
+                    Email us!
+                </h5>
+                <h6>
+                    production@creal.com
+                </h6>
+                </div>
+                <div class="contact_contact">
+                <h5>
+                    Call us!
+                </h5>
+                  <h6>
+                    +33 626 99 10 02
+                </h6>
+                <h6>
+                    +33 78 986 10 15
+                </h6>
+                </div>
+</div>
+<div class="contact_contact_block_block">
+                
+                <div class="contact_contact">
+                <h5>
+                    Want to fill in a brief online?
+                </h5>
+                </div>
+                <h5>
+                    Follow us!
+                </h5>
+                <div class="container social-wrapper">
+                <i id="codepen" class="fab fa-codepen"></i>
+                <i id="github" class="fab fa-github-square"></i>
+                <i id="instagram" class="fab fa-instagram"></i>
+                <i id="linkedin" class="fab fa-linkedin"></i>
+</div>
+</div>
+</div>
+        
+        
+            </div>
+        
+        
+            <div class="contact_block">
+                        <form method="POST" class="offset-md-3" >
+                            <?php
+                            echo $errorContact;
+                            echo $successContact;
+                            ?>
+                                    <input type="text" class="form-control" placeholder="Votre prénom" name="nom" value="<?php if (isset($nom)){echo $nom;}?>">
+                                    <input type="text" class="form-control" placeholder="Votre numero de telephone" name="phone" value="<?php if (isset($phone)){echo $phone;}?>">
+                                    <input type="text" class="form-control" placeholder="Email@gmail.com" name="email" value="<?php if (isset($email)){echo $email;}?>">
+                                    <textarea name="message" id="" cols="48" rows="8" placeholder="Votre messsage" value="<?php if (isset($message)){echo $message;}?>">
+                                    </textarea>
+                            <button type="submit"value="Envoyer">Send us!</button>
+                        </form>
+        </div>
+        </section>
        
 
     <div class="content-wrap">
         <div class="content content--layout content--layout-1">
 
     
-
-
-<!-- Zone contact-->
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mt-5">
-                <form method="POST" class="offset-md-3" >
-                    <?php
-                    echo $errorContact;
-                    echo $successContact;
-                    ?>
-                    <div class="form-row">
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control" placeholder="Votre prénom" name="nom" value="<?php if (isset($nom)){echo $nom;}?>">
-                        </div>
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control" placeholder="Votre numero de telephone" name="phone" value="<?php if (isset($phone)){echo $phone;}?>">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-lg-8 mt-3">
-                            <input type="text" class="form-control" placeholder="Email@gmail.com" name="email" value="<?php if (isset($email)){echo $email;}?>">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col mt-3">
-                            <textarea name="message" id="" cols="45" rows="10" placeholder="Votre messsage" value="<?php if (isset($message)){echo $message;}?>">
-                            </textarea>
-                        </div>
-                    </div>
-                    <input type="submit" class="btn btn-outline-light mt-4  offset-3" value="Envoyer">
-                </form>
-            </div>
-        </div>
-    </div>
-
-</section>
- 
+            <!-- Zone contact-->
             
                 <!-- formulário de contacto utilizando html e css -->
             
@@ -376,7 +404,7 @@ if($_POST){
             </div>
             </a>
         </section> -->
-    </main>
+    <!-- </main> -->
 
 <?php
 require_once('include/footer.php');

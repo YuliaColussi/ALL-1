@@ -223,7 +223,7 @@ if($_POST)
 </form> --> 
         <nav class="menu-wrap">
         <div class="logo">
-            <img src="#" alt="une image de logo">
+            <img src="../images/Fichier 2@3x.png" alt="une image de logo">
         </div>
         <div class="menu">
             <ul>
@@ -278,6 +278,16 @@ if($_POST)
                 <?= $error ?>
 <div class="pop-up-form">
 <form  class="form1" method="post" action="">
+                      <a href="#" class="close">Close</a>
+  <form method="post" action="">
+  <img class="logo" alt="dribble-logo"/>
+  <p class="signin">Subscribe!</p>
+  <p class="signin-text">Login with Twitter, Facebook,<br/> Google or:</p>
+  <div class="signin-row">
+    <i class="ic1 fab fa-twitter"></i>
+    <i class="ic2 fab fa-facebook"></i>
+    <i class="ic3 fab fa-google"></i>
+  </div>
   <div>
     <div>
       <label for="pseudo">Pseudo</label>
@@ -287,18 +297,18 @@ if($_POST)
     <label for="mdp">Mot de passe</label>
     <input type="text" id="mdp" name="mdp" placeholder="Entrer votre mot de passe">
   </div>
-    <div>
+    <!-- <div>
       <label for="nom">Nom</label>
       <input type="text" name="nom" id="nom" placeholder="Votre nom">
-    </div>
+    </div> -->
     <div>
       <label for="conf_mdp">Confirmer votre mot de passe</label>
-      <input type="text" id="conf_mdp" name="conf_mdp">
+      <input type="text" id="conf_mdp" name="conf_mdp" placeholder="Confirme votre mot de passe">
     </div>
-    <div>
+    <!-- <div>
       <label for="prenom">Prenom</label>
       <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
-    </div>
+    </div> -->
       <div>
       <label for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="Email">
@@ -307,7 +317,7 @@ if($_POST)
  
   <button type="submit" class="btn btn-primary" name="form">Sign in</button>
 </form>
-                    <a href="#" class="close">Close</a>
+
                 </div>
                 <div class="overlay"></div> 
 <!-- INSCRIPTIONS END -->
@@ -316,7 +326,7 @@ if($_POST)
 
 
 <?= $error ?>
-<div class="pop-up-form-one">
+<!-- <div class="pop-up-form-one">
 <form  class="col-md-4 offset-md-4 text-center" method="post" action="">
   <div class="form-row">
     <div class="form-group col-md-12">
@@ -333,7 +343,32 @@ if($_POST)
 </form>
     <a href="#" class="close">Close</a>
      </div>
+     <div class="overlay"></div>  -->
+
+
+<div class="pop-up-form-one">
+  <form class="form" method="post" action="">
+     <!-- <a href="#" class="close">Close</a> -->
+  <img class="logo" alt="dribble-logo"/>
+  <p class="signin">Sign in</p>
+  <p class="signin-text">Login with Twitter, Facebook,<br/> Google or:</p>
+  <div class="signin-row">
+    <i class="ic1 fab fa-twitter"></i>
+    <i class="ic2 fab fa-facebook"></i>
+    <i class="ic3 fab fa-google"></i>
+  </div>
+  <input type="text" class="form-control" id="email_pseudo" name="email_pseudo" placeholder="Entre votre email ou pseudo" required>
+  <br/>
+  <input type="text" class="form-control" id="mdp" name="mdp" placeholder="Entrer votre mot de passe" required>
+  <button>Sign In</button>
+  <!-- <p class="foot-txt">Forgot your password?</p>
+  <p class="foot-txt">Not a memeber? <span class="bold">Sign up now</p> -->
+
+         </form>
+         <!-- <a href="#" class="close">Close</a> -->
+     </div>
      <div class="overlay"></div> 
+        
 
 
 <!-- CONNEXION  END-->

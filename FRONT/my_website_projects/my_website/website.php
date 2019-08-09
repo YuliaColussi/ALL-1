@@ -718,7 +718,7 @@ extract($_GET);
 <div class="content_gallery">
    <article class="content__item">
        <div class="img-wrap img-wrap--content">
-           <div class="img img--content"></div>
+           <div class="img img--content" style="background: url(images/../images/barbershop-index.jpg)"></div>
        </div>
        <header class="content__item-header">
            <span class="content__item-header-meta">New York City, March 24</span>
@@ -737,7 +737,7 @@ extract($_GET);
    </article>
    <article class="content__item">
        <div class="img-wrap img-wrap--content">
-           <div class="img img--content"></div>
+           <div class="img img--content" style="background: url(images/../images/device-index.jpg)"></div>
        </div>
        <header class="content__item-header">
            <span class="content__item-header-meta">Acapulco, March 25</span>
@@ -757,7 +757,7 @@ extract($_GET);
    </article>
    <article class="content__item">
        <div class="img-wrap img-wrap--content">
-           <div class="img img--content"></div>
+           <div class="img img--content" style="background: url(images/../images/sedona-index.jpg)"></div>
        </div>
        <header class="content__item-header">
            <span class="content__item-header-meta">Brisbane, March 26</span>
@@ -776,7 +776,7 @@ extract($_GET);
    </article>
    <article class="content__item">
        <div class="img-wrap img-wrap--content">
-           <div class="img img--content">
+           <div class="img img--content" style="background: url(images/../images/technomart-index.jpg)">
        </div>
        <header class="content__item-header">
            <span class="content__item-header-meta">Berlin, March 27</span>
@@ -801,28 +801,28 @@ extract($_GET);
    <figure class="grid__item grid__item--slide">
        <span class="number">01</span>
        <div class="img-wrap">
-           <div class="img"></div>
+           <div class="img" style="background: url(images/../images/barbershop-index.jpg)"></div>
        </div>
        <figcaption class="caption">New York City, March 24</figcaption>
    </figure>
    <figure class="grid__item grid__item--slide">
        <span class="number">02</span>
        <div class="img-wrap">
-           <div class="img"></div>
+           <div class="img" style="background: url(images/../images/device-index.jpg)"></div>
        </div>
        <figcaption class="caption">Acapulco, March 25</figcaption>
    </figure>
    <figure class="grid__item grid__item--slide">
        <span class="number">03</span>
        <div class="img-wrap">
-           <div class="img"></div>
+           <div class="img" style="background: url(images/../images/sedona-index.jpg)"></div>
        </div>
        <figcaption class="caption">Brisbane, March 26</figcaption>
    </figure>
    <figure class="grid__item grid__item--slide">
        <span class="number">04</span>
        <div class="img-wrap">
-           <div class="img"></div>
+           <div class="img" style="background: url(images/../images/technomart-index.jpg)"></div>
        </div>
        <figcaption class="caption">Berlin, March 27</figcaption>
    </figure>
