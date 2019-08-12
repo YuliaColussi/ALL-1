@@ -70,6 +70,7 @@ ul {
 }
 
 .menu-wrap {
+	padding-top: 20px;
 	color: white;
     width: 90%;
     margin: auto;
@@ -78,8 +79,9 @@ ul {
 }
 
 .menu {
-	width: 90%;
+	width: 83%;
 	z-index: 9;
+	padding-top: 1rem;
 }
 
 .menu-wrap ul{
@@ -92,9 +94,15 @@ ul {
     padding-right: 1%;
 }
 
-.logo img {
-	background: url("images/../../../images/logo.png");
+.logo{
 	z-index: 10000;
+	width: 4rem;
+	height: 2rem;
+} 
+
+.logo img {
+	width: 15rem;
+
 }
 
 /* .menu-wrap ul li:first-child{
@@ -252,7 +260,7 @@ button,
 
 .pop-up-form .logo,
 .pop-up-form-one .logo {
-  background: url("../../images/logo.png");
+  /* background: url("../../images/logo.png"); */
   height: 3.125rem;
   margin-top: 1.875rem;
   width: 3.125rem;
@@ -408,6 +416,14 @@ input[type="text"]{
 	 top: 0;
 	 right: 0;
 } 
+
+
+  
+.fa-times:before {
+    content: "\f00d";
+	color: #ea4c89;
+	font-size: 2rem;
+}
   
 
 
@@ -529,7 +545,7 @@ canvas {
 /* WHAT WE DO BOX */
 
 .what_we_do {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -538,7 +554,7 @@ canvas {
 }
 
 .what_we_do_box {
-    width: 40%;
+    width: 30%;
     height: auto;
 }
 

@@ -44,7 +44,7 @@ echo '<pre>'; print_r($_POST); echo '</pre>';
       // $_POST['mdp']  = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // $2y$10$SV3bb8OkXQr9JLYeDsMQ/.RARkJudv6KP8wYoaxk.pK1TtqVwkG8u thats what it gives
       // on se conserve jamais en cliar les mots de passe dans la BDD, password_hash permet de créer une clé de hashage
 
-        $data_insert = $bdd->prepare("INSERT INTO member_form(pseudo, mdp, nom, prenom, email) VALUES (:pseudo, :mdp, :nom, :prenom, :email)");
+        $data_insert = $bdd->prepare("INSERT INTO member_form(pseudo, mdp, email) VALUES (:pseudo, :mdp, :email)");
         
       foreach($_POST as $key=>$value)
         { 
@@ -85,16 +85,8 @@ formulaire ($_POST)
     <input type="text" id="mdp" name="mdp" placeholder="Entrer votre mot de passe">
   </div>
     <div>
-      <label for="nom">Nom</label>
-      <input type="text" name="nom" id="nom" placeholder="Votre nom">
-    </div>
-    <div>
       <label for="conf_mdp">Confirmer votre mot de passe</label>
       <input type="text" id="conf_mdp" name="conf_mdp">
-    </div>
-    <div>
-      <label for="prenom">Prenom</label>
-      <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
     </div>
       <div>
       <label for="email">Email</label>

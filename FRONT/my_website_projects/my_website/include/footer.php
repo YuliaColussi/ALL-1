@@ -110,7 +110,60 @@
 //     });
 //   }); -->
 
+    <!-- AJAX -->
 
+    <!-- <script>
+    
+    $(function() {
+    // Получаем данные формы.
+    var form = $('#ajax-inscription');
+
+    // Получаем сообщения из div
+    var formMessages = $('#form-messages');
+
+    $(form).submit(function(event) {
+    // Блокируем отправку данных формы в браузере.
+    event.preventDefault();
+
+    var formData = $(form).serialize();
+
+    $.ajax({
+    type: 'POST',
+    url: $(form).attr('action'),
+    data: formData
+    });
+
+    .done(function(response) {
+    // Удостовериваемся в том, что div formMessages содержит класс 'success'.
+    $(formMessages).removeClass('error');
+    $(formMessages).addClass('success');
+
+    // Задаем текст сообщения.
+    $(formMessages).text(response);
+
+    // Очищаем форму.
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
+})
+
+.fail(function(data) {
+    // Удостовериваемся, что div formMessages содержит класс 'error'.
+    $(formMessages).removeClass('success');
+    $(formMessages).addClass('error');
+
+    // Устанавливаем текст сообщения.
+if (data.responseText !== '') {
+        $(formMessages).text(data.responseText);
+    } else {
+$(formMessages).text('Oops! An error occured and your message could not besent.');
+    }
+
+
+    // TODO: Здесь будет располагаться остальной код...
+    });
+    
+    </script> -->
 
     <script type="text/javascript">
 

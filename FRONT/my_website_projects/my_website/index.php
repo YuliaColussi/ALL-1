@@ -169,10 +169,24 @@ if($_POST){
                         <img src="images/3.jpg" class="content__img" alt="websites">
                         
                         <a class="btn btn-line-outline btn-lg">
-                            <span class="inner" data-hover="Hover me">Hover me</span>
+                            <span class="inner" data-hover="Designs">Designs</span>
                         </a>
-                        <p class="content__desc">Lost or found? That's the question today.</p>
-                        <a href="#" class="content__link">Discover</a>
+                        <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!</p>
+                        
+                        <!-- <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!.</p> -->
+                        <!-- <a href="#" class="content__link">Discover</a> -->
+                    </div>
+                </div>
+                <div class="what_we_do_box">
+                    <div class="pattern_background">
+                        <p>Learn more</p>
+                        <img src="images/3.jpg" class="content__img" alt="websites">
+                        
+                        <a class="btn btn-line-outline btn-lg">
+                            <span class="inner" data-hover="Websites">Websites</span>
+                        </a>
+                        <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!</p>
+                        <!-- <a href="#" class="content__link">Discover</a> -->
                     </div>
                 </div>
             </a>
