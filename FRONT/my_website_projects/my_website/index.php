@@ -313,18 +313,18 @@ if($_POST){
         
         
             <div class="contact_block">
-                        <form method="POST" class="offset-md-3" >
-                            <?php
+                        <!-- <form method="POST" class="offset-md-3" >
+                            <//?php
                             echo $errorContact;
                             echo $successContact;
                             ?>
-                                    <input type="text" class="form-control" placeholder="Votre prénom" name="nom" value="<?php if (isset($nom)){echo $nom;}?>">
-                                    <input type="text" class="form-control" placeholder="Votre numero de telephone" name="phone" value="<?php if (isset($phone)){echo $phone;}?>">
-                                    <input type="text" class="form-control" placeholder="Email@gmail.com" name="email" value="<?php if (isset($email)){echo $email;}?>">
-                                    <textarea name="message" id="" cols="48" rows="8" placeholder="Votre messsage" value="<?php if (isset($message)){echo $message;}?>">
+                                    <input type="text" class="form-control" placeholder="Votre prénom" name="nom" value="<//?php if (isset($nom)){echo $nom;}?>">
+                                    <input type="text" class="form-control" placeholder="Votre numero de telephone" name="phone" value="<//?php if (isset($phone)){echo $phone;}?>">
+                                    <input type="text" class="form-control" placeholder="Email@gmail.com" name="email" value="<//?php if (isset($email)){echo $email;}?>">
+                                    <textarea name="message" id="" cols="48" rows="8" placeholder="Votre messsage" value="<//?php if (isset($message)){echo $message;}?>">
                                     </textarea>
                             <button type="submit"value="Envoyer">Send us!</button>
-                        </form>
+                        </form> -->
         </div>
         </section>
        

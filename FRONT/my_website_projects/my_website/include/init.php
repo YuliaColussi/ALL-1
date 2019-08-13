@@ -6,7 +6,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=mon_site', 'root', '',
 
 // ---------- SESSION
 
-session_start();
+// session_start();
 
 // ---------CHEMIN
 define("RACINE_SITE", $_SERVER['DOCUMENT_ROOT'] . '/ALL/FRONT/my_website_projects/my_website/');

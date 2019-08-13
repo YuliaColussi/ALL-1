@@ -2,151 +2,195 @@
     <?php
     require_once("include/init.php");
     extract($_POST);
-    // $resultat =$bdd->query('SELECT*FROM user');nom de la base
-    $user=$resultat->fetch(PDO::FETCH_ASSOC);
+
     // <!-- INSCRIPTION -->
-    
-    if(isset($_GET['action']) && $_GET['action']=='subscribe'){
-    if(internauteEstConnecte()){
-        header("Location: index.php");
-    }
-    
-    
-    // 4
-    // CONTROLE MDP
-    if(isset($_POST['form'])) {
-    echo '<pre>'; print_r($_POST); echo '</pre>';
-        if ($_POST['mdp'] !== $_POST['conf_mdp']) 
-        {
-            $error .= "<div id='result_form' class='col-md-4 offset-md-4 alert alert-danger text-center text-dark'>Le mots de passes sont pas pareils </div>";
+    $donnees = $bdd->query('SELECT * FROM member_form');
+    $member = $donnees->fetch(PDO::FETCH_ASSOC);
+    echo '<pre>'; 
+    print_r($_POST);
+    echo '</pre>';
+     $errorPseudo = "";
+     $errorMdp = "";
+     $errorMdpVerif = "";
+     $errorEmail = "";
+     
+     if(isset($_GET['action']) && $_GET['action']=='subscribe'){
+       if(internauteEstConnecte()){
+         header("Location: index.php");
         }
-    
+        
+        
+        // 4
+        // CONTROLE MDP
+        // if(isset($_POST['form'])) {
+          // echo '<pre>'; print_r($_POST); echo '</pre>';
+          //     if ($_POST['mdp'] !== $_POST['conf_mdp']) 
+          //     {
+            //         $error .= "<div id='result_form' class='col-md-4 offset-md-4 alert alert-danger text-center text-dark'>Le mots de passes sont pas pareils </div>";
+            //     }
+            if($_POST){
+              
+      if( empty($pseudo) || iconv_strlen($pseudo)< 3 || iconv_strlen($pseudo) > 20){
+        $errorPseudo .= "<span id='result_form' class='col-md-4 offset-md-4 alert alert-danger text-center text-dark'>Saississez un pseudo (20 caractères max) </span>";
+      }
+      if( isset($pseudo) && $pseudo == $member['pseudo']){
+        $errorPseudo = "<span id='result_form' class='col-md-4 offset-md-4 alert alert-danger text-center text-dark'>Ce pseudo n'est pas disponible </div>";
+      }
+      if( empty($mdp) || iconv_strlen($mdp)< 3 || iconv_strlen($mdp) > 100){
+                $errorMdp .= "<span id='result_form' class='col-md-4 offset-md-4 alert alert-danger text-center text-dark'>Saississez un mot de passe (100 caractères max) </span>";
+      }
+      if( empty($conf_mdp) || $conf_mdp != $mdp){
+                $errorMdpVerif .= "<span id='result_form' class='col-md-4 offset-md-4 alert alert-danger text-center text-dark'>Votre mots de passe sont pas pareils </span>";
+      }
+      if( empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $errorEmail = "<span id='result_form' class='col-md-4 offset-md-4 alert alert-danger text-center text-dark'>Saissisez un bon email</span>";
+      }
+      if(empty($errorPseudo) && empty($errorMdp) && empty($errorMdpVerif) && empty($errorEmail)) {
+
+         foreach($_POST as $indice => $valeur){
+            $_POST[$indice] = htmlspecialchars($valeur, ENT_QUOTES);
+        }
+          $data_insert = $bdd->prepare("INSERT INTO member_form (pseudo, mdp, email) VALUES (:pseudo, :mdp, :email)");
+           $data_insert->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+            $data_insert->bindValue(':mdp', $mdp, PDO::PARAM_STR);
+            $data_insert->bindValue(':email', $email, PDO::PARAM_STR);
+          $data_insert->execute();
+      }
+
+    }// FIN  if($_POST){
+
     
     // CONTROLE PSEUDO
-    // $_POST['pseudo'] --> $pseudo
-        $verif_pseudo = $bdd->prepare("SELECT * FROM membre WHERE pseudo = :pseudo");
+    // // $_POST['pseudo'] --> $pseudo
+    //     $verif_pseudo = $bdd->prepare("SELECT * FROM membre WHERE pseudo = :pseudo");
     
-        $verif_pseudo->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
-        $verif_pseudo->execute();
-        if($verif_pseudo->rowCount() > 0)
-        {
-            $error .= "<div id='result_form' class='col-md-6 offset-md-6 text-center alert alert-danger'>Le pseudo  - <strong>" .
-            $pseudo . '</strong>est déja existante en BDD.</div>';
-        }
-    
-        
-    
+    //     $verif_pseudo->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+    //     $verif_pseudo->execute();
+    //     if($verif_pseudo->rowCount() > 0)
+    //     {
+    //         $error .= "<div id='result_form' class='col-md-6 offset-md-6 text-center alert alert-danger'>Le pseudo  - <strong>" .
+    //         $pseudo . '</strong>est déja existante en BDD.</div>';
+    //     }
     
         
-        // Exo: si l'internaute a bien rempli le formulaire, cela veut dire qu'il 
-        // n'est passé dans aucune conditions IF donc la variable $error est vide
-        // nous pouvons donc executer le traitement de l'insetion (requete préparée)
+    
+    
+        
+    //     // Exo: si l'internaute a bien rempli le formulaire, cela veut dire qu'il 
+    //     // n'est passé dans aucune conditions IF donc la variable $error est vide
+    //     // nous pouvons donc executer le traitement de l'insetion (requete préparée)
         
         
-        if(empty($error)) {
+    //     if(empty($error)) {
     
-          // $_POST['mdp']  = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // $2y$10$SV3bb8OkXQr9JLYeDsMQ/.RARkJudv6KP8wYoaxk.pK1TtqVwkG8u thats what it gives
-          // on se conserve jamais en cliar les mots de passe dans la BDD, password_hash permet de créer une clé de hashage
+    //       // $_POST['mdp']  = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // $2y$10$SV3bb8OkXQr9JLYeDsMQ/.RARkJudv6KP8wYoaxk.pK1TtqVwkG8u thats what it gives
+    //       // on se conserve jamais en cliar les mots de passe dans la BDD, password_hash permet de créer une clé de hashage
     
-            $data_insert = $bdd->prepare("INSERT INTO member_form(pseudo, mdp, email) VALUES (:pseudo, :mdp, :email)");
+    //         $data_insert = $bdd->prepare("INSERT INTO member_form(pseudo, mdp, email) VALUES (:pseudo, :mdp, :email)");
             
-          foreach($_POST as $key=>$value)
-            { 
-            if($key != 'conf_mdp' && $key != 'form')
-                {
-                $data_insert->bindValue(":$key", $value, PDO::PARAM_STR);
-                // $data_insert->binfValue(":pseudo, 'Iuliia', PDO::PARAM_STR);
-                // $data_insert->binfValue(":email, 'yuliabelova2307@gmail.com', PDO::PARAM_STR);
-                }
-            }
-          $data_insert->execute();
-          header("Location: index.php?action=validate"); // header() fonction prédéfiniequi permet d'effectuer une redirection de page / URL
-        }
+    //       foreach($_POST as $key=>$value)
+    //         { 
+    //         if($key != 'conf_mdp' && $key != 'form')
+    //             {
+    //             $data_insert->bindValue(":$key", $value, PDO::PARAM_STR);
+    //             // $data_insert->binfValue(":pseudo, 'Iuliia', PDO::PARAM_STR);
+    //             // $data_insert->binfValue(":email, 'yuliabelova2307@gmail.com', PDO::PARAM_STR);
+    //             }
+    //         }
+    //       $data_insert->execute();
+    //       header("Location: index.php?action=validate"); // header() fonction prédéfiniequi permet d'effectuer une redirection de page / URL
+    //     }
         
-    }
+     }
     
-    }
+  
     
     //  <!-- INSCRIPTION END -->
     
     // CONNEXION
+
+    //     $resultat = $bdd -> query('SELECT * FROM member_form');
+    // $connexion = $resultat->fetch(PDO::FETCH_ASSOC);
     
-    if(internauteEstConnecte()){
-        header("Location: index.php");
-    }
-    
-    
-    if(isset($_GET['action']) && $_GET['action'] == 'deconnexion')
-    {
-        session_destroy();
-    }
-    // Si l'indice 'action' est définit dans l'URL et qu'il a comme valeur 'deconnexion', cela veut dire que l'on cliqué sur le lien 'deconnexion',
-    // du coup on supprime le fishier session
-    
-    if(isset($_GET['action'])&& $_GET['action'] == 'validate')
-    {
-       $validate .="<div id='result_form' class='col-md-6 offset-md-3 alert alert-success text-center text-dark'>Félicitations !! Vous etes inscrit sur le site . Vous pouvez dés a present vous connecter!!</div>";
-    }
-    
-    require_once("include/header.php");
-    ?>
-    
-    <?= $validate ?>
-    
-    <?php //echo '<pre>'; echo print_r($_POST); echo '</pre>' 
-    
-    if($_POST)
-    
-    // if(isset($_POST['pseudo']) && $_POST['pseudo'] == $user['pseudo']){
-    //   session_start();
+    // if(internauteEstConnecte()){
+    //     header("Location: index.php");
     // }
+    
+    
+    // if(isset($_GET['action']) && $_GET['action'] == 'deconnexion')
+    // {
+    //     session_destroy();
+    // }
+    // // Si l'indice 'action' est définit dans l'URL et qu'il a comme valeur 'deconnexion', cela veut dire que l'on cliqué sur le lien 'deconnexion',
+    // // du coup on supprime le fishier session
+    
+    // if(isset($_GET['action'])&& $_GET['action'] == 'validate')
+    // {
+    //    $validate .="<div id='result_form' class='col-md-6 offset-md-3 alert alert-success text-center text-dark'>Félicitations !! Vous etes inscrit sur le site . Vous pouvez dés a present vous connecter!!</div>";
+    // }
+    
+    // require_once("include/header.php");
+    // ?>
+    
+
+    
+    // <?php //echo '<pre>'; echo print_r($_POST); echo '</pre>' 
+    
+    // if($_POST)
+    
+    // if(empty($_POST['pseudo']) && $_POST['pseudo'] != $connexion['pseudo'] && empty($_POST['mdp']) && $_POST['mdp'] != $connexion['mdp'])
+    // {
+    //      $validate .="<div id='result_form' class='col-md-6 offset-md-3 alert alert-danger text-center text-dark'>Erreur! Il faut remplir toutes les champs</div>";
+    // }
+
+
     // On selectionne tout dans la table 'membre' à condition que la colonne
     //pseudo ou email de la BDD soit bien égale au pseudo ou email saisie dans le formulaire 
-    {
-        $verif_pseudo_email = $bdd->prepare("SELECT * FROM member_form WHERE pseudo = :pseudo OR email = :email");
-        $verif_pseudo_email->bindValue(':pseudo', $email_pseudo,  PDO::PARAM_STR);
-        $verif_pseudo_email->bindValue(':email', $email_pseudo,  PDO::PARAM_STR);
-        $verif_pseudo_email->execute();
+    // {
+    //     $verif_pseudo_email = $bdd->prepare("SELECT * FROM member_form WHERE pseudo = :pseudo OR email = :email");
+    //     $verif_pseudo_email->bindValue(':pseudo', $email_pseudo,  PDO::PARAM_STR);
+    //     $verif_pseudo_email->bindValue(':email', $email_pseudo,  PDO::PARAM_STR);
+    //     $verif_pseudo_email->execute();
     
         // si le rersultat de la requete de selectionne est superieur à 0, cela veut dire que l'internaute a saisie le bon email
         // ou le bon pseudo donc on retnre dans le if
     
-        if($verif_pseudo_email->rowCount() > 0)
-        {
+        // if($verif_pseudo_email->rowCount() > 0)
+        // {
     
-        $membre = $verif_pseudo_email->fetch(PDO::FETCH_ASSOC);
-        echo '<pre>'; echo print_r($membre); echo '</pre>';
+        // $membre = $verif_pseudo_email->fetch(PDO::FETCH_ASSOC);
+        // echo '<pre>'; echo print_r($membre); echo '</pre>';
     
         // si le mot de passe de la BDD est égale au mot de passe que l'internaute a saisi dans le formulaire, on entre dans le IF
         // if(password_verify($mdp, $membre['mdp])) / si on hache de mdp a l'inscription (password_hash) / password_verify permet de comparer une clé de hashage à une chaine de caracteres
        
     //    on entre dans le IF seulement dans le cas ou internaute a saisi le bon email:pseudo et le bon mdp
-        if($membre['mdp'] == $mdp)
-        {
+    //     if($membre['mdp'] == $mdp)
+    //     {
     
-            // on passe en revue les données de l'internaute qui a saisi le bon email / pseudo et mdp
-            foreach($membre as $key => $value)
-            {
-                if($key != 'mdp')
-                {
-                    $_SESSION['member_form'][$key] = $value;
-                    // pour chaque tour de boucle foreach, on enregistre
-                    // les données de l'internaite dans son fishier session
-                }
-            }
-                // echo '<pre>'; echo print_r($_SESSION); echo '</pre>';
-                header("Location: index.php"); // aprés enregistrement des données de l'internaute dans son fishier session, on le redirige vars sa page profil
-        }
-            else // on entre dans le ELSE dans le cas ou l'internaute n'a pas saisi le bon mot de passe
-            {
-                $error .= "<div id='result_form' class='col-md-6 offset-md-3 text-center alert alert-danger'>Verifer le mot de passe!!</div>";
-            }
-        }
-        else 
-        {
-           $error .= "<div id='result_form' class='col-md-6 offset-md-3 text-center alert alert-danger'>Le pseudo ou email : <strong>" . $email_pseudo . "</strong> est inconnu en BDD</div>";
-        }
-    }
+    //         // on passe en revue les données de l'internaute qui a saisi le bon email / pseudo et mdp
+    //         foreach($membre as $key => $value)
+    //         {
+    //             if($key != 'mdp')
+    //             {
+    //                 $_SESSION['member_form'][$key] = $value;
+    //                 // pour chaque tour de boucle foreach, on enregistre
+    //                 // les données de l'internaite dans son fishier session
+    //             }
+    //         }
+    //             // echo '<pre>'; echo print_r($_SESSION); echo '</pre>';
+    //             header("Location: index.php"); // aprés enregistrement des données de l'internaute dans son fishier session, on le redirige vars sa page profil
+    //     }
+    //         else // on entre dans le ELSE dans le cas ou l'internaute n'a pas saisi le bon mot de passe
+    //         {
+    //             $error .= "<div id='result_form' class='col-md-6 offset-md-3 text-center alert alert-danger'>Verifer le mot de passe!!</div>";
+    //         }
+    //     }
+    //     else 
+    //     {
+    //        $error .= "<div id='result_form' class='col-md-6 offset-md-3 text-center alert alert-danger'>Le pseudo ou email : <strong>" . $email_pseudo . "</strong> est inconnu en BDD</div>";
+    //     }
+    // }
     
     
     ?>
@@ -158,17 +202,17 @@
     
     <?php
     
-    if (isset($_POST["name"]) && isset($_POST["phonenumber"]) ) { 
+    // if (isset($_POST["name"]) && isset($_POST["phonenumber"]) ) { 
     
-      // Формируем массив для JSON ответа
-        $result = array(
-          'name' => $_POST["name"],
-          'phonenumber' => $_POST["phonenumber"]
-        ); 
+    //   // Формируем массив для JSON ответа
+    //     $result = array(
+    //       'name' => $_POST["name"],
+    //       'phonenumber' => $_POST["phonenumber"]
+    //     ); 
     
-        // Переводим массив в JSON
-        echo json_encode($result); 
-    }
+    //     // Переводим массив в JSON
+    //     echo json_encode($result); 
+    // }
     
     ?>
 <!doctype html>
@@ -277,12 +321,12 @@
                     <div class="element">
                       <ul>
                  <li>
-            <!-- <a class="button">Inscription</a> -->
-            <a href="<?= URL ?>inscription.php">Inscription</a>
+            <a class="button">Inscription</a>
+            <!-- <a href=nscription.php">Inscription</a> -->
           </li>
                  <li>
-            <!-- <a class="button-one" >Connexion</a> -->
-            <a href="profil.php">Connexion</a>
+            <a class="button-one">Connexion</a>
+            <!-- <a href="connexion.php">Connexion</a> -->
           </li>
           </ul>
                 </div>
@@ -298,7 +342,7 @@
                 </div>
                 <div class="overlay"></div> -->
    <!-- INSCRIPTIONS -->
-                <?= $error ?>
+              
 <div class="pop-up-form">
 <form  class="form1" id="ajax-inscription" method="post">
   <a href="?action=subscribe" class="close"><i class="fas fa-times"></i></a>
@@ -313,31 +357,27 @@
   <div>
     <div>
       <label for="pseudo">Pseudo</label>
+        <?= $errorPseudo; ?>
       <input type="text" id="pseudo" name="pseudo" placeholder="Entre votre pseudo">
     </div>
   <div>
     <label for="mdp">Mot de passe</label>
+      <?= $errorMdp; ?>
     <input type="text" id="mdp" name="mdp" placeholder="Entrer votre mot de passe">
   </div>
     <div>
       <label for="conf_mdp">Confirmer votre mot de passe</label>
+        <?= $errorMdpVerif; ?>
       <input type="text" id="conf_mdp" name="conf_mdp" placeholder="Confirme votre mot de passe">
     </div>
- <!-- <div> -->
-        <!-- <label for="nom">Nom</label>
-        <input type="text" name="nom" id="nom" placeholder="Votre nom">
-      </div>
-      <div>
-      <label for="prenom">Prenom</label>
-      <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
-    </div> -->
       <div>
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Email">
+       <?= $errorEmail; ?>
+      <input type="text" id="email" name="email" placeholder="Email">
     </div>
   </div>
  
-  <button type="submit" id="btn" class="btn btn-primary" name="form">Sign in</button>
+  <button type="submit" id="btn" class="btn btn-primary">Sign in</button>
 </form>
 
                 </div>
@@ -367,26 +407,6 @@
      </div>
      <div class="overlay"></div>  -->
 
-
-<div class="pop-up-form-one">
-  <form class="form" id="ajax-connexion" method="post">
-     <!-- <a href="#" class="close">Close</a> -->
-  <img class="logo" alt="dribble-logo" src="<?= URL ?>images/logo.png"/>
-  <p class="signin">Sign in</p>
-  <p class="signin-text">Login with Twitter, Facebook,<br/> Google or:</p>
-  <div class="signin-row">
-    <i class="ic1 fab fa-twitter"></i>
-    <i class="ic2 fab fa-facebook"></i>
-    <i class="ic3 fab fa-google"></i>
-  </div>
-  <input type="text" class="form-control" id="email_pseudo" name="email_pseudo" placeholder="Entre votre email ou pseudo" required>
-  <br/>
-  <input type="text" class="form-control" id="mdp" name="mdp" placeholder="Entrer votre mot de passe" required>
-  <button id="btn">Sign In</button>
-  <!-- <p class="foot-txt">Forgot your password?</p>
-  <p class="foot-txt">Not a memeber? <span class="bold">Sign up now</p> -->
-
-         </form>
          <!-- <a href="#" class="close">Close</a> -->
      </div>
      <div class="overlay"></div> 
