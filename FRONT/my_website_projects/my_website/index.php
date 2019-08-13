@@ -171,12 +171,21 @@ if($_POST){
                         <a class="btn btn-line-outline btn-lg">
                             <span class="inner" data-hover="Designs">Designs</span>
                         </a>
+                        <!-- <div class="what_we_do_text">
                         <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!</p>
                         
+                        </div> -->
                         <!-- <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!.</p> -->
                         <!-- <a href="#" class="content__link">Discover</a> -->
+                         </a>
                     </div>
                 </div>
+                  <!-- <a class="what_we_do_link what_we_do" href="#">
+                      <div class="what_we_do_box_second">
+                        <p class="content__link">Upside down? Sometimes it's the best solution for the complex problems!</p>
+                        </div>
+</a> -->
+  <a class="what_we_do_link what_we_do" href="#">
                 <div class="what_we_do_box">
                     <div class="pattern_background">
                         <p>Learn more</p>
@@ -185,13 +194,25 @@ if($_POST){
                         <a class="btn btn-line-outline btn-lg">
                             <span class="inner" data-hover="Websites">Websites</span>
                         </a>
-                        <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!</p>
+                        <!-- <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!</p> -->
                         <!-- <a href="#" class="content__link">Discover</a> -->
                     </div>
                 </div>
-            </a>
+</a>
         </div>
     </div>
+               <div class="what_we_do_box_second">
+                                                    <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!</p>
+                                                </div>
+    <!-- <div class="content-wrap">
+        <div class="content content--layout content--layout-3 my_retouch">
+                                                    <div class="what_we_do_box">
+                                                    <p class="content__desc">Upside down? Sometimes it's the best solution for the complex problems!</p>
+                                                </div>
+        
+            <!-- <h3 class="content__title my_attaches ">revert</h3> -->
+        <!-- </div>
+    </div> --> 
     
     <div class="content-wrap">
             <!-- <h3 class="content__title">our projects</h3> -->
@@ -253,8 +274,8 @@ if($_POST){
 
         
             <!-- <h3 class="content__title my_attaches ">revert</h3> -->
-        </div>
-    </div>
+         </div>
+    </div> 
 
 
     <!-- <div class="content-wrap">

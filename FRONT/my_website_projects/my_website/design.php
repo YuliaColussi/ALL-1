@@ -83,7 +83,7 @@ extract($_GET);
                     </div>
             </div>
 </div>
-  <section class="loading__gallery">
+  <!-- <section class="loading__gallery">
 <div class="loading__gallery__main"> 
 <div class="content_gallery">
    <article class="content__item">
@@ -209,7 +209,7 @@ extract($_GET);
        <div class="grid__item grid__item--cursor grid__item--center"></div>
        <div class="grid__item grid__item--cursor grid__item--right"></div>
    </div>
-</div>
+</div> -->
 <!-- <div class="frame">
    <div class="frame__title-wrap">
        <h1 class="frame__title">Crossroads Slideshow</h1>
@@ -231,9 +231,9 @@ extract($_GET);
    </div> -->
 <!-- </div>
 </div> -->
-</div>    
+<!-- </div>    
             
-</section>
+</section> -->
             <div class="content-wrap">
                 <div class="content content--layout content--layout-3 my_retouch">
                     <!-- <h3 class="content__title my_attaches ">revert</h3> -->
