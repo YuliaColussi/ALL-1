@@ -137,7 +137,7 @@ main {
 	pointer-events: auto;
 	border-radius: 50%;
 	background: #fff;
-	overflow: hidden;
+	/* overflow: hidden; */
 	border: 1px solid var(--color-text);
 }
 
@@ -344,7 +344,7 @@ main {
 
 .img-wrap {
 	width: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 	position: relative;
 	height: 100%;
 }
@@ -428,7 +428,7 @@ main {
 
 @media screen and (min-width: 53em) {
 	body {
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 	.frame {
 		position: fixed;

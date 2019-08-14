@@ -1,0 +1,159 @@
+/* 
+@media screen and (max-width: 50em) {
+	.content--fixed {
+		height: auto;
+		min-height: 0;
+		display: block;
+		z-index: 1000;
+		position: absolute;
+	}
+	.codrops-header {
+		align-items: center;
+		flex-direction: column;
+	}
+	.deco--title {
+		display: none;
+	}
+	.demos {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.content--layout {
+		transform: scale3d(0.8,0.8,1);
+	}
+}
+
+@media screen and (max-width: 36em) {
+	.content--layout {
+		transform: scale3d(0.7,0.7,1);
+	}
+}
+
+@media screen and (max-width: 32em) {
+	.content--layout {
+		transform: scale3d(0.6,0.6,1);
+	}
+	.content__author,
+	.content__desc,
+	.content__link {
+		font-size: 1.35em;
+	}
+}
+
+@media screen and (max-width: 28em) {
+	.content--layout {
+		transform: scale3d(0.5,0.5,1);
+	}
+} */
+
+
+/*  DESIGNER DEVELOPPER HUMAN */
+
+.container_scroll {
+	display: flex;
+   width: 80%;
+   height: 20rem;
+   line-height: 20rem;
+   margin: 0 auto;
+   /* margin-left: -105px;
+   margin-top: -20px; */
+   font-size: 15rem;
+   z-index: 50;
+   -webkit-font-smoothing: antialiased;
+}
+
+.container_scroll p {
+   color: #FFFFFF;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+   margin-top: 0;
+}
+
+.container_scroll .scroller {
+
+	/* line-height: 7rem; */
+	float: left;
+	margin-left: 2%;
+	overflow: hidden;
+}
+
+.container_scroll .scroller span {
+	display: block; 
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+   color:  #e73c4e; 
+}
+
+.container_scroll .scroller .inner {
+   animation: scroll 6s infinite ease-out;
+}
+
+@keyframes scroll {
+   15%  {margin-top: 0;}
+   30%  {margin-top: -20rem;}
+   40%  {margin-top: -42rem;}
+   80%  {margin-top: -40rem;}
+   100%  {margin-top: 0;} 
+ } 
+
+ 
+
+
+/* COMPRESS DESIGN */
+
+@font-face {
+	src: url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2');
+	font-family:'Compressa VF';
+  font-style: normal;
+  
+}
+
+#compress {
+  
+  overflow: hidden;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	align-items: center;
+}
+
+
+#compress h1 {
+	font-family:'Compressa VF';
+	text-rendering: optimizeSpeed;
+	color: #D11B3D;
+	width: 50%;
+
+	line-height: 0.8em;
+	margin: 0 auto;
+	text-transform: uppercase;
+	font-weight: 100;
+	text-align: center;
+	width: 100vw;
+}
+#compres h1 span {
+	transform: translateY(-10px);
+	user-select: none;
+}
+#compres h1.flex {
+	display: flex;
+	justify-content: space-between;
+}
+#compres h1.stroke span {
+	position: relative;
+	color: #211D26;
+	line-height: inherit;
+}
+#compres h1.stroke span:after {
+	content: attr(data-char);
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: #FE6730;
+	position: absolute;
+	left: 0;
+	line-height: inherit;
+	color: transparent;
+	z-index: -1;
+}
+

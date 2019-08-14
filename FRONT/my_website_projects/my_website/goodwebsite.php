@@ -40,7 +40,7 @@ extract($_GET);
                     />
                 </svg>
         </header>
-        <!-- <main> -->
+        <main>
          
             </div>
             <div class="content-wrap">
@@ -56,34 +56,8 @@ extract($_GET);
     </div>
 </div>
 
-
-
-
-<div class="bg">
-    <svg xmlns="http://www.w3.org/2000/svg" width="3070" height="3035" viewBox="560.4 -110.4 670 235" enable-background="new 560.4 -110.4 670 235">
-
-        <path class="wind" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-            stroke-dasharray="50" stroke-dashoffset="50" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M597.8-86.2h21.7m185.4-3.4h13.5m364.1 25.6h13.5m-225.5-33.8h21.7m35.8 65.8h8.1m-277.8 72h21.7"
-            fill="none" />
-        <g stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
-
-            <path class="path-delay--4" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-                stroke-dasharray="300" stroke-dashoffset="300" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
-                d="M905.4-36.3v20.3l23.1 21.8-23.1 21.8v20.3l44.6-42.1zM888.2 27.6l-23.1-21.8 23.1-21.8v-20.3l-44.6 42.1 44.6 42.1z"
-            />
-        </g>
-
-        <g class="path-delay--3" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-            stroke-dasharray="500" stroke-dashoffset="500" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
-            <path d="M896.8-73.3c-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1c43.7 0 79.1-35.4 79.1-79.1s-35.4-79.1-79.1-79.1zM896.8 70.7c-35.8 0-64.9-29.1-64.9-64.9s29.1-64.9 64.9-64.9c35.8 0 64.9 29.1 64.9 64.9s-29.1 64.9-64.9 64.9z"
-            />
-        </g>
-        </svg>
-        </div>
-</div>
-
-        <section class="loading__gallery">
- <div class="loading__gallery__main">  
+<section class="loading__gallery">
+<div class="loading__gallery__main"> 
 <div class="content_gallery">
    <article class="content__item">
        <div class="img-wrap img-wrap--content">
@@ -210,11 +184,53 @@ extract($_GET);
    </div>
 </div>
 
-
+<!-- <div class="frame">
+   <div class="frame__title-wrap">
+       <h1 class="frame__title">Crossroads Slideshow</h1>
+       <div class="frame__links">
+           <a href="https://tympanus.net/Development/ExplodingObjects/">Previous Demo</a>
+           <a href="https://tympanus.net/codrops/?p=39863">Article</a>
+           <a href="https://github.com/codrops/CrossroadsSlideshow/">GitHub</a>
+       </div>
+       <div class="frame__mode" role="radiogroup">
+           <div class="frame__mode-item frame__mode-item--dark">
+               <input id="mode-1" type="radio" name="mode" class="frame__mode-input"></input>
+               <label class="frame__mode-label" for="mode-1">Dark mode</label>
+           </div>
+           <div class="frame__mode-item">
+               <input id="mode-2" type="radio" name="mode" class="frame__mode-input" checked></input>
+               <label class="frame__mode-label frame__mode-label--light" for="mode-2">Light mode</label>
+           </div>
+       </div>
+   </div> -->
+<!-- </div>
+</div> -->
 </div>    
             
-
 </section>
+
+<div class="bg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="3070" height="3035" viewBox="560.4 -110.4 670 235" enable-background="new 560.4 -110.4 670 235">
+
+        <path class="wind" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+            stroke-dasharray="50" stroke-dashoffset="50" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M597.8-86.2h21.7m185.4-3.4h13.5m364.1 25.6h13.5m-225.5-33.8h21.7m35.8 65.8h8.1m-277.8 72h21.7"
+            fill="none" />
+        <g stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+
+            <path class="path-delay--4" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-dasharray="300" stroke-dashoffset="300" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
+                d="M905.4-36.3v20.3l23.1 21.8-23.1 21.8v20.3l44.6-42.1zM888.2 27.6l-23.1-21.8 23.1-21.8v-20.3l-44.6 42.1 44.6 42.1z"
+            />
+        </g>
+
+        <g class="path-delay--3" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+            stroke-dasharray="500" stroke-dashoffset="500" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            <path d="M896.8-73.3c-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1c43.7 0 79.1-35.4 79.1-79.1s-35.4-79.1-79.1-79.1zM896.8 70.7c-35.8 0-64.9-29.1-64.9-64.9s29.1-64.9 64.9-64.9c35.8 0 64.9 29.1 64.9 64.9s-29.1 64.9-64.9 64.9z"
+            />
+        </g>
+        </svg>
+        </div>
+            </div>
             <div class="content-wrap">
                 <div class="content content--layout content--layout-2">
             <section id="adaptive">
