@@ -762,7 +762,8 @@ main {
 
  #adaptive {
     width: 90%;
-    margin: 60rem auto 10rem;
+		margin: auto;
+		margin-top: 6300px;
     display: flex;
     transition: none;
 }
@@ -803,67 +804,7 @@ main {
 /* Brewing Process Section SECTION HOW WE WORK
 /* ------------------------------------------------------------------ */
 
-#Brewingsection {
-    width: 90%;
-    margin: 0 auto;
-	padding: 2% 15%;
-	border-bottom-color: #E8E8EE;
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-}
-#brewing .selection {
-	margin: 0px auto;
-	width: 100%;
-	position: relative;
-}
-#brewing h1 {
-	color: #EE6A5B;
-	letter-spacing: 15px;
-	font-size: 180px;
-	font-weight: 800;
-	text-transform: uppercase;
-}
-#brewing p {
-	color: #1e1a1b;
-	font-size: 28px;
-}
 
-@media only screen and (max-width:768px) {
-#brewing h1 {
-	font-size: 80px;
-}
-}
-
-@media only screen and (min-width:768px) {
-#brewing .selection {
-	margin: 0px auto;
-	width: 500px;
-	position: relative;
-}
-#brewing .first {
-	margin-left: 0%;
-}
-#brewing .second {
-	margin-left: 50%;
-}
-#brewing .third {
-	margin-left: 0%;
-}
-#brewing .fourth {
-	margin-left: 50%;
-}
-#twentyone .secondfont {
-	font-size: 2.5em;
-}
-#brewing .position {
-	left: 0px;
-	top: 25px;
-	right: 0px;
-	margin-right: auto;
-	margin-left: auto;
-	position: absolute;
-}
-}
 
 /* COMPASS TEST  SECOND OPTION*/
 
@@ -2326,47 +2267,7 @@ p{
 }
 
 
-/* ADAPTIV SECTION TEXT*/
 
-
- #adaptive {
-    width: 90%;
-    margin: 60rem auto 10rem;
-    display: flex;
-    transition: none;
-}
-
-.adaptive_left {
-    font-size: 3rem;
-    margin-left: 10%;
-    width: 30%;
-}
-
-.adaptive_right {
-    /* background-color: #292929; */
-    padding: 5% 5% 0% 5%;
-    margin-left: 10%;
-    width: 70%;
-
-}
-.adaptive_left h3 {
-    font-size: 3.5rem;
-}
-
-.box_right_box {
-    margin-bottom: 5%;
-    width: 40%;
-    margin-right: 10%;
-}
-
-.adaptive_left p {
-    color: #808080;
-}
-
-.adaptive_left p {
-    font-size: 20px;
-    text-align: justify;
-}
 
 /* ------------------------------------------------------------------ */
 /* Brewing Process Section SECTION HOW WE WORK
@@ -2374,7 +2275,8 @@ p{
 
 #Brewingsection {
     width: 90%;
-    margin: 0 auto;
+		margin: auto;
+		margin-top: 2500px;
 	padding: 2% 15%;
 	border-bottom-color: #E8E8EE;
 	border-bottom-width: 3px;
@@ -3199,4 +3101,6 @@ a:focus {
 	z-index: -1;
 }
 
-
+/* #Brewingsection {
+	margin-top: 2000px;
+} */

@@ -23,6 +23,11 @@ html, body {
 	font-size: 15px;
 }
 
+nav.menu-wrap {
+	padding-bottom: 240px;
+}
+
+
 body {
 	--color-text: #5d5d5d;
 	--color-bg: #e6e6ea;
