@@ -5,7 +5,7 @@ extract($_GET);
 
 ?>
 
-<body class="demo-2 loading">
+<body class="demo-2">
     <!-- MORPHY START -->
     <svg class="hidden">
         <symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -43,11 +43,7 @@ extract($_GET);
     </div>
         <main>
             <div class="content-wrap">
-                <!-- <img class="content__img" src="img/3.jpg" alt="Some image" /> -->
-            <!-- <section id="first_image">
-                <canvas id="rounds"></canvas>
-            </section> -->
-            
+
             <div id="compress">
                 <h1 id="title">Design</h1>
             </div>
@@ -55,20 +51,28 @@ extract($_GET);
             </div>
             <div class="content-wrap">
                 <div class="content content--layout content--layout-2">
-                    <!-- <a class="what_we_do_link what_we_do" href="#">
-                        <div class="what_we_do_box">
-                            <div class="pattern_background">
-                                <p>Learn more</p>
-                                <img src="images/3.jpg" class="content__img" alt="websites">
-                                
-                                <a class="btn btn-line-outline btn-lg">
-                                    <span class="inner" data-hover="Hover me">Hover me</span>
-                                </a>
-                                <p class="content__desc">Lost or found? That's the question today.</p>
-                                <a href="#" class="content__link">Discover</a>
-                            </div>
-                        </div>
-                    </a> -->
+                    
+                    <!-- JUMPING WORDS -->
+                    
+                    
+                    <!-- JUMPING WORDS END -->
+                    <div class="design-list">
+                    <ul>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                      <li><p>DESIGN FOR EVERYONE</p></li>
+                    </ul>
+                  </div>
                 </div>
             </div>
             
@@ -78,177 +82,131 @@ extract($_GET);
                 
                 <div class="content content--layout content--layout-4 my_retouch">
                     <div class="content content--related">
-        <p class="content__info"></p>
+                                            <div class="design_text">
+                        <div class="design_text_one">
+        <h3>Lorem Ipsum</h3>
+        <p>
+           это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+        </p>
+        </div>
+        <div class="design_text_two"></div>
+                </div>
+
+<!-- BOITE WITH LETTERS -->
+ 
+
     
+ <div class="perspective-text-body">
+        <div class="perspective-text">
+      <div class="perspective-line">
+        <p></p>
+        <p>Creation</p>
+      </div>
+      <div class="perspective-line">
+        <p>Creation</p>
+        <p>For</p>
+      </div>
+      <div class="perspective-line">
+        <p>For</p>
+        <p>Your</p>
+      </div>
+      <div class="perspective-line">
+        <p>Your</p>
+        <p>Progression</p>
+      </div>
+      <div class="perspective-line">
+        <p>Progression</p>
+        <p></p>
+      </div>
+    </div>
+    </div> 
+    <!-- BOITE WITH LETTERS END-->
+
+<!-- </div> -->
                     </div>
-            </div>
+                </div>
 </div>
-  <!-- <section class="loading__gallery">
-<div class="loading__gallery__main"> 
-<div class="content_gallery">
-   <article class="content__item">
-       <div class="img-wrap img-wrap--content">
-           <div class="img img--content"></div>
-       </div>
-       <header class="content__item-header">
-           <span class="content__item-header-meta">New York City, March 24</span>
-           <h2 class="content__item-header-title">Kanzu</h2>
-       </header>
-       <div class="content__item-copy">
-           <p class="content__item-copy-text">
-           In the gloomy domed livingroom of the tower Buck Mulligan’s gowned form
-           moved briskly to and fro about the hearth, hiding and revealing its
-           yellow glow. Two shafts of soft daylight fell across the flagged floor
-           from the high barbacans: and at the meeting of their rays a cloud of
-           coalsmoke and fumes of fried grease floated, turning.
-           </p>
-           <a href="#" class="content__item-copy-more">more +</a>
-       </div>
-   </article>
-   <article class="content__item">
-       <div class="img-wrap img-wrap--content">
-           <div class="img img--content"></div>
-       </div>
-       <header class="content__item-header">
-           <span class="content__item-header-meta">Acapulco, March 25</span>
-           <h2 class="content__item-header-title">Juked</h2>
-       </header>
-       <div class="content__item-copy">
-           <p class="content__item-copy-text">
-           The key scraped round harshly twice and, when the heavy door had been
-           set ajar, welcome light and bright air entered. Haines stood at the
-           doorway, looking out. Stephen haled his upended valise to the table and
-           sat down to wait. Buck Mulligan tossed the fry on to the dish beside
-           him. Then he carried the dish and a large teapot over to the table, set
-           them down heavily and sighed with relief.
-           </p>
-           <a href="#" class="content__item-copy-more">more +</a>
-       </div>
-   </article>
-   <article class="content__item">
-       <div class="img-wrap img-wrap--content">
-           <div class="img img--content"></div>
-       </div>
-       <header class="content__item-header">
-           <span class="content__item-header-meta">Brisbane, March 26</span>
-           <h2 class="content__item-header-title">Colza</h2>
-       </header>
-       <div class="content__item-copy">
-           <p class="content__item-copy-text">
-           Stephen listened in scornful silence. She bows her old head to a voice
-           that speaks to her loudly, her bonesetter, her medicineman: me she
-           slights. To the voice that will shrive and oil for the grave all there
-           is of her but her woman’s unclean loins, of man’s flesh made not in
-           God’s likeness, the serpent’s prey.
-           </p>
-           <a href="#" class="content__item-copy-more">more +</a>
-       </div>
-   </article>
-   <article class="content__item">
-       <div class="img-wrap img-wrap--content">
-           <div class="img img--content">
-       </div>
-       <header class="content__item-header">
-           <span class="content__item-header-meta">Berlin, March 27</span>
-           <h2 class="content__item-header-title">Voxey</h2>
-       </header>
-       <div class="content__item-copy">
-           <p class="content__item-copy-text">
-           And putting on his stiff collar and rebellious tie he spoke to them,
-           chiding them, and to his dangling watchchain. His hands plunged and
-           rummaged in his trunk while he called for a clean handkerchief. God,
-           we’ll simply have to dress the character. I want puce gloves and green
-           boots. Contradiction.
-           </p>
-           <a href="#" class="content__item-copy-more">more +</a>
-       </div>
-   </article>
-</div>
-<div class="revealer">
-   <div class="revealer__inner"></div>
-</div>
-<div class="grid grid--slideshow">
-   <figure class="grid__item grid__item--slide">
-       <span class="number">01</span>
-       <div class="img-wrap">
-           <div class="img"></div>
-       </div>
-       <figcaption class="caption">New York City, March 24</figcaption>
-   </figure>
-   <figure class="grid__item grid__item--slide">
-       <span class="number">02</span>
-       <div class="img-wrap">
-           <div class="img"></div>
-       </div>
-       <figcaption class="caption">Acapulco, March 25</figcaption>
-   </figure>
-   <figure class="grid__item grid__item--slide">
-       <span class="number">03</span>
-       <div class="img-wrap">
-           <div class="img"></div>
-       </div>
-       <figcaption class="caption">Brisbane, March 26</figcaption>
-   </figure>
-   <figure class="grid__item grid__item--slide">
-       <span class="number">04</span>
-       <div class="img-wrap">
-           <div class="img"></div>
-       </div>
-       <figcaption class="caption">Berlin, March 27</figcaption>
-   </figure>
-   <div class="titles-wrap">
-       <div class="grid grid--titles">
-           <h3 class="grid__item grid__item--title">Kanzu</h3>
-           <h3 class="grid__item grid__item--title">Juked</h3>
-           <h3 class="grid__item grid__item--title">Colza</h3>
-           <h3 class="grid__item grid__item--title">Voxey</h3>
-       </div>
-   </div>
-   <div class="grid grid--interaction">
-       <div class="grid__item grid__item--cursor grid__item--left"></div>
-       <div class="grid__item grid__item--cursor grid__item--center"></div>
-       <div class="grid__item grid__item--cursor grid__item--right"></div>
-   </div>
-</div> -->
-<!-- <div class="frame">
-   <div class="frame__title-wrap">
-       <h1 class="frame__title">Crossroads Slideshow</h1>
-       <div class="frame__links">
-           <a href="https://tympanus.net/Development/ExplodingObjects/">Previous Demo</a>
-           <a href="https://tympanus.net/codrops/?p=39863">Article</a>
-           <a href="https://github.com/codrops/CrossroadsSlideshow/">GitHub</a>
-       </div>
-       <div class="frame__mode" role="radiogroup">
-           <div class="frame__mode-item frame__mode-item--dark">
-               <input id="mode-1" type="radio" name="mode" class="frame__mode-input"></input>
-               <label class="frame__mode-label" for="mode-1">Dark mode</label>
-           </div>
-           <div class="frame__mode-item">
-               <input id="mode-2" type="radio" name="mode" class="frame__mode-input" checked></input>
-               <label class="frame__mode-label frame__mode-label--light" for="mode-2">Light mode</label>
-           </div>
-       </div>
-   </div> -->
-<!-- </div>
-</div> -->
-<!-- </div>    
-            
-</section> -->
+
+<!-- /* HORISONTAL SCROLL PORTFOLIO */ -->
             <div class="content-wrap">
                 <div class="content content--layout content--layout-3 my_retouch">
-                    <!-- <h3 class="content__title my_attaches ">revert</h3> -->
+  
+                     <!-- <h3 class="content__title my_attaches ">revert</h3> -->
+                    <!-- <ul class="scroll">
+               
+                        <li class="list-item"></li>
+                        <li class="list-item"></li>
+                        <li class="list-item"></li>
+                        <li class="list-item"></li>
+                        <li class="list-item"></li>
+                        <li class="list-item"></li>
+                        <li class="list-item"></li>
+                    </ul>  -->
                 </div>
             </div>
             <div class="content-wrap">
                 <div class="content content--layout content--layout-1">
+
+<!-- TILT SECTION -->
+                <section class="container_tild">
+
+ <!-- Text -->
+ <ul class="scroll_one">
+ <li class="list-item_one">
+ <div class="example-2 list-item" data-tilt>
+  <span class="example-2__inner">Test</span>
+ </div>
+ </li>
+ <li class="list-item_one">
+ <div class="example-2 list-item" data-tilt>
+  <span class="example-2__inner">Test</span>
+ </div>
+ </li>
+ <li class="list-item_one">
+ <div class="example-2 list-item" data-tilt>
+  <span class="example-2__inner">Test</span>
+ </div>
+ </li>
+ <li class="list-item_one">
+ <div class="example-2 list-item" data-tilt>
+  <span class="example-2__inner">Test</span>
+ </div>
+ </li>
+ <li class="list-item_one">
+ <div class="example-2 list-item" data-tilt>
+  <span class="example-2__inner">Test</span>
+ </div>
+ </li>
+ <li class="list-item_one">
+ <div class="example-2 list-item" data-tilt>
+  <span class="example-2__inner">Test</span>
+ </div>
+ </li>
+ <li class="list-item_one">
+ <div class="example-2 list-item" data-tilt>
+  <span class="example-2__inner">Test</span>
+ </div>
+ </li>
+ <li class="list-item_one">
+ <div class="example-2 list-item" data-tilt>
+  <span class="example-2__inner">Test</span>
+ </div>
+ </li>
+
+</ul>
+
+
+	
+</section>
+<!-- TILT SECTION END -->
                     <!-- <h3 class="content__title my_attaches">frank</h3> -->
                 </div>
             </div>
             <!-- Related demos -->
      
 
-                <a class="content__related-item" href="">
-                </a>
+                 <a class="content__related-item" href="">
+                 </a>
 
             <!-- PHOTO ALBUM -->
 
