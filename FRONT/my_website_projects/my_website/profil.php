@@ -3,11 +3,11 @@ require_once('include/init.php');
 
 if(!internauteEstConnecte())// Si l'internaute NEST PAS (!) connecté,il n'a rien à faire sur la page profil, on le redirige vers la page connexion.
 {
-    header("Location: connexion.php");
+    header("Location: index.php");
 }
 
-require_once('include/header.php');
 
+require_once('include/header.php');
 
 echo '<pre>'; echo print_r($_SESSION); echo '</pre>' 
 ?>
@@ -39,7 +39,7 @@ echo '<pre>'; echo print_r($_SESSION); echo '</pre>'
 
 <table class="table table-dark">
 <!-- les ":" et endif / endforeach remplace les accolades {} -->
-<?php foreach($_SESSION['membre'] as $key => $value): ?>
+<?php foreach($_SESSION['member_form'] as $key => $value): ?>
 <?php if($key != 'id_membre' && $key != 'statut'): ?>
 <th><?= $key ?></th><td><?= $value ?></td>
 <?php endif; ?>
@@ -57,7 +57,6 @@ else {// sinon on tombe dans le else li le statut est agale à 0, donc ca vous d
 ?>
 <h3 class="text-center">Vous etes <strong class="text-info"><?= $statut ?></strong> du site</h3><br><br><br>
 
-?>
 
 
 <?php

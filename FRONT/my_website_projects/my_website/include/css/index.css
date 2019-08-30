@@ -204,6 +204,27 @@ li a:hover {
   width: 28.75rem;
 }
 
+.pop-up-form-one{
+	display: none;
+	position: fixed;
+	width: 400px;
+	height: 500px;
+	z-index: 100000;
+	background-color: white;
+	margin: 0 auto;
+	padding: 30px;
+	top: 30%;
+	right: 5%;
+	transform: translate(-50%,-50%);
+	border-radius: 10%;
+
+	box-shadow: 0 0 40px 0 rgba(234, 76, 137, 0.6);
+
+  height: 42.25rem;
+  position: absolute;
+  width: 28.75rem;
+}
+
 .pop-up-form {
 	height: 45rem;
 }
@@ -258,7 +279,15 @@ button,
   position: relative;
 }
 
-.pop-up-form .logo,
+.pop-up-form .logo {
+  /* background: url("../../images/logo.png"); */
+  height: 3.125rem;
+  margin-top: 1.875rem;
+  width: 3.125rem;
+  display: block;
+  margin: auto;
+}
+
 .pop-up-form-one .logo {
   /* background: url("../../images/logo.png"); */
   height: 3.125rem;
@@ -318,7 +347,21 @@ i:hover {
   color: #4285f4;
 }
 
-.pop-up-form input,
+.pop-up-form input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #9da3a5;
+  font: 500 0.9rem "Work Sans", sans-serif, sans-serif;
+  height: 2.15em;
+  margin-top: 0.7em;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  width: 80%;
+  margin-left: 2rem;
+}
+
 .pop-up-form-one input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -357,8 +400,23 @@ i:hover {
   color: #9da3a5;
 }
 
-.pop-up-form button,
-.pop-up-form-one button {
+.pop-up-form button{
+  background: #ea4c89;
+  border: 0;
+  border-radius: 1.4em;
+  color: #fff;
+  font: 1.1rem "Work Sans", sans-serif;
+  display: block; 
+  margin: 0 auto; 
+  outline: none;
+  padding: 0.6em;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.pop-up-form-one button{
   background: #ea4c89;
   border: 0;
   border-radius: 1.4em;
@@ -410,12 +468,12 @@ input[type="text"]{
 	margin-bottom: 10px;
 }  */
 
-.pop-up-form .class,
+/* .pop-up-form .class,
 .pop-up-form-one .class {
 	 position: absolute;
 	 top: 0;
 	 right: 0;
-} 
+}  */
 
 
   
