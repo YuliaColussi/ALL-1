@@ -1,8 +1,10 @@
-    
+
     <?php
-    require_once("include/init.php");
+    require_once("../include/init.php");
     extract($_POST);
 
+    
+        // <!-- INSCRIPTION -->
 
     // variable msg erreur :
     $errorPseudo = "";
@@ -10,7 +12,9 @@
     $errorMdpVerif = "";
     $errorEmail = "";
     $donnees = "";
-
+    // echo '<pre style="color:white;z-index:auto;">';
+    // print_r($_POST);
+    // echo '</pre>';
     // <!-- INSCRIPTION -->
     if ($_POST) {
         if (empty($pseudo) || iconv_strlen($pseudo) < 1  || iconv_strlen($pseudo) > 20) {
@@ -40,11 +44,8 @@
             $data_insert->bindValue(':mdp', $mdp, PDO::PARAM_STR);
             $data_insert->bindValue(':email', $email, PDO::PARAM_STR);
             $data_insert->execute();
-        } // END if(empty($errorPseudo) && empty($errorMdp) 
+        } // END if(empty($errorPseudo) && empty($errorMdp) && 
     } //END  if ($_POST)
-
-
-
 
     
     //  <!-- INSCRIPTION END -->
@@ -53,54 +54,46 @@
 
   $resultat = $bdd -> query('SELECT * FROM member_form');
   $connexion = $resultat->fetch(PDO::FETCH_ASSOC);
-
+    
     
      if(isset($_GET['action']) && $_GET['action'] == 'deconnexion')
      {
          session_destroy();
      }
-
+     // Si l'indice 'action' est définit dans l'URL et qu'il a comme valeur 'deconnexion', cela veut dire que l'on cliqué sur le lien 'deconnexion',
+     // du coup on supprime le fishier session
     
      if(isset($_GET['action'])&& $_GET['action'] == 'validate')
      {
         $validate .="<div id='result_form' class='col-md-6 offset-md-3 alert alert-success text-center text-dark'>Félicitations !! Vous etes inscrit sur le site . Vous pouvez dés a present vous connecter!!</div>";
      }
-    
-
-    
-    //  if(empty($_POST['pseudo']) && $_POST['pseudo'] != $connexion['pseudo'] && empty($_POST['mdp']) && $_POST['mdp'] != $connexion['mdp'])
-    //  {
-    //       $validate .="<div id='result_form' class='col-md-6 offset-md-3 alert alert-danger text-center text-dark'>Erreur! Il faut remplir toutes les champs</div>";
-    //  }
 
 if($_POST)
-    // On selectionne tout dans la table 'membre' à condition que la colonne
-    //pseudo ou email de la BDD soit bien égale au pseudo ou email saisie dans le formulaire 
      {
          $verif_pseudo_email = $bdd->prepare("SELECT * FROM member_form WHERE pseudo = :pseudo OR email = :email");
          $verif_pseudo_email->bindValue(':pseudo', $email_pseudo,  PDO::PARAM_STR);
          $verif_pseudo_email->bindValue(':email', $email_pseudo,  PDO::PARAM_STR);
          $verif_pseudo_email->execute();
-    
-         if($verif_pseudo_email->rowCount() > 0)
+
+if($verif_pseudo_email->rowCount() > 0)
          {
     
          $membre = $verif_pseudo_email->fetch(PDO::FETCH_ASSOC);
 
-         if($membre['mdp'] == $mdp)
+if($membre['mdp'] == $mdp)
          {
-
-             foreach($membre as $key => $value)
-           {
-                 if($key != 'mdp')
-                 {
+    
+    //    // on passe en revue les données de l'internaute qui a saisi le bon email / pseudo et mdp
+foreach($membre as $key => $value)
+            {
+            if($key != 'mdp')
+            {
                      $_SESSION['member_form'][$key] = $value;
                  }
              }
-
                  header("Location: profil.php"); 
          }
-            else
+            else 
             {
                  $error .= "<div id='result_form' class='col-md-6 offset-md-3 text-center alert alert-danger'>Verifer le mot de passe!!</div>";
              }
@@ -140,6 +133,7 @@ if($_POST)
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
     <meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
@@ -149,15 +143,14 @@ if($_POST)
 
     <script src="js/snap.svg-min.js"></script>
     <script src="js/lazy-line-painter-1.9.6.min.js"></script> 
-       
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <!-- <script src="../js/ajax.js"></script> -->
   <script href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
   <link rel="stylesheet" type="text/css" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="include/css/index.css">
-    <link rel="stylesheet" href="include/css/normalize.css">
+    <link rel="stylesheet" href="../include/css/base.css">
+    <link rel="stylesheet" href="../include/css/normalize.css">
 
     	
     <title>C.Real digital agency</title>
@@ -168,13 +161,9 @@ if($_POST)
 <!-- AJAX END  -->
 
 
-
-
         <nav class="menu-wrap">
         <div class="logo">
-        <a href="<?= URL ?>index.php">
             <img src="<?= URL ?>images/logo.png" alt="une image de logo">
-        </a>
         </div>
         <div class="menu">
             <ul>
@@ -186,7 +175,7 @@ if($_POST)
                     <a href="<?= URL ?>design.php">Design</a>
                 </li>
                 <li>
-                    <a href="<?= URL ?>website.php">Website</a>
+                    <a href="<?= URL ?>test.php">Website</a>
                 </li>
             <li>
             <a href="<?= URL ?>profil.php">Profil</a>
@@ -203,7 +192,7 @@ if($_POST)
                     <a href="<?= URL ?>design.php">Design</a>
                 </li>
                 <li>
-                    <a href="<?= URL ?>website.php">Website</a>
+                    <a href="<?= URL ?>test.php">Website</a>
                 </li>
             <li>
             <a class="button">Inscription</a>
@@ -214,18 +203,7 @@ if($_POST)
             <!-- <a href="connexion.php">Connexion</a> -->
           </li>
           </ul>
-               
-                <!-- </div> -->
-                <!-- <div class="pop-up-form">
-                    <form action="" class="form">
-                        <input type="text" name="first-name" id="" placeholder="Имя">
-                        <input type="text" name="second-name" id="" placeholder="Фамилия">
-                        <input type="text" name="phone" id="" placeholder="Телефон">
-                        <button type="submit">Sens us!</button>
-                    </form>
-                    <a href="#" class="close">Close</a>
-                </div>
-                <div class="overlay"></div> -->
+
    <!-- INSCRIPTIONS -->
               
 <div class="pop-up-form">
@@ -300,11 +278,6 @@ if($_POST)
      </div>
      <div class="overlay"></div>  
 
-         <!-- <a href="#" class="close">Close</a> -->
- 
-        
-
-
 <!-- CONNEXION  END-->
       <?php endif; ?>
       <?php if(internauteEstConnecteEtEstAdmin()): ?>
@@ -321,4 +294,3 @@ if($_POST)
          </div>
          
         </nav>
- 

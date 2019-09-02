@@ -12,29 +12,26 @@ if(!internauteEstConnecteEtEstAdmin())
 
 // -----------------SUPPRESSION PROJECT
 
-// on entre dans le If seulement dans le cas ou l'on a cliqué  sur la bouton de suppression
+
 if(isset($_GET['action']) && $_GET['action'] == 'suppression')
 {
-  // Exo: requete de suppression / requete préparé
-  $supp_membre = $bdd->prepare("DELETE FROM my_projects WHERE id_membre = :id_membre");
+  $supp_membre = $bdd->prepare("DELETE FROM member_form WHERE id_membre = :id_membre");
   $supp_membre->bindValue(':id_membre', $id_membre, PDO::PARAM_STR);
-  // if produit fait reference à $_GET['id_produit'] (extract)
-  $supp_proj->execute();
+  $supp_membre->execute();
 
   $_GET['action'] = 'affichage';
 
   $validate .= "<div class='alert alert-success cold-md-6 offset-md-3 text-center'>Le membre
-  n <strong>$id_project</strong> a bien été supprimé !!</div>";
+  n <strong>$id_membre</strong> a bien été supprimé !!</div>";
 
-  // echo 'suppression produit';
 }
 
 
 
 // ------------------ENREGISTREMENT PROJECT
 
-if($_POST)
-{
+// if($_POST)
+// {
 //     $photo_bdd = '';
 //     if(isset($_GET['action']) && $_GET['action'] == 'modification')
 
@@ -86,16 +83,17 @@ if($_POST)
   //   } else {
   //     echo '<p>Il y a une erreur:' . mysqli_error($bdd) . '</p>';
   //   }
-   }
+  //  }
 
     if(isset($_GET['action']) && $_GET['action'] == 'ajout')
     {
-        $data_insert = $bdd->prepare("INSERT INTO `member_form` (pseudo, mdp, email, statut) VALUES 
+        $data_insert = $bdd->prepare("INSERT INTO member_form (pseudo, mdp, email, statut) VALUES 
         (:pseudo, :mdp , :email, :statut)");
     }
-    else {
+    elseif(isset($_GET['action']) && $_GET['action'] == 'modification') {
         $data_insert = $bdd->prepare("UPDATE member_form SET 
         pseudo = :pseudo AND mdp = :mdp AND email = :email AND statut = :statut WHERE id_membre = $id_membre");
+        $data_insert->bindValue(':id_membre', $_POST['id_membre'], PDO::PARAM_INT);
 
         $_GET['action'] = 'affichage';
 
@@ -105,7 +103,7 @@ if($_POST)
 
       if($_POST)//si on valide le formulaaire, on rentre dans la condition
     {
-        $data_insert = $bdd->prepare("INSERT INTO `member_form` (pseudo, mdp, email, statut) VALUES 
+        $data_insert = $bdd->prepare("INSERT INTO member_form (pseudo, mdp, email, statut) VALUES 
         (:pseudo, :mdp , :email, :statut)");
     //       foreach($_POST as $key => $value){
     //       if($key != 'photo_actuelle') // on ejecte le champs 'hidden' de la photo
@@ -123,7 +121,7 @@ if($_POST)
 }
 
 
-require_once('../include/header.php');
+require_once('../include/header_admin.php');
 
 // echo '<pre>'; print_r($_POST); echo '</pre>';
 // $_FILES est une superglobale qiui permet de véhiculer les informations d'un fishier uploader
@@ -182,8 +180,8 @@ else: ?>
 <?php 
 endif; ?>
 <?php endforeach;?>
-<td><a href="?action=modification&id_member=<?= $tab['id_member'] ?>" class="text-info"><i class="fas fa-edit"></i></a></td>
-<td><a href="?action=suppression&id_memeber=<?= $tab['id_member'] ?>"class="text-danger" onclick="return(confirm('En etes vous certain?'))"><i class="fas fa-trash-alt"></i></a></td>
+<td><a href="form_member.php?action=modification&id_member=<?= $tab['id_membre'] ?>" class="text-info"><i class="fas fa-edit"></i></a></td>
+<td><a href="?action=suppression&id_memeber=<?= $tab['id_membre'] ?>"class="text-danger" onclick="return(confirm('En etes vous certain?'))"><i class="fas fa-trash-alt"></i></a></td>
 </tr>
 <?php endforeach;?>
 </table>
@@ -231,18 +229,17 @@ echo '</table>'; -->
 
 
 <hr>
-<h1 class="display-4 text-center"><?=  strtoupper($action) ?> un produit</h1><hr>
+<h1 class="display-4 text-center"><?=  strtoupper($action) ?> un membre</h1><hr>
 
 
 <?php
-if(isset($_GET['id_produit']))
+if(isset($_GET['id_membre']))
 {
   $resultat = $bdd->prepare("SELECT * FROM member_form WHERE id_membre = :id_membre");
   $resultat->bindValue(':id_membre', $id_membre, PDO::PARAM_INT);
   $resultat->execute();
 
   $project_actuel = $resultat->fetch(PDO::FETCH_ASSOC);
-  echo '<pre>';print_r($produit_actuel); echo '</pre>';
 }
 
 
@@ -256,30 +253,18 @@ $statut = (isset($membre_actuel['statut'])) ? $membre_actuel['statut'] : '';
 <form  class="col-md-4 offset-md-4 text-center form1" method="post" action="" enctype="multipart/form-data">
 <!--  enctype : obligatoire en PHP pour recolter les informations d'1 fishier uploadé-->
   <div class="form-row">
-  <div class="form-row">
     <div class="form-group col-md-6">
       <label for="categorie">Pseudo</label>
-      <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Entre categorie" value="<?= $pseudo ?>">
+      <input type="text" class="form-control" id="email_pseudo" name="pseudo" placeholder="Entre pseudo" value="<?= $pseudo ?>">
     </div>
     <div class="form-group col-md-6">
       <label for="titre">Mot de passe</label>
-      <input type="text" class="form-control" id="mdp" name="mdp" placeholder="Entre titre" value="<?= $mdp ?>">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="description">Email</label>
-      <input type="text" class="form-control" id="email" name="email" placeholder="Entre description" value="<?= $email ?>">
+      <input type="text" class="form-control" id="mdp" name="mdp" placeholder="Entre votre mot de passe" value="<?= $mdp ?>">
     </div>
     <div class="form-group col-md-12">
-    <label for="photo">Statut</label>
-    <input type="file" class="form-control" id="statut" name="statut">
+      <label for="description">Email</label>
+      <input type="text" class="form-control" id="email" name="email" placeholder="Entre votre email" value="<?= $email ?>">
     </div>
-    <!-- if we have a 'file' than we cant give it a value so we do that stuff below-->
-    <?php if(!empty($photo)): ?>
-    <em>Vous pouvez uploader une nouvelle photo si vous souhaitez la changer</em><br>
-    <img height="400" src="<?= $photo ?>" alt="<?= $titre ?>" class="card-img-top">
-    <?php endif; ?>
-    <!-- allows to get a photo -->
-    <input type="hidden" id="photo_actuelle" name="photo_actuelle" value="<?= $photo ?>">
 
   <button type="submit" class="col-md-12 btn btn-dark"><?= strtoupper($action) ?></button>
 

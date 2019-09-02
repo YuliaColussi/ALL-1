@@ -1139,6 +1139,27 @@ li a:hover {
   width: 28.75rem;
 }
 
+.pop-up-form-one{
+	display: none;
+	position: fixed;
+	width: 400px;
+	height: 500px;
+	z-index: 100000;
+	background-color: white;
+	margin: 0 auto;
+	padding: 30px;
+	top: 30%;
+	right: 5%;
+	transform: translate(-50%,-50%);
+	border-radius: 10%;
+
+	box-shadow: 0 0 40px 0 rgba(234, 76, 137, 0.6);
+
+  height: 42.25rem;
+  position: absolute;
+  width: 28.75rem;
+}
+
 .pop-up-form {
 	height: 45rem;
 }

@@ -1,22 +1,175 @@
-<!DOCTYPE html>
+       
+    <?php
+    require_once("include/init.php");
+    extract($_POST);
+
+
+    // variable msg erreur :
+    $errorPseudo = "";
+    $errorMdp = "";
+    $errorMdpVerif = "";
+    $errorEmail = "";
+    $donnees = "";
+
+    // <!-- INSCRIPTION -->
+    if ($_POST) {
+        if (empty($pseudo) || iconv_strlen($pseudo) < 1  || iconv_strlen($pseudo) > 20) {
+            $errorPseudo .= '<span class="text-danger">problème de pseudo 20 cractères max </span>';
+        }
+        // if (empty($mdp) || !preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)#', $mdp)) {
+        //     $errorMdp .= '<span class="text-danger">saisissez un mot de passe </span>';
+        // }
+        if (empty($mdp)) {
+            $errorMdp .= '<span class="text-danger">saisissez un mot de passe </span>';
+        }
+        if (empty($conf_mdp) || $conf_mdp != $mdp) {
+            $errorMdpVerif .= '<span class="text-danger">non reconnu </span>';
+        }
+        if (empty($email) ||  !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errorEmail .= '<span class="text-danger">saisissez un email valide </span>';
+        }
+        // insertion data base
+        if (empty($errorPseudo) && empty($errorMdp) && empty($errorMdpVerif) && empty($errorEmail)) {
+            //protection contre les injections
+            foreach ($_POST as $indice => $valeur) {
+                $_POST[$indice] = htmlspecialchars($valeur, ENT_QUOTES);
+            }
+            $pdo = $bdd;
+            $data_insert = $pdo->prepare("INSERT INTO member_form (pseudo, mdp, email) VALUES (:pseudo, :mdp, :email)");
+            $data_insert->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+            $data_insert->bindValue(':mdp', $mdp, PDO::PARAM_STR);
+            $data_insert->bindValue(':email', $email, PDO::PARAM_STR);
+            $data_insert->execute();
+        } // END if(empty($errorPseudo) && empty($errorMdp) 
+    } //END  if ($_POST)
+
+
+
+
+    
+    //  <!-- INSCRIPTION END -->
+    
+    // CONNEXION
+
+  $resultat = $bdd -> query('SELECT * FROM member_form');
+  $connexion = $resultat->fetch(PDO::FETCH_ASSOC);
+
+    
+     if(isset($_GET['action']) && $_GET['action'] == 'deconnexion')
+     {
+         session_destroy();
+     }
+
+    
+     if(isset($_GET['action'])&& $_GET['action'] == 'validate')
+     {
+        $validate .="<div id='result_form' class='col-md-6 offset-md-3 alert alert-success text-center text-dark'>Félicitations !! Vous etes inscrit sur le site . Vous pouvez dés a present vous connecter!!</div>";
+     }
+    
+
+    
+    //  if(empty($_POST['pseudo']) && $_POST['pseudo'] != $connexion['pseudo'] && empty($_POST['mdp']) && $_POST['mdp'] != $connexion['mdp'])
+    //  {
+    //       $validate .="<div id='result_form' class='col-md-6 offset-md-3 alert alert-danger text-center text-dark'>Erreur! Il faut remplir toutes les champs</div>";
+    //  }
+
+if($_POST)
+    // On selectionne tout dans la table 'membre' à condition que la colonne
+    //pseudo ou email de la BDD soit bien égale au pseudo ou email saisie dans le formulaire 
+     {
+         $verif_pseudo_email = $bdd->prepare("SELECT * FROM member_form WHERE pseudo = :pseudo OR email = :email");
+         $verif_pseudo_email->bindValue(':pseudo', $email_pseudo,  PDO::PARAM_STR);
+         $verif_pseudo_email->bindValue(':email', $email_pseudo,  PDO::PARAM_STR);
+         $verif_pseudo_email->execute();
+    
+         if($verif_pseudo_email->rowCount() > 0)
+         {
+    
+         $membre = $verif_pseudo_email->fetch(PDO::FETCH_ASSOC);
+
+         if($membre['mdp'] == $mdp)
+         {
+
+             foreach($membre as $key => $value)
+           {
+                 if($key != 'mdp')
+                 {
+                     $_SESSION['member_form'][$key] = $value;
+                 }
+             }
+
+                 header("Location: profil.php"); 
+         }
+            else
+            {
+                 $error .= "<div id='result_form' class='col-md-6 offset-md-3 text-center alert alert-danger'>Verifer le mot de passe!!</div>";
+             }
+         }
+         else 
+        {
+            $error .= "<div id='result_form' class='col-md-6 offset-md-3 text-center alert alert-danger'>Le pseudo ou email : <strong>" . $email_pseudo . "</strong> est inconnu en BDD</div>";
+         }
+     }
+    
+    
+    ?>
+    
+    <!--  CONNEXION END -->
+    
+    
+    <!-- AJAX -->
+    
+  <?php 
+    
+    // if (isset($_POST["name"]) && isset($_POST["phonenumber"]) ) { 
+    
+    //   // Формируем массив для JSON ответа
+    //     $result = array(
+    //       'name' => $_POST["name"],
+    //       'phonenumber' => $_POST["phonenumber"]
+    //     ); 
+    
+    //     // Переводим массив в JSON
+    //     echo json_encode($result); 
+    // }
+    
+    ?>
+<!doctype html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Crossroads Slideshow | Codrops</title>
-		<meta name="description" content="An experimental slideshow with an inclined look with three slide previews and a content view on click." />
-		<meta name="keywords" content="slideshow, javascript, tweenmax, rotation, animation, css" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="include/css/base.css"/>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
+    <meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="include/css/base.css"/>
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	</head>
-	 <nav class="menu-wrap">
+
+    	
+    <title>C.Real digital agency</title>
+    
+  </head>
+
+
+<!-- AJAX END  -->
+
+
+
+
+        <nav class="menu-wrap">
         <div class="logo">
+        <a href="<?= URL ?>index.php">
             <img src="<?= URL ?>images/logo.png" alt="une image de logo">
+        </a>
         </div>
         <div class="menu">
             <ul>
+              <?php if(internauteEstConnecte()):// accés membre connecté NON ADMIN?>
                 <li>
                     <a href="<?= URL ?>index.php">Home</a>
                 </li>
@@ -26,36 +179,34 @@
                 <li>
                     <a href="<?= URL ?>website.php">Website</a>
                 </li>
-                <li>
-                    <a href="test.php">Test</a>
-                </li> 
-                <li>
-                    <a href="#contact">Work with us!</a>
-                </li>
-                
-         <?php if(internauteEstConnecte()):// accés membre connecté NON ADMIN?>
-          <li>
+            <li>
             <a href="<?= URL ?>profil.php">Profil</a>
           </li>
           <li>
-            <a href="<?= URL ?>connexion.php?action=deconnexion">Deconnexion</a>
+            <a href="<?= URL ?>?action=deconnexion">Deconnexion</a>
           </li>
-         </ul>
+
                 <?php else: ?>
-                    <div class="container">
-                    <div class="element">
-                      <ul>
-                 <li>
+                <li>
+                    <a href="<?= URL ?>index.php">Home</a>
+                </li>
+                <li>
+                    <a href="<?= URL ?>design.php">Design</a>
+                </li>
+                <li>
+                    <a href="<?= URL ?>website.php">Website</a>
+                </li>
+            <li>
             <a class="button">Inscription</a>
             <!-- <a href=nscription.php">Inscription</a> -->
           </li>
                  <li>
-            <a class="button-one">Connexion</a>
+            <a class="button-one"  name="connect">Connexion</a>
             <!-- <a href="connexion.php">Connexion</a> -->
           </li>
           </ul>
-                </div>
-                </div>
+               
+                <!-- </div> -->
                 <!-- <div class="pop-up-form">
                     <form action="" class="form">
                         <input type="text" name="first-name" id="" placeholder="Имя">
@@ -70,7 +221,7 @@
               
 <div class="pop-up-form">
 <form  class="form1" id="ajax-inscription" method="post">
-  <a href="?action=subscribe" class="close"><i class="fas fa-times"></i></a>
+  <a href="#" class="close"><i class="fas fa-times"></i></a>
   <img class="logo" alt="dribble-logo" src="<?= URL ?>images/logo.png"/>
   <p class="signin">Subscribe!</p>
   <p class="signin-text">Login with Twitter, Facebook,<br/> Google or:</p>
@@ -111,10 +262,19 @@
 
 <!-- CONNEXION  -->
 
-
+<?= $validate ?>
 <?= $error ?>
-<!-- <div class="pop-up-form-one">
-<form  class="col-md-4 offset-md-4 text-center" method="post" action="">
+ <div class="pop-up-form-one">
+<form  class="form" method="post" action="">
+  <a href="#" class="close"><i class="fas fa-times"></i></a>
+    <img class="logo" alt="dribble-logo" src="<?= URL ?>images/logo.png"/>
+  <p class="signin">Subscribe!</p>
+  <p class="signin-text">Login with Twitter, Facebook,<br/> Google or:</p>
+  <div class="signin-row">
+    <i class="ic1 fab fa-twitter"></i>
+    <i class="ic2 fab fa-facebook"></i>
+    <i class="ic3 fab fa-google"></i>
+  </div>
   <div class="form-row">
     <div class="form-group col-md-12">
       <label for="email_pseudo">Email ou Pseudo</label>
@@ -128,13 +288,11 @@
   <button type="submit" class="col-md-12 btn btn-dark" name="form">Sign in</button>
          </div>
 </form>
-    <a href="#" class="close">Close</a>
      </div>
-     <div class="overlay"></div>  -->
+     <div class="overlay"></div>  
 
          <!-- <a href="#" class="close">Close</a> -->
-     </div>
-     <div class="overlay"></div> 
+ 
         
 
 
@@ -142,11 +300,11 @@
       <?php endif; ?>
       <?php if(internauteEstConnecteEtEstAdmin()): ?>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Back office</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Back office</a>
             <div class="dropdown-menu" aria-labelledby="dropdown04">
-              <a class="dropdown-item" href="<?= URL ?>admin/gestion_boutique.php">Gestion Boutique</a>
-              <a class="dropdown-item" href="<?= URL ?>admin/gestion_commande.php">Another Commande</a>
-              <a class="dropdown-item" href="<?= URL ?>admin/gestion_membre.php">Something Membre</a>
+              <a class="dropdown-item" href="<?= URL ?>admin/gestion_projects.php">Gestion de Projects</a>
+              <a class="dropdown-item" href="<?= URL ?>admin/gestion_membre.php">Gestion de Membre</a>
+              <a class="dropdown-item" href="<?= URL ?>admin/gestion_messages.php">Gestion de Messages</a>
             </div>
           </li>
          </ul>
@@ -154,4 +312,4 @@
          </div>
          
         </nav>
-  
+ 

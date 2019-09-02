@@ -33,9 +33,7 @@ if($_POST){
         foreach($_POST as $indice => $valeur){
             $_POST[$indice] = htmlspecialchars($valeur, ENT_QUOTES);
         }
-        // je créé un nouvel objet de ma classe Contact
         $contact = new Contact();
-        // j'utilise la methode contactAction() de ma class Contact.php
         $contact->contactAction($nom, $phone, $email, $message);
 
         unset($nom);
@@ -87,47 +85,10 @@ if($_POST){
                     <path d="M 10.45,74.41 C 39.4,110.8 72.59,67.27 95.98,68.68 122.3,70.35 131.5,101.4 154.7,99.69 177.9,98.03 200.5,79.26 198.1,47.17 195.9,15.27 174.6,-0.3279 151.8,0.9941 128.6,2.581 126,16.86 107,22.76 88.26,28.67 88.87,12.36 60.37,1.787 31.79,-8.877 -18.61,37.92 10.45,74.41 Z"
                     />
                 </svg>
-                <!-- <a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/FolderPreviewIdeas/" title="Previous Demo">
-                    <svg class="icon icon--arrow">
-                        <use xlink:href="#icon-arrow"></use>
-                    </svg>
-                </a>
-                <a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=31190" title="Back to the article">
-                    <svg class="icon icon--drop">
-                        <use xlink:href="#icon-drop"></use>
-                    </svg>
-                </a>
-            </div>
-            <h1 class="codrops-header__title">Morphing Background Shapes</h1> -->
         </header>
     </div>
             <main>
-        <!-- <nav class="demos">
-            <a class="demo" href="index.html">
-                <svg class="decoshape" preserveAspectRatio="none">
-                    <use xlink:href="#shape-demo"></use>
-                </svg>Demo 1</a>
-            <a class="demo demo--current" href="index2.html">
-                <svg class="decoshape">
-                    <use xlink:href="#shape-demo"></use>
-                </svg>Demo 2</a>
-            <a class="demo" href="index3.html">
-                <svg class="decoshape">
-                    <use xlink:href="#shape-demo"></use>
-                </svg>Demo 3</a>
-        </nav>
-         <a class="pater" href="http://synd.co/2pHxJny">
-                <svg class="pater__deco" width="300" height="240" viewBox="0 0 1000 800">
-                    <path d="M27.4,171.8C73,42.9,128.6,1,128.6,1s0,0,0,0c58.5,0,368.3,0.3,873.2,0.8c38.5,211,42.1,373.5,38.9,476.7c-2.5,80.3-10.6,174.9-76.7,247.8c-15.1,16.6-37.4,41.2-72.8,53.9c-92.4,33.1-173-50.8-283.9-99.4c-224.3-98.4-334.9,51.4-472.2-45.6C-6.3,535.2-14.5,290.6,27.4,171.8z"
-                    />
-                </svg>
-                <img class="pater__img" src="sponsor/hellosignapi.svg" alt="HelloSign API" />
-                <h4 class="pater__title">2x Faster Integration Time</h4>
-                <p class="pater__desc">Embed contracts and a
-                    
-                    greements into your site or app with a few lines of code.</p>
-            </a>   -->
-        <!-- <div class="deco deco--title">2017 Westland Exhibition Center</div> -->
+
   
     <div class="content-wrap">
             <!-- <img class="content__img" src="img/3.jpg" alt="Some image" /> -->
@@ -162,7 +123,7 @@ if($_POST){
      
     <div class="content-wrap">
         <div class="content content--layout content--layout-2">
-            <a class="what_we_do_link what_we_do" href="#">
+            <a class="what_we_do_link what_we_do" href="<?= URL ?>design.php">
                 <div class="what_we_do_box">
                     <div class="pattern_background">
                         <p>Learn more</p>
@@ -185,7 +146,7 @@ if($_POST){
                         <p class="content__link">Upside down? Sometimes it's the best solution for the complex problems!</p>
                         </div>
 </a> -->
-  <a class="what_we_do_link what_we_do" href="#">
+  <a class="what_we_do_link what_we_do" href="<?= URL ?>website.php">
                 <div class="what_we_do_box">
                     <div class="pattern_background">
                         <p>Learn more</p>
@@ -352,94 +313,18 @@ if($_POST){
 
     <div class="content-wrap">
         <div class="content content--layout content--layout-1">
-
-    
-            <!-- Zone contact-->
-            
-                <!-- formulário de contacto utilizando html e css -->
-            
-                <!-- <div class="contact_form" id="contact">
-            
-                    <div class="formulario">
-                        <h1>Contact us</h1>
-            
-            
-                        <form action="submeter-formulario.php" method="post">
-            
-            
-                            <p>
-                                <label for="nome" class="colocar_nome">Your name
-                                    <span class="obrigatorio">*</span>
-                                </label>
-                                <input type="text" name="introduzir_nome" id="nome" required="obrigatorio" placeholder="O teu nome">
-                            </p>
-            
-                            <p>
-                                <label for="email" class="colocar_email">Email
-                                    <span class="obrigatorio">*</span>
-                                </label>
-                                <input type="email" name="introduzir_email" id="email" required="obrigatorio" placeholder="O teu email">
-                            </p>
-            
-                            <p>
-                                <label for="telefone" class="colocar_telefone">Telephone
-                                </label>
-                                <input type="tel" name="introduzir_telefone" id="telefone" placeholder="O teu telefone">
-                            </p>
-                            <p>
-                                <label for="mensagem" class="colocar_mensagem">Message
-                                    <span class="obrigatorio">*</span>
-                                </label>
-                                <textarea name="introduzir_mensagem" class="texto_mensagem" id="mensagem" required="obrigatorio" placeholder="Write us few lines about your future project"></textarea>
-                            </p>
-            
-                            <button type="submit" name="enviar_formulario" id="enviar">
-                                <p>Send us!</p>
-                            </button>
-            
-                            <p class="aviso">
-                                <span class="obrigatorio"> * </span>Fields that have to be filled in.
-                            </p>
-            
-                        </form>
-                    </div>
-                </div> -->
-            
-
-
             <!-- <h3 class="content__title my_attaches">frank</h3> -->
         </div>
     </div>
-    <!-- </section> -->
-    <!-- Related demos -->
+
     <section class="content content--related">
-        <!-- <p class="content__info">If you enjoyed this demo you might also like:</p> -->
 
         <a class="content__related-item" href="https://tympanus.net/Development/ElasticSVGElements/">
         </a>
         <a class="content__related-item" href="">
         </a>
     </section>
-                <!-- MORPHY END -->
-
-<!-- menu and logo -->
-
-        <!-- <section class="what_we_do">
-            <a class="what_we_do_link" href="#">
-            <div class="what_we_do_box">
-                <div class="pattern_background">
-                    <p>Learn more</p>
-                    <img src="http://wpdemo2.oceanthemes.net/chiron/wp-content/uploads/sites/8/2018/12/1-3.jpg" alt="websites">
-        <section>
-            <a class="btn btn-line-outline btn-lg">
-                <span class="inner" data-hover="Hover me">Hover me</span>
-            </a>
-        </section>
-                </div>
-            </div>
-            </a>
-        </section> -->
-    <!-- </main> -->
+              
 
 <?php
 require_once('include/footer.php');

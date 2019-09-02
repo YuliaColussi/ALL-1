@@ -3,8 +3,7 @@ require_once('../include/init.php');
 extract($_POST);
 extract($_GET);
 
-// S    i l'internaute n'est pas connecté est ne pas ADMIN, il n'a rien à fair ici
-//on le redirige vers le page connexion.php
+
 if(!internauteEstConnecteEtEstAdmin())
 {
     header("Location:" . URL . "index.php");
@@ -12,13 +11,11 @@ if(!internauteEstConnecteEtEstAdmin())
 
 // -----------------SUPPRESSION PROJECT
 
-// on entre dans le If seulement dans le cas ou l'on a cliqué  sur la bouton de suppression
 if(isset($_GET['action']) && $_GET['action'] == 'suppression')
 {
-  // Exo: requete de suppression / requete préparé
+
   $supp_proj = $bdd->prepare("DELETE FROM my_projects WHERE id_project = :id_project");
   $supp_proj->bindValue(':id_project', $id_project, PDO::PARAM_STR);
-  // if produit fait reference à $_GET['id_produit'] (extract)
   $supp_proj->execute();
 
   $_GET['action'] = 'affichage';
@@ -26,7 +23,6 @@ if(isset($_GET['action']) && $_GET['action'] == 'suppression')
   $validate .= "<div class='alert alert-success cold-md-6 offset-md-3 text-center'>Le project
   n <strong>$id_project</strong> a bien été supprimé !!</div>";
 
-  // echo 'suppression produit';
 }
 
 
@@ -39,24 +35,19 @@ if($_POST)
     if(isset($_GET['action']) && $_GET['action'] == 'modification')
       {
         $photo_bdd = $photo_actuelle;
-        // we check that we will stock not the same photo
-        
-        // si on souhaite conserver la meme photo en cas de modification, on affecte la valeur du champ photo 'hidden'
-        // c'est à dire l'URL de la photo selectionnée en BDD
       }
 
 
 
 
-    if(!empty($_FILES['photo']['titre'])) // on vérifie que l'indice 'name' dans la superglobale $_FILE n'est
-    // pas vide, cela veut direque l'on a bien uploader une photo
+    if(!empty($_FILES['photo']['titre'])) 
     {
         $nom_photo = $reference . '-' . $_FILES['photo']['titre'];
-        // on redéfinit le nom de la photo en concaténant le réference saisi dans lz formulaire avec le nom de la photo
+        
         echo $nom_photo . '<br>';
 
         $photo_bdd  = URL . "photo/$nom_photo";
-        // on définit l'URL de la photo, c'est ce que l'on conservera en BDD
+        
         echo $photo_bdd . '<br>';
 
         $photo_dossier = RACINE_SITE . "photo/$nom_photo";
@@ -66,17 +57,7 @@ if($_POST)
         copy($_FILES['photo']['tmp_name'] ,$photo_dossier);// copy() est une fonction prédéfinie qui permet de copier la photo dans le dossier photo.
         // Arguments: copy(nom_temporaire_photo, chemin de destination)
     }
-  //   // Exo: Réaliser la requete d'insertion permettant d'insérer un produit dans la table 'produit' (requete préparée)
-  //    if (isset($_POST["Name"])) {
-  //   //Вставляем данные, подставляя их в запрос
-  //   $sql = mysqli_query($bdd, "INSERT INTO `produit` (`reference`, `categorie`, 'titre' ,'description', 'couleur', 'taille', 'public', 'photo', 'prix', 'stock') VALUES (`$reference`, `$categorie`, '$titre' ,'$description', '$couleur', '$taille', '$public', '$photo', '$prix', '$stock'");
-  //   //Если вставка прошла успешно
-  //   if ($sql) {
-  //     echo '<p>Le produit est bien enregistée.</p>';
-  //   } else {
-  //     echo '<p>Il y a une erreur:' . mysqli_error($bdd) . '</p>';
-  //   }
-  // }
+
 
     if(isset($_GET['action']) && $_GET['action'] == 'ajout')
     {
@@ -93,31 +74,25 @@ if($_POST)
     }
 
 
-      if($_POST)//si on valide le formulaaire, on rentre dans la condition
+      if($_POST)
     {
         $data_insert = $bdd->prepare("INSERT INTO `my_projects` (categorie, titre , description, photo) VALUES 
         (:categorie, :titre , :description, :photo)");
           foreach($_POST as $key => $value){
-          if($key != 'photo_actuelle') // on ejecte le champs 'hidden' de la photo
+          if($key != 'photo_actuelle')
             {
             $data_insert->bindValue(":$key", $value, PDO::PARAM_STR);
             }
           }
           $data_insert->bindValue(":photo", $photo_bdd, PDO::PARAM_STR);
           $data_insert->execute();
-
-
-        // On utilise la superglobale $_POST pour alleer crocheter à chaque champs du formulaire afin de recuperer sa valeur
     }
 
 }
 
 
-require_once('../include/header.php');
+require_once('../include/header_admin.php');
 
-// echo '<pre>'; print_r($_POST); echo '</pre>';
-// $_FILES est une superglobale qiui permet de véhiculer les informations d'un fishier uploader
-// echo '<pre>'; print_r($_FILES); echo '</pre>';
 ?>
 
 <!-- LIENS PRODUIT -->
@@ -134,23 +109,19 @@ require_once('../include/header.php');
 
 
 <!-- AFFICHAGE PROJECTS -->
+
 <?php if(isset($_GET['action']) && $_GET['action'] == 'affichage'): ?>
 
 <?php echo $validate; ?>
 <hr>
 <h1 class="display-4 text-center">LISTES DE PROJECTS</h1><hr>
 
-<!-- Exo : réaliser le traitement permettant l'affichage des produits sous forme de tableau HTML -->
-
-
-<!-- what we need to learn by heart -->
 
 <?php
-$result= $bdd->query("SELECT * FROM my_projects"); // запрос на выборку
-$projects = $result->fetchAll(PDO::FETCH_ASSOC);// выводим данные
+$result= $bdd->query("SELECT * FROM my_projects");
+$projects = $result->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<!-- what we need to learn by heart -->
 
 <table class="table table1 table-bordered text-center"><tr>
 <?php foreach($projects[0] as $key => $value):?>
@@ -193,29 +164,6 @@ endif; ?>
 <br>
 
 
-
-
-<!-- echo '<table class="table table-bordered text-center"><tr>';
-echo '<th>Poids</th>';
-foreach($tab_fruits as $fruits)
-{
-    echo "<th>$fruits</th>";
-}
-echo '</tr>';
-foreach($tab_poids as $poids)
-{
-    echo '<tr>';
-    echo "<th>$poids</th>";
-    foreach($tab_fruits as $fruit)
-    {
-        echo '<td>' . calcul($fruit, $poids) . '</td>';
-    }
-    echo '</tr>';
-}
-echo '</table>'; -->
-
-<!-- Realiser un formulaire permettent d'insérer un prosuit dans la table 'produit' (sauf le chambre "id_produit") -->
-
 <?php if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == 'modification')): ?>
 
 
@@ -244,7 +192,6 @@ $photo = (isset($produit_actuel['photo'])) ? $produit_actuel['photo'] : '';
 ?>
 
 <form  class="col-md-4 offset-md-4 text-center form1" method="post" action="" enctype="multipart/form-data">
-<!--  enctype : obligatoire en PHP pour recolter les informations d'1 fishier uploadé-->
   <div class="form-row">
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -263,12 +210,10 @@ $photo = (isset($produit_actuel['photo'])) ? $produit_actuel['photo'] : '';
     <label for="photo">Photo</label>
     <input type="file" class="form-control" id="photo" name="photo">
     </div>
-    <!-- if we have a 'file' than we cant give it a value so we do that stuff below-->
     <?php if(!empty($photo)): ?>
     <em>Vous pouvez uploader une nouvelle photo si vous souhaitez la changer</em><br>
     <img height="400" src="<?= $photo ?>" alt="<?= $titre ?>" class="card-img-top">
     <?php endif; ?>
-    <!-- allows to get a photo -->
     <input type="hidden" id="photo_actuelle" name="photo_actuelle" value="<?= $photo ?>">
 
   <button type="submit" class="col-md-12 btn btn-dark"><?= strtoupper($action) ?></button>

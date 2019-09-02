@@ -1,7 +1,7 @@
 <?php
 require_once('include/init.php');
 
-if(!internauteEstConnecte())// Si l'internaute NEST PAS (!) connecté,il n'a rien à faire sur la page profil, on le redirige vers la page connexion.
+if(!internauteEstConnecte())
 {
     header("Location: index.php");
 }
@@ -9,55 +9,45 @@ if(!internauteEstConnecte())// Si l'internaute NEST PAS (!) connecté,il n'a rie
 
 require_once('include/header.php');
 
-echo '<pre>'; echo print_r($_SESSION); echo '</pre>' 
+
 ?>
 
+<h2 class="display-4 text-center">Bonjour<strong class="text-info"><?=$_SESSION['member_form']['pseudo']; ?></strong></h2><hr>
 
-<!-- Exo: afficher le pseudo de l'internaute en passont par le fishier SESSION -->
-<h1 class="display-4 text-center">Bonjour <strong class="text-info"><?=$_SESSION['member_form']['pseudo']; ?></strong></h1><hr>
-
-
-<!-- Réaliser une page profil en affichante toute les données de l'internaute contenu dans la session sauf l'id_membre et le statut-->
-
-<?php 
-
-// if($_SESSION['membre'] != 'id_membre' && $_SESSION['membre'] != 'statut')
-// {
-    
-    //     foreach($_SESSION as $key => $tab)
-    //     {
-        //         foreach($tab as $key2 => $value)
-        //         {
-            //             echo '<div class="col-md-4 offset-md-4 alert alert-success text-dark mx-auto text-center">' . $key2 . '=>' . $value . '<br></div>';
-            //         }
-            //         echo '</div>';
-            //     }
-            //     echo '<hr>';
-            // }
-            
-            ?>
-
+<div class="container">
 <table class="table table-dark">
-<!-- les ":" et endif / endforeach remplace les accolades {} -->
 <?php foreach($_SESSION['member_form'] as $key => $value): ?>
 <?php if($key != 'id_membre' && $key != 'statut'): ?>
-<th><?= $key ?></th><td><?= $value ?></td>
+<th>
+<?= $key ?>
+</th>
+<td>
+<?= $value ?>
+</td>
 <?php endif; ?>
 </tr>
 <?php endforeach; ?>
 
 </table>
 <?php
-// si le statut dans la session, donc dans la bdd est à 1, cela veut dire que l'on est administateur du site, sinon 
+
 if($_SESSION['member_form']['statut'] == 1)
     $statut = 'ADMIN';
-else {// sinon on tombe dans le else li le statut est agale à 0, donc ca vous dire que voue etes juste la membte normal
+else {
     $statut = 'MEMBRE'; 
 }
+
 ?>
-<h3 class="text-center">Vous etes <strong class="text-info"><?= $statut ?></strong> du site</h3><br><br><br>
 
+<h2 class="text-center">Vous etes <strong class="text-info"><?= $statut ?></strong> du site</h2><br><br><br>
 
+<ul class="col-md-6 offset-md-3 list-group mt-2 text-center">
+            <li class="list-group-item"><a class="alert-link text-dark" href="<?= URL ?>admin/gestion_projects.php">Gestion de Projects</a></li>
+            <li class="list-group-item"><a class="alert-link text-dark" href="<?= URL ?>admin/gestion_membre.php">Gestion de Membre</a></li>
+            <li class="list-group-item"><a class="alert-link text-dark" href="<?= URL ?>admin/gestion_messages.php">Gestion de Messages</a></li>
+
+</ul>
+</div>
 
 <?php
 require_once('include/footer.php');

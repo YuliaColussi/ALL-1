@@ -7,6 +7,40 @@ extract($_GET);
 
 
 <body class="loading">
+	         <div class="content-wrap">
+                <!-- <div class="content content--layout content--layout-1"> -->
+					<div class="container_scroll">
+					   <p>I am a </p>
+    <div class="scroller">
+        <div class="inner">
+            <span>creator.</span>
+            <span>developer.</span>
+            <span>human.</span>
+        </div>
+	</div> 
+							</div>
+							<div class="bg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="3070" height="3035" viewBox="560.4 -110.4 670 235" enable-background="new 560.4 -110.4 670 235">
+
+        <path class="wind" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+            stroke-dasharray="50" stroke-dashoffset="50" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M597.8-86.2h21.7m185.4-3.4h13.5m364.1 25.6h13.5m-225.5-33.8h21.7m35.8 65.8h8.1m-277.8 72h21.7"
+            fill="none" />
+        <g stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+
+            <path class="path-delay--4" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-dasharray="300" stroke-dashoffset="300" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
+                d="M905.4-36.3v20.3l23.1 21.8-23.1 21.8v20.3l44.6-42.1zM888.2 27.6l-23.1-21.8 23.1-21.8v-20.3l-44.6 42.1 44.6 42.1z"
+            />
+        </g>
+
+        <g class="path-delay--3" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+            stroke-dasharray="500" stroke-dashoffset="500" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            <path d="M896.8-73.3c-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1c43.7 0 79.1-35.4 79.1-79.1s-35.4-79.1-79.1-79.1zM896.8 70.7c-35.8 0-64.9-29.1-64.9-64.9s29.1-64.9 64.9-64.9c35.8 0 64.9 29.1 64.9 64.9s-29.1 64.9-64.9 64.9z"
+            />
+        </g>
+        </svg>
+		</div>
+							</div>
     <!-- MORPHY START -->
     <!-- <svg class="hidden">
         <symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -32,34 +66,35 @@ extract($_GET);
             />
         </svg>
     </div> -->
-    <div class="content content--fixed">
+    <!-- <div class="content content--fixed">
         <header class="codrops-header">
             <div class="codrops-links">
                 <svg class="decoshape" viewBox="0 0 200 100" width="100%" height="100%" preserveAspectRatio="none">
                     <path d="M 10.45,74.41 C 39.4,110.8 72.59,67.27 95.98,68.68 122.3,70.35 131.5,101.4 154.7,99.69 177.9,98.03 200.5,79.26 198.1,47.17 195.9,15.27 174.6,-0.3279 151.8,0.9941 128.6,2.581 126,16.86 107,22.76 88.26,28.67 88.87,12.36 60.37,1.787 31.79,-8.877 -18.61,37.92 10.45,74.41 Z"
                     />
-                </svg>
+				</svg>
+</div>
         </header>
         <!-- <main> -->
          
-            </div>
+            <!-- </div> --> 
             <div class="content-wrap">
 
 <div class="container_scroll">
-    <p>I am a</p>
+    <!-- <p>I am a</p>
     <div class="scroller">
         <div class="inner">
             <span>creator.</span>
             <span>developer.</span>
             <span>human.</span>
         </div>
-    </div>
+    </div> -->
 </div>
+            <div class="content-wrap">
 
 
 
-
-<div class="bg">
+<!-- <div class="bg">
     <svg xmlns="http://www.w3.org/2000/svg" width="3070" height="3035" viewBox="560.4 -110.4 670 235" enable-background="new 560.4 -110.4 670 235">
 
         <path class="wind" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
@@ -79,8 +114,8 @@ extract($_GET);
             />
         </g>
         </svg>
-        </div>
-</div>
+        </div> -->
+<!-- </div> -->
 
         <section class="loading__gallery">
  <div class="loading__gallery__main">  
@@ -215,6 +250,21 @@ extract($_GET);
             
 
 </section>
+
+            <div class="content-wrap">
+
+<div class="container_scroll">
+    <!-- <p>I am a</p>
+    <div class="scroller">
+        <div class="inner">
+            <span>creator.</span>
+            <span>developer.</span>
+            <span>human.</span>
+        </div>
+    </div> -->
+</div>
+</div>
+
             <div class="content-wrap">
                 <div class="content content--layout content--layout-2">
             <section id="adaptive">
@@ -807,7 +857,23 @@ extract($_GET);
                 </div>
                 </section>
                 </div>
-                </div>
+				</div>
+				
+
+
+				            <div class="content-wrap">
+
+<div class="container_scroll">
+    <!-- <p>I am a</p>
+    <div class="scroller">
+        <div class="inner">
+            <span>creator.</span>
+            <span>developer.</span>
+            <span>human.</span>
+        </div>
+    </div> -->
+</div>
+							</div>
             <!-- </section> -->
 
             <!-- <div class="content-wrap"> -->
@@ -842,6 +908,7 @@ extract($_GET);
                                 </div>
                             </div>
                         </div>
+                        
                     </section>
              
 
@@ -853,12 +920,43 @@ extract($_GET);
                     
                     
                     <!-- <h3 class="content__title my_attaches ">revert</h3> -->
-                </div>
-            </div> 
+                <!-- </div>
+            </div>  -->
            
-            <div class="content-wrap">
-                <div class="content content--layout content--layout-1">
-                    <!-- <h3 class="content__title my_attaches">frank</h3> -->
+            <!-- <div class="content-wrap">
+                <!-- <div class="content content--layout content--layout-1"> -->
+					<!-- <div class="container_scroll">
+					   <p>I am a </p>
+    <div class="scroller">
+        <div class="inner">
+            <span>creator.</span>
+            <span>developer.</span>
+            <span>human.</span>
+        </div>
+	</div> 
+							</div>
+							<div class="bg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="3070" height="3035" viewBox="560.4 -110.4 670 235" enable-background="new 560.4 -110.4 670 235">
+
+        <path class="wind" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+            stroke-dasharray="50" stroke-dashoffset="50" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M597.8-86.2h21.7m185.4-3.4h13.5m364.1 25.6h13.5m-225.5-33.8h21.7m35.8 65.8h8.1m-277.8 72h21.7"
+            fill="none" />
+        <g stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+
+            <path class="path-delay--4" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+                stroke-dasharray="300" stroke-dashoffset="300" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
+                d="M905.4-36.3v20.3l23.1 21.8-23.1 21.8v20.3l44.6-42.1zM888.2 27.6l-23.1-21.8 23.1-21.8v-20.3l-44.6 42.1 44.6 42.1z"
+            />
+        </g>
+
+        <g class="path-delay--3" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
+            stroke-dasharray="500" stroke-dashoffset="500" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            <path d="M896.8-73.3c-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1c43.7 0 79.1-35.4 79.1-79.1s-35.4-79.1-79.1-79.1zM896.8 70.7c-35.8 0-64.9-29.1-64.9-64.9s29.1-64.9 64.9-64.9c35.8 0 64.9 29.1 64.9 64.9s-29.1 64.9-64.9 64.9z"
+            />
+        </g>
+        </svg>
+		</div> -->
+							<!-- </div> --> 
                 <!-- </div>
             </div> -->
             <!-- </div> -->

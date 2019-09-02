@@ -818,8 +818,7 @@ h2 {
     padding: 5% 5% 0% 5%;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 10%;
-    margin-top: 20%;
+    margin-left: 5%;
     width: 70%;
 
 }
@@ -830,8 +829,8 @@ h2 {
 .box_right_box {
     margin-bottom: 5%;
     color: white;
-    width: 40%;
-    margin-right: 10%;
+    width: 45%;
+    /* margin-right: 10%; */
 }
 
 .box_right_box p {
@@ -993,7 +992,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-	height: 20vh;
+	height: 6vh;
 	padding-left: 0;
 }
 
@@ -1005,6 +1004,10 @@ h6 {
 	color: white;
     transition: all ease-in-out 150ms;
     text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.7);
+}
+
+.social-wrapper i {
+    padding-left: 0px;
 }
 
 .social-wrapper i:hover {
@@ -1147,6 +1150,12 @@ h3{
 	font-size: 14px; 
 	padding-bottom: 30px;
 	color: #0e0e0e;   
+}
+
+.box_right_box h3{
+	font-size: 2.5rem; 
+	padding-bottom: 30px;
+	color: white;   
 }
 
 
