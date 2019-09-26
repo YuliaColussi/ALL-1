@@ -34,7 +34,7 @@ extract($_GET);
         </g>
 
         <g class="path-delay--3" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-            stroke-dasharray="500" stroke-dashoffset="500" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            stroke-dasharray="500" stroke-dashoffset="500" fill="none">
             <path d="M896.8-73.3c-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1c43.7 0 79.1-35.4 79.1-79.1s-35.4-79.1-79.1-79.1zM896.8 70.7c-35.8 0-64.9-29.1-64.9-64.9s29.1-64.9 64.9-64.9c35.8 0 64.9 29.1 64.9 64.9s-29.1 64.9-64.9 64.9z"
             />
         </g>
@@ -78,9 +78,9 @@ extract($_GET);
         <!-- <main> -->
          
             <!-- </div> --> 
-            <div class="content-wrap">
+            <!-- <div class="content-wrap">
 
-<div class="container_scroll">
+<div class="container_scroll"> -->
     <!-- <p>I am a</p>
     <div class="scroller">
         <div class="inner">
@@ -91,31 +91,6 @@ extract($_GET);
     </div> -->
 </div>
             <div class="content-wrap">
-
-
-
-<!-- <div class="bg">
-    <svg xmlns="http://www.w3.org/2000/svg" width="3070" height="3035" viewBox="560.4 -110.4 670 235" enable-background="new 560.4 -110.4 670 235">
-
-        <path class="wind" stroke="#4CADC1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-            stroke-dasharray="50" stroke-dashoffset="50" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M597.8-86.2h21.7m185.4-3.4h13.5m364.1 25.6h13.5m-225.5-33.8h21.7m35.8 65.8h8.1m-277.8 72h21.7"
-            fill="none" />
-        <g stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
-
-            <path class="path-delay--4" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-                stroke-dasharray="300" stroke-dashoffset="300" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10"
-                d="M905.4-36.3v20.3l23.1 21.8-23.1 21.8v20.3l44.6-42.1zM888.2 27.6l-23.1-21.8 23.1-21.8v-20.3l-44.6 42.1 44.6 42.1z"
-            />
-        </g>
-
-        <g class="path-delay--3" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10"
-            stroke-dasharray="500" stroke-dashoffset="500" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
-            <path d="M896.8-73.3c-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1c43.7 0 79.1-35.4 79.1-79.1s-35.4-79.1-79.1-79.1zM896.8 70.7c-35.8 0-64.9-29.1-64.9-64.9s29.1-64.9 64.9-64.9c35.8 0 64.9 29.1 64.9 64.9s-29.1 64.9-64.9 64.9z"
-            />
-        </g>
-        </svg>
-        </div> -->
-<!-- </div> -->
 
         <section class="loading__gallery">
  <div class="loading__gallery__main">  
@@ -201,6 +176,7 @@ extract($_GET);
 <div class="revealer">
    <div class="revealer__inner"></div>
 </div>
+
 <div class="grid grid--slideshow">
    <figure class="grid__item grid__item--slide">
        <span class="number">01</span>
@@ -245,15 +221,16 @@ extract($_GET);
    </div>
 </div>
 
-
-</div>    
+</div>
+  
             
 
 </section>
+</div>
 
-            <div class="content-wrap">
+ <!-- <div class="content-wrap">
 
-<div class="container_scroll">
+<div class="container_scroll">  -->
     <!-- <p>I am a</p>
     <div class="scroller">
         <div class="inner">
@@ -261,12 +238,12 @@ extract($_GET);
             <span>developer.</span>
             <span>human.</span>
         </div>
-    </div> -->
-</div>
-</div>
+    <!-- </div> -->
+<!-- </div>
+</div>  -->
 
-            <div class="content-wrap">
-                <div class="content content--layout content--layout-2">
+            <!-- <div class="content-wrap"> -->
+                <!-- <div class="content content--layout content--layout-2"> -->
             <section id="adaptive">
                 <div class="adaptive_left">
                     <h3>We create the multicross adaptive websites that look great from all the devices</h3>
@@ -856,24 +833,16 @@ extract($_GET);
                     <!-- FOURTH'S OPTION  -->
                 </div>
                 </section>
-                </div>
-				</div>
+                <!-- </div> -->
+				<!-- </div> -->
 				
 
 
-				            <div class="content-wrap">
+<div class="content-wrap">
 
 <div class="container_scroll">
-    <!-- <p>I am a</p>
-    <div class="scroller">
-        <div class="inner">
-            <span>creator.</span>
-            <span>developer.</span>
-            <span>human.</span>
-        </div>
-    </div> -->
 </div>
-							</div>
+	</div>
             <!-- </section> -->
 
             <!-- <div class="content-wrap"> -->

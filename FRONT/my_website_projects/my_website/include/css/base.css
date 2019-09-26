@@ -25,7 +25,7 @@ html, body {
 
 body {
 	--color-text: #5d5d5d;
-	--color-bg: #e6e6ea;
+	--color-bg: #282faf;
 	--color-link: #838288;
 	--color-link-hover: #000;
 	--color-number: #000;
@@ -44,7 +44,7 @@ body {
 
 .dark-mode {
 	--color-text: #424242;
-	--color-bg: #101010;
+	--color-bg: #282faf;
 	--color-link: #bb3a3a;
 	--color-link-hover: #fff;
 	--color-number: #484848;
@@ -1101,6 +1101,8 @@ li a:hover {
 }
 
 
+
+
 .button, .button-one:focus {
 	outline: none;
 } 
@@ -1608,9 +1610,54 @@ h2 {
     transition: 8s linear;
 }
 
-/* .invisiable {
-	display: none;
-} */
+
+/* ADMIN PARTY */
+
+h6 {
+	color: white;
+	text-align: center !important;
+	font-size: 3rem !important;
+}
+
+.edit .fa-edit {
+	color: #d4edda;
+	font-size: 3rem;
+}
+
+.suppression .fa-trash-alt {
+	color: #ea4d58;
+	font-size: 3rem;
+}
+
+.table1 tr {
+	font-size: 1.6rem;
+}
+
+.form1 label{
+	color: white;
+	font-size: 2rem;
+}
+
+.form1 button{
+	font-size: 2rem;
+	background-color: #ea4d58;
+}
+
+.profil li a {
+	font-size: 2rem;
+}
+
+.profil li{
+	background-color: #212529;
+	color: white;
+}
+
+.profil li a:hover{
+	box-shadow: none;
+}
+
+/* ADMIN END */
+
 
 .content-wrap .content--layout-2 h2:hover {
     /* -webkit-text-stroke: 2.2rem #000; */
@@ -3048,7 +3095,7 @@ a:focus {
 	display: block; 
    font-family: 'Poppins', sans-serif;
    font-weight: 700;
-   color:  #e73c4e; 
+   color:  #ea4d58; 
 }
 
 .container_scroll .scroller .inner {
@@ -3125,3 +3172,23 @@ a:focus {
 /* #Brewingsection {
 	margin-top: 2000px;
 } */
+
+
+
+div .dropdown-menu.show {
+	background-color: #282faf !important;
+}
+
+div .dropdown-menu.show a:hover {
+	background-color: #282faf !important;
+	color: white;
+	text-shadow: none;
+}
+
+
+.back_office li {
+	 	text-shadow: none !important;
+}
+
+
+/* finish */

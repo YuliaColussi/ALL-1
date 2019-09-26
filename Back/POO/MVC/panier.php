@@ -3,7 +3,8 @@
 session_start();
 if(isset($_GET['op']) && $_GET['op'] == 'conducteur')
 {
-    unset($_SESSION['vehicule']) && unset($_SESSION['association']);
+    unset($_SESSION['vehicule']);
+    unset($_SESSION['association']);
 }
 
 if(isset($_GET['action']) && $_GET['action'] == 'association' || isset($_SESSION['vehicule']))

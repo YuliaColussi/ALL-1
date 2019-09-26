@@ -31,207 +31,61 @@
    
    
    <script src="https://kit.fontawesome.com/1456345ba9.js"></script>
-    <script src="js/snap.svg-min.js"></script>
+    <!-- <script src="js/snap.svg-min.js"></script> -->
     <script src="js/anime.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/scrollMonitor.js"></script>
-    <script src="js/design_verly.js"></script>
+    <!-- <script src="js/design_verly.js"></script> -->
     <script src="js/charming.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/gh/anuraghazra/Verly.js@v1.3.0/dist/verly.bundle.js"></script> -->
-    <script href="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script>
+    <!-- <script href="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script> -->
     <script src="js/demo.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53257/jquery.superscrollorama.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.maskedinput.js"></script> -->
+    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53257/jquery.superscrollorama.js"></script> -->
 
     <!-- BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- END BOOTSTRAP -->
     
 
     <!-- CUSTOMED SCRIPTS -->
-     <!-- <script type="text/javascript">  -->
-
-<!-- //     POP UP FORM
-//   function validateEmail(email) { 
-//     var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return reg.test(email);
-//   }
-
-//   $(document).ready(function() {
-//     $(".modalbox").fancybox();
-//     $("#contact").submit(function() { return false; });
-//     $("#send").on("click", function(){
-//       var emailval  = $("#email").val();
-//       var namevl  = $("#name").val();
-//       var phonevl  = $("#phone").val();
-//       var msgval    = $("#msg").val();
-//       var msglen    = msgval.length;
-//       var mailvalid = validateEmail(emailval);
-
-//       if(mailvalid == false) {
-//         $("#email").addClass("error");
-//       }
-//       else if(mailvalid == true){
-//         $("#email").removeClass("error");
-//       }
-//   if(mailvalid == false) {
-//         $("#name").addClass("error");
-//       }
-//       else if(mailvalid == true){
-//         $("#name").removeClass("error");
-//       }
-//       if(mailvalid == false) {
-//         $("#phone").addClass("error");
-//       }
-//       else if(mailvalid == true){
-//         $("#phone").removeClass("error");
-//       }
-//       if(msglen < 4) {
-//         $("#msg").addClass("error");
-//       }
-//       else if(msglen >= 4){
-//         $("#msg").removeClass("error");
-//       }
-      
-//       if(mailvalid == true && msglen >= 4) {
-//         // если обе проверки пройдены
-//         // сначала мы скрываем кнопку отправки
-//         $("#send").replaceWith("<em>отправка...</em>");
-//         $.ajax({
-//           type: 'POST',
-//           url: 'sendmessage.php',
-//           data: $("#contact").serialize(),
-//           success: function(data) {
-//             if(data == "true") {
-//               $("#contact").fadeOut("fast", function(){
-//                 $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
-//                 setTimeout("$.fancybox.close()", 1000);
-//               });
-//             }
-//           }
-//         });
-//       }
-//     });
-//   }); -->
-
-    <!-- AJAX -->
-
-    <!-- <script>
-    
-    $(function() {
-    // Получаем данные формы.
-    var form = $('#ajax-inscription');
-
-    // Получаем сообщения из div
-    var formMessages = $('#form-messages');
-
-    $(form).submit(function(event) {
-    // Блокируем отправку данных формы в браузере.
-    event.preventDefault();
-
-    var formData = $(form).serialize();
-
-    $.ajax({
-    type: 'POST',
-    url: $(form).attr('action'),
-    data: formData
-    });
-
-    .done(function(response) {
-    // Удостовериваемся в том, что div formMessages содержит класс 'success'.
-    $(formMessages).removeClass('error');
-    $(formMessages).addClass('success');
-
-    // Задаем текст сообщения.
-    $(formMessages).text(response);
-
-    // Очищаем форму.
-    $('#name').val('');
-    $('#email').val('');
-    $('#message').val('');
-})
-
-.fail(function(data) {
-    // Удостовериваемся, что div formMessages содержит класс 'error'.
-    $(formMessages).removeClass('success');
-    $(formMessages).addClass('error');
-
-    // Устанавливаем текст сообщения.
-if (data.responseText !== '') {
-        $(formMessages).text(data.responseText);
-    } else {
-$(formMessages).text('Oops! An error occured and your message could not besent.');
-    }
 
 
-    // TODO: Здесь будет располагаться остальной код...
-    });
-    
-    </script> -->
+<!-- AJAX FORM -->
+    <script type="text/javascript">
 
-<!-- JUMPING WORDS -->
+jQuery(document).ready(function($) {
+ 
+$(".ajax-contact-form").submit(function() {
+var str = $(this).serialize();
+ 
+$.ajax({
+type: "POST",
+url: "http://creal-web/action_ajax_form.php",
+data: str,
+success: function(msg) {
+if(msg == 'OK') {
+result = '<p>Votre message a été bien reçu! Et on va vous contacter bietot!</p>';
+$(".fields").hide();
+} else {
+result = msg;
+}
+$('.note').html(result);
+}
+});
+return false;
+});
+});
 
-<!-- <script>
+</script>
 
-    function debounce(func, wait = 10, immediate = true) {
-      let timeout;
-      return function() {
-        let context = this, args = arguments;
-        let later = function() {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        let callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-      };
-    };
-    let scrollPos = 0;
-    const nav = document.querySelector('.site-nav');
-    function checkPosition() {
-      let windowY = window.scrollY;
-      if (windowY < scrollPos) { -->
-        <!-- // Scrolling UP
-        nav.classList.add('is-visible');
-        nav.classList.remove('is-hidden');
-      } else {
-        // Scrolling DOWN
-        nav.classList.add('is-hidden');
-        nav.classList.remove('is-visible');
-      }
-      scrollPos = windowY;
-    }
-    // window.addEventListener('scroll', checkPosition);
-//     window.addEventListener('scroll', debounce(checkPosition));
-//   </script> -->
-
-<!-- // :!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! appearance on scroll -->
-
-<!-- JUMPING WORDS END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- AJAX END -->
 
     <script type="text/javascript">
     $('.example-1').tilt({

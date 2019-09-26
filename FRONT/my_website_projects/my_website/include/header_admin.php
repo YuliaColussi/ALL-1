@@ -1,6 +1,6 @@
 
     <?php
-    require_once("../include/init.php");
+    require_once("init.php");
     extract($_POST);
 
     
@@ -68,7 +68,7 @@
         $validate .="<div id='result_form' class='col-md-6 offset-md-3 alert alert-success text-center text-dark'>Félicitations !! Vous etes inscrit sur le site . Vous pouvez dés a present vous connecter!!</div>";
      }
 
-if($_POST)
+if($_POST['form'] )
      {
          $verif_pseudo_email = $bdd->prepare("SELECT * FROM member_form WHERE pseudo = :pseudo OR email = :email");
          $verif_pseudo_email->bindValue(':pseudo', $email_pseudo,  PDO::PARAM_STR);
@@ -192,7 +192,7 @@ foreach($membre as $key => $value)
                     <a href="<?= URL ?>design.php">Design</a>
                 </li>
                 <li>
-                    <a href="<?= URL ?>test.php">Website</a>
+                    <a href="<?= URL ?>website.php">Website</a>
                 </li>
             <li>
             <a class="button">Inscription</a>

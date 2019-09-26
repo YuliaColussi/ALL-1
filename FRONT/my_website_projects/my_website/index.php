@@ -44,9 +44,8 @@ if($_POST){
 
         $successContact .='<div class="alert alert-success">Votre message à bien été enregistré </div>';
 
-        
-    }
-
+ 
+ }
 }
 
 ?>
@@ -289,13 +288,12 @@ if($_POST){
 </div>
 </div>
 </div>
-        
-        
             </div>
-        
-        
-            <div class="contact_block">
-                     <form method="POST" class="offset-md-3" >
+
+            <div class="contact_block form-container">
+            <div class="note"></div>
+            <div class="fields">
+                     <form method="POST" class="ajax-contact-form offset-md-3" action="">
                           <?php
                             echo $errorContact;
                             echo $successContact;
@@ -305,8 +303,9 @@ if($_POST){
                                     <input type="text" class="form-control" placeholder="Email@gmail.com" name="email" value="<?php if (isset($email)){echo $email;}?>">
                                     <textarea name="message" id="" cols="48" rows="8" placeholder="Votre messsage" value="<?php if (isset($message)){echo $message;}?>">
                                     </textarea>
-                            <button type="submit"value="Envoyer">Send us!</button>
+                            <button type="submit" class="form-container__btn" name="contact_form" value="Envoyer">Send us!</button>
                         </form> 
+                        </div>
         </div>
         </section>
        

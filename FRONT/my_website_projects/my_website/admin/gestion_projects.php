@@ -97,8 +97,8 @@ require_once('../include/header_admin.php');
 
 <!-- LIENS PRODUIT -->
 
-<ul class="col-md-4 offset-md-4 list-group mt-4 text-center">
-  <li class="list-group-item bg-dark text-center text-white"><h5>BACK OFFICE</h5></li>
+<ul class="col-md-4 offset-md-4 list-group mt-4 text-center back_office">
+  <li class="list-group-item bg-dark text-center text-white"><h6>BACK OFFICE</h6></li>
   <li class="list-group-item"><a href="?action=affichage" class="alert-link text-dark">AFFICHAGE PROJECTS</a></li>
   <li class="list-group-item"><a href="?action=ajout" class="alert-link text-dark">AJOUT PROJECT</a></li>
 

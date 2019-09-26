@@ -78,18 +78,25 @@ if($_POST)
 
 
 
-               $data_insert->bindValue(":reference", $reference, PDO::PARAM_STR);
-               $data_insert->bindValue(":categorie", $categorie, PDO::PARAM_STR);
-               $data_insert->bindValue(":titre", $titre, PDO::PARAM_STR);
-               $data_insert->bindValue(":description", $description, PDO::PARAM_STR);
-               $data_insert->bindValue(":couleur", $couleur, PDO::PARAM_STR);
-               $data_insert->bindValue(":taille", $taille, PDO::PARAM_STR);
-               $data_insert->bindValue(":public", $public, PDO::PARAM_STR);
+    // foreach($_POST as $key => $value)
+    // {
+        //  if($key != 'photo_actuelle')
+        //  {
+               $data_insert->bindValue(":$id_produit", $id_produit, PDO::PARAM_STR);
+               $data_insert->bindValue(":$reference", $reference, PDO::PARAM_STR);
+               $data_insert->bindValue(":$categorie", $categorie, PDO::PARAM_STR);
+               $data_insert->bindValue(":$titre", $titre, PDO::PARAM_STR);
+               $data_insert->bindValue(":$description", $description, PDO::PARAM_STR);
+               $data_insert->bindValue(":$couleur", $couleur, PDO::PARAM_STR);
+               $data_insert->bindValue(":$taille", $taille, PDO::PARAM_STR);
+               $data_insert->bindValue(":$public", $public, PDO::PARAM_STR);
                $data_insert->bindValue(":photo", $photo_bdd, PDO::PARAM_STR);
-               $data_insert->bindValue(":prix", $prix, PDO::PARAM_STR);
-               $data_insert->bindValue(":stock", $stock, PDO::PARAM_STR);
+               $data_insert->bindValue(":$prix", $prix, PDO::PARAM_STR);
+               $data_insert->bindValue(":$stock", $stock, PDO::PARAM_STR);
                
                $data_insert->execute();
+        //  }
+    // }
 
 }
 
@@ -173,7 +180,7 @@ Exo : Réaliser le traitement permettant l'affichage des produits sous forme de 
         $resultat = $bdd->prepare("SELECT * FROM produit WHERE id_produit = :id_produit");
         $resultat->bindValue('id_produit', $id_produit, PDO::PARAM_INT);
         $resultat->execute();
-
+ 
         $produit_actuel = $resultat->fetch(PDO::FETCH_ASSOC);
         echo '<pre>'; print_r($produit_actuel); echo '</pre>';
     }

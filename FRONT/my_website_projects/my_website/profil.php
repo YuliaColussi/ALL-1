@@ -1,5 +1,6 @@
 <?php
 require_once('include/init.php');
+require_once('include/header_website.php');
 
 if(!internauteEstConnecte())
 {
@@ -7,12 +8,11 @@ if(!internauteEstConnecte())
 }
 
 
-require_once('include/header.php');
 
 
 ?>
 
-<h2 class="display-4 text-center">Bonjour<strong class="text-info"><?=$_SESSION['member_form']['pseudo']; ?></strong></h2><hr>
+<h4 class="display-4 text-center">Bonjour <strong class="text-danger"><?=$_SESSION['member_form']['pseudo']; ?></strong></h4><hr>
 
 <div class="container">
 <table class="table table-dark">
@@ -39,14 +39,16 @@ else {
 
 ?>
 
-<h2 class="text-center">Vous etes <strong class="text-info"><?= $statut ?></strong> du site</h2><br><br><br>
+<h4 class="text-center">Vous etes <strong class="text-danger"><?= $statut ?></strong> du site</h4><br><br><br>
 
-<ul class="col-md-6 offset-md-3 list-group mt-2 text-center">
-            <li class="list-group-item"><a class="alert-link text-dark" href="<?= URL ?>admin/gestion_projects.php">Gestion de Projects</a></li>
-            <li class="list-group-item"><a class="alert-link text-dark" href="<?= URL ?>admin/gestion_membre.php">Gestion de Membre</a></li>
-            <li class="list-group-item"><a class="alert-link text-dark" href="<?= URL ?>admin/gestion_messages.php">Gestion de Messages</a></li>
+<ul class="col-md-6 offset-md-3 list-group mt-2 text-center profil">
+            <li class="list-group-item"><a class="alert-link text-light" href="<?= URL ?>admin/gestion_projects.php">Gestion de Projects</a></li>
+            <li class="list-group-item"><a class="alert-link text-light" href="<?= URL ?>admin/gestion_membre.php">Gestion de Membre</a></li>
+            <li class="list-group-item"><a class="alert-link text-light" href="<?= URL ?>admin/gestion_messages.php">Gestion de Messages</a></li>
 
 </ul>
+<br>
+<br>
 </div>
 
 <?php
