@@ -1,0 +1,164 @@
+/******************************************** RESET ********************************************/
+* {
+  box-sizing: border-box;
+}
+
+/************************************* REGLAGES GENERAUX *************************************/
+body {
+  background-color: #EAFCF4;
+   font-family: 'Lora', sans-serif !important;
+}
+html{
+   font-family: 'Lora', sans-serif !important;
+}
+
+/*************************************** font général  ***************************************
+
+/* p {
+  text-align: justify;
+} */
+
+em {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: rgb(69, 70, 70);
+
+}
+
+/* hover pour les boutons "qui, séance, témoignages, blog" */
+.hover:hover {
+  color: black;
+  background-color: #EAFCF4;
+  color: rgb(36, 116, 190);
+  box-shadow: -2px 2px 15px 0px rgba(0, 0, 0, 0.75);
+  background-color: #EAFCF4;
+  border: 2rem grey;
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+/*************************************** HEADER & FOOTER ***************************************/
+/* header {
+  border-bottom: 2px solid black;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+} */
+
+hr {
+  width: 75rem;
+  border: 1px solid #d3d3d3;
+}
+
+a hr {
+  cursor: default;
+}
+
+/****************************** header****************************************/
+
+.bouton_vert{
+ background-color: #3DA35D;
+ color:white;
+}
+/*  */
+aside>p>i {
+  font-size: 0.6rem;
+}
+
+/* Agir sur le nom Anne-Ceciele ROUGIER afin de le rendre gris avec une taille speciale afin de le descendre */
+/* .textNom {
+  margin-top: 100px;
+  text-align: justify;
+  font-size: 40px;
+} */
+
+.rounded :hover {
+  width: 150px !important;
+  /* on affiche l'image au carré */
+  height: 150px !important;
+  border-radius: 50% !important;
+}
+
+/* reseaux sociaux footer
+1_ Redimensionner chacun des logos en talle 60px(X)60px
+2_Reduire en forme circulaire avec le border-radius 
+3_ajouter une bordure en RGB
+4_appliquer le code du passage de la souris
+
+*/
+footer ul li .face {
+  display: block;
+  width: 60px;
+  height: 60px;
+  /* margin: 10px auto; */
+  border-radius: 50%;
+  margin: 2px;
+  border: rgb(69, 179, 212) 10px double;
+}
+
+footer ul li .link {
+  display: block;
+  width: 60px;
+  height: 60px;
+  /* margin: 10px auto; */
+  border-radius: 50%;
+  margin: 2px;
+  border: rgb(69, 179, 212) 10px double;
+
+}
+
+footer ul li .twit {
+  display: block;
+  width: 60px;
+  height: 60px;
+  /* margin: 10px auto; */
+  border-radius: 50%;
+  margin: 2px;
+  border: rgb(69, 179, 212) 10px double;
+
+}
+
+/* Photo de profil et bouton après */
+ /* @media all and (max-width: 640px) {
+  .display {
+    display: none;
+    clear: both;
+  }
+}  */
+
+.image-fluid{
+  max-width: 0%;
+  height: auto;
+}
+/* redimensionner l'image de profil */
+ .image-anne {
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: 10px auto;
+  border-radius: 50%;
+  margin: 2px;
+
+} 
+.signature{
+  position: relative;
+  margin-top: -2.5rem;
+}
+
+/*  */
+aside>p>i {
+  font-size: 0.6rem;
+}
+
+/* #navbarPrimaire{
+  position: relative;
+} */
+#border{
+  border-right: 1px solid black;
+  height: 7rem;
+}
+/*************page Qui ******************************/
+
+h4{
+  text-align:center;
+  font-size: 1.2rem;
+}
