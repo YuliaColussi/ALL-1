@@ -1,0 +1,455 @@
+body,
+html {
+    min-height: 100vh;
+}
+
+html {
+    background-color: #a9d7d1;
+}
+
+
+.row {
+    background: white ;
+    padding: 10px 70px !important;
+}
+
+
+li {
+    list-style: none;
+}
+
+body {
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 480px;
+    background-color: #a9d7d1 !important;
+}
+
+i {
+    margin-right: 0.5em;
+}
+
+.event-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+  
+h2{
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    color: #314a6b;
+   /*margin-left: 30%;*/
+    text-align: center;
+    background: linear-gradient(to bottom, transparent 65%, #45cbf0 65%)no-repeat center left / 0 100%;
+    transition: background-size 0.5s ease
+  }
+  
+ h2:hover {
+    background-size: 100% 100%;
+  }
+
+
+
+/*.event-list .event-image {
+    height: 350px;
+    object-fit: cover;
+    width: 250px;
+}*/
+
+.navbar {
+    border-radius: 0;
+}
+
+.nav-item .img-thumbnail {
+    max-width: 50px;
+}
+
+
+
+/* QUIZ CODEPEN TEST */
+
+/* CUSTOM */
+
+/* ICON FLOATING COMPUTER */
+
+  .cls-1 {
+          fill: #28bdeb;
+                            opacity: 0.06;
+                        }
+            
+                        .cls-1,
+                        .cls-11,
+                        .cls-5 {
+                            isolation: isolate;
+                        }
+            
+                        .cls-2 {
+                            fill: #0f0e9f;
+                        }
+            
+                        .cls-3 {
+                            fill: url(#Безымянный_градиент_6);
+                        }
+            
+                        .cls-4 {
+                            fill: url(#Безымянный_градиент_8);
+                        }
+            
+                        .cls-10,
+                        .cls-5 {
+                            opacity: 0.45;
+                        }
+            
+                        .cls-6 {
+                            fill: url(#Безымянный_градиент);
+                        }
+            
+                        .cls-7 {
+                            fill: url(#Безымянный_градиент_2);
+                        }
+            
+                        .cls-8 {
+                            fill: url(#Безымянный_градиент_3);
+                        }
+            
+                        .cls-9 {
+                            fill: url(#Безымянный_градиент_4);
+                        }
+            
+                        .cls-12 {
+                            fill: url(#Безымянный_градиент_5);
+                        }
+            
+                        .cls-13 {
+                            fill: #fff;
+                        }
+            
+                        .pazzle {
+                            animation: levitation 1.2s ease-in-out 0s infinite alternate;
+                        }
+            
+                        @keyframes levitation {
+                            0% {
+                                transform: translateY(-5%)
+                            }
+            
+                            100% {
+                                transform: translateY(2%)
+                            }
+                        }
+
+.custom-label {
+  font-size: 2rem!important;
+}
+
+
+/* Container divs*/
+.init-page,
+.questions-page,
+.results-page {
+  height: 100%;
+}
+
+#checkbox-true {
+  font-size: 18px;
+}
+
+/* Button */
+.btn {
+  margin: 2rem auto 0;
+  display: block;
+  width: 45%;
+  font-size: 1rem;
+
+  background: #01ABAA;
+  border-radius: 10px;
+}
+
+.btn {
+  background: #0f0d9f;
+  color: white;
+}
+
+/* TITLE PAGE */
+
+.init-page__title {
+  margin: 0;
+  font-family: "Flamenco";
+  font-size: 5rem;
+}
+
+.init-page__icon {
+  font-size: 20rem;
+  margin: 0;
+}
+
+/* QUESTIONS PAGE*/
+
+.questions-page__question {
+  padding: 0;
+  height: 11rem;
+}
+
+.questions-page__answer-list {
+  padding: 0;
+  list-style-type: none;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+
+.questions-page__answer-line {
+  margin: 0 auto;
+  width: 75%;
+  cursor: pointer;
+}
+
+.questions-page__selection-div {
+  float: left;
+  padding-left: 1rem;
+}
+
+.questions-page__feedback-div {
+  float: right;
+  padding-right: 1rem;
+}
+
+.questions-page--correct {
+  background: #76B574;
+}
+
+/*.questions-page--incorrect {
+  background: #FEA680;
+}*/
+
+.btn-holder {
+  height: 5rem;
+}
+
+/* RESULTS PAGE */
+
+
+
+.results-page__spanish-btn {
+  margin-top: 3rem;
+}
+
+.results-page__spanish-btn-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+/* ----------------------------
+MEDIA QUERIES
+---------------------------- */
+
+@media screen and (min-width: 480px) {
+
+  html {
+    font-size: 85%;
+  }
+
+  body {
+    min-height: 700px;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  /*input {
+    height: 55px!important;
+  }*/
+
+
+  .questions-page__question {
+    height: 8rem;
+  }
+
+}
+
+@media screen and (min-width: 1100px) {
+
+  html {
+    font-size: 100%;
+  }
+
+}
+
+
+
+/* SECOND VERSION FORM CREATE QUIZ */
+
+body {
+	 font-family: "Roboto";
+}
+/* .back {
+	 background: linear-gradient(120grad, #643986, #98aed5);
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+}*/
+ .registration-form {
+   width: 600px;
+   margin: 3rem auto 15rem;
+	 /*position: absolute;
+	 left: 50%;
+	 transform: translate(-50%, 0%);*/
+	 top: 15%;
+	 background: transparent;
+}
+ .registration-form header {
+	 position: relative;
+	 z-index: 4;
+	 background: white;
+	 padding: 20px 40px;
+	 border-radius: 15px 15px 0 0;
+}
+ .registration-form header h1 {
+	 font-weight: 900;
+	 letter-spacing: 1.5px;
+	 color: #0f0d9f;
+	 font-size: 23px;
+	 text-transform: uppercase;
+	 margin: 0;
+}
+ .registration-form header p {
+	 word-spacing: 0px;
+	 color: #9facb6;
+	 font-size: 17px;
+	 margin: 0;
+	 margin-top: 5px;
+}
+ .registration-form form {
+	 position: relative;
+}
+ .registration-form .input-section {
+	 width: 100%;
+	 position: absolute;
+	 display: flex;
+	 left: 50%;
+	 transform: translate(-50%, 0);
+	 height: 75px;
+	 border-radius: 0 0 15px 15px;
+	 overflow: hidden;
+	 z-index: 2;
+	 box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+	 transition: all 0.2s ease-in;
+}
+ .registration-form .input-section.folded {
+	 width: 95%;
+	 margin-top: 10px;
+	 left: 50%;
+	 transform: translate(-50%, 0);
+	 z-index: 1;
+}
+ .registration-form .input-section.folded input {
+	 background-color: #e9e2c0;
+}
+ .registration-form .input-section.folded span {
+	 background-color: #e9e2c0;
+}
+ .registration-form .input-section.folded + .folded {
+	 width: 90%;
+	 margin-top: 20px;
+	 left: 50%;
+	 transform: translate(-50%, 0);
+	 z-index: 0;
+}
+ /*.registration-form .input-section.folded + .folded input {
+	 background-color: #e1bcef;
+}
+ .registration-form .input-section.folded + .folded span {
+	 background-color: #e1bcef;
+}*/
+ .registration-form .input-section.fold-up {
+	 margin-top: -75px;
+}
+ .registration-form form input {
+	 color: #0f0d9f!important;
+	 width: 100%;
+	 border: 0;
+	 margin: 0;
+}
+
+ .first {
+	 padding: 20px 40px;
+}
+ .registration-form form input:focus {
+	 outline: none;
+}
+ .registration-form form input::placeholder {
+	 color: #8f8fd6;
+	 font-weight: 100;
+}
+ .animated-button {
+	 width: 20%;
+	background-color: #40648c;
+}
+ .animated-button span {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-around;
+	 align-items: center;
+	 line-height: 75px;
+	 text-align: center;
+	 height: 75px;
+	 transition: all 0.2s ease-in;
+}
+ .animated-button span i {
+	 font-size: 25px;
+	color: #45cbf0;
+}
+ .animated-button .next-button {
+	 background: transparent;
+	 color: #9999f8;
+	 font-weight: 100;
+	 width: 100%;
+	 border: 0;
+}
+ .next {
+	 margin-top: -75px;
+}
+ .success {
+	 width: 100%;
+	 position: absolute;
+	 display: flex;
+	 align-items: center;
+	 left: 50%;
+	 transform: translate(-50%, 0);
+	 height: 75px;
+	 border-radius: 0 0 15px 15px;
+	 overflow: hidden;
+	 z-index: 2;
+	 box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+	 transition: all 0.2s ease-in;
+	 background: #40648c;
+	 margin-top: -75px;
+}
+ .success p {
+	 color: white;
+	 font-weight: 900;
+	 letter-spacing: 2px;
+	 font-size: 18px;
+	 width: 100%;
+	 text-align: center;
+}
+ 
+
+.none {
+	 display: none;
+}
+
+
+.visiable {
+	 display: block;
+}

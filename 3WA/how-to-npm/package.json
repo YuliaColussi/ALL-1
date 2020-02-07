@@ -1,0 +1,13 @@
+{
+  "name": "package.json",
+  "version": "1.5.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": "https://www.netflix.com/watch/70274055?trackId=14170287&tctx=0%2C0%2C8a51eacb-c526-4fd7-9e91-759cd69ba570-9468907%2Cec2d1bcc-d187-4a72-977a-f6667b38427d_65094405X3XX1578322775882%2Cec2d1bcc-d187-4a72-977a-f6667b38427d_ROOT",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

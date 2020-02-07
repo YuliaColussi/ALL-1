@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
+    
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c0f54a17f3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="quiz.js"></script>
+    <script src="quiz_game.js"></script>
+    <!-- <script src="localStorage.js"></script>-->
+    <!-- Styles utilisateur -->
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container text-center">
+        <a class="navbar-brand" style="border: 1px solid black;" href="/#/">Quiz creator</a>
+    </div><!-- .container -->
+</nav><!-- .navbar -->
+
+<!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  -->
+<!--  Quiz codepen test  -->
+<div class="content">
+    <div class="col-md-12">
+
+<!-- FLOATing computer-->
+        <div class="col-md-4" style="margin-left: 37%; ">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 164 167">
+                <defs>
+                    <linearGradient id="Безымянный_градиент_6" x1="128.27" y1="-525" x2="139.95" y2="-525"
+                        gradientTransform="matrix(1, 0, 0, -1, 0, -456)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0.27" stop-color="#28bdeb" />
+                        <stop offset="0.85" stop-color="#70e5f9" />
+                    </linearGradient>
+                    <linearGradient id="Безымянный_градиент_8" x1="50.62" y1="-487.09" x2="50.62" y2="-478.15"
+                        xlink:href="#Безымянный_градиент_6" />
+                    <linearGradient id="Безымянный_градиент" x1="64.77" y1="-500.18" x2="22.23" y2="-548.36"
+                        gradientTransform="matrix(1, 0, 0, -1, -5.82, -457.95)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#456e99" />
+                        <stop offset="1" stop-color="#202a42" />
+                    </linearGradient>
+                    <linearGradient id="Безымянный_градиент_2" x1="114" y1="-546.44" x2="65.29" y2="-592.92"
+                        xlink:href="#Безымянный_градиент" />
+                    <linearGradient id="Безымянный_градиент_3" x1="119.14" y1="-494.55" x2="40.43" y2="-572.84"
+                        xlink:href="#Безымянный_градиент" />
+                    <linearGradient id="Безымянный_градиент_4" x1="72.81" y1="-536.72" x2="13.38" y2="-604.29"
+                        gradientTransform="matrix(1, 0, 0, -1, -5.82, -457.95)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0.15" stop-color="#70e5f9" />
+                        <stop offset="0.73" stop-color="#28bdeb" />
+                    </linearGradient>
+                    <linearGradient id="Безымянный_градиент_5" x1="105.73" y1="-493.48" x2="89.81" y2="-511.58"
+                        gradientTransform="matrix(1, 0, 0, -1, 0, -456)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#0d55a1" />
+                        <stop offset="1" stop-color="#0f0e9f" />
+                    </linearGradient>
+                </defs>
+                <g id="bg">
+                    <path id="bg-2" data-name="bg" class="cls-1"
+                        d="M73.35,163.87,30.57,148.25A46.53,46.53,0,0,1,0,102.88L1.66,57.37A46.55,46.55,0,0,1,35.38,14.3L79.16,1.79a46.55,46.55,0,0,1,51.38,18.76L156,58.32A46.54,46.54,0,0,1,154,113l-28.07,35.86A46.53,46.53,0,0,1,73.35,163.87Z" />
+                    <path class="cls-2"
+                        d="M130.13,123.79a1.52,1.52,0,0,1-1.26-.68l-7.31-11.24a1.52,1.52,0,0,1,0-1.64L128.86,99a1.56,1.56,0,0,1,2.52,0l7.31,11.24a1.52,1.52,0,0,1,0,1.64l-7.3,11.23A1.52,1.52,0,0,1,130.13,123.79Zm-5.52-12.74,5.52,8.49,5.51-8.48-5.52-8.49Z" />
+                    <path class="cls-3" d="M139,70H129a1,1,0,0,1,0-2h10a1,1,0,0,1,0,2Z" />
+                    <path class="cls-3" d="M134,75a1,1,0,0,1-1-1V64a1,1,0,0,1,2,0V74A1,1,0,0,1,134,75Z" />
+                    <path class="cls-4"
+                        d="M50.59,31.09h0a.71.71,0,0,1-.61-.35l-4.35-7.55a.73.73,0,0,1,0-.7.71.71,0,0,1,.61-.35H55a.71.71,0,0,1,.61.35.73.73,0,0,1,0,.7L51.2,30.74A.71.71,0,0,1,50.59,31.09Zm-3.14-7.55L50.59,29l3.15-5.45Z" />
+                </g>
+                <g id="pazzle" class="pazzle">
+                    <image class="cls-5" width="113" height="115" transform="translate(6.43 35.35) scale(0.97)"
+                        xlink:href="data:image/png;base64,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" />
+                    <path class="cls-6"
+                        d="M70.12,60.14a5.81,5.81,0,0,0-5.73,2.77,1.66,1.66,0,0,1-1.39.81h0a1.61,1.61,0,0,1-1.61-1.61h0V43.87A1.9,1.9,0,0,0,59.51,42H16.91A1.88,1.88,0,0,0,15,43.85h0V86.47a1.88,1.88,0,0,0,1.88,1.88H34.15A1.89,1.89,0,0,0,36,86.46v-.29a1.94,1.94,0,0,0-.94-1.63,5.8,5.8,0,1,1,6.16,0,1.93,1.93,0,0,0-.87,1.64v.21a1.9,1.9,0,0,0,1.86,1.92H61.39V69.67A1.61,1.61,0,0,1,63,68.06h0a1.66,1.66,0,0,1,1.4.83,5.79,5.79,0,1,0,5.72-8.75Z" />
+                    <path class="cls-7"
+                        d="M105.87,88.35H88.62a1.88,1.88,0,0,0-1.88,1.88v.29a2,2,0,0,0,.94,1.64,5.79,5.79,0,1,1-6.16,0,1.93,1.93,0,0,0,.87-1.64v-.24a1.88,1.88,0,0,0-1.88-1.88H61.39v19.12a1.89,1.89,0,0,1-1.89,1.88h-.29a1.94,1.94,0,0,1-1.63-.94,5.8,5.8,0,1,0,0,6.16,1.93,1.93,0,0,1,1.64-.87h.24a1.89,1.89,0,0,1,1.89,1.88v17.25a1.88,1.88,0,0,0,1.88,1.88h42.6a1.89,1.89,0,0,0,1.88-1.88V90.22A1.88,1.88,0,0,0,105.87,88.35Z" />
+                    <path class="cls-8"
+                        d="M105.87,42H63.27a1.88,1.88,0,0,0-1.88,1.88h0V62.11A1.61,1.61,0,0,0,63,63.72h0a1.66,1.66,0,0,0,1.39-.81,5.83,5.83,0,1,1,0,6,1.66,1.66,0,0,0-1.4-.83h0a1.61,1.61,0,0,0-1.61,1.61h0V88.35H80.51a1.88,1.88,0,0,1,1.88,1.88v.29a2,2,0,0,1-.94,1.64,5.79,5.79,0,1,0,6.16,0,1.93,1.93,0,0,1-.87-1.64v-.24a1.88,1.88,0,0,1,1.88-1.88h17.25a1.89,1.89,0,0,0,1.88-1.88V43.87A1.9,1.9,0,0,0,105.87,42Z" />
+                    <path class="cls-9"
+                        d="M51.93,105.78a5.79,5.79,0,0,1,5.65,2.63,1.94,1.94,0,0,0,1.63.94h.29a1.89,1.89,0,0,0,1.89-1.88V88.35H42.26a1.89,1.89,0,0,1-1.88-1.89v-.29a2,2,0,0,1,.94-1.63,5.8,5.8,0,1,0-6.16,0A1.94,1.94,0,0,1,36,86.22v.24a1.89,1.89,0,0,1-1.88,1.89H16.91A1.88,1.88,0,0,0,15,90.2h0v42.63a1.88,1.88,0,0,0,1.88,1.88h42.6a1.89,1.89,0,0,0,1.88-1.88V115.58a1.89,1.89,0,0,0-1.89-1.88h-.24a1.93,1.93,0,0,0-1.64.87,5.79,5.79,0,1,1-5.69-8.79Z" />
+                    <g class="cls-10">
+                        <image class="cls-11" width="96" height="96" transform="translate(52 -1)"
+                            xlink:href="data:image/png;base64,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" />
+                    </g>
+                    <circle class="cls-12" cx="100" cy="44" r="12" />
+                    <path class="cls-13"
+                        d="M100,50.81A6.81,6.81,0,1,1,106.8,44h0A6.84,6.84,0,0,1,100,50.81Zm0-12A5.19,5.19,0,1,0,105.2,44a5.19,5.19,0,0,0-5.2-5.19Z" />
+                </g>
+            </svg>
+        </div>
+        <div class="questions-page" style="display: none">
+    <div class="container make_visiable" style="display: none">
+        <h2 class="questions-page__question" id="test_question"></h2>
+        <ul class="questions-page__answer-list">
+<!-- form of quiz -->
+            <!--  Letter A  -->
+            <!--  Answer div  -->
+            <div class="questions-page__answer-div questions-page__answer-div-a" id="counting_answers">
+                <!--  Selector div  -->
+                <div class="questions-page__selection-div"></div>
+                <!--  Feedback div -->
+                <div class="questions-page__feedback-div"></div>
+                <!--  Answer -->
+                <li class="questions-page__answer-line first-answer" style="display: flex;">A)
+                    <span id="test"></span></li>
+            </div>
+            
+            <!--  Letter B  -->
+            <!--  Answer div  -->
+            <div class="questions-page__answer-div questions-page__answer-div-b">
+                <!--  Selector div  -->
+                <div class="questions-page__selection-div"></div>
+                <!--  Feedback div -->
+                <div class="questions-page__feedback-div"></div>
+                <!--  Answer -->
+                <li class="questions-page__answer-line second-answer" style="display: flex;">B)
+                    <span id="test2"></span></li>
+            </div>
+       
+            
+       
+            </ul>
+            
+            <!--  ICON NAMES: x is   ion-close-round  , check is   ion-checkmark-round-->
+            <!--  ICON NAMES: x is   ion-close-round  , check is   ion-checkmark-round-->
+            <div class="btn-holder">
+                <!-- <button type="submit" id="submit" class="btn btn-primary"
+                                    style="display: block; margin: 0 auto; width: 25rem;">Submit</button>-->
+                <button class="questions-page__submit-btn btn" type="submit" id="submit">Submit</button>
+                <button class="questions-page__continue-btn btn" id="continue">Continue</button>
+            </div>
+            </div>
+            </div>
+            
+            <div class="results-page">
+                <div class="container">
+                    <h3 class="results-page__info">Your final score :</h3>
+                    <h2 class="results-page__score"></h2>
+                    <button class="results-page__retake-btn btn">Take it again</button>
+                </div>
+            </div>
+            </div>
+            
+            </div>
+            <!-- FORTM QUIZ END-->
+
+<!-- form of quiz -->
+
+
+<!-- form of quiz  CREATION-->
+        <div class="init-page">
+            <div class="container" style="text-align: center;margin-bottom: 10rem">
+                <h2 class="text-center">Let's create our Quiiiiiiiz</h2>
+                <p class="init-page__icon ion-earth"></p>
+               <button class="init-page__btn btn">Start</button>
+</div>
+</div>
+<div class="questions-page questions-page2" style="margin: auto;">
+<div class="container">
+<div class="registration-form">
+    <header>
+        <h1>Let's create our first question</h1>
+        <p>Let's begin with our quiz!</p>
+    </header>
+    <form id="my_form">
+        <div class="input-section email-section"><input class="email first" type="text" id="question" placeholder="ENTER YOUR QUESTION HERE"
+                autocomplete="off" />
+            <div class="animated-button"><span class="icon-paper-plane"><i class="fas fa-question-circle"></i></span><span
+                    class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+        </div>
+        <div class="input-section password-section folded">
+            <div class="row1 row">
+            <input class="password password1" class="optionCheckbox1" type="text" id="response1" placeholder="ENTER YOUR FIRST ANSWER HERE" />
+            <div class="form-check" style="display: flex; padding: 0;">
+                <input type="checkbox" class="optionCheckbox1" id="true1" value="true" style="width: 30%; margin-top: 7px;">
+                <label id="checkbox-true" for="exampleCheck1" style="line-height: none; color: #0f0d9f!important;"></label>True answer</label>
+                                <input type="checkbox" value="false" id="false1" style="width: 30%; margin-top: 7px;">
+                                <label id="checkbox-true" for="exampleCheck1" style="line-height: none; color: #0f0d9f!important;"></label>False
+                                answer</label>
+
+            </div>
+            </div>
+            <div class="animated-button">
+                <span class="icon-lock">
+                    <i class="fas fa-user-check"></i>
+                </span>
+                <span class="next-button password"><i class="fa fa-arrow-up"></i></span>
+            </div>
+            
+        </div>
+        <div class="input-section repeat-password-section folded">
+            <div class="row2 row">
+                <input class="repeat-password password2 password" type="text" id="response2" placeholder="ENTER YOUR SECOND ANSWER HERE" />
+                    <div class="form-check" style="display: flex; padding: 0;">
+                    <input type="checkbox" class="optionCheckbox2" id="true2" style="width: 30%; margin-top: 7px;">
+                    <label id="checkbox-true" for="exampleCheck1" style="line-height: none; color: #0f0d9f!important;"></label>True
+                    answer</label>
+                    <input type="checkbox" id="false2" class="optionCheckbox2" style="width: 30%; margin-top: 7px;">
+                    <label id="checkbox-true" for="exampleCheck1" style="line-height: none; color: #0f0d9f!important;"></label>False
+                    answer</label>
+                       </div>     
+                    </div>
+            <div class="animated-button"><span class="icon-repeat-lock"><i class="fas fa-user-times"></i></span><span
+                    class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+        </div>
+
+           <!--<div class="input-section repeat-password-section folded">
+                <div class="row2 row">
+                    <input class="repeat-password password2 password" type="text" id="response2"
+                        placeholder="ENTER YOUR SECOND ANSWER HERE" />
+                    <div class="form-check" style="display: flex; padding: 0;">
+                        <input type="checkbox" class="optionCheckbox2" id="true2" style="width: 30%; margin-top: 7px;">
+                        <label id="checkbox-true" for="exampleCheck1"
+                            style="line-height: none; color: #0f0d9f!important;"></label>True
+                        answer</label>
+                        <input type="checkbox" id="false2" class="optionCheckbox2" style="width: 30%; margin-top: 7px;">
+                        <label id="checkbox-true" for="exampleCheck1"
+                            style="line-height: none; color: #0f0d9f!important;"></label>False
+                        answer</label>
+                    </div>
+                </div>
+                <div class="animated-button"><span class="icon-repeat-lock"><i class="fas fa-user-times"></i></span><span
+                        class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+            </div>
+
+                <div class="input-section repeat-password-section folded">
+                    <div class="row2 row">
+                        <input class="repeat-password password2 password" type="text" id="response2"
+                            placeholder="ENTER YOUR SECOND ANSWER HERE" />
+                        <div class="form-check" style="display: flex; padding: 0;">
+                            <input type="checkbox" class="optionCheckbox2" id="true2" style="width: 30%; margin-top: 7px;">
+                            <label id="checkbox-true" for="exampleCheck1"
+                                style="line-height: none; color: #0f0d9f!important;"></label>True
+                            answer</label>
+                            <input type="checkbox" id="false2" class="optionCheckbox2" style="width: 30%; margin-top: 7px;">
+                            <label id="checkbox-true" for="exampleCheck1"
+                                style="line-height: none; color: #0f0d9f!important;"></label>False
+                            answer</label>
+                        </div>
+                    </div>
+                    <div class="animated-button"><span class="icon-repeat-lock"><i class="fas fa-user-times"></i></span><span
+                            class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+                </div>
+-->
+        <div class="success">
+            <p class="col-md-12">CONGRATULATIONS! YOUR QUESTION IS CREATED!</p>
+        </div>
+    </form>
+    <div class="btn-holder" style="display: flex; margin-top: 8rem;">
+                    <button class="edit btn none" type="submit" id="submit"><i class="fas fa-edit"></i>Edit this question</button>
+                    <button class="btn create none"><i class="fas fa-plus"></i>Create another question</button>
+                    </div>
+                    <button class="btn view none"><i class="fas fa-puzzle-piece"></i>Try your quiz</button>
+                    
+                    
+</div>
+</div>
+    <script src="second_version_quiz_form.js"></script>
+    <script type="module" src="app/main.js"></script>
+    <ul id="items2">
+    </ul>
+    <table class="table table-bordered p-5" style="display: none" id="items">
+        <thead>
+            <tr>
+                <th scope="col">Key</th>
+                <th scope="col">Value</th>
+                <th scope="col">Edit</th>
+            </tr>
+        </thead>
+        <tbody id="first-tr">
+        </tbody>
+    </table>
+</body>
+</html>
